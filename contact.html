@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contactez Africa Wine Food — Formulaire de contact, demande de devis, adresse et telephone" />
+  <title>Contact — Africa Wine Food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="contact">
+
+<!-- NAVIGATION -->
+<nav id="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Africa Wine Food - Accueil">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
+      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
+    </a>
+    <div class="nav-actions">
+      <a href="commande.html" class="cart-nav-btn" id="cart-nav-btn" aria-label="Voir le panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+        <span class="cart-badge" id="cart-badge" hidden>0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"     data-i18n="nav.home"      class="nav-link">Accueil</a></li>
+        <li><a href="catalogue.html" data-i18n="nav.catalogue" class="nav-link">Catalogue</a></li>
+        <li><a href="about.html"     data-i18n="nav.about"     class="nav-link">A propos</a></li>
+        <li><a href="blog.html"      data-i18n="nav.blog"      class="nav-link">Blog</a></li>
+        <li><a href="contact.html"   data-i18n="nav.contact"   class="nav-link">Contact</a></li>
+      </ul>
+      <div class="lang-switcher" role="group" aria-label="Changer de langue">
+        <button class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1528823872057-9c018a07a7a7?w=1600&q=80&auto=format&fit=crop')"></div>
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content animate-on-scroll">
+      <p class="section-pretitle" data-i18n="contact.pretitle">Parlons-en</p>
+      <h1 data-i18n="contact.title">Contact</h1>
+      <p data-i18n="contact.subtitle">Notre equipe est a votre disposition pour repondre a toutes vos questions et vous accompagner.</p>
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <span aria-hidden="true">›</span>
+        <span data-i18n="nav.contact">Contact</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FORMULAIRES + INFOS -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Formulaire principal -->
+        <div class="contact-left animate-on-scroll">
+          <h3 data-i18n="contact.form.title">Nous ecrire</h3>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="c-name" data-i18n="contact.form.name">Nom complet</label>
+              <input type="text" id="c-name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-email" data-i18n="contact.form.email">Email</label>
+                <input type="email" id="c-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="c-phone" data-i18n="contact.form.phone">Telephone</label>
+                <input type="tel" id="c-phone" name="phone" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-type" data-i18n="contact.form.type">Type de demande</label>
+              <select id="c-type" name="type">
+                <option value=""             data-i18n="contact.form.select">Selectionner...</option>
+                <option value="particulier"  data-i18n="contact.form.opt.particulier">Particulier</option>
+                <option value="restaurant"   data-i18n="contact.form.opt.restaurant">Restaurant / Hotel</option>
+                <option value="entreprise"   data-i18n="contact.form.opt.entreprise">Entreprise</option>
+                <option value="collectionneur" data-i18n="contact.form.opt.collector">Collectionneur</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="c-message" data-i18n="contact.form.message">Message</label>
+              <textarea id="c-message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.send">Envoyer le message</button>
+            <div class="form-success" id="form-success" role="alert" hidden data-i18n="contact.form.success">Message envoye ! Nous vous repondrons sous 24h.</div>
+          </form>
+        </div>
+
+        <!-- Devis + coordonnees -->
+        <div class="contact-right animate-on-scroll">
+
+          <!-- Formulaire devis -->
+          <div class="devis-box">
+            <h3 data-i18n="contact.devis.title">Demander un devis</h3>
+            <form class="devis-form" id="devis-form" novalidate>
+              <div class="form-group">
+                <label for="d-product" data-i18n="contact.devis.product">Produit souhaite</label>
+                <input type="text" id="d-product" name="product" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="d-qty" data-i18n="contact.devis.quantity">Quantite</label>
+                  <input type="number" id="d-qty" name="quantity" min="1" value="1" />
+                </div>
+                <div class="form-group">
+                  <label for="d-occasion" data-i18n="contact.devis.occasion">Occasion</label>
+                  <input type="text" id="d-occasion" name="occasion" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="d-email" data-i18n="contact.devis.email">Email de contact</label>
+                <input type="email" id="d-email" name="devis-email" required />
+              </div>
+              <button type="submit" class="btn btn-gold btn-full" data-i18n="contact.devis.send">Obtenir un devis</button>
+              <div class="form-success" id="devis-success" role="alert" hidden data-i18n="contact.devis.success">Devis demande ! Nous vous contactons rapidement.</div>
+            </form>
+          </div>
+
+          <!-- Coordonnees -->
+          <div class="contact-info-box">
+            <h3 data-i18n="contact.info.title">Nos coordonnees</h3>
+            <div class="cii">
+              <span class="cii-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong data-i18n="contact.info.address">Adresse</strong>
+                <p>Plateau, Rue du Commerce 42<br>Abidjan, Cote d'Ivoire</p>
+              </div>
+            </div>
+            <div class="cii">
+              <span class="cii-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong data-i18n="contact.info.phone">Telephone</strong>
+                <p><a href="tel:+2250102030405">+225 01 02 03 04 05</a></p>
+              </div>
+            </div>
+            <div class="cii">
+              <span class="cii-icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:contact@africawinefood.com">contact@africawinefood.com</a></p>
+              </div>
+            </div>
+            <div class="cii">
+              <span class="cii-icon" aria-hidden="true">🕐</span>
+              <div>
+                <strong data-i18n="contact.info.hours">Horaires</strong>
+                <p data-i18n="footer.hours">Lun&ndash;Sam : 9h&ndash;19h</p>
+              </div>
+            </div>
+            <a href="tel:+2250102030405" class="btn btn-call" data-i18n="contact.call">📞 Appeler directement</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-pretitle" data-i18n="contact.map.pretitle">Ou nous trouver</p>
+        <h2 data-i18n="contact.map.title">Notre adresse</h2>
+      </div>
+      <div class="map-full animate-on-scroll" role="img" aria-label="Carte : Plateau, Abidjan, Cote d'Ivoire">
+        <div class="map-full-inner">
+          <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1400&q=80&auto=format&fit=crop" alt="Vue aerienne Abidjan Cote d'Ivoire" loading="lazy" />
+          <div class="map-full-overlay">
+            <div class="map-marker">
+              <div class="map-marker-pin" aria-hidden="true">📍</div>
+              <div class="map-marker-card">
+                <strong>Africa Wine Food</strong>
+                <p>Plateau, Rue du Commerce 42</p>
+                <p>Abidjan, Cote d'Ivoire</p>
+                <a href="tel:+2250102030405">+225 01 02 03 04 05</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOS AUTRES BUREAUX -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p class="section-pretitle" data-i18n="contact.offices.pretitle">Nos implantations</p>
+        <h2 data-i18n="contact.offices.title">Nos bureaux en Afrique</h2>
+      </div>
+      <div class="offices-grid">
+        <div class="office-card animate-on-scroll" data-delay="0">
+          <div class="office-flag" aria-hidden="true">🇨🇮</div>
+          <h3 data-i18n="contact.offices.ci.city">Abidjan</h3>
+          <p class="office-country" data-i18n="contact.offices.ci.country">Cote d'Ivoire — Siege social</p>
+          <p>Plateau, Rue du Commerce 42</p>
+          <a href="tel:+2250102030405">+225 01 02 03 04 05</a>
+        </div>
+        <div class="office-card animate-on-scroll" data-delay="100">
+          <div class="office-flag" aria-hidden="true">🇸🇳</div>
+          <h3 data-i18n="contact.offices.sn.city">Dakar</h3>
+          <p class="office-country" data-i18n="contact.offices.sn.country">Senegal — Bureau regional</p>
+          <p>Plateau, Avenue Lamine Gueye 18</p>
+          <a href="tel:+221338001122">+221 33 800 11 22</a>
+        </div>
+        <div class="office-card animate-on-scroll" data-delay="200">
+          <div class="office-flag" aria-hidden="true">🇬🇭</div>
+          <h3 data-i18n="contact.offices.gh.city">Accra</h3>
+          <p class="office-country" data-i18n="contact.offices.gh.country">Ghana — Bureau regional</p>
+          <p>Airport City, Liberation Road 7</p>
+          <a href="tel:+233302001122">+233 30 200 11 22</a>
+        </div>
+        <div class="office-card animate-on-scroll" data-delay="300">
+          <div class="office-flag" aria-hidden="true">🇨🇲</div>
+          <h3 data-i18n="contact.offices.cm.city">Douala</h3>
+          <p class="office-country" data-i18n="contact.offices.cm.country">Cameroun — Bureau regional</p>
+          <p>Bonanjo, Rue Joss 22</p>
+          <a href="tel:+237222001122">+237 222 00 11 22</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Africa Wine Food">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/></svg>
+            <span>Africa <span class="logo-accent">Wine</span> Food</span>
+          </a>
+          <p class="footer-slogan" data-i18n="footer.slogan">L'excellence viticole, au coeur de l'Afrique.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav.title">Navigation</h4>
+          <ul role="list">
+            <li><a href="index.html"     data-i18n="nav.home">Accueil</a></li>
+            <li><a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a></li>
+            <li><a href="about.html"     data-i18n="nav.about">A propos</a></li>
+            <li><a href="blog.html"      data-i18n="nav.blog">Blog</a></li>
+            <li><a href="contact.html"   data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.cat.title">Nos produits</h4>
+          <ul role="list">
+            <li><a href="catalogue.html" data-i18n="badge.rouge">Vins Rouges</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.blanc">Vins Blancs &amp; Roses</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.champagne">Champagnes</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.spirits">Whisky &amp; Cognac</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.rare">Collections Rares</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact.title">Contact</h4>
+          <address>
+            <p>Plateau, Rue du Commerce 42<br>Abidjan, Cote d'Ivoire</p>
+            <p><a href="tel:+2250102030405">+225 01 02 03 04 05</a></p>
+            <p><a href="mailto:contact@africawinefood.com">contact@africawinefood.com</a></p>
+            <p data-i18n="footer.hours">Lun&ndash;Sam : 9h&ndash;19h</p>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="footer-copy" data-i18n="footer.legal">&copy; 2025 Africa Wine Food. Tous droits reserves.</p>
+      <p class="footer-warning" data-i18n="footer.warning">&#9888;&#65039; L'abus d'alcool est dangereux pour la sante. A consommer avec moderation. Interdit aux mineurs de moins de 18 ans.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2250102030405" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Contacter Africa Wine Food sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="whatsapp-label" data-i18n="whatsapp.label">WhatsApp</span>
+</a>
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut de page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>

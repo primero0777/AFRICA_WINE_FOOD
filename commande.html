@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Africa Wine Food — Passer commande de vins de luxe, champagnes et spiritueux premium" />
+  <title>Ma Sélection — Africa Wine Food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="commande">
+
+<!-- NAVIGATION -->
+<nav id="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Africa Wine Food - Accueil">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
+      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
+    </a>
+    <div class="nav-actions">
+      <a href="commande.html" class="cart-nav-btn active" id="cart-nav-btn" aria-label="Voir le panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+        <span class="cart-badge" id="cart-badge" hidden>0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"     data-i18n="nav.home"      class="nav-link">Accueil</a></li>
+        <li><a href="catalogue.html" data-i18n="nav.catalogue" class="nav-link">Catalogue</a></li>
+        <li><a href="about.html"     data-i18n="nav.about"     class="nav-link">A propos</a></li>
+        <li><a href="blog.html"      data-i18n="nav.blog"      class="nav-link">Blog</a></li>
+        <li><a href="contact.html"   data-i18n="nav.contact"   class="nav-link">Contact</a></li>
+      </ul>
+      <div class="lang-switcher" role="group" aria-label="Changer de langue">
+        <button class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80&auto=format&fit=crop')"></div>
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content animate-on-scroll">
+      <p class="section-pretitle" data-i18n="order.pretitle">Votre sélection</p>
+      <h1 data-i18n="order.title">Ma Commande</h1>
+      <p data-i18n="order.subtitle">Finalisez votre sélection et transmettez-nous votre demande. Notre équipe vous contacte sous 24h.</p>
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <span aria-hidden="true">›</span>
+        <span data-i18n="order.title">Ma Commande</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- COMMANDE -->
+  <section class="section">
+    <div class="container">
+
+      <!-- PANIER VIDE -->
+      <div class="cart-empty" id="cart-empty" hidden>
+        <div class="cart-empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="64" height="64" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+        </div>
+        <h2 data-i18n="order.empty.title">Votre sélection est vide</h2>
+        <p data-i18n="order.empty.desc">Parcourez notre catalogue et ajoutez les bouteilles qui vous font envie.</p>
+        <a href="catalogue.html" class="btn btn-primary" data-i18n="order.empty.cta">Explorer le catalogue</a>
+      </div>
+
+      <!-- COMMANDE ACTIVE -->
+      <div class="commande-grid" id="commande-grid" hidden>
+
+        <!-- Colonne gauche : récapitulatif panier -->
+        <div class="commande-cart-col">
+          <h2 class="commande-col-title" data-i18n="order.recap">Votre sélection</h2>
+          <div class="cart-items-list" id="cart-items-list">
+            <!-- Généré par JS -->
+          </div>
+          <div class="cart-summary">
+            <div class="cart-summary-row">
+              <span data-i18n="order.items">Articles</span>
+              <span id="cart-count">—</span>
+            </div>
+            <div class="cart-summary-row cart-total-row">
+              <span data-i18n="order.total">Total estimé</span>
+              <strong id="cart-total-price">—</strong>
+            </div>
+            <p class="cart-summary-note" data-i18n="order.total.note">
+              Prix indicatifs HT. Un devis personnalisé et les modalités de paiement vous seront transmis par notre équipe.
+            </p>
+            <a href="catalogue.html" class="btn btn-outline cart-continue-btn" data-i18n="order.continue">
+              ← Continuer mes achats
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne droite : formulaire de commande -->
+        <div class="commande-form-col">
+          <h2 class="commande-col-title" data-i18n="order.form.title">Vos coordonnées</h2>
+
+          <form id="order-form" class="order-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-prenom" data-i18n="order.form.prenom">Prénom *</label>
+                <input type="text" id="order-prenom" name="prenom" autocomplete="given-name" placeholder="Jean" required />
+              </div>
+              <div class="form-group">
+                <label for="order-nom" data-i18n="order.form.nom">Nom *</label>
+                <input type="text" id="order-nom" name="nom" autocomplete="family-name" placeholder="Konan" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="order-email" data-i18n="order.form.email">Email *</label>
+              <input type="email" id="order-email" name="email" autocomplete="email" placeholder="exemple@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="order-phone" data-i18n="order.form.phone">Téléphone *</label>
+              <input type="tel" id="order-phone" name="phone" autocomplete="tel" placeholder="+225 01 02 03 04 05" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-pays" data-i18n="order.form.pays">Pays *</label>
+                <select id="order-pays" name="pays" required>
+                  <option value="">Sélectionner...</option>
+                  <option value="CI">Côte d'Ivoire</option>
+                  <option value="SN">Sénégal</option>
+                  <option value="GH">Ghana</option>
+                  <option value="CM">Cameroun</option>
+                  <option value="ML">Mali</option>
+                  <option value="BF">Burkina Faso</option>
+                  <option value="NE">Niger</option>
+                  <option value="GN">Guinée</option>
+                  <option value="TG">Togo</option>
+                  <option value="BJ">Bénin</option>
+                  <option value="GA">Gabon</option>
+                  <option value="CG">Congo</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="FR">France</option>
+                  <option value="BE">Belgique</option>
+                  <option value="CH">Suisse</option>
+                  <option value="OTHER">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="order-ville" data-i18n="order.form.ville">Ville *</label>
+                <input type="text" id="order-ville" name="ville" autocomplete="address-level2" placeholder="Abidjan" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="order-adresse" data-i18n="order.form.adresse">Adresse de livraison</label>
+              <input type="text" id="order-adresse" name="adresse" autocomplete="street-address" placeholder="Rue du Commerce 42, Plateau" />
+            </div>
+            <div class="form-group">
+              <label for="order-livraison" data-i18n="order.form.delivery">Mode de livraison</label>
+              <select id="order-livraison" name="livraison">
+                <option value="standard">Livraison standard (5–7 jours ouvrés)</option>
+                <option value="express">Livraison express (2–3 jours ouvrés)</option>
+                <option value="pickup">Retrait en agence — Abidjan Plateau</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order-occasion" data-i18n="order.form.occasion">Occasion</label>
+              <select id="order-occasion" name="occasion">
+                <option value="">Sélectionner (optionnel)...</option>
+                <option value="perso">Cave personnelle</option>
+                <option value="cadeau">Cadeau</option>
+                <option value="event">Événement / Réception</option>
+                <option value="business">Cadeau d'affaires</option>
+                <option value="invest">Investissement viticole</option>
+                <option value="resto">Restaurant / Hôtel</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order-notes" data-i18n="order.form.notes">Notes &amp; instructions spéciales</label>
+              <textarea id="order-notes" name="notes" rows="3" placeholder="Occasion particulière, préférences d'emballage, date souhaitée..." data-i18n-placeholder="order.form.notes.placeholder"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary order-submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+              <span data-i18n="order.form.submit">Envoyer ma demande de commande</span>
+            </button>
+            <p class="order-disclaimer" data-i18n="order.disclaimer">
+              En soumettant ce formulaire, vous acceptez d'être recontacté par notre équipe pour confirmer votre commande et les modalités de paiement sécurisé. Aucun prélèvement ne sera effectué sans votre accord préalable.
+            </p>
+          </form>
+
+          <!-- Succès -->
+          <div id="order-success" class="order-success-card" hidden>
+            <div class="order-success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 data-i18n="order.success.title">Demande envoyée !</h3>
+            <p data-i18n="order.success.desc">Notre équipe vous contactera sous 24h pour confirmer votre commande et vous transmettre un devis personnalisé avec les modalités de paiement.</p>
+            <div class="order-success-actions">
+              <a href="catalogue.html" class="btn btn-outline" data-i18n="order.success.catalogue">Retour au catalogue</a>
+              <a href="index.html" class="btn btn-primary" data-i18n="order.success.home">Accueil</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Africa Wine Food - Retour accueil">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/></svg>
+            <span>Africa <span class="logo-accent">Wine</span> Food</span>
+          </a>
+          <p class="footer-slogan" data-i18n="footer.slogan">L'excellence viticole, au coeur de l'Afrique.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav.title">Navigation</h4>
+          <ul role="list">
+            <li><a href="index.html"     data-i18n="nav.home">Accueil</a></li>
+            <li><a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a></li>
+            <li><a href="about.html"     data-i18n="nav.about">A propos</a></li>
+            <li><a href="blog.html"      data-i18n="nav.blog">Blog</a></li>
+            <li><a href="contact.html"   data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.cat.title">Nos produits</h4>
+          <ul role="list">
+            <li><a href="catalogue.html" data-i18n="badge.rouge">Vins Rouges</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.blanc">Vins Blancs &amp; Roses</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.champagne">Champagnes</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.spirits">Whisky &amp; Cognac</a></li>
+            <li><a href="catalogue.html" data-i18n="badge.rare">Collections Rares</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact.title">Contact</h4>
+          <address>
+            <p>Plateau, Rue du Commerce 42<br>Abidjan, Cote d'Ivoire</p>
+            <p><a href="tel:+2250102030405">+225 01 02 03 04 05</a></p>
+            <p><a href="mailto:contact@africawinefood.com">contact@africawinefood.com</a></p>
+            <p data-i18n="footer.hours">Lun&ndash;Sam : 9h&ndash;19h</p>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="footer-copy" data-i18n="footer.legal">&copy; 2025 Africa Wine Food. Tous droits reserves.</p>
+      <p class="footer-warning" data-i18n="footer.warning">&#9888;&#65039; L'abus d'alcool est dangereux pour la sante. A consommer avec moderation. Interdit aux mineurs de moins de 18 ans.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2250102030405" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Contacter Africa Wine Food sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="whatsapp-label" data-i18n="whatsapp.label">WhatsApp</span>
+</a>
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut de page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
