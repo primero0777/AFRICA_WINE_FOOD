@@ -1006,25 +1006,37 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .section { padding: 3.5rem 0; }
 
   /* Nav mobile */
-  .hamburger { display: flex; z-index: 10; }
+  .nav-actions { position: relative; z-index: 20; }
+  .hamburger { display: flex; }
   .nav-menu {
-    position: fixed;
-    top: 0; right: -100%;
+    position: absolute;
+    top: 100%; right: -100vw;
     width: min(320px, 85vw);
     height: 100vh;
     background: rgba(10,5,3,.97);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 4rem 2rem;
     gap: 2.5rem;
-    transition: right var(--tr);
-    z-index: 9;
+    transition: right .35s cubic-bezier(.4,0,.2,1);
+    z-index: 19;
+    overflow-y: auto;
   }
   .nav-menu.open { right: 0; }
+  /* Overlay sombre derrière le panneau */
+  .nav-menu.open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: -1;
+    pointer-events: none;
+  }
   .nav-links { flex-direction: column; align-items: flex-start; gap: .25rem; width: 100%; }
-  .nav-link { font-size: 1rem; letter-spacing: .08em; padding: .65rem 0; }
+  .nav-link { font-size: 1rem; letter-spacing: .08em; padding: .65rem 0; width: 100%; }
   .lang-switcher { margin-left: 0; }
 
   /* Hero */
