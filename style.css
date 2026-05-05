@@ -177,7 +177,7 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .lang-btn.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 .lang-btn:hover { color: var(--gold-l); }
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; }
-.hamburger span { display: block; height: 1.5px; background: var(--cream); border-radius: 1px; transition: transform var(--tr), opacity var(--tr), width var(--tr); }
+.hamburger span { display: block; width: 100%; height: 2px; background: var(--cream); border-radius: 1px; transition: transform var(--tr), opacity var(--tr), width var(--tr); }
 .hamburger span:nth-child(3) { width: 60%; }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
