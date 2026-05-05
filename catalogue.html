@@ -32,8 +32,10 @@
         <span class="lang-sep" aria-hidden="true">|</span>
         <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <span id="currency-rate-display" class="currency-rate" aria-live="polite"></span>
     </div>
     <div class="nav-actions">
+      <button id="currency-toggle" class="currency-btn" aria-label="Afficher en USD" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-usd">USD</span></button>
       <a href="commande.html" class="cart-nav-btn" id="cart-nav-btn" aria-label="Voir le panier">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
         <span class="cart-badge" id="cart-badge" hidden>0</span>
@@ -89,7 +91,7 @@
             <span class="product-badge badge-rouge" data-i18n="badge.rouge">Vin Rouge</span>
             <h3 class="product-name">Chateau Margaux</h3>
             <p class="product-appellation">AOC Margaux, Bordeaux &mdash; 2018</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>650 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="425000">425 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -101,14 +103,14 @@
 
         <article class="product-card animate-on-scroll" data-category="rouge" data-product-id="opus-one-2019" role="button" tabindex="0" aria-label="Voir les détails de Opus One">
           <div class="product-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80&auto=format&fit=crop" alt="Opus One 2019 Napa Valley Californie" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80&auto=format&fit=crop" alt="Opus One 2019 Napa Valley Californie" loading="lazy" />
             <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
           </div>
           <div class="product-info">
             <span class="product-badge badge-rouge" data-i18n="badge.rouge">Vin Rouge</span>
             <h3 class="product-name">Opus One</h3>
             <p class="product-appellation">Napa Valley, Californie &mdash; 2019</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>380 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="249000">249 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -120,14 +122,14 @@
 
         <article class="product-card animate-on-scroll" data-category="champagne" data-product-id="dom-perignon-2015" role="button" tabindex="0" aria-label="Voir les détails de Dom Pérignon Vintage">
           <div class="product-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1545540456-9ea89ecd5eb4?w=600&q=80&auto=format&fit=crop" alt="Dom Perignon Vintage 2015 Champagne AOC" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80&auto=format&fit=crop" alt="Dom Perignon Vintage 2015 Champagne AOC" loading="lazy" />
             <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
           </div>
           <div class="product-info">
             <span class="product-badge badge-champagne" data-i18n="badge.champagne">Champagne</span>
             <h3 class="product-name">Dom P&eacute;rignon Vintage</h3>
             <p class="product-appellation">Champagne AOC &mdash; 2015</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>220 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="144000">144 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -139,14 +141,14 @@
 
         <article class="product-card animate-on-scroll" data-category="champagne" data-product-id="cristal-2016" role="button" tabindex="0" aria-label="Voir les détails de Cristal Roederer">
           <div class="product-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1519671282429-b44b4a74de0d?w=600&q=80&auto=format&fit=crop" alt="Cristal Louis Roederer 2016 Champagne AOC" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80&auto=format&fit=crop" alt="Cristal Louis Roederer 2016 Champagne AOC" loading="lazy" />
             <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
           </div>
           <div class="product-info">
             <span class="product-badge badge-champagne" data-i18n="badge.champagne">Champagne</span>
             <h3 class="product-name">Cristal Roederer</h3>
             <p class="product-appellation">Champagne AOC &mdash; 2016</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>350 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="230000">230 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -165,7 +167,7 @@
             <span class="product-badge badge-blanc" data-i18n="badge.blanc">Vin Blanc</span>
             <h3 class="product-name">Puligny-Montrachet 1er Cru</h3>
             <p class="product-appellation">AOC Bourgogne &mdash; 2020</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>180 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="118000">118 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -184,7 +186,7 @@
             <span class="product-badge badge-spirits" data-i18n="badge.spirits">Whisky</span>
             <h3 class="product-name">The Macallan 25 Years</h3>
             <p class="product-appellation">Speyside, Scotland &mdash; Single Malt</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>1 200 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="787000">787 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -203,7 +205,7 @@
             <span class="product-badge badge-spirits" data-i18n="badge.cognac">Cognac</span>
             <h3 class="product-name">Hennessy Paradis Imp&eacute;rial</h3>
             <p class="product-appellation">Cognac AOC, Grande Champagne</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>2 500 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="1640000">1 640 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -215,14 +217,14 @@
 
         <article class="product-card animate-on-scroll" data-category="champagne" data-product-id="krug-grande-cuvee" role="button" tabindex="0" aria-label="Voir les détails de Krug Grande Cuvée">
           <div class="product-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1528823872057-9c018a07a7a7?w=600&q=80&auto=format&fit=crop" alt="Krug Grande Cuvee 170eme Edition Champagne AOC" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80&auto=format&fit=crop" alt="Krug Grande Cuvee 170eme Edition Champagne AOC" loading="lazy" />
             <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
           </div>
           <div class="product-info">
             <span class="product-badge badge-champagne" data-i18n="badge.champagne">Champagne</span>
             <h3 class="product-name">Krug Grande Cuv&eacute;e</h3>
             <p class="product-appellation">Champagne AOC &mdash; 170&egrave;me &Eacute;dition</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>280 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="184000">184 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -241,7 +243,7 @@
             <span class="product-badge badge-rouge" data-i18n="badge.rouge">Vin Rouge</span>
             <h3 class="product-name">P&eacute;trus</h3>
             <p class="product-appellation">AOC Pomerol, Bordeaux &mdash; 2018</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>3 500 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="2296000">2 296 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -260,7 +262,7 @@
             <span class="product-badge badge-blanc" data-i18n="badge.blanc">Vin Blanc</span>
             <h3 class="product-name">Sancerre Henri Bourgeois</h3>
             <p class="product-appellation">AOC Sancerre, Loire &mdash; 2022</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>75 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="49000">49 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -279,7 +281,7 @@
             <span class="product-badge badge-rare" data-i18n="badge.rare">Collection Rare</span>
             <h3 class="product-name">Roman&eacute;e-Conti DRC</h3>
             <p class="product-appellation">AOC Grand Cru Bourgogne &mdash; 2015</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>18 000 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="11807000">11 807 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -298,7 +300,7 @@
             <span class="product-badge badge-rare" data-i18n="badge.rare">Collection Rare</span>
             <h3 class="product-name">Glenfarclas 50 Years</h3>
             <p class="product-appellation">Speyside, Scotland &mdash; &Eacute;dition Limit&eacute;e</p>
-            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong>5 800 &euro;</strong></p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="3805000">3 805 000 F CFA</strong></p>
             <div class="product-card-actions">
               <button class="btn-details" data-i18n="modal.details">Voir les détails</button>
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
@@ -442,6 +444,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
+<script src="currency.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

@@ -86,8 +86,10 @@
               EN
             </button>
           </div>
+          <span id="currency-rate-display" class="currency-rate" aria-live="polite"></span>
         </div>
         <div class="nav-actions">
+          <button id="currency-toggle" class="currency-btn" aria-label="Afficher en USD" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-usd">USD</span></button>
           <a
             href="commande.html"
             class="cart-nav-btn"
@@ -500,7 +502,7 @@
                   >Vin Rouge</span
                 >
                 <h3>Chateau Margaux 2018</h3>
-                <p>AOC Margaux &mdash; <strong>650 &euro;</strong></p>
+                <p>AOC Margaux &mdash; <strong data-price-xof="425000">425 000 F CFA</strong></p>
               </div>
             </a>
             <a
@@ -510,7 +512,7 @@
             >
               <div class="preview-img">
                 <img
-                  src="https://images.unsplash.com/photo-1545540456-9ea89ecd5eb4?w=500&q=80&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=500&q=80&auto=format&fit=crop"
                   alt="Champagnes de prestige"
                   loading="lazy"
                 />
@@ -522,7 +524,7 @@
                   >Champagne</span
                 >
                 <h3>Dom P&eacute;rignon Vintage 2015</h3>
-                <p>Champagne AOC &mdash; <strong>220 &euro;</strong></p>
+                <p>Champagne AOC &mdash; <strong data-price-xof="144000">144 000 F CFA</strong></p>
               </div>
             </a>
             <a
@@ -544,7 +546,7 @@
                   >Whisky</span
                 >
                 <h3>The Macallan 25 Years</h3>
-                <p>Speyside &mdash; <strong>1 200 &euro;</strong></p>
+                <p>Speyside &mdash; <strong data-price-xof="787000">787 000 F CFA</strong></p>
               </div>
             </a>
           </div>
@@ -844,6 +846,7 @@
       </svg>
     </button>
 
+    <script src="currency.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

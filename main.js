@@ -946,6 +946,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-rouge',
     price: '650 €',
+    priceXof: 425000,
     fr: {
       badge: 'Vin Rouge',
       name: 'Château Margaux',
@@ -975,9 +976,10 @@ const productsData = [
   },
   {
     id: 'opus-one-2019',
-    img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=85&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-rouge',
     price: '380 €',
+    priceXof: 249000,
     fr: {
       badge: 'Vin Rouge',
       name: 'Opus One',
@@ -1007,9 +1009,10 @@ const productsData = [
   },
   {
     id: 'dom-perignon-2015',
-    img: 'https://images.unsplash.com/photo-1545540456-9ea89ecd5eb4?w=800&q=85&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-champagne',
     price: '220 €',
+    priceXof: 144000,
     fr: {
       badge: 'Champagne',
       name: 'Dom Pérignon Vintage',
@@ -1039,9 +1042,10 @@ const productsData = [
   },
   {
     id: 'cristal-2016',
-    img: 'https://images.unsplash.com/photo-1519671282429-b44b4a74de0d?w=800&q=85&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-champagne',
     price: '350 €',
+    priceXof: 230000,
     fr: {
       badge: 'Champagne',
       name: 'Cristal Roederer',
@@ -1074,6 +1078,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-blanc',
     price: '180 €',
+    priceXof: 118000,
     fr: {
       badge: 'Vin Blanc',
       name: 'Puligny-Montrachet 1er Cru',
@@ -1106,6 +1111,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-spirits',
     price: '1 200 €',
+    priceXof: 787000,
     fr: {
       badge: 'Whisky Single Malt',
       name: 'The Macallan 25 Years',
@@ -1138,6 +1144,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-spirits',
     price: '2 500 €',
+    priceXof: 1640000,
     fr: {
       badge: 'Cognac',
       name: 'Hennessy Paradis Impérial',
@@ -1167,9 +1174,10 @@ const productsData = [
   },
   {
     id: 'krug-grande-cuvee',
-    img: 'https://images.unsplash.com/photo-1528823872057-9c018a07a7a7?w=800&q=85&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-champagne',
     price: '280 €',
+    priceXof: 184000,
     fr: {
       badge: 'Champagne',
       name: 'Krug Grande Cuvée',
@@ -1202,6 +1210,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-rouge',
     price: '3 500 €',
+    priceXof: 2296000,
     fr: {
       badge: 'Vin Rouge',
       name: 'Pétrus',
@@ -1234,6 +1243,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-blanc',
     price: '75 €',
+    priceXof: 49000,
     fr: {
       badge: 'Vin Blanc',
       name: 'Sancerre Henri Bourgeois',
@@ -1266,6 +1276,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-rare',
     price: '18 000 €',
+    priceXof: 11807000,
     fr: {
       badge: 'Collection Rare',
       name: 'Romanée-Conti DRC',
@@ -1298,6 +1309,7 @@ const productsData = [
     img: 'https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?w=800&q=85&auto=format&fit=crop',
     badgeClass: 'badge-rare',
     price: '5 800 €',
+    priceXof: 3805000,
     fr: {
       badge: 'Collection Rare',
       name: 'Glenfarclas 50 Years',
@@ -1348,7 +1360,7 @@ function initProductModal() {
     const badge = document.getElementById('modal-badge');
     badge.textContent = t.badge;
     badge.className   = 'product-badge ' + data.badgeClass;
-    document.getElementById('modal-price').textContent        = data.price;
+    document.getElementById('modal-price').textContent        = (window.AWF_CURRENCY && data.priceXof) ? window.AWF_CURRENCY.fmtPrice(data.priceXof) : data.price;
     document.getElementById('modal-product-name').textContent = t.name;
     document.getElementById('modal-appellation').textContent  = t.appellation;
     document.getElementById('modal-desc').textContent         = t.desc;
@@ -1447,7 +1459,8 @@ function initCommandePage() {
       if (!data) return;
       const t = data[currentLang] || data.fr;
       totalQty += item.qty;
-      totalAmt += parsePrice(data.price) * item.qty;
+      totalAmt += (data.priceXof || 0) * item.qty;
+      const itemPriceStr = (window.AWF_CURRENCY && data.priceXof) ? window.AWF_CURRENCY.fmtPrice(data.priceXof) : data.price;
 
       const row = document.createElement('div');
       row.className = 'cart-item';
@@ -1460,7 +1473,7 @@ function initCommandePage() {
           <p class="cart-item-badge">${t.badge}</p>
           <p class="cart-item-name">${t.name}</p>
           <p class="cart-item-appellation">${t.appellation}</p>
-          <p class="cart-item-price">${data.price} / bouteille</p>
+          <p class="cart-item-price">${itemPriceStr} / bouteille</p>
         </div>
         <div class="cart-item-controls">
           <div class="qty-stepper" role="group" aria-label="Quantité">
@@ -1501,13 +1514,18 @@ function initCommandePage() {
 
     if (countEl) countEl.textContent = totalQty + ' article' + (totalQty !== 1 ? 's' : '');
     if (totalEl) {
-      totalEl.textContent = totalAmt > 0
-        ? totalAmt.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 })
-        : 'Sur devis';
+      if (totalAmt > 0 && window.AWF_CURRENCY) {
+        totalEl.textContent = window.AWF_CURRENCY.fmtPrice(totalAmt);
+      } else if (totalAmt > 0) {
+        totalEl.textContent = totalAmt.toLocaleString('fr-FR') + ' F CFA';
+      } else {
+        totalEl.textContent = 'Sur devis';
+      }
     }
   }
 
   renderCart();
+  window.addEventListener('awf:currency', renderCart);
 
   /* Form submission */
   if (orderForm && orderSuccess) {

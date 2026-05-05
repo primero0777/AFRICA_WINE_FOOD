@@ -176,6 +176,13 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .lang-btn.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 .lang-btn:hover { color: var(--gold-l); }
+.currency-btn { display: flex; align-items: center; gap: .2rem; padding: .28rem .55rem; border-radius: 999px; border: 1px solid rgba(201,168,76,.3); color: rgba(250,247,242,.7); font-size: .72rem; font-weight: 600; letter-spacing: .08em; transition: border-color var(--tr), color var(--tr); }
+.currency-btn:hover { border-color: var(--gold); color: var(--cream); }
+.cur { transition: color var(--tr); }
+.cur-active { color: var(--gold); }
+.cur-sep { color: rgba(250,247,242,.3); font-size: .65rem; }
+.currency-rate { font-size: .65rem; color: rgba(250,247,242,.5); white-space: nowrap; padding: .5rem .75rem 0; }
+.currency-rate.rate-fallback { color: var(--gold-d); }
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; }
 .hamburger span { display: block; width: 100%; height: 2px; background: var(--cream); border-radius: 1px; transition: transform var(--tr), opacity var(--tr), width var(--tr); }
 .hamburger span:nth-child(3) { width: 60%; }
@@ -1038,6 +1045,7 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .nav-links { flex-direction: column; align-items: flex-start; gap: .25rem; width: 100%; }
   .nav-link { font-size: 1rem; letter-spacing: .08em; padding: .65rem 0; width: 100%; }
   .lang-switcher { margin-left: 0; }
+  .currency-rate { padding: .4rem 0 0; }
 
   /* Hero */
   .hero-title { font-size: clamp(1.75rem, 8vw, 2.5rem); }
