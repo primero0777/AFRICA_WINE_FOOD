@@ -2,7 +2,9 @@
 <html lang="fr" data-lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#4D0F1C" />
     <meta
       name="description"
       content="Africa Wine Food - Selection exclusive de vins de luxe et spiritueux premium en Afrique"
@@ -12,10 +14,17 @@
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap"
       rel="stylesheet"
+      media="print" onload="this.media='all'"
     />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    </noscript>
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&q=80&auto=format&fit=crop" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-page="home">
@@ -28,7 +37,7 @@
           aria-label="Africa Wine Food - Accueil"
         >
           <svg
-            class="logo-ico'n"
+            class="logo-icon"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -678,19 +687,19 @@
                 aria-label="Africa Wine Food - Retour accueil"
               >
                 <svg
+                  class="logo-icon"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.5"
-                  width="22"
-                  height="22"
+                  width="28"
+                  height="28"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"
-                  />
+                  <path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z" />
+                  <path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5" />
                 </svg>
-                <span>Africa <span class="logo-accent">Wine</span> Food</span>
+                <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
               </a>
               <p class="footer-slogan" data-i18n="footer.slogan">
                 L'excellence viticole, au coeur de l'Afrique.
@@ -700,7 +709,7 @@
                   href="#"
                   class="social-link"
                   aria-label="Instagram"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   ><svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -716,7 +725,7 @@
                   href="#"
                   class="social-link"
                   aria-label="Facebook"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   ><svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -846,7 +855,7 @@
       </svg>
     </button>
 
-    <script src="currency.js"></script>
-    <script src="main.js"></script>
+    <script src="currency.js" defer></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
