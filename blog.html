@@ -14,7 +14,13 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Africa Wine Food">
+  <meta property="og:title" content="Blog Vin &amp; Spiritueux — Africa Wine Food">
+  <meta property="og:description" content="Guides de dégustation, accords mets-vins, sélections premium et conseils d'experts sommeliers.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80">
 </head>
 <body data-page="blog">
 
@@ -29,7 +35,7 @@
       <ul class="nav-links" role="list">
         <li><a href="index.html"     data-i18n="nav.home"      class="nav-link">Accueil</a></li>
         <li><a href="catalogue.html" data-i18n="nav.catalogue" class="nav-link">Catalogue</a></li>
-        <li><a href="about.html"     data-i18n="nav.about"     class="nav-link">A propos</a></li>
+        <li><a href="about.html"     data-i18n="nav.about"     class="nav-link">À propos</a></li>
         <li><a href="blog.html"      data-i18n="nav.blog"      class="nav-link active">Blog</a></li>
         <li><a href="contact.html"   data-i18n="nav.contact"   class="nav-link">Contact</a></li>
       </ul>
@@ -273,9 +279,9 @@
           <!-- Liens internes -->
           <p style="margin-top:2rem;font-size:.875rem;color:var(--muted)">
             <strong>Articles en lien :</strong>
-            <a href="#article-whisky" style="color:var(--bordeaux)">Guide du Whisky Single Malt</a> •
-            <a href="#article-accords" style="color:var(--bordeaux)">Accords Mets-Vins</a> •
-            <a href="#article-cave" style="color:var(--bordeaux)">Cave à Vins en Climat Tropical</a>
+            <a href="definition-vin.html" style="color:var(--bordeaux)">Qu'est-ce que le vin ?</a> •
+            <a href="types-de-vins.html" style="color:var(--bordeaux)">Les 5 types de vins</a> •
+            <a href="caves-lome.html" style="color:var(--bordeaux)">Top caves à vins de Lomé</a>
           </p>
 
         </div><!-- .article-body -->
@@ -291,19 +297,19 @@
     <div class="container">
 
       <div class="section-header animate-on-scroll">
-        <p class="section-pretitle">5 idées d'articles SEO</p>
-        <h2 class="section-title">Notre programme éditorial</h2>
-        <p class="section-subtitle" style="color:rgba(250,247,242,.55)">Chaque article est accompagné de 3 titres alternatifs pour maximiser le référencement et l'engagement.</p>
+        <p class="section-pretitle">Éducation · Dégustation · Mixologie</p>
+        <h2 class="section-title">Nos Articles</h2>
+        <p class="section-subtitle" style="color:rgba(250,247,242,.55)">Guides experts, conseils pratiques et portraits rédigés par nos sommeliers — pour tout savoir sur les vins, spiritueux et la culture de la boisson à Lomé.</p>
       </div>
 
       <!-- Filtres catégories -->
       <div class="blog-filters-bar" role="group" aria-label="Filtrer par catégorie">
         <button class="blog-filter-btn active" data-filter="all">Tous</button>
-        <button class="blog-filter-btn" data-filter="degustation">Dégustation</button>
+        <button class="blog-filter-btn" data-filter="education">Éducation</button>
         <button class="blog-filter-btn" data-filter="guide">Guide</button>
-        <button class="blog-filter-btn" data-filter="accords">Accords</button>
-        <button class="blog-filter-btn" data-filter="spiritueux">Spiritueux</button>
-        <button class="blog-filter-btn" data-filter="terroirs">Terroirs</button>
+        <button class="blog-filter-btn" data-filter="sante">Santé</button>
+        <button class="blog-filter-btn" data-filter="mixologie">Mixologie</button>
+        <button class="blog-filter-btn" data-filter="partenaires">Portrait</button>
       </div>
 
       <!-- Layout 2 colonnes : articles + sidebar -->
@@ -313,135 +319,87 @@
         <div>
           <div class="blog-grid" id="blog-grid">
 
-            <!-- Article 1 : Whisky -->
-            <article class="blog-card animate-on-scroll" data-delay="0" data-category="guide spiritueux" id="article-whisky">
+            <!-- Article 1 : Définition du vin -->
+            <article class="blog-card animate-on-scroll" data-delay="0" data-category="education" id="card-definition-vin">
               <div class="blog-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=700&q=80&auto=format&fit=crop" alt="Verre de whisky single malt Speyside Macallan" loading="lazy" />
-                <span class="blog-cat">Guide Spiritueux</span>
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700&q=80&auto=format&fit=crop" alt="Grappe de raisin et verre de vin rouge sur fond de vigne" loading="lazy" />
+                <span class="blog-cat">Éducation</span>
               </div>
               <div class="blog-content">
                 <time class="blog-date" datetime="2025-02-10">10 Février 2025</time>
-                <h3>Whisky Single Malt : Du Speyside à l'Islay, le Guide des Connaisseurs</h3>
-                <p>Des distilleries parfumées du Speyside aux tourbes marines de l'Islay, en passant par les Highlands sauvages — notre guide complet pour naviguer dans l'univers fascinant du whisky single malt d'exception.</p>
-                <div class="blog-alt-titles">
-                  <h5>3 titres alternatifs</h5>
-                  <ul>
-                    <li>The Macallan 25 ans : Pourquoi ce Whisky vaut son Prix</li>
-                    <li>Speyside vs Islay : Quelle Région Produit les Meilleurs Single Malts ?</li>
-                    <li>Comment Déguster un Whisky Single Malt comme un Professionnel</li>
-                  </ul>
-                </div>
-                <a href="#" class="btn btn-text">Lire la suite &rarr;</a>
+                <h3>Qu'est-ce que le Vin ? Définition, Origine et Histoire</h3>
+                <p>Du latin <em>vinum</em> aux premières amphores d'Arménie datant de 6 000 av. J.-C. — plongez dans l'histoire fascinante du vin, ses critères de définition et les 5 clés pour reconnaître un vin de qualité.</p>
+                <a href="definition-vin.html" class="btn btn-text">Lire la suite &rarr;</a>
               </div>
             </article>
 
-            <!-- Article 2 : Accords -->
-            <article class="blog-card animate-on-scroll" data-delay="150" data-category="accords" id="article-accords">
+            <!-- Article 2 : 5 types de vins -->
+            <article class="blog-card animate-on-scroll" data-delay="150" data-category="guide" id="card-types-de-vins">
               <div class="blog-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80&auto=format&fit=crop" alt="Table gastronomique accord mets et vins prestige" loading="lazy" />
-                <span class="blog-cat">Accords Mets-Vins</span>
+                <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=700&q=80&auto=format&fit=crop" alt="Cinq verres de vin différents rouge blanc rosé mousseux dessert" loading="lazy" />
+                <span class="blog-cat">Guide</span>
               </div>
               <div class="blog-content">
                 <time class="blog-date" datetime="2025-02-25">25 Février 2025</time>
-                <h3>Accords Mets-Vins : Les 10 Règles d'Or d'une Sommellière</h3>
-                <p>Notre sommelière Afi Koudadjé vous livre ses conseils incontournables pour composer des accords parfaits lors d'un dîner d'affaires, d'une réception de mariage ou d'un repas gastronomique en famille.</p>
-                <div class="blog-alt-titles">
-                  <h5>3 titres alternatifs</h5>
-                  <ul>
-                    <li>Quel Vin Servir lors d'un Dîner d'Affaires Gastronomique ?</li>
-                    <li>Vins et Cuisine Africaine : les Accords Inattendus qui Fonctionnent</li>
-                    <li>Dom Pérignon avec quoi ? Les Mariages Parfaits avec le Champagne</li>
-                  </ul>
-                </div>
-                <a href="#" class="btn btn-text">Lire la suite &rarr;</a>
+                <h3>Les 5 Types de Vins : Rouge, Blanc, Rosé, Dessert et Mousseux</h3>
+                <p>Tanins, acidité, effervescence, douceur : chaque type de vin possède son identité propre. Notre guide complet vous explique les caractéristiques, les accords et les températures de service idéales pour chaque famille.</p>
+                <a href="types-de-vins.html" class="btn btn-text">Lire la suite &rarr;</a>
               </div>
             </article>
 
-            <!-- Article 3 : Champagne -->
-            <article class="blog-card animate-on-scroll" data-delay="300" data-category="degustation" id="article-champagne">
+            <!-- Article 3 : Bienfaits du vin rouge -->
+            <article class="blog-card animate-on-scroll" data-delay="300" data-category="sante" id="card-bienfaits-vin-rouge">
               <div class="blog-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=700&q=80&auto=format&fit=crop" alt="Champagne de prestige Dom Pérignon Cristal flûtes" loading="lazy" />
-                <span class="blog-cat">Dégustation</span>
+                <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=700&q=80&auto=format&fit=crop" alt="Verre de vin rouge et raisins noirs bienfaits santé" loading="lazy" />
+                <span class="blog-cat">Santé</span>
               </div>
               <div class="blog-content">
                 <time class="blog-date" datetime="2025-03-10">10 Mars 2025</time>
-                <h3>Champagne de Prestige : Dom Pérignon, Cristal, Krug — Lequel Choisir ?</h3>
-                <p>Brut, Blanc de Blancs, Vintage ou Prestige Cuvée : notre décryptage complet des plus grands champagnes du monde, avec les critères pour choisir la bouteille parfaite selon l'occasion et le budget.</p>
-                <div class="blog-alt-titles">
-                  <h5>3 titres alternatifs</h5>
-                  <ul>
-                    <li>Dom Pérignon vs Cristal Roederer : Lequel Choisir pour une Grande Occasion ?</li>
-                    <li>Les Secrets de Fabrication du Champagne de Prestige</li>
-                    <li>Blanc de Blancs vs Blanc de Noirs : Comprendre les Cuvées Champagne</li>
-                  </ul>
-                </div>
-                <a href="#" class="btn btn-text">Lire la suite &rarr;</a>
+                <h3>10 Bienfaits du Vin Rouge sur la Santé prouvés par la Science</h3>
+                <p>Resvératrol, antioxydants, protection cardiovasculaire : la science confirme que consommé avec modération (1 à 2 verres par jour), le vin rouge peut contribuer à votre bien-être. Voici les 10 bienfaits validés par les études.</p>
+                <a href="bienfaits-vin-rouge.html" class="btn btn-text">Lire la suite &rarr;</a>
               </div>
             </article>
 
-            <!-- Article 4 : Cave -->
-            <article class="blog-card animate-on-scroll" data-delay="0" data-category="guide" id="article-cave">
+            <!-- Article 4 : Caves à vins de Lomé -->
+            <article class="blog-card animate-on-scroll" data-delay="0" data-category="guide local" id="card-caves-lome">
               <div class="blog-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=80&auto=format&fit=crop" alt="Cave à vins conservation en climat tropical Afrique" loading="lazy" />
-                <span class="blog-cat">Guide Pratique</span>
+                <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=80&auto=format&fit=crop" alt="Cave à vins rayonnages bouteilles Lomé Togo" loading="lazy" />
+                <span class="blog-cat">Guide Local</span>
               </div>
               <div class="blog-content">
                 <time class="blog-date" datetime="2025-03-28">28 Mars 2025</time>
-                <h3>Cave à Vins en Climat Tropical : Conseils d'Expert pour l'Afrique de l'Ouest</h3>
-                <p>Température, hygrométrie, lumière et organisation : notre guide complet pour constituer et conserver une cave à vins de qualité à Lomé, Accra, Dakar ou Douala, dans les conditions tropicales de l'Afrique de l'Ouest.</p>
-                <div class="blog-alt-titles">
-                  <h5>3 titres alternatifs</h5>
-                  <ul>
-                    <li>Les 7 Erreurs à Éviter pour Conserver ses Bouteilles en Afrique</li>
-                    <li>Température et Hygrométrie : les 3 Ennemis du Vin en Pays Tropical</li>
-                    <li>Cave à Vin Électronique à Lomé : Notre Avis d'Expert</li>
-                  </ul>
-                </div>
-                <a href="#" class="btn btn-text">Lire la suite &rarr;</a>
+                <h3>Top des Meilleures Caves à Vins de Lomé</h3>
+                <p>La Cave de la République, Bono Vino, La Route des Vins, BB Brasserie… Découvrez notre sélection des meilleures adresses pour acheter vos vins et spiritueux à Lomé, avec l'annuaire complet de 16 cavistes de la capitale.</p>
+                <a href="caves-lome.html" class="btn btn-text">Lire la suite &rarr;</a>
               </div>
             </article>
 
-            <!-- Article 5 : Cognac -->
-            <article class="blog-card animate-on-scroll" data-delay="150" data-category="spiritueux" id="article-cognac">
+            <!-- Article 5 : Cocktails maison -->
+            <article class="blog-card animate-on-scroll" data-delay="150" data-category="mixologie" id="card-cocktails-maison">
               <div class="blog-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=700&q=80&auto=format&fit=crop" alt="Hennessy Paradis Impérial cognac Grande Champagne fûts" loading="lazy" />
-                <span class="blog-cat">Spiritueux Premium</span>
+                <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=700&q=80&auto=format&fit=crop" alt="Cocktails colorés maison mojito margarita gin tonic" loading="lazy" />
+                <span class="blog-cat">Mixologie</span>
               </div>
               <div class="blog-content">
                 <time class="blog-date" datetime="2025-04-15">15 Avril 2025</time>
-                <h3>L'Art du Cognac : Hennessy, Grande Champagne et Spiritueux d'Exception</h3>
-                <p>De la Grande Champagne aux Borderies, notre plongée dans l'univers du cognac de luxe — fabrication, appellations, lecture d'étiquette et suggestions d'accords pour apprécier pleinement ces eaux-de-vie d'exception.</p>
-                <div class="blog-alt-titles">
-                  <h5>3 titres alternatifs</h5>
-                  <ul>
-                    <li>Hennessy Paradis Impérial : l'Assemblage qui a Transcendé l'Art du Cognac</li>
-                    <li>VS, VSOP, XO, Extra : Déchiffrer l'Étiquette d'un Cognac de Qualité</li>
-                    <li>Cognac et Gastronomie : les Accords qui Surprendront vos Convives</li>
-                  </ul>
-                </div>
-                <a href="#" class="btn btn-text">Lire la suite &rarr;</a>
+                <h3>5 Cocktails Maison Faciles à Réaliser</h3>
+                <p>Bora Bora, Virgin Piña Colada, Gin Tonic Maison, Margarita, Mojito — cinq recettes inratables avec les ingrédients exacts et les étapes de préparation pour épater vos invités sans être un bartender professionnel.</p>
+                <a href="cocktails-maison.html" class="btn btn-text">Lire la suite &rarr;</a>
               </div>
             </article>
 
-            <!-- Article 6 : Vins Africains -->
-            <article class="blog-card animate-on-scroll" data-delay="300" data-category="terroirs">
+            <!-- Article 6 : BB Brasserie -->
+            <article class="blog-card animate-on-scroll" data-delay="300" data-category="partenaires" id="card-bb-brasserie">
               <div class="blog-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=700&q=80&auto=format&fit=crop" alt="Vignobles africains Afrique du Sud Stellenbosch vin rouge" loading="lazy" />
-                <span class="blog-cat">Terroirs & Régions</span>
+                <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=700&q=80&auto=format&fit=crop" alt="BB Brasserie Lomé bières vins spiritueux DIAGEO HEINEKEN" loading="lazy" />
+                <span class="blog-cat">Portrait</span>
               </div>
               <div class="blog-content">
                 <time class="blog-date" datetime="2025-04-30">30 Avril 2025</time>
-                <h3>Vins d'Afrique : Ces Nouvelles Cuvées qui Font Bouger le Marché International</h3>
-                <p>Afrique du Sud, Maroc, Tunisie, Algérie : notre panorama des vignobles africains qui produisent des vins d'une qualité croissante et rivalisant désormais avec les grandes appellations européennes.</p>
-                <div class="blog-alt-titles">
-                  <h5>3 titres alternatifs</h5>
-                  <ul>
-                    <li>Constantia et Stellenbosch : les Terroirs Sud-Africains qui Rivalisent avec Bordeaux</li>
-                    <li>L'Essor du Vin en Afrique de l'Ouest : Tendances et Perspectives 2025</li>
-                    <li>Meilleurs Vins d'Afrique du Sud à Moins de 100 000 F CFA</li>
-                  </ul>
-                </div>
-                <a href="#" class="btn btn-text">Lire la suite &rarr;</a>
+                <h3>BB Brasserie : 60 ans au Service des Boissons à Lomé</h3>
+                <p>Fondée en 1964 par le Dr. Joachim HAASE et intégrée au groupe BGI depuis 1988, BB Brasserie est le distributeur incontournable de Lomé — partenaire officiel de DIAGEO, HEINEKEN, GRIMBERGEN et des vins de la Famille CASTEL.</p>
+                <a href="bb-brasserie.html" class="btn btn-text">Lire la suite &rarr;</a>
               </div>
             </article>
 
@@ -450,23 +408,6 @@
 
         <!-- SIDEBAR -->
         <aside class="blog-sidebar" aria-label="Informations complémentaires">
-
-          <!-- 10 Mots-clés SEO -->
-          <div class="sidebar-box">
-            <h3 class="sidebar-box-title">🔎 10 Mots-clés SEO</h3>
-            <div class="seo-tags" role="list">
-              <span class="seo-tag" role="listitem">vin de luxe Lomé</span>
-              <span class="seo-tag" role="listitem">château margaux 2018</span>
-              <span class="seo-tag" role="listitem">champagne prestige Togo</span>
-              <span class="seo-tag" role="listitem">whisky single malt premium</span>
-              <span class="seo-tag" role="listitem">accord mets vins gastronomie</span>
-              <span class="seo-tag" role="listitem">bordeaux millésime exceptionnel</span>
-              <span class="seo-tag" role="listitem">cave à vins Afrique</span>
-              <span class="seo-tag" role="listitem">spiritueux Hennessy Togo</span>
-              <span class="seo-tag" role="listitem">pétrus 2018 prix</span>
-              <span class="seo-tag" role="listitem">dégustation vin rouge Bordeaux</span>
-            </div>
-          </div>
 
           <!-- Produits recommandés -->
           <div class="sidebar-box">
@@ -502,33 +443,38 @@
             <a href="catalogue.html" class="btn btn-primary btn-full" style="margin-top:1rem">Voir tout le catalogue</a>
           </div>
 
-          <!-- 5 Idées d'articles -->
+          <!-- 6 articles du magazine -->
           <div class="sidebar-box">
-            <h3 class="sidebar-box-title">📝 Programme éditorial</h3>
+            <h3 class="sidebar-box-title">📝 Nos articles</h3>
             <div class="article-idea-item">
               <p class="article-idea-num">Article 1</p>
-              <p class="article-idea-title">Whisky Single Malt : Guide des Connaisseurs</p>
-              <p class="article-idea-cat">Guide · Spiritueux</p>
+              <p class="article-idea-title">Qu'est-ce que le vin ? Définition & Histoire</p>
+              <p class="article-idea-cat">Éducation · Origines</p>
             </div>
             <div class="article-idea-item">
               <p class="article-idea-num">Article 2</p>
-              <p class="article-idea-title">Accords Mets-Vins : 10 Règles d'Or</p>
-              <p class="article-idea-cat">Accords · Gastronomie</p>
+              <p class="article-idea-title">Les 5 types de vins expliqués</p>
+              <p class="article-idea-cat">Guide · Dégustation</p>
             </div>
             <div class="article-idea-item">
               <p class="article-idea-num">Article 3</p>
-              <p class="article-idea-title">Dom Pérignon, Cristal, Krug : Lequel Choisir ?</p>
-              <p class="article-idea-cat">Dégustation · Champagne</p>
+              <p class="article-idea-title">10 bienfaits du vin rouge sur la santé</p>
+              <p class="article-idea-cat">Santé · Science</p>
             </div>
             <div class="article-idea-item">
               <p class="article-idea-num">Article 4</p>
-              <p class="article-idea-title">Cave à Vins en Climat Tropical</p>
-              <p class="article-idea-cat">Guide Pratique · Conservation</p>
+              <p class="article-idea-title">Top caves à vins de Lomé</p>
+              <p class="article-idea-cat">Guide Local · Lomé</p>
             </div>
             <div class="article-idea-item">
               <p class="article-idea-num">Article 5</p>
-              <p class="article-idea-title">L'Art du Cognac : Hennessy & Grande Champagne</p>
-              <p class="article-idea-cat">Spiritueux · Dégustation</p>
+              <p class="article-idea-title">5 cocktails maison faciles</p>
+              <p class="article-idea-cat">Mixologie · Recettes</p>
+            </div>
+            <div class="article-idea-item">
+              <p class="article-idea-num">Article 6</p>
+              <p class="article-idea-title">BB Brasserie : 60 ans à Lomé</p>
+              <p class="article-idea-cat">Portrait · Histoire</p>
             </div>
           </div>
 
@@ -537,7 +483,7 @@
             <h3 class="sidebar-box-title">✉️ Nos conseils par email</h3>
             <p style="font-size:.82rem;color:rgba(250,247,242,.6);margin-bottom:1rem;line-height:1.6">Recevez chaque mois nos articles, sélections et offres exclusives directement dans votre boîte mail.</p>
             <form class="newsletter-form" id="nl-sidebar-form" novalidate style="flex-direction:column">
-              <input type="email" name="email" required placeholder="Votre adresse email" aria-label="Email newsletter sidebar" / autocomplete="email">
+              <input type="email" name="email" required placeholder="Votre adresse email" aria-label="Email newsletter sidebar" autocomplete="email">
               <button type="submit" class="btn btn-gold btn-full" style="margin-top:.5rem">S'inscrire</button>
             </form>
           </div>
@@ -585,7 +531,7 @@
           <p data-i18n="blog.newsletter.desc">Recevez nos articles, nos nouvelles arrivées et nos offres exclusives directement dans votre boîte mail.</p>
         </div>
         <form class="newsletter-form" id="newsletter-form" novalidate>
-          <input type="email" id="nl-email" name="email" required placeholder="Votre adresse email" aria-label="Email newsletter" / autocomplete="email">
+          <input type="email" id="nl-email" name="email" required placeholder="Votre adresse email" aria-label="Email newsletter" autocomplete="email">
           <button type="submit" class="btn btn-gold" data-i18n="blog.newsletter.btn">S'inscrire</button>
         </form>
         <div class="form-success" id="nl-success" role="alert" hidden>Merci ! Vous êtes inscrit à notre newsletter.</div>
@@ -602,8 +548,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo" aria-label="Africa Wine Food">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/></svg>
-            <span>Africa <span class="logo-accent">Wine</span> Food</span>
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
+            <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
           </a>
           <p class="footer-slogan" data-i18n="footer.slogan">L'excellence viticole, au cœur de l'Afrique.</p>
           <div class="footer-social">
@@ -622,14 +568,14 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Thématiques Blog</h4>
+          <h4>Articles du Blog</h4>
           <ul role="list">
-            <li><a href="#article-bordeaux-2018">Dégustation & Millésimes</a></li>
-            <li><a href="#article-whisky">Guide Whisky</a></li>
-            <li><a href="#article-accords">Accords Mets-Vins</a></li>
-            <li><a href="#article-champagne">Champagnes de Prestige</a></li>
-            <li><a href="#article-cave">Cave à Vins Tropicale</a></li>
-            <li><a href="#article-cognac">Art du Cognac</a></li>
+            <li><a href="blog.html#article-bordeaux-2018">Bordeaux 2018</a></li>
+            <li><a href="definition-vin.html">Définition du vin</a></li>
+            <li><a href="types-de-vins.html">Les 5 types de vins</a></li>
+            <li><a href="bienfaits-vin-rouge.html">Bienfaits du vin rouge</a></li>
+            <li><a href="caves-lome.html">Caves à vins de Lomé</a></li>
+            <li><a href="cocktails-maison.html">Cocktails maison</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -646,7 +592,7 @@
   </div>
   <div class="footer-bottom">
     <div class="container">
-      <p class="footer-copy" data-i18n="footer.legal">&copy; 2025 Africa Wine Food. Tous droits réservés.</p>
+      <p class="footer-copy" data-i18n="footer.legal">&copy; 2026 Africa Wine Food. Tous droits réservés.</p>
       <p class="footer-warning" data-i18n="footer.warning">&#9888;&#65039; L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Interdit aux mineurs de moins de 18 ans.</p>
     </div>
   </div>
@@ -660,7 +606,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
-<script src="currency.js" defer></script>
-<script src="main.js" defer></script>
+<script src="assets/js/currency.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

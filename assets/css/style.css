@@ -108,6 +108,8 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .btn-text { color: var(--gold); font-size: .875rem; font-weight: 600; letter-spacing: .05em; padding: 0; text-transform: none; }
 .btn-text:hover { color: var(--gold-l); gap: .75rem; }
+.btn-outline { background: transparent; border: 1px solid rgba(250,247,242,.35); color: var(--cream); }
+.btn-outline:hover { background: rgba(250,247,242,.08); border-color: var(--cream); }
 .btn-call { background: transparent; border: 1px solid var(--gold); color: var(--gold); width: 100%; justify-content: center; margin: 1.25rem 0; }
 .btn-call:hover { background: var(--gold); color: var(--noir); }
 .btn-full { width: 100%; justify-content: center; }
@@ -1037,24 +1039,6 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .article-idea-num { font-size: .62rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .2rem; }
 .article-idea-title { font-size: .82rem; color: var(--cream); font-weight: 500; line-height: 1.35; }
 .article-idea-cat { font-size: .68rem; color: var(--muted); margin-top: .15rem; }
-
-/* Titres alternatifs sur les cards */
-.blog-alt-titles {
-  margin-top: .75rem;
-  padding-top: .75rem;
-  border-top: 1px solid rgba(201,168,76,.1);
-}
-.blog-alt-titles h5 {
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--gold-d);
-  margin-bottom: .4rem;
-}
-.blog-alt-titles ul { list-style: none; padding: 0; margin: 0; }
-.blog-alt-titles li { font-size: .75rem; color: #777; padding: .15rem 0; line-height: 1.35; }
-.blog-alt-titles li::before { content: '→ '; color: var(--gold-d); }
 
 /* Article complet */
 .blog-article-full-wrap {

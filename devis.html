@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devis — Africa Wine Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bordeaux: #6B1A2B;
+      --bordeaux-d: #4D0F1C;
+      --gold: #C9A84C;
+      --gold-l: #DFC07A;
+      --cream: #FAF7F2;
+      --noir: #1A1A1A;
+      --text: #2C2C2C;
+      --muted: #7A7069;
+      --border: #e8e0d5;
+      --ff-serif: 'Playfair Display', Georgia, serif;
+      --ff-sans: 'Raleway', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--ff-sans);
+      background: #EFEFEF;
+      color: var(--text);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,.13);
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--bordeaux-d);
+      padding: 44px 52px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon svg { color: var(--gold); }
+
+    .logo-text {
+      font-family: var(--ff-serif);
+      font-size: 1.45rem;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .logo-text span { color: var(--gold); }
+
+    .header-meta {
+      text-align: right;
+    }
+
+    .badge-devis {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bordeaux-d);
+      font-family: var(--ff-sans);
+      font-weight: 700;
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+
+    .devis-number {
+      font-family: var(--ff-serif);
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .devis-date {
+      font-size: .82rem;
+      color: rgba(250,247,242,.55);
+      margin-top: 4px;
+      font-weight: 300;
+    }
+
+    /* ── BAND OR ── */
+    .gold-band {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold-l), var(--gold), var(--gold-l));
+    }
+
+    /* ── INFOS PARTIES ── */
+    .parties {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .party {
+      padding: 32px 52px;
+    }
+
+    .party + .party {
+      border-left: 1px solid var(--border);
+    }
+
+    .party-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .party-name {
+      font-family: var(--ff-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--bordeaux-d);
+      margin-bottom: 6px;
+    }
+
+    .party-info {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* ── OBJET ── */
+    .objet-section {
+      padding: 24px 52px;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .objet-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .objet-text {
+      font-size: .92rem;
+      font-weight: 500;
+      color: var(--bordeaux-d);
+    }
+
+    /* ── TABLEAU PRESTATIONS ── */
+    .table-section { padding: 36px 52px; }
+
+    .table-title {
+      font-family: var(--ff-serif);
+      font-size: 1rem;
+      color: var(--bordeaux-d);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .table-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+
+    thead tr {
+      background: var(--bordeaux-d);
+      color: var(--cream);
+    }
+
+    thead th {
+      padding: 11px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    thead th:last-child { text-align: right; }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background .15s;
+    }
+
+    tbody tr:hover { background: #fdf9f4; }
+
+    tbody tr.subtotal-row { background: #fdf6ee; }
+
+    tbody td {
+      padding: 13px 16px;
+      vertical-align: top;
+    }
+
+    tbody td:last-child {
+      text-align: right;
+      font-weight: 600;
+      color: var(--bordeaux-d);
+      white-space: nowrap;
+    }
+
+    .td-num {
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 600;
+      width: 32px;
+    }
+
+    .td-desc strong {
+      display: block;
+      font-weight: 600;
+      color: var(--noir);
+      margin-bottom: 3px;
+    }
+
+    .td-desc span {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* séparateur catégorie */
+    .cat-row td {
+      background: #f4ece0;
+      padding: 7px 16px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--bordeaux);
+      border-bottom: none;
+    }
+
+    /* ── TOTAUX ── */
+    .totaux {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 52px 36px;
+    }
+
+    .totaux-box {
+      width: 310px;
+    }
+
+    .totaux-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+
+    .totaux-line:last-child { border-bottom: none; }
+
+    .totaux-line .lbl { color: var(--muted); }
+    .totaux-line .val { font-weight: 600; color: var(--bordeaux-d); }
+
+    .totaux-final {
+      background: var(--bordeaux-d);
+      border-radius: 3px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .totaux-final .lbl {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(250,247,242,.7);
+    }
+
+    .totaux-final .val {
+      font-family: var(--ff-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* ── MODALITÉS ── */
+    .modalites {
+      padding: 28px 52px;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .modal-item { }
+
+    .modal-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--bordeaux-d);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .modal-icon svg { color: var(--gold); }
+
+    .modal-title {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--bordeaux);
+      margin-bottom: 5px;
+    }
+
+    .modal-text {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .modal-text strong { color: var(--bordeaux-d); font-weight: 600; }
+
+    /* ── NOTE ── */
+    .note-section {
+      padding: 20px 52px;
+      border-top: 1px solid var(--border);
+    }
+
+    .note-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .note-text {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--bordeaux-d);
+      padding: 20px 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-text {
+      font-size: .75rem;
+      color: rgba(250,247,242,.5);
+    }
+
+    .footer-valid {
+      font-size: .75rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ── PRINT ── */
+    .print-btn {
+      display: block;
+      width: fit-content;
+      margin: 24px auto 0;
+      padding: 12px 32px;
+      background: var(--bordeaux-d);
+      color: var(--cream);
+      font-family: var(--ff-sans);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .print-btn:hover { background: var(--bordeaux); }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; }
+      .print-btn { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .header { padding: 28px 24px; flex-direction: column; }
+      .header-meta { text-align: left; }
+      .party { padding: 24px; }
+      .parties { grid-template-columns: 1fr; }
+      .party + .party { border-left: none; border-top: 1px solid var(--border); }
+      .objet-section, .table-section, .totaux, .note-section { padding-left: 24px; padding-right: 24px; }
+      .totaux { padding: 0 24px 28px; }
+      .totaux-box { width: 100%; }
+      .modalites { grid-template-columns: 1fr; padding: 24px; }
+      .footer { flex-direction: column; align-items: flex-start; padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+          <path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/>
+          <path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-text">Africa <span>Wine</span> Food</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <div class="badge-devis">Devis</div>
+      <div class="devis-number">N° AWF-2026-001</div>
+      <div class="devis-date">Émis le 13 mai 2026</div>
+    </div>
+  </div>
+
+  <div class="gold-band"></div>
+
+  <!-- PARTIES -->
+  <div class="parties">
+    <div class="party">
+      <div class="party-label">Prestataire</div>
+      <div class="party-name">Votre Nom / Studio</div>
+      <div class="party-info">
+        Développeur Web Freelance<br/>
+        Lomé, Togo<br/>
+        +228 XX XX XX XX<br/>
+        votre@email.com
+      </div>
+    </div>
+    <div class="party">
+      <div class="party-label">Client</div>
+      <div class="party-name">Africa Wine Food</div>
+      <div class="party-info">
+        Agence vins de luxe & spiritueux<br/>
+        Lomé, Togo<br/>
+        contact@africawinefood.com
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJET -->
+  <div class="objet-section">
+    <span class="objet-label">Objet</span>
+    <span class="objet-text">Création d'un site web vitrine premium — Africa Wine Food</span>
+  </div>
+
+  <!-- TABLEAU -->
+  <div class="table-section">
+    <div class="table-title">Détail des prestations</div>
+    <table>
+      <thead>
+        <tr>
+          <th class="td-num">#</th>
+          <th>Prestation</th>
+          <th style="text-align:right; width:130px">Montant</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- CAT 1 -->
+        <tr class="cat-row"><td colspan="3">Développement & Design</td></tr>
+
+        <tr>
+          <td class="td-num">01</td>
+          <td class="td-desc">
+            <strong>Conception & développement du site</strong>
+            <span>6 pages complètes (Accueil, Catalogue, À propos, Blog, Contact, Commande) — HTML5, CSS3, JavaScript vanilla, animations et interactions.</span>
+          </td>
+          <td>250 000 FCFA</td>
+        </tr>
+
+        <tr>
+          <td class="td-num">02</td>
+          <td class="td-desc">
+            <strong>Design premium & identité visuelle</strong>
+            <span>Palette luxe Bordeaux/Or, typographies Playfair Display & Raleway, mise en page haut de gamme responsive (mobile, tablette, desktop).</span>
+          </td>
+          <td>50 000 FCFA</td>
+        </tr>
+
+        <!-- CAT 2 -->
+        <tr class="cat-row"><td colspan="3">Hébergement & Domaine — 2 ans</td></tr>
+
+        <tr>
+          <td class="td-num">03</td>
+          <td class="td-desc">
+            <strong>Nom de domaine .com</strong>
+            <span>Enregistrement et renouvellement sur 2 ans — ex : africawinefood.com</span>
+          </td>
+          <td>18 000 FCFA</td>
+        </tr>
+
+        <tr>
+          <td class="td-num">04</td>
+          <td class="td-desc">
+            <strong>Hébergement web Premium (Hostinger)</strong>
+            <span>Hébergement partagé performance sur 2 ans — SSL gratuit inclus, bande passante illimitée, disponibilité 99,9%.</span>
+          </td>
+          <td>55 000 FCFA</td>
+        </tr>
+
+        <!-- CAT 3 -->
+        <tr class="cat-row"><td colspan="3">Maintenance & Support — 2 ans</td></tr>
+
+        <tr>
+          <td class="td-num">05</td>
+          <td class="td-desc">
+            <strong>Maintenance & support technique</strong>
+            <span>Mises à jour de contenu, corrections, suivi des performances et support réactif sur toute la durée du contrat (2 ans).</span>
+          </td>
+          <td>60 000 FCFA</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOTAUX -->
+  <div class="totaux">
+    <div class="totaux-box">
+      <div class="totaux-line">
+        <span class="lbl">Développement & Design</span>
+        <span class="val">300 000 FCFA</span>
+      </div>
+      <div class="totaux-line">
+        <span class="lbl">Hébergement 2 ans</span>
+        <span class="val">73 000 FCFA</span>
+      </div>
+      <div class="totaux-line">
+        <span class="lbl">Maintenance 2 ans</span>
+        <span class="val">60 000 FCFA</span>
+      </div>
+      <div class="totaux-line">
+        <span class="lbl">TVA</span>
+        <span class="val">Non applicable</span>
+      </div>
+      <div class="totaux-final">
+        <span class="lbl">Total TTC</span>
+        <span class="val">433 000 FCFA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALITÉS -->
+  <div class="modalites">
+    <div class="modal-item">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <div class="modal-title">Délai de livraison</div>
+      <div class="modal-text"><strong>7 à 14 jours</strong> ouvrés après réception de l'acompte et des contenus.</div>
+    </div>
+    <div class="modal-item">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <rect x="2" y="5" width="20" height="14" rx="2"/>
+          <path d="M2 10h20"/>
+        </svg>
+      </div>
+      <div class="modal-title">Modalités de paiement</div>
+      <div class="modal-text"><strong>50% à la commande</strong> — 216 500 FCFA<br/><strong>50% à la livraison</strong> — 216 500 FCFA</div>
+    </div>
+    <div class="modal-item">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <path d="M9 12l2 2 4-4"/>
+          <path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/>
+        </svg>
+      </div>
+      <div class="modal-title">Validité du devis</div>
+      <div class="modal-text">Ce devis est valable <strong>30 jours</strong> à compter de sa date d'émission.</div>
+    </div>
+  </div>
+
+  <!-- NOTE -->
+  <div class="note-section">
+    <div class="note-label">Note</div>
+    <div class="note-text">
+      Les droits sur le site web sont transférés intégralement au client après règlement complet. Les contenus (textes, images, logo) sont à fournir par le client. Toute modification majeure hors périmètre défini fera l'objet d'un avenant.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-text">Africa Wine Food — Devis N° AWF-2026-001 — Lomé, Togo</span>
+    <span class="footer-valid">Valable jusqu'au 12 juin 2026</span>
+  </div>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">🖨️ &nbsp;Imprimer / Sauvegarder en PDF</button>
+
+</body>
+</html>

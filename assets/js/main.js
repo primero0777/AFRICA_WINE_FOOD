@@ -126,7 +126,7 @@ const translations = {
     'order.form.delivery': 'Mode de livraison',
     'order.delivery.standard': 'Livraison standard (5–7 jours ouvrés)',
     'order.delivery.express':  'Livraison express (2–3 jours ouvrés)',
-    'order.delivery.pickup':   'Retrait en agence — Abidjan Plateau',
+    'order.delivery.pickup':   'Retrait en agence — Lomé',
     'order.form.occasion': 'Occasion',
     'order.form.occasion.placeholder': 'Sélectionner (optionnel)...',
     'order.occasion.perso':   'Cave personnelle',
@@ -147,9 +147,9 @@ const translations = {
     'about.pretitle':         'Notre histoire',
     'about.title':            'À propos',
     'about.story.title':      'Une passion née entre deux continents',
-    'about.story.p1':         "Fondée en 2009 à Abidjan par des passionnés de vin ayant fait leurs armes dans les plus grandes maisons bordelaises et bourguignonnes, Africa Wine Food est née d'une conviction : l'Afrique mérite un accès aux plus grands vins du monde, avec le service et l'expertise qui leur sont dus.",
+    'about.story.p1':         "Fondée en 2009 à Lomé par des passionnés de vin ayant fait leurs armes dans les plus grandes maisons bordelaises et bourguignonnes, Africa Wine Food est née d'une conviction : l'Afrique mérite un accès aux plus grands vins du monde, avec le service et l'expertise qui leur sont dus.",
     'about.story.p2':         "Depuis plus de 15 ans, nous sillonnons les vignobles du monde entier — Bordeaux, Bourgogne, Champagne, Napa Valley, Toscane — pour sélectionner avec rigueur les bouteilles qui méritent une place dans vos caves et vos tables d'exception.",
-    'about.story.p3':         "Implantés en Côte d'Ivoire avec des relais au Sénégal, au Ghana et au Cameroun, nous sommes la référence incontournable pour les amateurs et professionnels exigeants de toute l'Afrique de l'Ouest.",
+    'about.story.p3':         "Basés à Lomé, Togo, nous servons une clientèle exigeante partout en Afrique et à l'international. Nous sommes la référence incontournable pour les amateurs et professionnels du grand vin sur l'ensemble du continent.",
     'about.mission.title':    'Notre Mission',
     'about.mission.desc':     "Démocratiser l'accès aux grands vins et spiritueux d'exception en Afrique, en proposant une sélection pointue, un service irréprochable et une expertise authentique.",
     'about.vision.title':     'Notre Vision',
@@ -213,46 +213,46 @@ const translations = {
     'contact.info.address':       'Adresse',
     'contact.info.phone':         'Téléphone',
     'contact.call':               '📞 Appeler directement',
-    'contact.map':                'Plateau, Abidjan — Côte d\'Ivoire',
+    'contact.map':                'Quartier Administratif, Lomé — Togo',
 
     'footer.slogan':        "L'excellence viticole, au cœur de l'Afrique.",
     'footer.nav.title':     'Navigation',
     'footer.cat.title':     'Nos produits',
     'footer.contact.title': 'Contact',
     'footer.hours':         'Lun–Sam : 9h–19h',
-    'footer.legal':         '© 2025 Africa Wine Food. Tous droits réservés.',
+    'footer.legal':         '© {{year}} Africa Wine Food. Tous droits réservés.',
     'footer.warning':       "⚠️ L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Interdit aux mineurs de moins de 18 ans.",
     'whatsapp.label':       'WhatsApp',
 
     /* ---- Nouvelles cles multipage ---- */
-    'home.preview.pretitle': 'Nos selections du moment',
-    'home.preview.title':    'A la une',
-    'home.preview.subtitle': "Un avant-gout de notre catalogue d'exception.",
+    'home.preview.pretitle': 'Nos sélections du moment',
+    'home.preview.title':    'À la une',
+    'home.preview.subtitle': "Un avant-goût de notre catalogue d'exception.",
     'home.blog.all':         'Voir tous les articles',
 
-    'catalogue.cta.text': "Vous recherchez une bouteille en particulier ? Notre equipe est disponible pour vous aider.",
-    'catalogue.cta.btn':  'Demander un conseil personnalise',
+    'catalogue.cta.text': "Vous recherchez une bouteille en particulier ? Notre équipe est disponible pour vous aider.",
+    'catalogue.cta.btn':  'Demander un conseil personnalisé',
 
-    'about.header.subtitle': "Depuis 2009, la reference du vin de luxe en Afrique de l'Ouest.",
+    'about.header.subtitle': "Depuis 2009, la référence du vin de luxe en Afrique de l'Ouest.",
     'about.mvv.pretitle':    'Ce qui nous guide',
     'about.mvv.title':       'Mission, Vision & Valeurs',
     'about.stats.pretitle':  'En chiffres',
     'about.stats.title':     'Africa Wine Food en quelques chiffres',
     'about.cta.pretitle':    'Travaillons ensemble',
-    'about.cta.title':       'Pret a decouvrir notre selection ?',
+    'about.cta.title':       'Prêt à découvrir notre sélection ?',
     'about.cta.desc':        'Consultez notre catalogue ou contactez directement nos experts pour un accompagnement sur mesure.',
 
     'blog.more.pretitle':         'Autres articles',
-    'blog.more.title':            'A lire egalement',
-    'blog.a4.title':              'Champagne : comment choisir la bonne cuvee ?',
-    'blog.a4.excerpt':            "Brut, blanc de blancs, millesime ou prestige : notre guide pour decrypter les etiquettes de champagne et choisir la cuvee parfaite pour chaque occasion...",
-    'blog.a5.title':              'Constituer une cave a vins : les regles d\'or',
-    'blog.a5.excerpt':            "Temperature, hygrometrie, lumiere et organisation : tout ce qu'il faut savoir pour constituer et conserver une cave a vins de qualite en region tropicale...",
-    'blog.a6.title':              'Vins africains : les nouvelles cuvees a surveiller',
-    'blog.a6.excerpt':            "L'Afrique du Sud, le Maroc, la Tunisie et l'Algerie produisent des vins d'une qualite croissante. Notre selection des etiquettes africaines les plus prometteuses...",
-    'blog.a7.title':              "L'art du cognac : histoire, terroir et degustation",
-    'blog.a7.excerpt':            "De la Grande Champagne a l'Armagnac, notre immersion dans l'univers du cognac d'exception pour mieux comprendre ce spiritueux iconique aux multiples nuances...",
-    'blog.a1.body':               "Bordeaux 2024 est marque par un ete chaud et sec, tempere par des pluies automnales salvatrices. Les chateaux ayant les meilleures expositions et des sols a bonne retention hydrique ont produit des vins d'une concentration et d'une finesse rares.",
+    'blog.more.title':            'À lire également',
+    'blog.a4.title':              'Champagne : comment choisir la bonne cuvée ?',
+    'blog.a4.excerpt':            "Brut, blanc de blancs, millésime ou prestige : notre guide pour décrypter les étiquettes de champagne et choisir la cuvée parfaite pour chaque occasion...",
+    'blog.a5.title':              "Constituer une cave à vins : les règles d'or",
+    'blog.a5.excerpt':            "Température, hygrométrie, lumière et organisation : tout ce qu'il faut savoir pour constituer et conserver une cave à vins de qualité en région tropicale...",
+    'blog.a6.title':              'Vins africains : les nouvelles cuvées à surveiller',
+    'blog.a6.excerpt':            "L'Afrique du Sud, le Maroc, la Tunisie et l'Algérie produisent des vins d'une qualité croissante. Notre sélection des étiquettes africaines les plus prometteuses...",
+    'blog.a7.title':              "L'art du cognac : histoire, terroir et dégustation",
+    'blog.a7.excerpt':            "De la Grande Champagne à l'Armagnac, notre immersion dans l'univers du cognac d'exception pour mieux comprendre ce spiritueux iconique aux multiples nuances...",
+    'blog.a1.body':               "Bordeaux 2024 est marqué par un été chaud et sec, tempéré par des pluies automnales salvatrices. Les châteaux ayant les meilleures expositions et des sols à bonne rétention hydrique ont produit des vins d'une concentration et d'une finesse rares.",
     'blog.newsletter.title':      'Restez informe',
     'blog.newsletter.desc':       "Recevez nos conseils, nos nouveautes et nos offres exclusives directement dans votre boite mail.",
     'blog.newsletter.btn':        "S'inscrire",
@@ -263,8 +263,8 @@ const translations = {
     'contact.map.title':          'Notre adresse',
     'contact.offices.pretitle':   'Nos implantations',
     'contact.offices.title':      'Nos bureaux en Afrique',
-    'contact.offices.ci.city':    'Abidjan',
-    'contact.offices.ci.country': "Cote d'Ivoire — Siege social",
+    'contact.offices.ci.city':    'Lomé',
+    'contact.offices.ci.country': "Togo — Siège social",
     'contact.offices.sn.city':    'Dakar',
     'contact.offices.sn.country': 'Senegal — Bureau regional',
     'contact.offices.gh.city':    'Accra',
@@ -390,7 +390,7 @@ const translations = {
     'order.form.delivery': 'Delivery method',
     'order.delivery.standard': 'Standard delivery (5–7 business days)',
     'order.delivery.express':  'Express delivery (2–3 business days)',
-    'order.delivery.pickup':   'Agency pick-up — Abidjan Plateau',
+    'order.delivery.pickup':   'Agency pick-up — Lomé',
     'order.form.occasion': 'Occasion',
     'order.form.occasion.placeholder': 'Select (optional)...',
     'order.occasion.perso':   'Personal cellar',
@@ -411,9 +411,9 @@ const translations = {
     'about.pretitle':         'Our story',
     'about.title':            'About us',
     'about.story.title':      'A passion born between two continents',
-    'about.story.p1':         "Founded in 2009 in Abidjan by wine enthusiasts who trained at the greatest Bordeaux and Burgundy houses, Africa Wine Food was born from a conviction: Africa deserves access to the world's finest wines, with the service and expertise they deserve.",
+    'about.story.p1':         "Founded in 2009 in Lomé by wine enthusiasts who trained at the greatest Bordeaux and Burgundy houses, Africa Wine Food was born from a conviction: Africa deserves access to the world's finest wines, with the service and expertise they deserve.",
     'about.story.p2':         "For over 15 years, we have travelled the world's vineyards — Bordeaux, Burgundy, Champagne, Napa Valley, Tuscany — to rigorously select the bottles that deserve a place in your cellars and exceptional dining tables.",
-    'about.story.p3':         "Based in Côte d'Ivoire with offices in Senegal, Ghana and Cameroon, we are the unmissable reference for discerning enthusiasts and professionals across West Africa.",
+    'about.story.p3':         "Based in Lomé, Togo, we serve a discerning clientele across Africa and internationally. We are the unmissable reference for fine wine enthusiasts and professionals across the continent.",
     'about.mission.title':    'Our Mission',
     'about.mission.desc':     "To democratize access to exceptional fine wines and spirits in Africa, offering a curated selection, impeccable service and genuine expertise.",
     'about.vision.title':     'Our Vision',
@@ -477,14 +477,14 @@ const translations = {
     'contact.info.address':       'Address',
     'contact.info.phone':         'Phone',
     'contact.call':               '📞 Call directly',
-    'contact.map':                'Plateau, Abidjan — Côte d\'Ivoire',
+    'contact.map':                'Administrative District, Lomé — Togo',
 
     'footer.slogan':        "The finest wines & spirits, at the heart of Africa.",
     'footer.nav.title':     'Navigation',
     'footer.cat.title':     'Our products',
     'footer.contact.title': 'Contact',
     'footer.hours':         'Mon–Sat: 9am–7pm',
-    'footer.legal':         '© 2025 Africa Wine Food. All rights reserved.',
+    'footer.legal':         '© {{year}} Africa Wine Food. All rights reserved.',
     'footer.warning':       "⚠️ Alcohol abuse is dangerous for your health. Drink responsibly. Sale prohibited to persons under 18.",
     'whatsapp.label':       'WhatsApp',
 
@@ -527,8 +527,8 @@ const translations = {
     'contact.map.title':          'Our address',
     'contact.offices.pretitle':   'Our locations',
     'contact.offices.title':      'Our offices across Africa',
-    'contact.offices.ci.city':    'Abidjan',
-    'contact.offices.ci.country': "Côte d'Ivoire — Head office",
+    'contact.offices.ci.city':    'Lomé',
+    'contact.offices.ci.country': "Togo — Head office",
     'contact.offices.sn.city':    'Dakar',
     'contact.offices.sn.country': 'Senegal — Regional office',
     'contact.offices.gh.city':    'Accra',
@@ -544,13 +544,15 @@ let currentLang = 'fr';
 /* ---- Apply translations ---- */
 function applyTranslations(lang) {
   const t = translations[lang];
+  const year = new Date().getFullYear();
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) {
+      const val = typeof t[key] === 'string' ? t[key].replace('{{year}}', year) : t[key];
       if (key === 'hero.title') {
-        el.innerHTML = t[key];
+        el.innerHTML = val;
       } else {
-        el.textContent = t[key];
+        el.textContent = val;
       }
     }
   });
