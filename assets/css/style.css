@@ -87,6 +87,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   border-radius: 2px;
   transition: var(--tr);
   white-space: nowrap;
+  max-width: 100%;
 }
 .btn-primary {
   background: var(--bordeaux);
@@ -1362,6 +1363,24 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   /* WhatsApp label hidden on very small screens */
   .whatsapp-label { display: none; }
   .whatsapp-fab { border-radius: 50%; padding: .875rem; }
+
+  /* Article CTA boxes — boutons pleine largeur, texte wrappé */
+  .article-cta-box { padding: 1.5rem 1rem; }
+  .article-cta-box .btn {
+    display: flex;
+    width: 100%;
+    white-space: normal;
+    line-height: 1.4;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0 !important;
+    margin-bottom: .5rem;
+  }
+  .article-cta-box .btn:last-child { margin-bottom: 0; }
+
+  /* Article body — réduire padding sur petits écrans */
+  .article-body { padding: 1.25rem; }
+  .article-toc { padding: 1rem; }
 }
 
 @media (max-width: 480px) {
