@@ -126,17 +126,45 @@
             <h3 data-i18n="contact.devis.title">Demander un devis</h3>
             <form class="devis-form" id="devis-form" novalidate>
               <div class="form-group">
-                <label for="d-product" data-i18n="contact.devis.product">Produit souhaite</label>
-                <input type="text" id="d-product" name="product" />
+                <label for="d-product" data-i18n="contact.devis.product">Produit souhaité</label>
+                <select id="d-product" name="product">
+                  <option value="" disabled selected>— Sélectionnez un produit —</option>
+                  <option value="Château Margaux">Château Margaux</option>
+                  <option value="Opus One">Opus One</option>
+                  <option value="Dom Pérignon Vintage">Dom Pérignon Vintage</option>
+                  <option value="Cristal Roederer">Cristal Roederer</option>
+                  <option value="Puligny-Montrachet 1er Cru">Puligny-Montrachet 1er Cru</option>
+                  <option value="The Macallan 25 Years">The Macallan 25 Years</option>
+                  <option value="Hennessy Paradis Impérial">Hennessy Paradis Impérial</option>
+                  <option value="Krug Grande Cuvée">Krug Grande Cuvée</option>
+                  <option value="Pétrus">Pétrus</option>
+                  <option value="Sancerre Henri Bourgeois">Sancerre Henri Bourgeois</option>
+                  <option value="Romanée-Conti DRC">Romanée-Conti DRC</option>
+                  <option value="Glenfarclas 50 Years">Glenfarclas 50 Years</option>
+                  <option value="autre">Autre(s)</option>
+                </select>
+              </div>
+              <div class="form-group" id="d-product-other-group" hidden>
+                <label for="d-product-other">Précisez le produit</label>
+                <input type="text" id="d-product-other" name="product-other" placeholder="Nom du produit ou de l'article…" />
               </div>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="d-qty" data-i18n="contact.devis.quantity">Quantite</label>
+                  <label for="d-qty" data-i18n="contact.devis.quantity">Quantité</label>
                   <input type="number" id="d-qty" name="quantity" min="1" value="1" />
                 </div>
                 <div class="form-group">
                   <label for="d-occasion" data-i18n="contact.devis.occasion">Occasion</label>
-                  <input type="text" id="d-occasion" name="occasion" />
+                  <select id="d-occasion" name="occasion">
+                    <option value="" disabled selected>— Sélectionnez —</option>
+                    <option value="Mariage">Mariage</option>
+                    <option value="Anniversaire">Anniversaire</option>
+                    <option value="Soirée privée">Soirée privée</option>
+                    <option value="Événement d'entreprise">Événement d'entreprise</option>
+                    <option value="Cadeau">Cadeau</option>
+                    <option value="Dégustation">Dégustation</option>
+                    <option value="Autre">Autre</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
@@ -144,7 +172,7 @@
                 <input type="email" id="d-email" name="devis-email" autocomplete="email" required />
               </div>
               <button type="submit" class="btn btn-gold btn-full" data-i18n="contact.devis.send">Obtenir un devis</button>
-              <div class="form-success" id="devis-success" role="alert" hidden data-i18n="contact.devis.success">Devis demande ! Nous vous contactons rapidement.</div>
+              <div class="form-success" id="devis-success" role="alert" hidden data-i18n="contact.devis.success">Devis demandé ! Nous vous contactons rapidement.</div>
             </form>
           </div>
 

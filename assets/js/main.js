@@ -165,12 +165,6 @@ const translations = {
     'about.team.m1.name':     'Jean-Philippe Konan',
     'about.team.m1.role':     'Fondateur & Directeur général',
     'about.team.m1.bio':      "Diplômé de l'École du Vin de Bordeaux, 20 ans d'expérience dans la distribution de vins fins en Afrique et en Europe.",
-    'about.team.m2.name':     'Sophie Traoré',
-    'about.team.m2.role':     'Directrice des ventes & Sommelière',
-    'about.team.m2.bio':      "Master Sommelier certifiée, spécialiste des vins de Bourgogne et de Champagne. Elle dirige nos relations avec les établissements de luxe.",
-    'about.team.m3.name':     'David Mensah',
-    'about.team.m3.role':     'Responsable B2B & Développement',
-    'about.team.m3.bio':      "Expert en développement commercial et logistique internationale, il coordonne nos partenariats avec les hôtels et restaurants 5 étoiles.",
 
     'blog.pretitle':          'Actualités & conseils',
     'blog.title':             'Le Blog',
@@ -429,12 +423,6 @@ const translations = {
     'about.team.m1.name':     'Jean-Philippe Konan',
     'about.team.m1.role':     'Founder & CEO',
     'about.team.m1.bio':      "Graduate of the Bordeaux Wine School, 20 years of experience in fine wine distribution across Africa and Europe.",
-    'about.team.m2.name':     'Sophie Traoré',
-    'about.team.m2.role':     'Sales Director & Sommelier',
-    'about.team.m2.bio':      "Certified Master Sommelier, specialist in Burgundy and Champagne wines. She leads our relationships with luxury establishments.",
-    'about.team.m3.name':     'David Mensah',
-    'about.team.m3.role':     'B2B & Development Manager',
-    'about.team.m3.bio':      "Expert in commercial development and international logistics, he coordinates our partnerships with 5-star hotels and restaurants.",
 
     'blog.pretitle':          'News & advice',
     'blog.title':             'The Blog',
@@ -886,12 +874,25 @@ function initForms() {
   const devisForm    = document.getElementById('devis-form');
   const devisSuccess = document.getElementById('devis-success');
   if (devisForm && devisSuccess) {
+    const productSelect     = document.getElementById('d-product');
+    const otherGroup        = document.getElementById('d-product-other-group');
+    const otherInput        = document.getElementById('d-product-other');
+    if (productSelect && otherGroup) {
+      productSelect.addEventListener('change', () => {
+        const isOther = productSelect.value === 'autre';
+        otherGroup.hidden = !isOther;
+        if (otherInput) otherInput.required = isOther;
+        if (!isOther && otherInput) otherInput.value = '';
+      });
+    }
     devisForm.addEventListener('submit', e => {
       e.preventDefault();
       const email = devisForm.querySelector('[type="email"]');
       if (!email.value) return;
       devisSuccess.hidden = false;
       devisForm.reset();
+      if (otherGroup) otherGroup.hidden = true;
+      if (otherInput) { otherInput.required = false; otherInput.value = ''; }
       setTimeout(() => { devisSuccess.hidden = true; }, 5000);
     });
   }
