@@ -1710,34 +1710,55 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   margin-top: .75rem;
 }
 
-.btn-details {
+.product-card-actions .btn-details,
+.product-card-actions .btn-add-cart {
   flex: 1;
-}
-
-.btn-add-cart {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .5rem .7rem;
-  background: transparent;
-  border: 1px solid var(--border);
+  padding: .5rem .6rem;
   border-radius: 2px;
-  color: var(--bordeaux);
+  font-family: var(--ff-sans);
+  font-size: .78rem;
+  font-weight: 600;
   cursor: pointer;
   transition: background var(--tr), color var(--tr), border-color var(--tr);
-  flex-shrink: 0;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  gap: .35rem;
 }
-.btn-add-cart:hover,
-.btn-add-cart:focus-visible {
-  background: var(--gold);
-  color: white;
-  border-color: var(--gold);
-  outline: none;
+
+.product-card-actions .btn-details {
+  background: transparent;
+  border-color: var(--bordeaux);
+  color: var(--bordeaux);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-top: 0;
+  width: auto;
 }
-.btn-add-cart.added {
+.product-card-actions .btn-details:hover,
+.product-card-actions .btn-details:focus-visible {
   background: var(--bordeaux);
   color: var(--cream);
+  outline: none;
+}
+
+.product-card-actions .btn-add-cart {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+.product-card-actions .btn-add-cart:hover,
+.product-card-actions .btn-add-cart:focus-visible {
+  background: var(--gold-d, #9a6c00);
+  border-color: var(--gold-d, #9a6c00);
+  outline: none;
+}
+.product-card-actions .btn-add-cart.added {
+  background: var(--bordeaux);
   border-color: var(--bordeaux);
+  color: var(--cream);
 }
 
 /* Modal add-to-cart button */

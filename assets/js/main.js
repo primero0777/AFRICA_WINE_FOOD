@@ -88,7 +88,7 @@ const translations = {
     'badge.cognac':             'Cognac',
     'badge.rare':               'Collection Rare',
 
-    'modal.details':  'Voir les détails',
+    'modal.details':  'Détails',
     'modal.cepage':   'Cépage(s)',
     'modal.region':   'Région',
     'modal.service':  'Température de service',
@@ -352,7 +352,7 @@ const translations = {
     'badge.cognac':             'Cognac',
     'badge.rare':               'Rare Collection',
 
-    'modal.details':  'View details',
+    'modal.details':  'Details',
     'modal.cepage':   'Grape variety',
     'modal.region':   'Region',
     'modal.service':  'Serving temperature',
