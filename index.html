@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr" data-lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -27,6 +27,7 @@
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&q=80&auto=format&fit=crop" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://www.africawinefood.com/" />
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Africa Wine Food">
     <meta property="og:title" content="Africa Wine Food — L'excellence viticole au cœur de l'Afrique">
@@ -34,6 +35,7 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80">
   </head>
   <body data-page="home">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <!-- NAVIGATION -->
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="nav-container">
@@ -140,7 +142,7 @@
       </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <!-- HERO -->
       <div class="hero" id="hero">
         <div
@@ -508,6 +510,10 @@
               <div class="preview-img">
                 <img
                   src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=500&q=80&auto=format&fit=crop"
+                  srcset="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=400&q=75&auto=format&fit=crop 400w,
+                          https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&q=80&auto=format&fit=crop 600w,
+                          https://images.unsplash.com/photo-1474722883778-792e7990302f?w=900&q=80&auto=format&fit=crop 900w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt="Grands vins rouges"
                   loading="lazy"
                 />
@@ -528,6 +534,10 @@
               <div class="preview-img">
                 <img
                   src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=500&q=80&auto=format&fit=crop"
+                  srcset="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=400&q=75&auto=format&fit=crop 400w,
+                          https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80&auto=format&fit=crop 600w,
+                          https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=900&q=80&auto=format&fit=crop 900w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt="Champagnes de prestige"
                   loading="lazy"
                 />
@@ -550,6 +560,10 @@
               <div class="preview-img">
                 <img
                   src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=500&q=80&auto=format&fit=crop"
+                  srcset="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400&q=75&auto=format&fit=crop 400w,
+                          https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=600&q=80&auto=format&fit=crop 600w,
+                          https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=900&q=80&auto=format&fit=crop 900w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt="Spiritueux premium single malt"
                   loading="lazy"
                 />
@@ -572,6 +586,53 @@
               data-i18n="hero.cta"
               >Decouvrir notre catalogue</a
             >
+          </div>
+        </div>
+      </div>
+
+      <!-- TELECHARGEMENT CATALOGUE -->
+      <div class="section section-download-catalogue animate-on-scroll">
+        <div class="container">
+          <div class="download-catalogue-inner">
+            <div class="download-catalogue-deco" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" width="120" height="120">
+                <circle cx="60" cy="60" r="58" stroke="currentColor" stroke-width="1" opacity=".25"/>
+                <path d="M40 42v4M60 38v8M80 42v4M32 54c0 20 10 34 28 34s28-14 28-34H32z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M45 72c3 3 8 5 15 5s12-2 15-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="download-catalogue-body">
+              <p class="section-pretitle">Notre catalogue complet</p>
+              <h2 class="download-catalogue-title">Téléchargez notre catalogue</h2>
+              <p class="download-catalogue-text">Accédez à notre sélection complète de grands crus, champagnes, spiritueux premium et collections rares — disponible en PDF pour consultation hors ligne.</p>
+              <a
+                href="assets/docs/catalogues.pdf"
+                download="Africa_Wine_Food_Catalogue.pdf"
+                class="btn btn-download"
+                aria-label="Télécharger le catalogue Africa Wine Food en PDF"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Télécharger le catalogue PDF
+              </a>
+            </div>
+            <div class="download-catalogue-stats">
+              <div class="dl-stat">
+                <span class="dl-stat-num">200+</span>
+                <span class="dl-stat-label">Références</span>
+              </div>
+              <div class="dl-stat">
+                <span class="dl-stat-num">15+</span>
+                <span class="dl-stat-label">Pays producteurs</span>
+              </div>
+              <div class="dl-stat">
+                <span class="dl-stat-num">4</span>
+                <span class="dl-stat-label">Univers</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -741,6 +802,7 @@
                 <li>
                   <a href="contact.html" data-i18n="nav.contact">Contact</a>
                 </li>
+                <li><a href="devis.html">Demander un devis</a></li>
               </ul>
             </div>
             <div class="footer-col">
@@ -795,7 +857,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copy" data-i18n="footer.legal">
-            &copy; 2026 Africa Wine Food. Tous droits reserves.
+            &copy; 2026 Africa Wine Food. Tous droits réservés. &nbsp;·&nbsp; <a href="confidentialite.html" style="color:inherit;text-decoration:underline;">Politique de confidentialité</a>
           </p>
           <p class="footer-warning" data-i18n="footer.warning">
             &#9888;&#65039; L'abus d'alcool est dangereux pour la sante. A

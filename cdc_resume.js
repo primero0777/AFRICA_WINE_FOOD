@@ -61,7 +61,6 @@ function pb() {
   return new Paragraph({ children: [new PageBreak()] });
 }
 
-// ── Tableau simple ──
 function tbl(headers, rows, cols) {
   return new Table({
     width: { size: cols.reduce((a, b) => a + b, 0), type: WidthType.DXA },
@@ -90,13 +89,12 @@ function tbl(headers, rows, cols) {
   });
 }
 
-// ── Boîte info colorée ──
 function infoBox(title, text, bg) {
   bg = bg || LIGHT_BG;
   var cell = new TableCell({
     width: { size: 9026, type: WidthType.DXA },
     shading: { fill: bg, type: ShadingType.CLEAR },
-    borders: { top: border(GOLD), bottom: border(GOLD), left: { style: BorderStyle.SINGLE, size: 12, color: BORDEAUX }, right: border('F5EDE0') },
+    borders: { top: border(GOLD), bottom: border(GOLD), left: { style: BorderStyle.SINGLE, size: 12, color: BORDEAUX }, right: border(bg) },
     margins: { top: 120, bottom: 120, left: 200, right: 200 },
     children: [
       new Paragraph({ spacing: { before: 0, after: 60 }, children: [new TextRun({ text: title, font: 'Arial', size: 20, bold: true, color: BORDEAUX })] }),
@@ -110,12 +108,9 @@ function infoBox(title, text, bg) {
   });
 }
 
-// ── Total box ──
 function totalBox(lignes) {
   var paragraphs = lignes.map(function(item) {
-    var lbl = item[0];
-    var val = item[1];
-    var hi  = item[2];
+    var lbl = item[0], val = item[1], hi = item[2];
     return new Paragraph({
       spacing: { before: 80, after: 80 },
       children: [
@@ -205,7 +200,7 @@ const doc = new Document({
         alignment: AlignmentType.CENTER,
         spacing: { before: 0, after: 280 },
         border: { bottom: { style: BorderStyle.SINGLE, size: 5, color: GOLD, space: 10 } },
-        children: [new TextRun({ text: 'VERSION RÉSUMÉE', font: 'Arial', size: 28, color: GOLD, allCaps: true })]
+        children: [new TextRun({ text: 'VERSION RÉSUMÉE — V2.0', font: 'Arial', size: 28, color: GOLD, allCaps: true })]
       }),
       sp(),
       new Paragraph({
@@ -225,7 +220,7 @@ const doc = new Document({
         rows: [
           new TableRow({ children: [
             new TableCell({ width: { size: 2400, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 90, bottom: 90, left: 140, right: 140 }, children: [new Paragraph({ children: [new TextRun({ text: 'Version', font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
-            new TableCell({ width: { size: 3600, type: WidthType.DXA }, shading: { fill: LIGHT_BG, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 90, bottom: 90, left: 140, right: 140 }, children: [new Paragraph({ children: [new TextRun({ text: '1.0 Résumée — 13 mai 2026', font: 'Arial', size: 20, color: DARK })] })] }),
+            new TableCell({ width: { size: 3600, type: WidthType.DXA }, shading: { fill: LIGHT_BG, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 90, bottom: 90, left: 140, right: 140 }, children: [new Paragraph({ children: [new TextRun({ text: '2.0 Résumée — 15 mai 2026', font: 'Arial', size: 20, color: DARK })] })] }),
           ]}),
           new TableRow({ children: [
             new TableCell({ width: { size: 2400, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 90, bottom: 90, left: 140, right: 140 }, children: [new Paragraph({ children: [new TextRun({ text: 'Client', font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
@@ -247,28 +242,44 @@ const doc = new Document({
         "Agence togolaise de sélection et distribution de vins de luxe et spiritueux premium à destination du marché africain (hôtels, restaurants, particuliers, entreprises)."
       ),
       sp(),
-      p('Le projet consiste en la création d\'un site vitrine premium 6 pages pour renforcer la présence digitale de la marque et générer des prises de contact qualifiées.'),
+      p('Le projet consiste en la création d\'un site vitrine premium 16 pages pour renforcer la présence digitale de la marque et générer des prises de contact qualifiées.'),
       sp(),
       p('Objectifs principaux :', { bold: true }),
       blt("Asseoir le positionnement luxe de la marque en ligne"),
       blt("Présenter les 4 univers produits (vins, champagnes, spiritueux, collections)"),
-      blt("Permettre la navigation bilingue FR/EN et multi-devises"),
-      blt("Générer des commandes et demandes de contact directement depuis le site"),
+      blt("Permettre la navigation bilingue FR/EN et multi-devises (XOF/EUR/USD)"),
+      blt("Générer des commandes et devis directement depuis le site"),
+      blt("Protéger l'historique des devis par accès administrateur sécurisé"),
+      blt("Garantir la conformité légale internationale (RGPD, CCPA, Loi togolaise 2019-014)"),
       sp(),
 
       // ── 2. PÉRIMÈTRE ──
       h1('2. Périmètre du projet'),
+      h2('Pages principales (navigation publique)'),
       tbl(
         ['Page', 'Contenu principal'],
         [
           ['Accueil (index.html)', 'Hero, univers produits, arguments, chiffres clés, blog'],
-          ['Catalogue', 'Produits filtrables + téléchargement PDF'],
-          ['À propos', 'Histoire, valeurs, équipe'],
-          ['Blog', 'Articles et actualités'],
-          ['Contact', 'Formulaire + coordonnées'],
-          ['Commande', 'Formulaire de commande produits'],
+          ['Catalogue (catalogue.html)', 'Produits filtrables + téléchargement PDF'],
+          ['À propos (about.html)', 'Histoire, valeurs, équipe'],
+          ['Blog (blog.html)', 'Articles et actualités'],
+          ['Contact (contact.html)', 'Formulaire + coordonnées + carte'],
+          ['Commande (commande.html)', 'Formulaire de commande multi-produits'],
         ],
         [3200, 5826]
+      ),
+      sp(),
+      h2('Pages de support & articles'),
+      tbl(
+        ['Page', 'Rôle'],
+        [
+          ['devis.html', 'Document devis PDF généré dynamiquement après commande'],
+          ['historique.html', 'Administration des devis — accès sécurisé par mot de passe'],
+          ['confidentialite.html', 'Politique de confidentialité internationale (RGPD, CCPA, Malabo)'],
+          ['404.html', 'Page d\'erreur 404 personnalisée avec redirection'],
+          ['6 pages articles blog', 'bb-brasserie, bienfaits-vin-rouge, cocktails-maison, caves-lome, definition-vin, types-de-vins'],
+        ],
+        [2800, 6226]
       ),
       sp(),
 
@@ -276,14 +287,23 @@ const doc = new Document({
       tbl(
         ['Fonctionnalité', 'Statut'],
         [
-          ['Bilingue FR / EN dynamique', 'Inclus'],
-          ['Convertisseur de devises (XOF / EUR / USD)', 'Inclus'],
-          ['Design 100% responsive (mobile, tablette, desktop)', 'Inclus'],
-          ['Animations : parallaxe, carousel, compteurs', 'Inclus'],
-          ['Navigation sticky + hamburger mobile', 'Inclus'],
-          ['Filtres catalogue + PDF téléchargeable', 'Inclus'],
-          ['Formulaires contact & commande', 'Inclus'],
-          ['SEO de base (balises meta, titres, descriptions)', 'Inclus'],
+          ['Bilingue FR / EN dynamique (sans rechargement)', 'Livré'],
+          ['Convertisseur de devises XOF / EUR / USD', 'Livré'],
+          ['Design responsive — 320px à 4K (5 breakpoints)', 'Livré'],
+          ['Optimisation cross-browser (Chrome, Firefox, Safari, Edge)', 'Livré'],
+          ['Accessibilité : prefers-reduced-motion, focus-visible, ARIA', 'Livré'],
+          ['Cibles tactiles ≥ 44px — compatible touch / pointer: coarse', 'Livré'],
+          ['Anti-zoom iOS — font-size ≥ 16px sur tous les inputs', 'Livré'],
+          ['Génération de devis PDF dynamique (localStorage)', 'Livré'],
+          ['Historique admin sécurisé par mot de passe (overlay login)', 'Livré'],
+          ['Politique de confidentialité internationale (13 articles)', 'Livré'],
+          ['Navigation sticky + hamburger mobile animé', 'Livré'],
+          ['Filtres catalogue + téléchargement PDF', 'Livré'],
+          ['Formulaires contact & commande avec validation', 'Livré'],
+          ['WhatsApp FAB + partage devis sur WhatsApp', 'Livré'],
+          ['SEO : meta, Open Graph, sitemap.xml, robots.txt', 'Livré'],
+          ['Séparation totale HTML / CSS (aucun style inline dans <head>)', 'Livré'],
+          ['Page 404 personnalisée aux couleurs de la marque', 'Livré'],
         ],
         [5500, 3526]
       ),
@@ -291,9 +311,23 @@ const doc = new Document({
 
       // ── 3. TECHNIQUE ──
       h1('3. Aspects techniques'),
-      p('Technologies : HTML5, CSS3, JavaScript vanilla (ES6+), sans framework ni CMS.'),
-      p('Volume de code : ~6 000 lignes (2 129 CSS / 1 633 JS / ~2 000 HTML).'),
+      tbl(
+        ['Fichier', 'Rôle', 'Lignes'],
+        [
+          ['style.css', 'Feuille de styles globale — responsive, animations, admin', '3 056'],
+          ['devis.css', 'Styles du document devis (standalone)', '508'],
+          ['main.js', 'Logique principale — i18n, carousel, filtres, devise, animations', '1 723'],
+          ['historique.js', 'Logique admin — authentification, tri, CRUD devis', '255'],
+          ['HTML (16 pages)', 'Structure sémantique complète', '5 661'],
+          ['TOTAL', 'Volume de code source', '11 203'],
+        ],
+        [2800, 4400, 1826]
+      ),
+      sp(),
+      p('Technologies : HTML5, CSS3, JavaScript Vanilla ES6+. Aucun framework, aucun CMS, aucune dépendance externe.'),
       p('Charte graphique : Bordeaux #4D0F1C, Or #C9A84C, Crème #FAF7F2 — typographies Playfair Display & Raleway.'),
+      sp(),
+      infoBox('Architecture CSS propre', 'Aucune balise <style> dans les fichiers HTML. Tout le CSS est externalisé dans style.css et devis.css, garantissant une maintenance facile et des performances optimales.'),
       sp(),
 
       // ── 4. HÉBERGEMENT ──
@@ -315,9 +349,11 @@ const doc = new Document({
         ['Phase', 'Durée'],
         [
           ['Maquettage + validation client', '1-2 jours'],
-          ['Développement complet (6 pages)', '7-9 jours'],
-          ['Tests, optimisation, mise en ligne', '2-3 jours'],
-          ['Livraison finale', 'Jour 14 maximum'],
+          ['Développement pages principales (6)', '7-9 jours'],
+          ['Développement pages articles, devis, admin, 404, confidentialité', '3-4 jours'],
+          ['Optimisation cross-browser, responsive, accessibilité', '1-2 jours'],
+          ['Tests, mise en ligne, livraison', '1-2 jours'],
+          ['TOTAL', '14-20 jours ouvrables'],
         ],
         [5500, 3526]
       ),
@@ -332,8 +368,11 @@ const doc = new Document({
       tbl(
         ['Poste', 'Montant FCFA', 'Montant EUR'],
         [
-          ['Conception & développement (6 pages)', '250 000', '~381 €'],
+          ['Conception & développement (16 pages)', '350 000', '~534 €'],
           ['Design premium & charte graphique', '50 000', '~76 €'],
+          ['Système devis + admin sécurisé', '40 000', '~61 €'],
+          ['Conformité légale (RGPD, CCPA, Malabo)', '20 000', '~31 €'],
+          ['Optimisation cross-browser & accessibilité', '20 000', '~31 €'],
           ['Nom de domaine .com (2 ans)', '18 000', '~27 €'],
           ['Hébergement web Premium (2 ans)', '55 000', '~84 €'],
           ['Maintenance & support (2 ans)', '60 000', '~92 €'],
@@ -343,10 +382,10 @@ const doc = new Document({
       sp(),
 
       totalBox([
-        ['Développement & Design', '300 000 FCFA', false],
+        ['Développement & Design (16 pages + fonctionnalités)', '480 000 FCFA', false],
         ['Infrastructure 2 ans (hébergement + domaine)', '73 000 FCFA', false],
         ['Maintenance & Support 2 ans', '60 000 FCFA', false],
-        ['TOTAL TTC', '433 000 FCFA  (~660 €)', true],
+        ['TOTAL TTC', '613 000 FCFA  (~935 €)', true],
       ]),
       sp(),
 
@@ -354,8 +393,8 @@ const doc = new Document({
       tbl(
         ['Échéance', 'Montant', 'Déclencheur'],
         [
-          ['Acompte — 50%', '216 500 FCFA', 'Signature du devis'],
-          ['Solde — 50%', '216 500 FCFA', 'Livraison du site en ligne'],
+          ['Acompte — 50%', '306 500 FCFA', 'Signature du devis'],
+          ['Solde — 50%', '306 500 FCFA', 'Livraison du site en ligne'],
         ],
         [3000, 2800, 3226]
       ),
@@ -363,7 +402,7 @@ const doc = new Document({
       p('Moyens de paiement acceptés : Flooz, T-Money, Wave, Orange Money, virement, espèces.'),
       sp(),
 
-      infoBox('Validité du devis', "Ce cahier des charges et le devis associé (N° AWF-2026-001) sont valables 30 jours, soit jusqu'au 12 juin 2026."),
+      infoBox('Validité du devis', "Ce cahier des charges et le devis associé (N° AWF-2026-001) sont valables 30 jours, soit jusqu'au 14 juin 2026."),
       sp(),
 
       // ── 7. BON POUR ACCORD ──

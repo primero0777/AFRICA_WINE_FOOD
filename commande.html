@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -15,6 +15,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://www.africawinefood.com/commande.html" />
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Africa Wine Food">
   <meta property="og:title" content="Ma Sélection — Africa Wine Food">
@@ -22,12 +23,13 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80">
 </head>
 <body data-page="commande">
-
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
 <!-- NAVIGATION -->
 <nav id="navbar" role="navigation" aria-label="Navigation principale">
   <div class="nav-container">
     <a href="index.html" class="nav-logo" aria-label="Africa Wine Food - Accueil">
-      <img src="assets/logo2.jpg" alt="Africa Wine Food" class="logo-img" />
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
+      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
     </a>
     <div class="nav-menu" id="nav-menu">
       <ul class="nav-links" role="list">
@@ -57,7 +59,7 @@
   </div>
 </nav>
 
-<main>
+<main id="main-content">
 
   <!-- PAGE HEADER -->
   <header class="page-header">
@@ -113,113 +115,48 @@
             <a href="catalogue.html" class="btn btn-outline cart-continue-btn" data-i18n="order.continue">
               ← Continuer mes achats
             </a>
-          </div>
-        </div>
-
-        <!-- Colonne droite : formulaire de commande -->
-        <div class="commande-form-col">
-          <h2 class="commande-col-title" data-i18n="order.form.title">Vos coordonnées</h2>
-
-          <form id="order-form" class="order-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="order-prenom" data-i18n="order.form.prenom">Prénom *</label>
-                <input type="text" id="order-prenom" name="prenom" autocomplete="given-name" placeholder="Jean" required />
-              </div>
-              <div class="form-group">
-                <label for="order-nom" data-i18n="order.form.nom">Nom *</label>
-                <input type="text" id="order-nom" name="nom" autocomplete="family-name" placeholder="Agbodjan" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="order-email" data-i18n="order.form.email">Email *</label>
-              <input type="email" id="order-email" name="email" autocomplete="email" placeholder="exemple@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="order-phone" data-i18n="order.form.phone">Téléphone *</label>
-              <input type="tel" id="order-phone" name="phone" autocomplete="tel" placeholder="+228 90 11 22 33" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="order-pays" data-i18n="order.form.pays">Pays *</label>
-                <select id="order-pays" name="pays" required>
-                  <option value="">Sélectionner...</option>
-                  <option value="TG" selected>Togo</option>
-                  <option value="BJ">Bénin</option>
-                  <option value="CI">Côte d'Ivoire</option>
-                  <option value="SN">Sénégal</option>
-                  <option value="GH">Ghana</option>
-                  <option value="CM">Cameroun</option>
-                  <option value="ML">Mali</option>
-                  <option value="BF">Burkina Faso</option>
-                  <option value="NE">Niger</option>
-                  <option value="GN">Guinée</option>
-                  <option value="BF">Burkina Faso</option>
-                  <option value="GA">Gabon</option>
-                  <option value="CG">Congo</option>
-                  <option value="NG">Nigeria</option>
-                  <option value="FR">France</option>
-                  <option value="BE">Belgique</option>
-                  <option value="CH">Suisse</option>
-                  <option value="OTHER">Autre</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="order-ville" data-i18n="order.form.ville">Ville *</label>
-                <input type="text" id="order-ville" name="ville" autocomplete="address-level2" placeholder="Lomé" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="order-adresse" data-i18n="order.form.adresse">Adresse de livraison</label>
-              <input type="text" id="order-adresse" name="adresse" autocomplete="street-address" placeholder="Boulevard du 13 Janvier, Quartier Administratif" />
-            </div>
-            <div class="form-group">
-              <label for="order-livraison" data-i18n="order.form.delivery">Mode de livraison</label>
-              <select id="order-livraison" name="livraison">
-                <option value="standard">Livraison standard (5–7 jours ouvrés)</option>
-                <option value="express">Livraison express (2–3 jours ouvrés)</option>
-                <option value="pickup">Retrait en agence — Lomé, Quartier Administratif</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="order-occasion" data-i18n="order.form.occasion">Occasion</label>
-              <select id="order-occasion" name="occasion">
-                <option value="">Sélectionner (optionnel)...</option>
-                <option value="perso">Cave personnelle</option>
-                <option value="cadeau">Cadeau</option>
-                <option value="event">Événement / Réception</option>
-                <option value="business">Cadeau d'affaires</option>
-                <option value="invest">Investissement viticole</option>
-                <option value="resto">Restaurant / Hôtel</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="order-notes" data-i18n="order.form.notes">Notes &amp; instructions spéciales</label>
-              <textarea id="order-notes" name="notes" rows="3" placeholder="Occasion particulière, préférences d'emballage, date souhaitée..." data-i18n-placeholder="order.form.notes.placeholder"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary order-submit-btn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></svg>
-              <span data-i18n="order.form.submit">Envoyer ma demande de commande</span>
+            <button id="btn-generer-devis" class="btn btn-primary cart-devis-btn">
+              📋 Générer mon devis
             </button>
-            <p class="order-disclaimer" data-i18n="order.disclaimer">
-              En soumettant ce formulaire, vous acceptez d'être recontacté par notre équipe pour confirmer votre commande et les modalités de paiement sécurisé. Aucun prélèvement ne sera effectué sans votre accord préalable.
-            </p>
-          </form>
-
-          <!-- Succès -->
-          <div id="order-success" class="order-success-card" hidden>
-            <div class="order-success-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 data-i18n="order.success.title">Demande envoyée !</h3>
-            <p data-i18n="order.success.desc">Notre équipe vous contactera sous 24h pour confirmer votre commande et vous transmettre un devis personnalisé avec les modalités de paiement.</p>
-            <div class="order-success-actions">
-              <a href="catalogue.html" class="btn btn-outline" data-i18n="order.success.catalogue">Retour au catalogue</a>
-              <a href="index.html" class="btn btn-primary" data-i18n="order.success.home">Accueil</a>
-            </div>
           </div>
-
         </div>
+
+        <!-- Colonne droite : guide commande -->
+        <div class="order-guide">
+          <h3 class="order-guide-title">Comment passer commande ?</h3>
+          <ol class="order-guide-steps">
+            <li class="order-guide-step">
+              <span class="order-guide-num">1</span>
+              <div>
+                <strong>Sélectionnez vos produits</strong>
+                <p>Parcourez notre catalogue et ajoutez les bouteilles souhaitées à votre sélection.</p>
+              </div>
+            </li>
+            <li class="order-guide-step">
+              <span class="order-guide-num">2</span>
+              <div>
+                <strong>Choisissez votre devise</strong>
+                <p>Cliquez sur "Générer mon devis" et sélectionnez F CFA ou Dollar US.</p>
+              </div>
+            </li>
+            <li class="order-guide-step">
+              <span class="order-guide-num">3</span>
+              <div>
+                <strong>Recevez votre devis</strong>
+                <p>Un devis détaillé est généré instantanément avec vos prix et quantités.</p>
+              </div>
+            </li>
+            <li class="order-guide-step">
+              <span class="order-guide-num">4</span>
+              <div>
+                <strong>Confirmez via WhatsApp</strong>
+                <p>Renseignez vos coordonnées — le devis PDF est téléchargé et notre équipe reçoit votre commande directement sur WhatsApp.</p>
+              </div>
+            </li>
+          </ol>
+          <p class="order-guide-note">Livraison disponible à Lomé et dans toute la sous-région. Délais et modalités confirmés par notre équipe.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -232,8 +169,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo" aria-label="Africa Wine Food - Retour accueil">
-            <img src="assets/logo2.jpg" alt="Africa Wine Food" class="logo-img" />
+          <a href="index.html" class="footer-logo" aria-label="Africa Wine Food">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/></svg>
+            <span>Africa <span class="logo-accent">Wine</span> Food</span>
           </a>
           <p class="footer-slogan" data-i18n="footer.slogan">L'excellence viticole, au coeur de l'Afrique.</p>
           <div class="footer-social">
@@ -249,6 +187,7 @@
             <li><a href="about.html"     data-i18n="nav.about">À propos</a></li>
             <li><a href="blog.html"      data-i18n="nav.blog">Blog</a></li>
             <li><a href="contact.html"   data-i18n="nav.contact">Contact</a></li>
+            <li><a href="devis.html">Demander un devis</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -275,7 +214,7 @@
   </div>
   <div class="footer-bottom">
     <div class="container">
-      <p class="footer-copy" data-i18n="footer.legal">&copy; 2026 Africa Wine Food. Tous droits reserves.</p>
+      <p class="footer-copy" data-i18n="footer.legal">&copy; 2026 Africa Wine Food. Tous droits réservés. &nbsp;·&nbsp; <a href="confidentialite.html" style="color:inherit;text-decoration:underline;">Politique de confidentialité</a></p>
       <p class="footer-warning" data-i18n="footer.warning">&#9888;&#65039; L'abus d'alcool est dangereux pour la sante. A consommer avec moderation. Interdit aux mineurs de moins de 18 ans.</p>
     </div>
   </div>
@@ -291,5 +230,48 @@
 
 <script src="assets/js/currency.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script>
+(function () {
+  var btn = document.getElementById('btn-generer-devis');
+  if (!btn) return;
+
+  btn.addEventListener('click', function () {
+    /* ── Modal de choix de devise ── */
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(26,26,26,.65);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;';
+
+    overlay.innerHTML = [
+      '<div style="background:#fff;border-radius:6px;padding:36px 32px;max-width:420px;width:100%;box-shadow:0 16px 64px rgba(0,0,0,.3);font-family:\'Raleway\',system-ui,sans-serif;text-align:center;">',
+        '<h2 style="font-family:\'Playfair Display\',Georgia,serif;font-size:1.2rem;color:#4D0F1C;margin:0 0 6px;">Choisissez votre devise</h2>',
+        '<p style="font-size:.82rem;color:#7A7069;margin:0 0 24px;">Votre devis sera établi dans la devise sélectionnée.</p>',
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">',
+          '<button id="cur-xof" style="padding:18px 12px;border:2px solid #4D0F1C;border-radius:5px;background:#4D0F1C;color:#FAF7F2;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">',
+            '<span>Franc CFA</span>',
+            '<span style="font-size:.72rem;opacity:.8;font-weight:400;">XOF</span>',
+          '</button>',
+          '<button id="cur-usd" style="padding:18px 12px;border:2px solid #e8e0d5;border-radius:5px;background:#fff;color:#4D0F1C;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">',
+            '<span>Dollar US</span>',
+            '<span style="font-size:.72rem;color:#7A7069;font-weight:400;">USD</span>',
+          '</button>',
+        '</div>',
+        '<button id="cur-cancel" style="background:transparent;border:none;font-family:inherit;font-size:.8rem;color:#7A7069;cursor:pointer;text-decoration:underline;">Annuler</button>',
+      '</div>'
+    ].join('');
+
+    document.body.appendChild(overlay);
+
+    function go(currency) {
+      sessionStorage.setItem('awf-devis-currency', currency);
+      overlay.remove();
+      window.location.href = 'devis.html';
+    }
+
+    overlay.querySelector('#cur-xof').addEventListener('click', function () { go('XOF'); });
+    overlay.querySelector('#cur-usd').addEventListener('click', function () { go('USD'); });
+    overlay.querySelector('#cur-cancel').addEventListener('click', function () { overlay.remove(); });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) overlay.remove(); });
+  });
+})();
+</script>
 </body>
 </html>
