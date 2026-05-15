@@ -214,7 +214,7 @@ const translations = {
     'footer.cat.title':     'Nos produits',
     'footer.contact.title': 'Contact',
     'footer.hours':         'Lun–Sam : 9h–19h',
-    'footer.legal':         '© {{year}} Africa Wine Food. Tous droits réservés.',
+    'footer.legal':         '© {{year}} Africa Wine Food. Tous droits réservés. &nbsp;·&nbsp; <a href="confidentialite.html" style="color:inherit;text-decoration:underline;">Politique de confidentialité</a>',
     'footer.warning':       "⚠️ L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Interdit aux mineurs de moins de 18 ans.",
     'whatsapp.label':       'WhatsApp',
 
@@ -257,8 +257,8 @@ const translations = {
     'contact.map.title':          'Notre adresse',
     'contact.offices.pretitle':   'Nos implantations',
     'contact.offices.title':      'Nos bureaux en Afrique',
-    'contact.offices.ci.city':    'Lomé',
-    'contact.offices.ci.country': "Togo — Siège social",
+    'contact.offices.tg.city':    'Lomé',
+    'contact.offices.tg.country': "Togo — Siège social",
     'contact.offices.sn.city':    'Dakar',
     'contact.offices.sn.country': 'Senegal — Bureau regional',
     'contact.offices.gh.city':    'Accra',
@@ -472,7 +472,7 @@ const translations = {
     'footer.cat.title':     'Our products',
     'footer.contact.title': 'Contact',
     'footer.hours':         'Mon–Sat: 9am–7pm',
-    'footer.legal':         '© {{year}} Africa Wine Food. All rights reserved.',
+    'footer.legal':         '© {{year}} Africa Wine Food. All rights reserved. &nbsp;·&nbsp; <a href="confidentialite.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a>',
     'footer.warning':       "⚠️ Alcohol abuse is dangerous for your health. Drink responsibly. Sale prohibited to persons under 18.",
     'whatsapp.label':       'WhatsApp',
 
@@ -515,8 +515,8 @@ const translations = {
     'contact.map.title':          'Our address',
     'contact.offices.pretitle':   'Our locations',
     'contact.offices.title':      'Our offices across Africa',
-    'contact.offices.ci.city':    'Lomé',
-    'contact.offices.ci.country': "Togo — Head office",
+    'contact.offices.tg.city':    'Lomé',
+    'contact.offices.tg.country': "Togo — Head office",
     'contact.offices.sn.city':    'Dakar',
     'contact.offices.sn.country': 'Senegal — Regional office',
     'contact.offices.gh.city':    'Accra',
@@ -537,7 +537,7 @@ function applyTranslations(lang) {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) {
       const val = typeof t[key] === 'string' ? t[key].replace('{{year}}', year) : t[key];
-      if (key === 'hero.title') {
+      if (key === 'hero.title' || key === 'footer.legal') {
         el.innerHTML = val;
       } else {
         el.textContent = val;
@@ -854,29 +854,45 @@ function initBackToTop() {
 }
 
 /* ---- Form Handling ---- */
+const WA_NUMBER = '22890112233';
+function sendToWhatsApp(text) {
+  window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+}
+
 function initForms() {
-  /* Contact form */
+  /* Contact form → WhatsApp */
   const contactForm = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
   if (contactForm && formSuccess) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
-      /* Basic validation */
-      const email = contactForm.querySelector('[type="email"]');
-      const msg   = contactForm.querySelector('textarea');
-      if (!email.value || !msg.value) return;
+      const name  = (contactForm.querySelector('#c-name')?.value || '').trim();
+      const email = (contactForm.querySelector('#c-email')?.value || '').trim();
+      const phone = (contactForm.querySelector('#c-phone')?.value || '').trim();
+      const type  = contactForm.querySelector('#c-type')?.value || '';
+      const msg   = (contactForm.querySelector('#c-message')?.value || '').trim();
+      if (!email || !msg) return;
+      const text =
+        'Bonjour Africa Wine Food 🍷\n\n' +
+        'Nom : ' + (name || '—') + '\n' +
+        'Type de demande : ' + (type || '—') + '\n' +
+        'Email : ' + email + '\n' +
+        'Téléphone : ' + (phone || '—') + '\n\n' +
+        'Message :\n' + msg;
+      sendToWhatsApp(text);
       formSuccess.hidden = false;
       contactForm.reset();
       setTimeout(() => { formSuccess.hidden = true; }, 5000);
     });
   }
-  /* Devis form */
+
+  /* Devis form → WhatsApp */
   const devisForm    = document.getElementById('devis-form');
   const devisSuccess = document.getElementById('devis-success');
   if (devisForm && devisSuccess) {
-    const productSelect     = document.getElementById('d-product');
-    const otherGroup        = document.getElementById('d-product-other-group');
-    const otherInput        = document.getElementById('d-product-other');
+    const productSelect = document.getElementById('d-product');
+    const otherGroup    = document.getElementById('d-product-other-group');
+    const otherInput    = document.getElementById('d-product-other');
     if (productSelect && otherGroup) {
       productSelect.addEventListener('change', () => {
         const isOther = productSelect.value === 'autre';
@@ -887,8 +903,19 @@ function initForms() {
     }
     devisForm.addEventListener('submit', e => {
       e.preventDefault();
-      const email = devisForm.querySelector('[type="email"]');
-      if (!email.value) return;
+      const email    = (devisForm.querySelector('#d-email')?.value || '').trim();
+      if (!email) return;
+      const product  = (otherInput?.value || productSelect?.value || '—').trim();
+      const qty      = devisForm.querySelector('#d-qty')?.value || '1';
+      const occasion = devisForm.querySelector('#d-occasion')?.value || '—';
+      const text =
+        'Bonjour Africa Wine Food 🍷\n\n' +
+        'Demande de devis :\n' +
+        'Produit : ' + product + '\n' +
+        'Quantité : ' + qty + '\n' +
+        'Occasion : ' + occasion + '\n' +
+        'Email : ' + email;
+      sendToWhatsApp(text);
       devisSuccess.hidden = false;
       devisForm.reset();
       if (otherGroup) otherGroup.hidden = true;
@@ -897,19 +924,28 @@ function initForms() {
     });
   }
 
-  /* Newsletter form */
-  const nlForm    = document.getElementById('newsletter-form');
-  const nlSuccess = document.getElementById('nl-success');
-  if (nlForm && nlSuccess) {
-    nlForm.addEventListener('submit', e => {
+  /* Newsletter forms — confirmation uniquement */
+  [
+    { formId: 'newsletter-form',  successId: 'nl-success' },
+    { formId: 'nl-sidebar-form',  successId: null }
+  ].forEach(({ formId, successId }) => {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      const email = nlForm.querySelector('[type="email"]');
-      if (!email.value) return;
-      nlSuccess.hidden = false;
-      nlForm.reset();
-      setTimeout(() => { nlSuccess.hidden = true; }, 5000);
+      const emailEl = form.querySelector('[type="email"]');
+      if (!emailEl?.value) return;
+      const sc = successId ? document.getElementById(successId) : null;
+      if (sc) { sc.hidden = false; setTimeout(() => { sc.hidden = true; }, 5000); }
+      const btn = form.querySelector('[type="submit"]');
+      if (btn) {
+        const orig = btn.textContent;
+        btn.textContent = '✓ Inscrit !';
+        setTimeout(() => { btn.textContent = orig; }, 4000);
+      }
+      form.reset();
     });
-  }
+  });
 }
 
 /* ---- Cart ---- */
@@ -1411,6 +1447,7 @@ function initProductModal() {
   const closeBtn    = document.getElementById('modal-close');
   const addCartBtn  = document.getElementById('modal-add-cart');
   let currentModalId = null;
+  let focusTrapHandler = null;
 
   function openModal(productId) {
     const data = productsData.find(p => p.id === productId);
@@ -1445,12 +1482,31 @@ function initProductModal() {
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
     closeBtn.focus();
+
+    /* Focus trap */
+    const sel = 'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusable = Array.from(modal.querySelectorAll(sel));
+    if (focusable.length > 1) {
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+      if (focusTrapHandler) document.removeEventListener('keydown', focusTrapHandler);
+      focusTrapHandler = function(e) {
+        if (e.key !== 'Tab') return;
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+        }
+      };
+      document.addEventListener('keydown', focusTrapHandler);
+    }
   }
 
   function closeModal() {
     modal.hidden = true;
     document.body.style.overflow = '';
     currentModalId = null;
+    if (focusTrapHandler) { document.removeEventListener('keydown', focusTrapHandler); focusTrapHandler = null; }
   }
 
   /* "Ajouter à ma sélection" button inside modal */
@@ -1586,13 +1642,44 @@ function initCommandePage() {
   renderCart();
   window.addEventListener('awf:currency', renderCart);
 
-  /* Form submission */
+  /* Form submission → WhatsApp */
   if (orderForm && orderSuccess) {
     orderForm.addEventListener('submit', e => {
       e.preventDefault();
-      const email = orderForm.querySelector('[type="email"]');
-      const prenom = orderForm.querySelector('#order-prenom');
-      if (!email || !email.value || !prenom || !prenom.value) return;
+      const prenom   = (orderForm.querySelector('#order-prenom')?.value || '').trim();
+      const nom      = (orderForm.querySelector('#order-nom')?.value || '').trim();
+      const email    = (orderForm.querySelector('#order-email')?.value || '').trim();
+      const phone    = (orderForm.querySelector('#order-phone')?.value || '').trim();
+      const pays     = orderForm.querySelector('#order-pays')?.value || '';
+      const ville    = (orderForm.querySelector('#order-ville')?.value || '').trim();
+      const adresse  = (orderForm.querySelector('#order-adresse')?.value || '').trim();
+      const delivery = orderForm.querySelector('[name="delivery"]:checked')?.value || '';
+      const occasion = orderForm.querySelector('#order-occasion')?.value || '';
+      const notes    = (orderForm.querySelector('#order-notes')?.value || '').trim();
+      if (!email || !prenom) return;
+
+      let cartLines = '';
+      cart.forEach(item => {
+        const data = productsData.find(p => p.id === item.id);
+        if (!data) return;
+        const t = data[currentLang] || data.fr;
+        cartLines += '  - ' + t.name + ' x' + item.qty + '\n';
+      });
+
+      const text =
+        'Bonjour Africa Wine Food 🍷\n\n' +
+        'Demande de commande :\n' + cartLines + '\n' +
+        'Coordonnées :\n' +
+        'Nom : ' + prenom + ' ' + nom + '\n' +
+        'Email : ' + email + '\n' +
+        'Tél : ' + (phone || '—') + '\n' +
+        'Pays : ' + (pays || '—') + ' | Ville : ' + (ville || '—') + '\n' +
+        'Adresse : ' + (adresse || '—') + '\n' +
+        'Livraison : ' + (delivery || '—') + '\n' +
+        'Occasion : ' + (occasion || '—') + '\n' +
+        'Notes : ' + (notes || '—');
+
+      sendToWhatsApp(text);
       orderForm.hidden = true;
       orderSuccess.hidden = false;
       cart = [];

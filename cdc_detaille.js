@@ -8,21 +8,21 @@ const {
 const fs = require('fs');
 
 // ── Couleurs ──
-const BORDEAUX = '4D0F1C';
+const BORDEAUX   = '4D0F1C';
 const BORDEAUX_L = '6B1A2B';
-const GOLD = 'C9A84C';
-const CREAM = 'FAF7F2';
-const LIGHT_BG = 'F5EDE0';
-const MUTED = '7A7069';
-const WHITE = 'FFFFFF';
-const DARK = '1A1A1A';
-const GREY_BG = 'F2F2F2';
+const GOLD       = 'C9A84C';
+const CREAM      = 'FAF7F2';
+const LIGHT_BG   = 'F5EDE0';
+const MUTED      = '7A7069';
+const WHITE      = 'FFFFFF';
+const DARK       = '1A1A1A';
+const GREY_BG    = 'F2F2F2';
 
 // ── Helpers ──
-const border = (color = 'CCCCCC') => ({ style: BorderStyle.SINGLE, size: 1, color });
-const noBorder = () => ({ style: BorderStyle.NONE, size: 0, color: 'FFFFFF' });
+const border     = (color = 'CCCCCC') => ({ style: BorderStyle.SINGLE, size: 1, color });
+const noBorder   = () => ({ style: BorderStyle.NONE, size: 0, color: 'FFFFFF' });
 const allBorders = (color = 'CCCCCC') => ({ top: border(color), bottom: border(color), left: border(color), right: border(color) });
-const noBorders = () => ({ top: noBorder(), bottom: noBorder(), left: noBorder(), right: noBorder() });
+const noBorders  = () => ({ top: noBorder(), bottom: noBorder(), left: noBorder(), right: noBorder() });
 
 function heading1(text) {
   return new Paragraph({
@@ -56,13 +56,6 @@ function body(text, opts = {}) {
   });
 }
 
-function label(text) {
-  return new Paragraph({
-    spacing: { before: 60, after: 80 },
-    children: [new TextRun({ text, font: 'Arial', size: 20, color: MUTED, bold: true })]
-  });
-}
-
 function bullet(text, level = 0) {
   return new Paragraph({
     numbering: { reference: 'bullets', level },
@@ -79,14 +72,12 @@ function pageBreak() {
   return new Paragraph({ children: [new PageBreak()] });
 }
 
-// ── Table helper ──
 function makeTable(headers, rows, colWidths) {
   const totalWidth = colWidths.reduce((a, b) => a + b, 0);
   return new Table({
     width: { size: totalWidth, type: WidthType.DXA },
     columnWidths: colWidths,
     rows: [
-      // Header row
       new TableRow({
         tableHeader: true,
         children: headers.map((h, i) => new TableCell({
@@ -95,22 +86,16 @@ function makeTable(headers, rows, colWidths) {
           borders: allBorders(BORDEAUX),
           margins: { top: 100, bottom: 100, left: 140, right: 140 },
           verticalAlign: VerticalAlign.CENTER,
-          children: [new Paragraph({
-            alignment: AlignmentType.LEFT,
-            children: [new TextRun({ text: h, font: 'Arial', size: 20, bold: true, color: WHITE })]
-          })]
+          children: [new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: h, font: 'Arial', size: 20, bold: true, color: WHITE })] })]
         }))
       }),
-      // Data rows
       ...rows.map((row, ri) => new TableRow({
         children: row.map((cell, ci) => new TableCell({
           width: { size: colWidths[ci], type: WidthType.DXA },
           shading: { fill: ri % 2 === 0 ? WHITE : GREY_BG, type: ShadingType.CLEAR },
           borders: allBorders('DDDDDD'),
           margins: { top: 80, bottom: 80, left: 140, right: 140 },
-          children: [new Paragraph({
-            children: [new TextRun({ text: String(cell), font: 'Arial', size: 20, color: DARK })]
-          })]
+          children: [new Paragraph({ children: [new TextRun({ text: String(cell), font: 'Arial', size: 20, color: DARK })] })]
         }))
       }))
     ]
@@ -118,9 +103,9 @@ function makeTable(headers, rows, colWidths) {
 }
 
 function makeTotalRow(label, value, highlight = false) {
-  const bg = highlight ? BORDEAUX : WHITE;
-  const fg = highlight ? WHITE : DARK;
-  const fgVal = highlight ? GOLD : BORDEAUX_L;
+  const bg    = highlight ? BORDEAUX : WHITE;
+  const fg    = highlight ? WHITE    : DARK;
+  const fgVal = highlight ? GOLD     : BORDEAUX_L;
   return new TableRow({
     children: [
       new TableCell({
@@ -142,7 +127,7 @@ function makeTotalRow(label, value, highlight = false) {
 }
 
 // ══════════════════════════════════════════
-//  DOCUMENT
+//  DOCUMENT DÉTAILLÉ
 // ══════════════════════════════════════════
 const doc = new Document({
   numbering: {
@@ -179,39 +164,34 @@ const doc = new Document({
     },
     headers: {
       default: new Header({
-        children: [
-          new Paragraph({
-            border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: GOLD, space: 4 } },
-            children: [
-              new TextRun({ text: 'CAHIER DES CHARGES — SITE VITRINE PREMIUM', font: 'Arial', size: 18, color: MUTED }),
-              new TextRun({ text: '\t', font: 'Arial' }),
-              new TextRun({ text: 'Africa Wine Food', font: 'Arial', size: 18, bold: true, color: BORDEAUX }),
-            ],
-            tabStops: [{ type: 'right', position: 9026 }],
-          })
-        ]
+        children: [new Paragraph({
+          border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: GOLD, space: 4 } },
+          children: [
+            new TextRun({ text: 'CAHIER DES CHARGES DÉTAILLÉ — SITE VITRINE PREMIUM', font: 'Arial', size: 18, color: MUTED }),
+            new TextRun({ text: '\t', font: 'Arial' }),
+            new TextRun({ text: 'Africa Wine Food', font: 'Arial', size: 18, bold: true, color: BORDEAUX }),
+          ],
+          tabStops: [{ type: 'right', position: 9026 }],
+        })]
       })
     },
     footers: {
       default: new Footer({
-        children: [
-          new Paragraph({
-            border: { top: { style: BorderStyle.SINGLE, size: 2, color: 'DDDDDD', space: 4 } },
-            children: [
-              new TextRun({ text: 'Document confidentiel — Mai 2026', font: 'Arial', size: 16, color: MUTED }),
-              new TextRun({ text: '\tPage ', font: 'Arial', size: 16, color: MUTED }),
-              new TextRun({ children: [PageNumber.CURRENT], font: 'Arial', size: 16, color: MUTED }),
-            ],
-            tabStops: [{ type: 'right', position: 9026 }],
-          })
-        ]
+        children: [new Paragraph({
+          border: { top: { style: BorderStyle.SINGLE, size: 2, color: 'DDDDDD', space: 4 } },
+          children: [
+            new TextRun({ text: 'Document confidentiel — Mai 2026', font: 'Arial', size: 16, color: MUTED }),
+            new TextRun({ text: '\tPage ', font: 'Arial', size: 16, color: MUTED }),
+            new TextRun({ children: [PageNumber.CURRENT], font: 'Arial', size: 16, color: MUTED }),
+          ],
+          tabStops: [{ type: 'right', position: 9026 }],
+        })]
       })
     },
     children: [
 
       // ══ PAGE DE GARDE ══
       new Paragraph({ spacing: { before: 1200, after: 0 }, children: [] }),
-
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { before: 0, after: 60 },
@@ -221,7 +201,7 @@ const doc = new Document({
         alignment: AlignmentType.CENTER,
         spacing: { before: 0, after: 300 },
         border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: GOLD, space: 12 } },
-        children: [new TextRun({ text: 'SITE VITRINE PREMIUM', font: 'Arial', size: 34, bold: false, color: GOLD, allCaps: true })]
+        children: [new TextRun({ text: 'SITE VITRINE PREMIUM — VERSION 2.0', font: 'Arial', size: 34, bold: false, color: GOLD, allCaps: true })]
       }),
       space(2),
       new Paragraph({
@@ -235,29 +215,28 @@ const doc = new Document({
         children: [new TextRun({ text: "L'excellence viticole au cœur de l'Afrique", font: 'Arial', size: 24, color: MUTED, italics: true })]
       }),
       space(3),
-
       new Table({
         width: { size: 7000, type: WidthType.DXA },
         columnWidths: [2800, 4200],
         rows: [
           new TableRow({ children: [
-            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Version', font: 'Arial', size: 20, color: 'FAF7F2', bold: true })] })] }),
-            new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: LIGHT_BG, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Version 1.0 — Détaillée', font: 'Arial', size: 20, color: DARK })] })] }),
+            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Version', font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
+            new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: LIGHT_BG, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Version 2.0 — Détaillée', font: 'Arial', size: 20, color: DARK })] })] }),
           ]}),
           new TableRow({ children: [
-            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: "Date d'émission", font: 'Arial', size: 20, color: 'FAF7F2', bold: true })] })] }),
-            new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: WHITE, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: '13 mai 2026', font: 'Arial', size: 20, color: DARK })] })] }),
+            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: "Date d'émission", font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
+            new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: WHITE, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: '15 mai 2026', font: 'Arial', size: 20, color: DARK })] })] }),
           ]}),
           new TableRow({ children: [
-            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Client', font: 'Arial', size: 20, color: 'FAF7F2', bold: true })] })] }),
+            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Client', font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
             new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: LIGHT_BG, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Africa Wine Food — Lomé, Togo', font: 'Arial', size: 20, color: DARK })] })] }),
           ]}),
           new TableRow({ children: [
-            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Prestataire', font: 'Arial', size: 20, color: 'FAF7F2', bold: true })] })] }),
+            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Prestataire', font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
             new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: WHITE, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Développeur Web Freelance — Lomé, Togo', font: 'Arial', size: 20, color: DARK })] })] }),
           ]}),
           new TableRow({ children: [
-            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Référence devis', font: 'Arial', size: 20, color: 'FAF7F2', bold: true })] })] }),
+            new TableCell({ width: { size: 2800, type: WidthType.DXA }, shading: { fill: BORDEAUX, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'Référence devis', font: 'Arial', size: 20, color: CREAM, bold: true })] })] }),
             new TableCell({ width: { size: 4200, type: WidthType.DXA }, shading: { fill: LIGHT_BG, type: ShadingType.CLEAR }, borders: noBorders(), margins: { top: 100, bottom: 100, left: 160, right: 160 }, children: [new Paragraph({ children: [new TextRun({ text: 'AWF-2026-001', font: 'Arial', size: 20, color: BORDEAUX_L, bold: true })] })] }),
           ]}),
         ]
@@ -273,20 +252,22 @@ const doc = new Document({
       // ══ 1. PRÉSENTATION ══
       heading1('1. Présentation du projet'),
       heading2('1.1 Contexte'),
-      body("Africa Wine Food est une agence togolaise spécialisée dans la sélection et la distribution de vins de luxe et de spiritueux premium à destination du marché africain. Dans le cadre de son développement et de sa visibilité digitale, l’entreprise souhaite disposer d’un site vitrine haut de gamme reflétant son positionnement premium."),
+      body("Africa Wine Food est une agence togolaise spécialisée dans la sélection et la distribution de vins de luxe et de spiritueux premium à destination du marché africain. Dans le cadre de son développement et de sa visibilité digitale, l'entreprise a fait réaliser un site vitrine haut de gamme reflétant son positionnement premium."),
       space(),
 
       heading2('1.2 Objectifs du projet'),
       bullet("Asseoir la crédibilité et le prestige de la marque en ligne"),
-      bullet("Présenter l’offre produit (vins, champagnes, spiritueux, collections rares)"),
+      bullet("Présenter l'offre produit (vins, champagnes, spiritueux, collections rares)"),
       bullet("Générer des prises de contact qualifiées (formulaire, WhatsApp)"),
+      bullet("Permettre la génération et la gestion de devis directement depuis le site"),
       bullet("Proposer un catalogue téléchargeable au format PDF"),
       bullet("Permettre une navigation fluide en français et en anglais"),
-      bullet("S’adresser à une clientèle exigeante : hôtels, restaurants, particuliers et entreprises"),
+      bullet("Garantir la conformité légale internationale (RGPD, CCPA, Loi Togo 2019-014, Convention de Malabo)"),
+      bullet("Optimiser l'expérience sur tous les appareils (mobile, tablette, desktop)"),
       space(),
 
       heading2('1.3 Périmètre fonctionnel'),
-      body("Le projet consiste en un site vitrine statique (HTML/CSS/JS), sans CMS ni base de données, composé de 6 pages complètes. Il ne s’agit pas d’un site e-commerce avec paiement en ligne."),
+      body("Le projet consiste en un site vitrine statique (HTML/CSS/JS), sans CMS ni base de données. Il comprend 16 pages au total : 6 pages principales, 4 pages de support et administration, et 6 articles de blog. Il ne s'agit pas d'un site e-commerce avec paiement en ligne."),
       space(2),
 
       // ══ 2. DESCRIPTION TECHNIQUE ══
@@ -295,53 +276,94 @@ const doc = new Document({
       makeTable(
         ['Technologie', 'Rôle', 'Version'],
         [
-          ['HTML5', 'Structure sémantique des pages', 'Standard actuel'],
-          ['CSS3', 'Mise en page, animations, responsive', 'Standard actuel'],
-          ['JavaScript (Vanilla)', 'Interactions, bilinguisme, carousel', 'ES6+'],
+          ['HTML5', 'Structure sémantique des pages — balises ARIA accessibles', 'Standard actuel'],
+          ['CSS3', 'Mise en page, animations, responsive, cross-browser', 'Standard actuel'],
+          ['JavaScript Vanilla', 'i18n, carousel, filtres, devis, admin, devise', 'ES6+'],
           ['Google Fonts', 'Typographies premium (Playfair Display, Raleway)', 'CDN'],
-          ['Unsplash API', 'Images haute résolution (hôte externe)', 'CDN'],
+          ['Unsplash', 'Images haute résolution (hôte externe)', 'CDN'],
+          ['Leaflet.js', 'Carte interactive sur la page contact', 'CDN'],
         ],
-        [3200, 3700, 2126]
+        [2800, 4200, 2026]
       ),
       space(2),
 
       heading2('2.2 Architecture des fichiers'),
-      bullet("index.html — Page d’accueil (hero, univers, pourquoi nous, clientèle, blog)"),
-      bullet("catalogue.html — Page catalogue avec filtres par catégorie"),
-      bullet("about.html — Page à propos (histoire, équipe, valeurs)"),
-      bullet("blog.html — Page blog et actualités"),
-      bullet("contact.html — Formulaire de contact"),
-      bullet("commande.html — Formulaire de commande"),
-      bullet("style.css — Feuille de styles globale (2 129 lignes)"),
-      bullet("main.js — Logique JavaScript (1 633 lignes)"),
-      bullet("currency.js — Convertisseur de devises"),
-      bullet("assets/docs/catalogues.pdf — Catalogue téléchargeable"),
+      heading3('Pages HTML principales'),
+      bullet("index.html — Page d'accueil (hero, univers, arguments, chiffres clés, blog)"),
+      bullet("catalogue.html — Catalogue avec filtres par catégorie et téléchargement PDF"),
+      bullet("about.html — À propos (histoire, équipe, valeurs, mission)"),
+      bullet("blog.html — Blog et actualités avec articles en vedette"),
+      bullet("contact.html — Formulaire de contact + carte interactive + coordonnées"),
+      bullet("commande.html — Formulaire de commande multi-produits avec panier"),
+      space(),
+      heading3('Pages de support et administration'),
+      bullet("devis.html — Document devis généré dynamiquement (lecture depuis localStorage)"),
+      bullet("historique.html — Interface admin sécurisée — historique et gestion des devis"),
+      bullet("confidentialite.html — Politique de confidentialité internationale (13 articles)"),
+      bullet("404.html — Page d'erreur 404 personnalisée avec redirection"),
+      space(),
+      heading3('Pages articles de blog'),
+      bullet("bb-brasserie.html — Article : Bar & Brasserie — l'art de servir le vin"),
+      bullet("bienfaits-vin-rouge.html — Article : Les bienfaits du vin rouge"),
+      bullet("cocktails-maison.html — Article : Cocktails maison au vin"),
+      bullet("caves-lome.html — Article : Les caves de Lomé"),
+      bullet("definition-vin.html — Article : Définition et culture du vin"),
+      bullet("types-de-vins.html — Article : Les types de vins"),
+      space(),
+      heading3('Fichiers CSS & JavaScript'),
+      bullet("assets/css/style.css — Feuille de styles globale (3 056 lignes)"),
+      bullet("assets/css/devis.css — Styles du document devis standalone (508 lignes)"),
+      bullet("assets/js/main.js — Logique principale — i18n, carousel, filtres, devise, animations (1 723 lignes)"),
+      bullet("assets/js/historique.js — Logique admin — auth, tri, CRUD devis (255 lignes)"),
+      bullet("assets/docs/catalogue.pdf — Catalogue téléchargeable"),
       space(2),
 
-      heading2('2.3 Fonctionnalités développées'),
+      heading2('2.3 Volume de code source'),
       makeTable(
-        ['Fonctionnalité', 'Description', 'Statut'],
+        ['Fichier / Groupe', 'Type', 'Lignes'],
         [
-          ['Système bilingue FR/EN', 'Traduction dynamique de 100% du contenu sans rechargement', 'Livré'],
-          ['Convertisseur de devises', 'Affichage des prix en XOF, EUR, USD en temps réel', 'Livré'],
-          ['Design responsive', 'Adaptation mobile (320px), tablette (768px), desktop (1200px+)', 'Livré'],
-          ['Navigation sticky', 'Barre de navigation fixe au scroll avec effet glassmorphism', 'Livré'],
-          ['Menu hamburger', 'Navigation mobile animée avec fermeture au clic extérieur', 'Livré'],
-          ['Effet parallaxe', 'Animation de profondeur sur le hero et sections visuelles', 'Livré'],
-          ['Carousel auto', 'Défilement automatique des catégories produits', 'Livré'],
-          ['Filtres catalogue', 'Filtrage des produits par catégorie sans rechargement', 'Livré'],
-          ['Compteurs animés', 'Animation des chiffres clés au scroll', 'Livré'],
-          ['Smooth scroll', 'Navigation fluide entre les ancres', 'Livré'],
-          ['Back-to-top', 'Bouton retour en haut visible au scroll', 'Livré'],
-          ['Formulaires', 'Contact et commande avec validation côté client', 'Livré'],
-          ['PDF Catalogue', 'Téléchargement du catalogue produits en un clic', 'Livré'],
-          ['SEO de base', 'Balises meta, titres hiérarchisés, description, viewport', 'Livré'],
+          ['style.css', 'CSS', '3 056'],
+          ['devis.css', 'CSS', '508'],
+          ['main.js', 'JavaScript', '1 723'],
+          ['historique.js', 'JavaScript', '255'],
+          ['HTML — 16 pages', 'HTML', '5 661'],
+          ['TOTAL GÉNÉRAL', '—', '11 203'],
         ],
-        [3000, 4300, 1726]
+        [3600, 2000, 3426]
       ),
       space(2),
 
-      heading2('2.4 Design & charte graphique'),
+      heading2('2.4 Fonctionnalités développées'),
+      makeTable(
+        ['Fonctionnalité', 'Description technique', 'Statut'],
+        [
+          ['Bilingue FR/EN', 'Traduction dynamique 100% via data-i18n + innerHTML pour les liens — sans rechargement', 'Livré'],
+          ['Convertisseur de devises', 'XOF / EUR / USD avec taux configurables — affichage en temps réel', 'Livré'],
+          ['Génération de devis PDF', 'Le formulaire de commande crée un devis numéroté (localStorage) — visualisable et imprimable', 'Livré'],
+          ['Admin historique sécurisé', 'Overlay login par mot de passe (base64 + localStorage) — grille tri, actions WhatsApp, suppression', 'Livré'],
+          ['Responsive 5 breakpoints', '360px / 480px / 768px / 1024px / 1440px+ — grille fluide, hamburger, typographie clamp()', 'Livré'],
+          ['Compatibilité cross-browser', 'Chrome, Firefox, Safari (iOS/macOS), Edge — prefixes webkit, fallbacks CSS variables', 'Livré'],
+          ['Anti-zoom iOS', 'font-size ≥ 16px sur tous les champs input/select/textarea', 'Livré'],
+          ['Cibles tactiles ≥ 44px', 'hamburger, lang-btn, currency-btn, .btn — pointer: coarse media query', 'Livré'],
+          ['Accessibilité motion', '@media (prefers-reduced-motion: reduce) — désactive toutes les animations', 'Livré'],
+          ['Focus visible', ':focus-visible avec outline or — :focus:not(:focus-visible) masqué', 'Livré'],
+          ['ARIA & skip link', 'Liens d\'évitement, role="dialog", aria-modal, aria-labelledby, aria-live', 'Livré'],
+          ['Navigation sticky', 'Navbar fixe avec glassmorphism au scroll — transition opacité/blur', 'Livré'],
+          ['Filtres catalogue', 'Filtrage par catégorie sans rechargement — animation CSS', 'Livré'],
+          ['Compteurs animés', 'IntersectionObserver — chiffres clés animés au scroll (avec fallback)', 'Livré'],
+          ['Carousel testimonials', 'Défilement automatique + navigation manuelle + indicateurs', 'Livré'],
+          ['Parallaxe hero', 'Effet profondeur CSS transform au scroll — performance will-change', 'Livré'],
+          ['WhatsApp FAB', 'Bouton flottant avec partage dynamique du devis formaté', 'Livré'],
+          ['Politique de confidentialité', '13 articles — Togo Loi 2019-014, CEDEAO, Convention de Malabo, RGPD, CCPA', 'Livré'],
+          ['Séparation HTML/CSS', 'Aucun style inline dans les <head> — tout externalisé dans style.css et devis.css', 'Livré'],
+          ['SEO technique', 'meta description, Open Graph, sitemap.xml, robots.txt, viewport, theme-color', 'Livré'],
+          ['Page 404 personnalisée', 'Aux couleurs de la marque avec bouton retour accueil', 'Livré'],
+        ],
+        [2600, 4400, 1426]
+      ),
+      space(2),
+
+      heading2('2.5 Design & charte graphique'),
       makeTable(
         ['Élément', 'Détail'],
         [
@@ -349,9 +371,10 @@ const doc = new Document({
           ['Couleur accent', 'Or luxe #C9A84C / #DFC07A'],
           ['Fond', 'Crème #FAF7F2'],
           ['Texte', 'Noir doux #1A1A1A / #2C2C2C'],
-          ['Typographie titres', 'Playfair Display (sérif, classique, luxe)'],
-          ['Typographie corps', 'Raleway (sans-sérif, moderne, élégant)'],
-          ['Style général', 'Luxe élégant, contrastes bordeaux/or, espacements généreux'],
+          ['Typographie titres', "Playfair Display (sérif, Google Fonts) — fallback Georgia, 'Times New Roman', serif"],
+          ['Typographie corps', "Raleway (sans-sérif, Google Fonts) — fallback -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto"],
+          ['Style général', 'Luxe élégant, contrastes bordeaux/or, espacements généreux, animations subtiles'],
+          ['Variables CSS', '20 custom properties dans :root — cohérence totale de la palette'],
         ],
         [3500, 5526]
       ),
@@ -362,43 +385,108 @@ const doc = new Document({
       // ══ 3. PAGES ══
       heading1('3. Détail des pages'),
 
-      heading2('3.1 Page d’accueil (index.html)'),
-      body("La page d’accueil est la page principale du site. Elle est structurée en 7 sections distinctes :"),
-      bullet("Hero : image plein écran, titre principal, sous-titre, bouton CTA vers le catalogue", 0),
-      bullet("Univers : 4 cartes catégories (Vins Rouges/Blancs, Champagnes, Spiritueux, Collections Rares)", 0),
-      bullet("Pourquoi nous choisir : 3 arguments clés avec icônes (sélection, livraison, expertise)", 0),
-      bullet("Clientèle : présentation des profils clients (hôtels, restaurants, particuliers, entreprises)", 0),
-      bullet("Chiffres clés : compteurs animés (années d’expérience, références, pays couverts)", 0),
-      bullet("Extrait blog : 3 derniers articles mis en avant", 0),
-      bullet("Call-to-action final : invitation au contact", 0),
+      heading2('3.1 Page d\'accueil (index.html)'),
+      body("La page d'accueil est le point d'entrée principal. Elle est structurée en 8 sections distinctes :"),
+      bullet("Hero — image plein écran (100dvh), titre principal, sous-titre, bouton CTA catalogue"),
+      bullet("Univers — 4 cartes catégories (Vins Rouges/Blancs, Champagnes, Spiritueux, Collections Rares)"),
+      bullet("Pourquoi nous — 3 arguments clés avec icônes (sélection, livraison, expertise)"),
+      bullet("Clientèle — présentation des profils clients (hôtels, restaurants, particuliers, entreprises)"),
+      bullet("Chiffres clés — compteurs animés (années d'expérience, références, pays couverts)"),
+      bullet("Témoignages — carousel de citations clients avec navigation"),
+      bullet("Extrait blog — 3 derniers articles mis en avant"),
+      bullet("Call-to-action final — invitation au contact avec boutons primaire et secondaire"),
       space(),
 
       heading2('3.2 Page Catalogue (catalogue.html)'),
-      body("Le catalogue présente les produits disponibles avec un système de filtres :"),
+      body("Le catalogue présente les produits avec filtres et téléchargement :"),
       bullet("Filtres par catégorie : Tous, Vins Rouges, Vins Blancs, Rosés, Champagnes, Spiritueux, Collections"),
-      bullet("Cartes produits : photo, nom, appellation, millésime, prix indicatif"),
+      bullet("Cartes produits : photo, nom, appellation, millésime, prix en devise choisie, bouton détails"),
+      bullet("Modal produit — fiche détaillée avec description, caractéristiques, bouton commande"),
       bullet("Bouton téléchargement PDF du catalogue complet"),
       space(),
 
       heading2('3.3 Page À propos (about.html)'),
-      body("Présente l’identité et les valeurs de Africa Wine Food :"),
-      bullet("Histoire de l’agence et mission"),
-      bullet("Valeurs fondatrices : excellence, authenticité, service"),
-      bullet("Équipe et expertise sommeliers"),
+      body("Présente l'identité et les valeurs de Africa Wine Food :"),
+      bullet("Histoire de l'agence et mission"),
+      bullet("Valeurs fondatrices — excellence, authenticité, service"),
+      bullet("Mission, Vision, Valeurs (MVV) avec icônes"),
+      bullet("Équipe — sommeliers et experts avec photo et bio"),
+      bullet("Partenaires et certifications"),
       space(),
 
       heading2('3.4 Page Blog (blog.html)'),
-      body("Espace éditorial pour les actualités et articles :"),
-      bullet("Grille d’articles avec image, titre, catégorie, date et extrait"),
+      body("Espace éditorial complet :"),
+      bullet("Article en vedette avec image grande format et résumé"),
+      bullet("Grille d'articles avec image, titre, catégorie, date et extrait"),
       bullet("Catégories : Dégustation, Actualités, Conseils, Investissement"),
+      bullet("Newsletter — formulaire d'abonnement"),
       space(),
 
       heading2('3.5 Page Contact (contact.html)'),
-      body("Formulaire de prise de contact avec champs : nom, email, téléphone, sujet, message. Coordonnées complètes et liens réseaux sociaux."),
+      body("Formulaire de prise de contact et informations pratiques :"),
+      bullet("Formulaire — nom, email, téléphone, sujet, message avec validation"),
+      bullet("Carte interactive Leaflet.js — localisation bureau Lomé"),
+      bullet("Coordonnées complètes — adresse, téléphone, email, horaires"),
+      bullet("Liens réseaux sociaux"),
       space(),
 
       heading2('3.6 Page Commande (commande.html)'),
-      body("Formulaire de commande avec sélection de produits, quantités, adresse de livraison et instructions spéciales. La commande est transmise par email ou WhatsApp."),
+      body("Formulaire de commande complet avec génération de devis :"),
+      bullet("Panier produits — sélection multi-produits avec quantités"),
+      bullet("Informations client — nom, prénom, email, téléphone, ville, pays, occasion"),
+      bullet("Livraison — choix du mode de livraison"),
+      bullet("Génération du devis — numérotation automatique AWF-XXXXXX, stockage localStorage"),
+      bullet("Redirection vers devis.html pour visualisation et impression"),
+      bullet("Partage direct sur WhatsApp avec message formaté"),
+      space(),
+
+      heading2('3.7 Page Devis (devis.html)'),
+      body("Document devis généré dynamiquement depuis les données de commande :"),
+      bullet("Lecture des données depuis localStorage (numéro de devis en paramètre URL)"),
+      bullet("Document PDF-ready — mise en page professionnelle imprimable"),
+      bullet("En-tête avec logo, numéro de devis, date"),
+      bullet("Tableau des prestations — produits, quantités, sous-totaux, total"),
+      bullet("Modalités de paiement et de livraison"),
+      bullet("Bouton impression + bouton retour commande"),
+      bullet("CSS standalone (devis.css) — indépendant de style.css"),
+      space(),
+
+      heading2('3.8 Page Historique Admin (historique.html)'),
+      body("Interface d'administration sécurisée pour la gestion des devis :"),
+      bullet("Overlay de login — mot de passe chiffré base64, animation shake si erreur"),
+      bullet("Session persistée en localStorage — reste connecté jusqu'à déconnexion explicite"),
+      bullet("Affichage bouton oeil — toggle visibilité mot de passe"),
+      bullet("Tableau de bord — total devis, total articles, montant global"),
+      bullet("Grille des devis — 3 colonnes (responsive 2 puis 1) avec numéro, client, date, montant"),
+      bullet("Actions par devis — Voir le devis, Envoyer sur WhatsApp, Supprimer"),
+      bullet("Tri — par date décroissante/croissante, par nom, par montant"),
+      bullet("Suppression globale — bouton avec confirmation"),
+      bullet("Bouton déconnexion dans la barre d'outils admin"),
+      space(),
+
+      heading2('3.9 Page Politique de confidentialité (confidentialite.html)'),
+      body("Politique de confidentialité conforme aux réglementations internationales — 13 articles :"),
+      bullet("Art. 1 — Identité du responsable de traitement"),
+      bullet("Art. 2 — Cadre légal applicable (Togo, CEDEAO, Malabo, RGPD, CCPA)"),
+      bullet("Art. 3 — Données collectées et finalités"),
+      bullet("Art. 4 — Base légale du traitement (RGPD Art. 6)"),
+      bullet("Art. 5 — Durée de conservation"),
+      bullet("Art. 6 — Stockage local (localStorage — données non envoyées aux serveurs)"),
+      bullet("Art. 7 — Partage avec des tiers"),
+      bullet("Art. 8 — Sécurité des données"),
+      bullet("Art. 9 — Vos droits (accès, rectification, suppression, portabilité, opposition)"),
+      bullet("Art. 10 — Autorités de contrôle (Togo ADPNP, UE CEPD, US FTC, UK ICO)"),
+      bullet("Art. 11 — Cookies et technologies de suivi"),
+      bullet("Art. 12 — Transferts internationaux"),
+      bullet("Art. 13 — Modifications et contact"),
+      bullet("Sommaire sticky avec ancres — navigation rapide entre articles"),
+      space(),
+
+      heading2('3.10 Page 404 (404.html)'),
+      body("Page d'erreur personnalisée aux couleurs de la marque :"),
+      bullet("Code d'erreur 404 en grand format typographique bordeaux"),
+      bullet("Message explicatif et bouton retour à l'accueil"),
+      bullet("Liens vers les pages principales du site"),
       space(2),
 
       pageBreak(),
@@ -407,7 +495,7 @@ const doc = new Document({
       heading1('4. Infrastructure & Hébergement'),
 
       heading2('4.1 Solution retenue'),
-      body("Compte tenu du profil statique du site (aucune base de données, aucun back-office), une solution d’hébergement mutualisé performance est pleinement adaptée."),
+      body("Compte tenu du profil statique du site (aucune base de données, aucun back-office), une solution d'hébergement mutualisé performance est pleinement adaptée."),
       space(),
 
       makeTable(
@@ -415,7 +503,7 @@ const doc = new Document({
         [
           ['Nom de domaine', 'africawinefood.com', 'Namecheap / OVH', '2 ans'],
           ['Hébergement web', 'Hébergement Premium', 'Hostinger', '2 ans'],
-          ['Certificat SSL', 'Let’s Encrypt (HTTPS)', 'Inclus Hostinger', '2 ans'],
+          ['Certificat SSL', "Let's Encrypt (HTTPS)", 'Inclus Hostinger', '2 ans'],
           ['Bande passante', 'Illimitée', 'Inclus Hostinger', '2 ans'],
           ['Sauvegardes', 'Automatiques hebdomadaires', 'Inclus Hostinger', '2 ans'],
           ['Uptime garanti', '99,9%', 'SLA Hostinger', '2 ans'],
@@ -428,13 +516,15 @@ const doc = new Document({
       bullet("Transfert des fichiers par FTP/SFTP ou panneau cPanel"),
       bullet("Configuration DNS (enregistrements A, CNAME, MX)"),
       bullet("Activation et vérification SSL"),
-      bullet("Tests de compatibilité cross-browser (Chrome, Firefox, Safari, Edge)"),
-      bullet("Tests de performance (chargement < 3 secondes sur connexion mobile)"),
+      bullet("Tests cross-browser : Chrome, Firefox, Safari, Edge"),
+      bullet("Tests responsive : iPhone SE (360px), Galaxy S, iPad, desktop"),
+      bullet("Test anti-zoom iOS — vérification des inputs sur Safari mobile"),
+      bullet("Vérification performance Lighthouse — objectif > 85"),
       bullet("Livraison des accès hébergement au client"),
       space(2),
 
       heading2('4.3 Maintenance 2 ans incluse'),
-      bullet("Corrections de bugs ou anomalies d’affichage"),
+      bullet("Corrections de bugs ou anomalies d'affichage"),
       bullet("Mises à jour mineures de contenu (textes, prix, photos)"),
       bullet("Surveillance de la disponibilité du site"),
       bullet("Support par WhatsApp et email sous 48h ouvrables"),
@@ -445,8 +535,7 @@ const doc = new Document({
 
       // ══ 5. PLANNING ══
       heading1('5. Planning de réalisation'),
-
-      body("Le délai de livraison est estimé à 7 à 14 jours ouvrables à compter de la réception de l’acompte et des éléments de contenu."),
+      body("Le délai de livraison est estimé à 14 à 20 jours ouvrables à compter de la réception de l'acompte et des éléments de contenu."),
       space(),
 
       makeTable(
@@ -454,20 +543,21 @@ const doc = new Document({
         [
           ['1', 'Réception acompte + briefing détaillé client', 'Jour 1'],
           ['2', 'Maquettage et validation charte graphique', 'Jours 2-3'],
-          ['3', 'Développement page Accueil', 'Jours 3-5'],
-          ['4', 'Développement pages secondaires (Catalogue, About, Blog)', 'Jours 5-8'],
-          ['5', 'Développement pages Contact et Commande', 'Jours 8-9'],
-          ['6', 'Intégration bilinguisme, devise, animations', 'Jours 9-11'],
-          ['7', 'Tests, corrections, optimisation mobile', 'Jours 11-12'],
-          ['8', 'Mise en ligne, configuration hébergement', 'Jours 13-14'],
-          ['9', 'Livraison finale + formation client', 'Jour 14'],
+          ['3', 'Développement pages principales (index, catalogue, about, blog, contact, commande)', 'Jours 3-10'],
+          ['4', 'Développement système devis + historique admin sécurisé', 'Jours 10-13'],
+          ['5', 'Développement pages articles blog (6 articles)', 'Jours 13-15'],
+          ['6', 'Politique de confidentialité internationale + page 404', 'Jours 15-16'],
+          ['7', 'Optimisation cross-browser, responsive, accessibilité', 'Jours 16-17'],
+          ['8', 'Séparation HTML/CSS — externalisation styles', 'Jour 17-18'],
+          ['9', 'Tests complets + corrections', 'Jours 18-19'],
+          ['10', 'Mise en ligne, configuration hébergement, formation client', 'Jours 19-20'],
         ],
         [1200, 5500, 2326]
       ),
       space(2),
 
       heading2('5.1 Conditions de respect des délais'),
-      body("Le respect du planning est conditionné à la fourniture par le client, dans les 48h suivant le versement de l’acompte, des éléments suivants :"),
+      body("Le respect du planning est conditionné à la fourniture par le client, dans les 48h suivant l'acompte :"),
       bullet("Logo en haute définition (PNG transparent ou SVG)"),
       bullet("Photos produits (minimum 10 visuels haute résolution)"),
       bullet("Textes définitifs (présentation entreprise, descriptifs produits)"),
@@ -484,15 +574,19 @@ const doc = new Document({
       makeTable(
         ['Poste', 'Description', 'Montant FCFA', 'Montant EUR'],
         [
-          ['Conception & développement', '6 pages HTML/CSS/JS complètes', '250 000', '~381 €'],
+          ['Pages principales (6)', '6 pages HTML/CSS/JS complètes', '250 000', '~381 €'],
+          ['Pages articles blog (6)', '6 articles mis en page', '60 000', '~92 €'],
+          ['Système devis + admin', 'Génération PDF, auth sécurisée, historique', '60 000', '~92 €'],
           ['Design premium', 'Charte graphique luxe, animations, responsive', '50 000', '~76 €'],
-          ['Sous-total développement', '', '300 000', '~457 €'],
+          ['Conformité légale', 'Politique confidentialité 13 articles, page 404', '20 000', '~31 €'],
+          ['Cross-browser & A11y', 'Optimisations iOS, touch, reduced-motion', '20 000', '~31 €'],
+          ['Sous-total développement', '', '460 000', '~702 €'],
         ],
-        [2800, 3600, 1600, 1026]
+        [2800, 3200, 1700, 1326]
       ),
       space(),
 
-      heading2('6.2 Détail des coûts d’infrastructure (2 ans)'),
+      heading2('6.2 Détail des coûts d\'infrastructure (2 ans)'),
       makeTable(
         ['Poste', 'Fournisseur', 'Montant FCFA', 'Montant EUR'],
         [
@@ -510,11 +604,11 @@ const doc = new Document({
         width: { size: 9360, type: WidthType.DXA },
         columnWidths: [5500, 3860],
         rows: [
-          makeTotalRow('Développement & Design', '300 000 FCFA'),
+          makeTotalRow('Développement & Design (16 pages + fonctionnalités)', '460 000 FCFA'),
           makeTotalRow('Hébergement + Domaine (2 ans)', '73 000 FCFA'),
           makeTotalRow('Maintenance & Support (2 ans)', '60 000 FCFA'),
           makeTotalRow('TVA', 'Non applicable', false),
-          makeTotalRow('TOTAL TTC', '433 000 FCFA  (~660 €)', true),
+          makeTotalRow('TOTAL TTC', '593 000 FCFA  (~905 €)', true),
         ]
       }),
       space(2),
@@ -523,8 +617,8 @@ const doc = new Document({
       makeTable(
         ['Échéance', 'Montant', 'Condition', 'Moyen accepté'],
         [
-          ['Acompte (50%)', '216 500 FCFA', 'Dès signature du devis', 'Mobile Money, virement, espèces'],
-          ['Solde (50%)', '216 500 FCFA', 'Livraison du site en ligne', 'Mobile Money, virement, espèces'],
+          ['Acompte (50%)', '296 500 FCFA', 'Dès signature du devis', 'Mobile Money, virement, espèces'],
+          ['Solde (50%)', '296 500 FCFA', 'Livraison du site en ligne', 'Mobile Money, virement, espèces'],
         ],
         [1800, 2000, 2800, 2760]
       ),
@@ -533,9 +627,9 @@ const doc = new Document({
       space(2),
 
       heading2('6.5 Validité et conditions'),
-      bullet("Devis valable 30 jours à compter du 13 mai 2026 (soit jusqu’au 12 juin 2026)"),
+      bullet("Devis valable 30 jours à compter du 15 mai 2026 (soit jusqu'au 14 juin 2026)"),
       bullet("Les droits sur le site sont intégralement transférés au client après règlement complet"),
-      bullet("Tout développement supplémentaire hors périmètre fera l’objet d’un avenant tarifaire"),
+      bullet("Tout développement supplémentaire hors périmètre fera l'objet d'un avenant tarifaire"),
       bullet("Les contenus (textes, photos, logo, PDF) sont à fournir par le client"),
       space(2),
 
@@ -548,10 +642,11 @@ const doc = new Document({
       makeTable(
         ['Livrable', 'Format', 'Inclus'],
         [
-          ['Code source complet du site', 'Dossier ZIP (HTML/CSS/JS)', 'Oui'],
+          ['Code source complet du site (16 pages)', 'Dossier ZIP (HTML/CSS/JS)', 'Oui'],
           ['Site mis en ligne sur domaine client', 'URL publique HTTPS', 'Oui'],
           ['Accès FTP / cPanel hébergement', 'Identifiants sécurisés', 'Oui'],
-          ['Documentation utilisation simple', 'PDF 1 page', 'Oui'],
+          ['Code d\'accès administration (historique devis)', 'Confidentiel — livré en main propre', 'Oui'],
+          ['Documentation utilisation simplifiée', 'PDF', 'Oui'],
           ['Session de formation à la prise en main', '1h par WhatsApp/appel', 'Oui'],
         ],
         [3800, 2800, 2760]
@@ -559,14 +654,14 @@ const doc = new Document({
       space(2),
 
       heading2('7.2 Propriété intellectuelle'),
-      body("Après règlement intégral du montant du devis, le client Africa Wine Food devient propriétaire exclusif du code source, du design et de l’ensemble des éléments créés spécifiquement pour ce projet. Les bibliothèques open-source utilisées (Google Fonts) restent soumises à leurs licences respectives."),
+      body("Après règlement intégral du montant du devis, le client Africa Wine Food devient propriétaire exclusif du code source, du design et de l'ensemble des éléments créés spécifiquement pour ce projet. Les bibliothèques open-source utilisées (Google Fonts, Leaflet.js) restent soumises à leurs licences respectives."),
       space(2),
 
       pageBreak(),
 
       // ══ 8. SIGNATURES ══
       heading1('8. Bon pour accord'),
-      body("Les deux parties, après lecture et acceptation de l’intégralité des clauses du présent cahier des charges, certifient leur accord par leur signature."),
+      body("Les deux parties, après lecture et acceptation de l'intégralité des clauses du présent cahier des charges, certifient leur accord par leur signature."),
       space(2),
 
       new Table({
@@ -597,7 +692,7 @@ const doc = new Document({
       space(2),
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        children: [new TextRun({ text: 'Africa Wine Food — L’excellence viticole au cœur de l’Afrique', font: 'Georgia', size: 20, italics: true, color: MUTED })]
+        children: [new TextRun({ text: "Africa Wine Food — L'excellence viticole au cœur de l'Afrique", font: 'Georgia', size: 20, italics: true, color: MUTED })]
       }),
     ]
   }]
