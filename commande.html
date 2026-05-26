@@ -2,6 +2,7 @@
 <html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' images.unsplash.com data: blob:; connect-src 'self' api.exchangerate-api.com; frame-src 'none'; object-src 'none'; base-uri 'self';" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#4D0F1C" />
@@ -29,7 +30,7 @@
   <div class="nav-container">
     <a href="index.html" class="nav-logo" aria-label="Africa Wine Food - Accueil">
       <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
-      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
+      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span>
     </a>
     <div class="nav-menu" id="nav-menu">
       <ul class="nav-links" role="list">
@@ -47,7 +48,7 @@
       <span id="currency-rate-display" class="currency-rate" aria-live="polite"></span>
     </div>
     <div class="nav-actions">
-      <button id="currency-toggle" class="currency-btn" aria-label="Afficher en USD" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-usd">USD</span></button>
+      <button id="currency-toggle" class="currency-btn" aria-label="Afficher en Euro" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-eur">EUR</span></button>
       <a href="commande.html" class="cart-nav-btn active" id="cart-nav-btn" aria-label="Voir le panier">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
         <span class="cart-badge" id="cart-badge" hidden>0</span>
@@ -136,7 +137,7 @@
               <span class="order-guide-num">2</span>
               <div>
                 <strong>Choisissez votre devise</strong>
-                <p>Cliquez sur "Générer mon devis" et sélectionnez F CFA ou Dollar US.</p>
+                <p>Cliquez sur "Générer mon devis" et sélectionnez F CFA ou Euro.</p>
               </div>
             </li>
             <li class="order-guide-step">
@@ -158,6 +159,138 @@
         </div>
 
       </div>
+
+      <!-- ── FORMULAIRE COORDONNÉES ── -->
+      <form id="order-form" class="order-form-wrap" hidden novalidate>
+        <div class="order-form-header">
+          <h2 data-i18n="order.form.title">Vos coordonnées</h2>
+          <p>Renseignez vos informations pour finaliser votre demande. Notre équipe vous contacte sous 24h.</p>
+        </div>
+
+        <div class="order-form-grid">
+          <!-- Prénom / Nom -->
+          <div class="form-group">
+            <label for="order-prenom" data-i18n="order.form.prenom">Prénom *</label>
+            <input type="text" id="order-prenom" name="prenom" required autocomplete="given-name" placeholder="Jean" />
+          </div>
+          <div class="form-group">
+            <label for="order-nom" data-i18n="order.form.nom">Nom *</label>
+            <input type="text" id="order-nom" name="nom" required autocomplete="family-name" placeholder="Dupont" />
+          </div>
+
+          <!-- Email / Téléphone -->
+          <div class="form-group">
+            <label for="order-email" data-i18n="order.form.email">Email *</label>
+            <input type="email" id="order-email" name="email" required autocomplete="email" placeholder="jean.dupont@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="order-phone" data-i18n="order.form.phone">Téléphone *</label>
+            <input type="tel" id="order-phone" name="phone" required autocomplete="tel" placeholder="+228 90 00 00 00" />
+          </div>
+
+          <!-- Pays / Ville -->
+          <div class="form-group">
+            <label for="order-pays" data-i18n="order.form.pays">Pays *</label>
+            <select id="order-pays" name="pays" required>
+              <option value="" data-i18n="order.form.pays.placeholder">Sélectionner...</option>
+              <option value="TG">Togo</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="SN">Sénégal</option>
+              <option value="GH">Ghana</option>
+              <option value="CM">Cameroun</option>
+              <option value="BJ">Bénin</option>
+              <option value="ML">Mali</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="FR">France</option>
+              <option value="BE">Belgique</option>
+              <option value="OTHER" data-i18n="order.form.pays.other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="order-ville" data-i18n="order.form.ville">Ville *</label>
+            <input type="text" id="order-ville" name="ville" required autocomplete="address-level2" placeholder="Lomé" />
+          </div>
+
+          <!-- Adresse -->
+          <div class="form-group form-group--full">
+            <label for="order-adresse" data-i18n="order.form.adresse">Adresse de livraison</label>
+            <input type="text" id="order-adresse" name="adresse" autocomplete="street-address" placeholder="Quartier, rue, N°..." />
+          </div>
+
+          <!-- Mode de livraison -->
+          <div class="form-group form-group--full">
+            <p class="form-label-text" data-i18n="order.form.delivery">Mode de livraison</p>
+            <div class="delivery-options">
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="standard" checked />
+                <span data-i18n="order.delivery.standard">Livraison standard (5–7 jours ouvrés)</span>
+              </label>
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="express" />
+                <span data-i18n="order.delivery.express">Livraison express (2–3 jours ouvrés)</span>
+              </label>
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="pickup" />
+                <span data-i18n="order.delivery.pickup">Retrait en agence — Lomé</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Occasion -->
+          <div class="form-group form-group--full">
+            <label for="order-occasion" data-i18n="order.form.occasion">Occasion</label>
+            <select id="order-occasion" name="occasion">
+              <option value="" data-i18n="order.form.occasion.placeholder">Sélectionner (optionnel)...</option>
+              <option value="perso"    data-i18n="order.occasion.perso">Cave personnelle</option>
+              <option value="cadeau"   data-i18n="order.occasion.cadeau">Cadeau</option>
+              <option value="event"    data-i18n="order.occasion.event">Événement / Réception</option>
+              <option value="business" data-i18n="order.occasion.business">Cadeau d'affaires</option>
+              <option value="invest"   data-i18n="order.occasion.invest">Investissement viticole</option>
+              <option value="resto"    data-i18n="order.occasion.resto">Restaurant / Hôtel</option>
+            </select>
+          </div>
+
+          <!-- Notes -->
+          <div class="form-group form-group--full">
+            <label for="order-notes" data-i18n="order.form.notes">Notes & instructions spéciales</label>
+            <textarea id="order-notes" name="notes" rows="3" data-i18n-placeholder="order.form.notes.placeholder" placeholder="Occasion particulière, préférences d'emballage, date de livraison souhaitée..."></textarea>
+          </div>
+        </div>
+
+        <p class="order-disclaimer" data-i18n="order.disclaimer">
+          En soumettant ce formulaire, vous acceptez d'être recontacté par notre équipe pour confirmer votre commande et les modalités de paiement sécurisé. Aucun prélèvement ne sera effectué sans votre accord préalable.
+        </p>
+
+        <div class="order-form-actions">
+          <button type="submit" class="btn btn-primary order-submit-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            <span data-i18n="order.form.submit">Envoyer ma demande de commande</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- ── MESSAGE DE CONFIRMATION ── -->
+      <div id="order-success" class="order-success-wrap" hidden>
+        <div class="order-success-card">
+          <div class="order-success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
+          </div>
+          <h2 class="order-success-title">Votre commande a été confirmée !</h2>
+          <p class="order-success-desc" data-i18n="order.success.desc">
+            Notre équipe vous contactera sous 24h pour confirmer votre commande et vous transmettre un devis personnalisé avec les modalités de paiement.
+          </p>
+          <div class="order-success-actions">
+            <a href="index.html" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Retour à l'accueil
+            </a>
+            <a href="catalogue.html" class="btn btn-outline" data-i18n="order.success.catalogue">
+              Retour au catalogue
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -171,7 +304,7 @@
         <div class="footer-brand">
           <a href="index.html" class="footer-logo" aria-label="Africa Wine Food">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/></svg>
-            <span>Africa <span class="logo-accent">Wine</span> Food</span>
+            <span>Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span>
           </a>
           <p class="footer-slogan" data-i18n="footer.slogan">L'excellence viticole, au coeur de l'Afrique.</p>
           <div class="footer-social">
@@ -249,9 +382,9 @@
             '<span>Franc CFA</span>',
             '<span style="font-size:.72rem;opacity:.8;font-weight:400;">XOF</span>',
           '</button>',
-          '<button id="cur-usd" style="padding:18px 12px;border:2px solid #e8e0d5;border-radius:5px;background:#fff;color:#4D0F1C;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">',
-            '<span>Dollar US</span>',
-            '<span style="font-size:.72rem;color:#7A7069;font-weight:400;">USD</span>',
+          '<button id="cur-eur" style="padding:18px 12px;border:2px solid #e8e0d5;border-radius:5px;background:#fff;color:#4D0F1C;font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">',
+            '<span>Euro</span>',
+            '<span style="font-size:.72rem;color:#7A7069;font-weight:400;">EUR</span>',
           '</button>',
         '</div>',
         '<button id="cur-cancel" style="background:transparent;border:none;font-family:inherit;font-size:.8rem;color:#7A7069;cursor:pointer;text-decoration:underline;">Annuler</button>',
@@ -267,7 +400,7 @@
     }
 
     overlay.querySelector('#cur-xof').addEventListener('click', function () { go('XOF'); });
-    overlay.querySelector('#cur-usd').addEventListener('click', function () { go('USD'); });
+    overlay.querySelector('#cur-eur').addEventListener('click', function () { go('EUR'); });
     overlay.querySelector('#cur-cancel').addEventListener('click', function () { overlay.remove(); });
     overlay.addEventListener('click', function (e) { if (e.target === overlay) overlay.remove(); });
   });

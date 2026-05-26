@@ -4,8 +4,11 @@
 
 'use strict';
 
-const ADMIN_B64  = 'QVdGQExvbWU='; /* base64 de AWF@Lome */
+/* SHA-256 de AWF@Lome — mot de passe jamais stocké en clair */
+const ADMIN_HASH  = '1c2900019142a8119cd85d0ab828416d1539fdcb23cfc7f08fd44d9e4cc01fbb';
 const SESSION_KEY = 'awf-admin-auth';
+const LOCKOUT_KEY = 'awf-admin-lockout';
+const MAX_ATTEMPTS = 5;
 let _sortKey = 'date-desc';
 
 /* ── Utils ──────────────────────────────────────── */
@@ -21,20 +24,46 @@ function fmtXof(n) {
   return Number(n).toLocaleString('fr-FR') + ' FCFA';
 }
 
+const HISTORY_MAX_AGE = 90 * 24 * 3600 * 1000; /* 90 jours */
+const HISTORY_MAX_ENTRIES = 50;
+
 function getHistory() {
-  try { return JSON.parse(localStorage.getItem('awf-devis-history') || '[]'); }
-  catch(e) { return []; }
+  try {
+    const raw = JSON.parse(localStorage.getItem('awf-devis-history') || '[]');
+    const cutoff = Date.now() - HISTORY_MAX_AGE;
+    return raw.filter(e => !e.ts || e.ts > cutoff);
+  } catch(e) { return []; }
 }
 
 function saveHistory(h) {
-  localStorage.setItem('awf-devis-history', JSON.stringify(h));
+  const pruned = h.slice(-HISTORY_MAX_ENTRIES);
+  localStorage.setItem('awf-devis-history', JSON.stringify(pruned));
 }
 
 /* ── Auth ──────────────────────────────────────── */
 
-function checkPassword(pwd) {
-  try { return pwd === atob(ADMIN_B64); }
-  catch(e) { return false; }
+async function sha256hex(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+function isLockedOut() {
+  try {
+    const d = JSON.parse(localStorage.getItem(LOCKOUT_KEY) || 'null');
+    if (!d) return false;
+    if (Date.now() > d.until) { localStorage.removeItem(LOCKOUT_KEY); return false; }
+    return d;
+  } catch(_) { return false; }
+}
+
+function recordFailedAttempt() {
+  try {
+    const d = JSON.parse(localStorage.getItem(LOCKOUT_KEY) || '{"count":0,"until":0}');
+    d.count = (d.count || 0) + 1;
+    if (d.count >= MAX_ATTEMPTS) d.until = Date.now() + 15 * 60 * 1000; /* 15 min */
+    localStorage.setItem(LOCKOUT_KEY, JSON.stringify(d));
+    return d;
+  } catch(_) { return null; }
 }
 
 function isAuthenticated() {
@@ -64,18 +93,39 @@ function handleLogin(e) {
   const pwdEl = document.getElementById('admin-pwd');
   const errEl = document.getElementById('admin-error');
   const card  = document.querySelector('.admin-login-card');
+  const submitBtn = document.getElementById('admin-submit');
 
-  if (checkPassword(pwdEl.value)) {
-    localStorage.setItem(SESSION_KEY, '1');
-    hideOverlay();
-    initAdmin();
-  } else {
+  const lockout = isLockedOut();
+  if (lockout) {
+    const mins = Math.ceil((lockout.until - Date.now()) / 60000);
+    errEl.textContent = `Trop de tentatives. Réessayez dans ${mins} min.`;
     errEl.hidden = false;
-    pwdEl.value  = '';
-    pwdEl.focus();
-    card.classList.add('shake');
-    setTimeout(() => card.classList.remove('shake'), 500);
+    return;
   }
+
+  const pwd = pwdEl.value;
+  pwdEl.value = '';
+  if (submitBtn) submitBtn.disabled = true;
+
+  sha256hex(pwd).then(hash => {
+    if (hash === ADMIN_HASH) {
+      localStorage.removeItem(LOCKOUT_KEY);
+      localStorage.setItem(SESSION_KEY, '1');
+      hideOverlay();
+      initAdmin();
+    } else {
+      const d = recordFailedAttempt();
+      const remaining = MAX_ATTEMPTS - (d ? d.count : 1);
+      errEl.textContent = remaining > 0
+        ? `Mot de passe incorrect. ${remaining} tentative(s) restante(s).`
+        : 'Compte verrouillé 15 minutes.';
+      errEl.hidden = false;
+      pwdEl.focus();
+      card.classList.add('shake');
+      setTimeout(() => card.classList.remove('shake'), 500);
+    }
+    if (submitBtn) submitBtn.disabled = false;
+  });
 }
 
 /* ── History ────────────────────────────────────── */

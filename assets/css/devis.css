@@ -442,10 +442,10 @@ tbody td:last-child {
   font-weight: 600;
   letter-spacing: .06em;
   padding: 10px 22px;
-  border-radius: 3px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: background .2s, color .2s;
+  transition: background .2s, color .2s, box-shadow .2s;
   white-space: nowrap;
   text-decoration: none;
   display: inline-flex;
@@ -466,29 +466,64 @@ tbody td:last-child {
 }
 
 @media (max-width: 600px) {
-  .header { padding: 28px 24px; flex-direction: column; }
+  body { padding: 16px 12px; }
+
+  /* En-tête */
+  .header { padding: 24px 20px; flex-direction: column; gap: 16px; }
   .header-meta { text-align: left; }
-  .party { padding: 24px; }
+  .badge-devis { font-size: .65rem; }
+  .devis-number { font-size: 1.25rem; }
+
+  /* Parties */
   .parties { grid-template-columns: 1fr; }
+  .party { padding: 20px; }
   .party + .party { border-left: none; border-top: 1px solid var(--border); }
-  .objet-section, .table-section, .totaux, .note-section { padding-left: 24px; padding-right: 24px; }
-  .totaux { padding: 0 24px 28px; }
+  .party-name { font-size: 1rem; }
+  .party-info { font-size: .8rem; }
+
+  /* Objet */
+  .objet-section { padding: 16px 20px; flex-direction: column; align-items: flex-start; gap: 6px; }
+
+  /* Tableau — masquer colonne numéro, réduire tailles */
+  .table-section { padding: 24px 20px; }
+  .td-num { display: none; }
+  table { font-size: .82rem; }
+  thead th { padding: 10px 12px; font-size: .68rem; }
+  tbody td { padding: 11px 12px; }
+  .td-desc strong { font-size: .85rem; }
+  .td-desc span { font-size: .75rem; }
+
+  /* Totaux */
+  .totaux { padding: 0 20px 28px; }
   .totaux-box { width: 100%; }
-  .modalites { grid-template-columns: 1fr; padding: 24px; }
-  .footer { flex-direction: column; align-items: flex-start; padding: 20px 24px; }
+  .totaux-final .val { font-size: 1.15rem; }
+
+  /* Modalités */
+  .modalites { grid-template-columns: 1fr; padding: 20px; gap: 18px; }
+
+  /* Note */
+  .note-section { padding: 16px 20px; }
+
+  /* Footer */
+  .footer { flex-direction: column; align-items: flex-start; padding: 18px 20px; gap: 8px; }
+  .footer-text, .footer-valid { font-size: .72rem; }
+
+  /* Bouton impression */
+  .print-btn { width: 100%; text-align: center; }
 }
 
 /* 360px — très petits écrans */
 @media (max-width: 360px) {
-  body { padding: 20px 12px; }
-  .header { padding: 24px 16px; }
-  .party { padding: 20px 16px; }
-  .objet-section, .table-section, .note-section { padding-left: 16px; padding-right: 16px; }
-  .totaux { padding: 0 16px 24px; }
-  .modalites { padding: 20px 16px; }
-  .footer { padding: 16px; }
+  body { padding: 12px 8px; }
+  .header { padding: 20px 14px; }
+  .party { padding: 16px 14px; }
+  .objet-section, .table-section, .note-section { padding-left: 14px; padding-right: 14px; }
+  .totaux { padding: 0 14px 20px; }
+  .modalites { padding: 16px 14px; }
+  .footer { padding: 14px; }
   table { font-size: .76rem; }
-  thead th, tbody td { padding: 9px 10px; }
+  thead th, tbody td { padding: 8px 9px; }
+  .devis-number { font-size: 1.1rem; }
 }
 
 /* Accessibilité — prefers-reduced-motion */
@@ -505,4 +540,37 @@ tbody td:last-child {
   .print-btn { min-height: 44px; }
   .devis-btn--primary:hover,
   .devis-btn--secondary:hover { transform: none; box-shadow: none; }
+}
+
+/* ── Glassmorphism — devis.html ── */
+.page {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-icon {
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,168,76,.25) !important;
+  box-shadow: 0 4px 16px rgba(77,15,28,.2), inset 0 1px 0 rgba(201,168,76,.15);
+}
+
+.devis-btn--primary:hover {
+  box-shadow: 0 6px 20px rgba(77,15,28,.35), 0 0 0 3px rgba(201,168,76,.15);
+}
+.devis-btn--secondary:hover {
+  box-shadow: 0 6px 20px rgba(201,168,76,.4), 0 0 0 3px rgba(201,168,76,.18);
+}
+.print-btn {
+  border-radius: 50px;
+}
+.print-btn:hover {
+  box-shadow: 0 6px 20px rgba(77,15,28,.3);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .page { border-radius: 4px; }
 }

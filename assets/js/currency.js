@@ -1,14 +1,15 @@
 /* =============================================
    AFRICA WINE FOOD — currency.js
-   Convertisseur XOF <-> USD  |  taux live, cache 1h
+   Convertisseur XOF <-> EUR  |  taux live, cache 1h
+   Note: 1 EUR = 655.957 XOF (parité fixe CFA)
    ============================================= */
 'use strict';
 
 window.AWF_CURRENCY = (function () {
 
-  const _FALLBACK = 655;
-  const _API      = 'https://api.exchangerate-api.com/v4/latest/USD';
-  const _KEY      = 'awf_xof_rate_v1';
+  const _FALLBACK = 656;  /* parité fixe CFA : 1 EUR ≈ 655.957 XOF */
+  const _API      = 'https://api.exchangerate-api.com/v4/latest/EUR';
+  const _KEY      = 'awf_xof_eur_rate_v1';
   const _TTL      = 3600000; /* 1 heure */
 
   let _current = 'XOF';
@@ -16,13 +17,13 @@ window.AWF_CURRENCY = (function () {
 
   /* ---- Formatters ---- */
   function fmtXOF(n) {
-    return Math.round(n).toLocaleString('fr-FR') + ' F CFA';
+    return Math.round(n).toLocaleString('fr-FR') + ' F CFA';
   }
-  function fmtUSD(n) {
-    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  function fmtEUR(n) {
+    return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
   }
   function fmtPrice(xofAmount) {
-    return _current === 'XOF' ? fmtXOF(xofAmount) : fmtUSD(xofAmount / _rate);
+    return _current === 'XOF' ? fmtXOF(xofAmount) : fmtEUR(xofAmount / _rate);
   }
 
   /* ---- Cache + API ---- */
@@ -35,7 +36,10 @@ window.AWF_CURRENCY = (function () {
       }
     } catch (_) {}
     try {
-      const res  = await fetch(_API);
+      const ctrl = new AbortController();
+      const tid  = setTimeout(() => ctrl.abort(), 5000);
+      const res  = await fetch(_API, { signal: ctrl.signal });
+      clearTimeout(tid);
       const data = await res.json();
       const r    = data.rates && data.rates.XOF;
       if (!r || isNaN(r)) throw new Error('invalid XOF rate');
@@ -59,11 +63,11 @@ window.AWF_CURRENCY = (function () {
   function _syncToggle() {
     const btn = document.getElementById('currency-toggle');
     if (!btn) return;
-    const isUSD = _current === 'USD';
-    btn.querySelector('.cur-xof').classList.toggle('cur-active', !isUSD);
-    btn.querySelector('.cur-usd').classList.toggle('cur-active',  isUSD);
-    btn.setAttribute('aria-pressed', String(isUSD));
-    btn.setAttribute('aria-label', isUSD ? 'Afficher les prix en F CFA' : 'Afficher les prix en USD');
+    const isEUR = _current === 'EUR';
+    btn.querySelector('.cur-xof').classList.toggle('cur-active', !isEUR);
+    btn.querySelector('.cur-eur').classList.toggle('cur-active',  isEUR);
+    btn.setAttribute('aria-pressed', String(isEUR));
+    btn.setAttribute('aria-label', isEUR ? 'Afficher les prix en F CFA' : 'Afficher les prix en Euro');
   }
 
   function _syncRateBadge(fallback) {
@@ -71,8 +75,8 @@ window.AWF_CURRENCY = (function () {
     if (!el) return;
     const r = Math.round(_rate);
     el.textContent = fallback
-      ? `1 USD ≈ ${r} F CFA ⚠️`
-      : `1 USD = ${r} F CFA (live)`;
+      ? `1 EUR ≈ ${r} F CFA ⚠️`
+      : `1 EUR = ${r} F CFA (live)`;
     el.title = fallback
       ? 'Taux de secours — API temporairement indisponible'
       : 'Taux de change en temps réel';
@@ -90,7 +94,7 @@ window.AWF_CURRENCY = (function () {
     const btn = document.getElementById('currency-toggle');
     if (btn) {
       btn.addEventListener('click', () => {
-        _current = _current === 'XOF' ? 'USD' : 'XOF';
+        _current = _current === 'XOF' ? 'EUR' : 'XOF';
         _renderAll();
         _syncToggle();
       });
@@ -104,7 +108,7 @@ window.AWF_CURRENCY = (function () {
     get current() { return _current; },
     get rate()    { return _rate;    },
     fmtXOF,
-    fmtUSD,
+    fmtEUR,
     fmtPrice,
   };
 

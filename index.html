@@ -2,15 +2,16 @@
 <html lang="fr" data-lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' images.unsplash.com data: blob:; connect-src 'self' api.exchangerate-api.com; frame-src 'none'; object-src 'none'; base-uri 'self';" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#4D0F1C" />
     <meta
       name="description"
-      content="Africa Wine Food - Selection exclusive de vins de luxe et spiritueux premium en Afrique"
+      content="Africa Wine Food - Selection exclusive de vins de luxe, spiritueux premium et produits de distillerie en Afrique"
     />
     <title>
-      Africa Wine Food — L'excellence viticole au coeur de l'Afrique
+      Africa Wine Food — L'excellence viticole et distillerie au coeur de l'Afrique
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,8 +31,8 @@
     <link rel="canonical" href="https://www.africawinefood.com/" />
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Africa Wine Food">
-    <meta property="og:title" content="Africa Wine Food — L'excellence viticole au cœur de l'Afrique">
-    <meta property="og:description" content="Sélection exclusive de vins de luxe et spiritueux premium livrés avec élégance partout en Afrique.">
+    <meta property="og:title" content="Africa Wine Food — L'excellence viticole et distillerie au cœur de l'Afrique">
+    <meta property="og:description" content="Sélection exclusive de vins de luxe, spiritueux premium et produits de distillerie livrés avec élégance partout en Afrique.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80">
   </head>
   <body data-page="home">
@@ -58,7 +59,7 @@
             <path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5" />
           </svg>
           <span class="logo-text"
-            >Africa <span class="logo-accent">Wine</span> Food</span
+            >Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span
           >
         </a>
         <div class="nav-menu" id="nav-menu">
@@ -106,7 +107,7 @@
           <span id="currency-rate-display" class="currency-rate" aria-live="polite"></span>
         </div>
         <div class="nav-actions">
-          <button id="currency-toggle" class="currency-btn" aria-label="Afficher en USD" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-usd">USD</span></button>
+          <button id="currency-toggle" class="currency-btn" aria-label="Afficher en Euro" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-eur">EUR</span></button>
           <a
             href="commande.html"
             class="cart-nav-btn"
@@ -154,13 +155,13 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="hero-pretitle" data-i18n="hero.pretitle">
-            Agence de vins de luxe &amp; spiritueux premium
+            Agence de vins de luxe, spiritueux &amp; distillerie premium
           </p>
           <h1 class="hero-title" data-i18n="hero.title">
-            L'excellence viticole,<br />au coeur de l'Afrique
+            L'excellence viticole et distillerie,<br />au coeur de l'Afrique
           </h1>
           <p class="hero-subtitle" data-i18n="hero.subtitle">
-            Base a Lome, Togo — Selection exclusive de grands crus et spiritueux
+            Base a Lome, Togo — Selection exclusive de grands crus, spiritueux et distilleries
             haut de gamme, livres avec elegance partout en Afrique et a
             l'international.
           </p>
@@ -180,7 +181,7 @@
             </p>
             <h2 class="section-title" data-i18n="univers.title">Nos Univers</h2>
             <p class="section-subtitle" data-i18n="univers.subtitle">
-              Quatre univers de l'excellence viticole et des spiritueux
+              Cinq univers de l'excellence viticole, spiritueux et distilleries
               d'exception.
             </p>
           </div>
@@ -240,6 +241,20 @@
                 href="catalogue.html"
                 class="card-link"
                 data-i18n="univers.c4.cta"
+                >Explorer &rarr;</a
+              >
+            </div>
+            <div class="univers-card animate-on-scroll" data-delay="400">
+              <div class="univers-icon" aria-hidden="true">🍾</div>
+              <h3 data-i18n="univers.c5.title">Crémants &amp; Effervescents</h3>
+              <p data-i18n="univers.c5.desc">
+                Crémants d'Alsace, de Bourgogne, du Jura et autres effervescents
+                d'exception — l'élégance pétillante à prix accessible.
+              </p>
+              <a
+                href="catalogue.html"
+                class="card-link"
+                data-i18n="univers.c5.cta"
                 >Explorer &rarr;</a
               >
             </div>
@@ -748,10 +763,10 @@
                   <path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z" />
                   <path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5" />
                 </svg>
-                <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
+                <span class="logo-text">Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span>
               </a>
               <p class="footer-slogan" data-i18n="footer.slogan">
-                L'excellence viticole, au coeur de l'Afrique.
+                L'excellence viticole et distillerie, au coeur de l'Afrique.
               </p>
               <div class="footer-social">
                 <a

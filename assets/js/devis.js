@@ -7,7 +7,7 @@
 'use strict';
 
 /* ── Devise choisie par le client dans le modal ──────── */
-let _devisCurrency = 'XOF'; // 'XOF' ou 'USD', défini au moment de la confirmation
+let _devisCurrency = 'XOF'; // 'XOF' ou 'EUR', défini au moment de la confirmation
 
 /* ── Échappement HTML (protection XSS) ──────────────── */
 function esc(str) {
@@ -55,8 +55,8 @@ function getHistoryId() {
 /* ── Formatage prix selon la devise choisie par le client */
 function fmtXof(n) {
   const num = Number(n);
-  if (_devisCurrency === 'USD' && window.AWF_CURRENCY) {
-    return window.AWF_CURRENCY.fmtUSD(num / window.AWF_CURRENCY.rate);
+  if (_devisCurrency === 'EUR' && window.AWF_CURRENCY) {
+    return window.AWF_CURRENCY.fmtEUR(num / window.AWF_CURRENCY.rate);
   }
   if (window.AWF_CURRENCY) return window.AWF_CURRENCY.fmtXOF(num);
   return num.toLocaleString('fr-FR') + ' F CFA';
@@ -64,9 +64,9 @@ function fmtXof(n) {
 
 /* ── Label devise pour l'en-tête du devis ────────────── */
 function getCurrencyLabel() {
-  if (_devisCurrency !== 'USD' || !window.AWF_CURRENCY) return null;
+  if (_devisCurrency !== 'EUR' || !window.AWF_CURRENCY) return null;
   const rate = Math.round(window.AWF_CURRENCY.rate);
-  return `Devis établi en USD — taux de conversion : 1 USD = ${rate} F CFA`;
+  return `Devis établi en EUR — taux de conversion : 1 EUR = ${rate} F CFA`;
 }
 
 /* ── Date lisible ────────────────────────────────────── */
@@ -105,8 +105,8 @@ function buildWhatsAppMessage(data) {
   lines += '\n\u{1F4B0} Total : ' + fmtXof(total) + '\n';
   lines += '\u{1F69A} Livraison : ' + (delivery || 'À définir') + '\n';
   lines += '\u{1F4CB} Devis N° : ' + number + '\n';
-  if (_devisCurrency === 'USD' && window.AWF_CURRENCY) {
-    lines += '\u{1F4B1} Taux\u00a0: 1 USD = ' + Math.round(window.AWF_CURRENCY.rate) + ' F CFA\n';
+  if (_devisCurrency === 'EUR' && window.AWF_CURRENCY) {
+    lines += '\u{1F4B1} Taux\u00a0: 1 EUR = ' + Math.round(window.AWF_CURRENCY.rate) + ' F CFA\n';
   }
   return lines;
 }
@@ -127,22 +127,7 @@ function sendEmail(data) {
   ).join('\n');
   const waText = buildWhatsAppMessage(data);
 
-  emailjs.send('AWF_SERVICE_ID', 'AWF_DEVIS_TEMPLATE', {
-    devis_number:     number,
-    devis_date:       dateStr,
-    client_name:      `${client.prenom} ${client.nom}`,
-    client_email:     client.email  || '—',
-    client_phone:     client.phone  || '—',
-    client_ville:     client.ville  || '—',
-    client_pays:      client.pays   || '—',
-    occasion:         client.occasion || '—',
-    delivery:         delivery || 'À définir',
-    notes:            client.notes  || '—',
-    items_list:       itemsTxt,
-    total:            fmtXof(total),
-    message_complet:  waText,
-    reply_to:         client.email  || 'contact@africawinefood.com',
-  }).catch(() => {});
+  /* EmailJS non configuré — envoi WhatsApp uniquement */
 }
 
 /* ── Génération PDF (retourne une Promise) ───────────── */
@@ -543,7 +528,7 @@ function initDevis() {
   const savedCurrency = sessionStorage.getItem('awf-devis-currency');
   if (savedCurrency) {
     sessionStorage.removeItem('awf-devis-currency');
-    _devisCurrency = savedCurrency === 'USD' ? 'USD' : 'XOF';
+    _devisCurrency = savedCurrency === 'EUR' ? 'EUR' : 'XOF';
   }
 
   const historyId = getHistoryId();

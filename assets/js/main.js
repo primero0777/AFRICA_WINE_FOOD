@@ -16,14 +16,14 @@ const translations = {
     'nav.blog':        'Blog',
     'nav.contact':     'Contact',
 
-    'hero.pretitle':  'Agence de vins de luxe & spiritueux premium',
-    'hero.title':     "L'excellence viticole,<br>au cœur de l'Afrique",
-    'hero.subtitle':  "Sélection exclusive de grands crus et spiritueux haut de gamme, livrés avec élégance partout en Afrique.",
+    'hero.pretitle':  'Agence de vins de luxe, spiritueux & distillerie premium',
+    'hero.title':     "L'excellence viticole et distillerie,<br>au cœur de l'Afrique",
+    'hero.subtitle':  "Sélection exclusive de grands crus, spiritueux et distilleries haut de gamme, livrés avec élégance partout en Afrique.",
     'hero.cta':       'Découvrir notre catalogue',
 
     'univers.pretitle':  'Notre sélection',
     'univers.title':     'Nos Univers',
-    'univers.subtitle':  "Quatre univers de l'excellence viticole et des spiritueux d'exception.",
+    'univers.subtitle':  "Cinq univers de l'excellence viticole, spiritueux et distilleries d'exception.",
     'univers.c1.title':  'Vins Rouges, Blancs & Rosés',
     'univers.c1.desc':   "Grands crus classés et pépites du monde entier soigneusement sélectionnés par nos experts.",
     'univers.c1.cta':    'Explorer →',
@@ -36,6 +36,10 @@ const translations = {
     'univers.c4.title':  'Collections Rares',
     'univers.c4.desc':   "Millésimes exceptionnels, éditions limitées et bouteilles de collection pour les connaisseurs les plus exigeants.",
     'univers.c4.cta':    'Explorer →',
+
+    'univers.c5.title':  'Crémants & Effervescents',
+    'univers.c5.desc':   "Crémants d'Alsace, de Bourgogne, du Jura et autres effervescents d'exception — l'élégance pétillante à prix accessible.",
+    'univers.c5.cta':    'Explorer →',
 
     'pourquoi.pretitle':  'Notre différence',
     'pourquoi.title':     'Pourquoi nous choisir',
@@ -209,7 +213,7 @@ const translations = {
     'contact.call':               '📞 Appeler directement',
     'contact.map':                'Quartier Administratif, Lomé — Togo',
 
-    'footer.slogan':        "L'excellence viticole, au cœur de l'Afrique.",
+    'footer.slogan':        "L'excellence viticole et distillerie, au cœur de l'Afrique.",
     'footer.nav.title':     'Navigation',
     'footer.cat.title':     'Nos produits',
     'footer.contact.title': 'Contact',
@@ -255,16 +259,10 @@ const translations = {
     'contact.info.hours':         'Horaires',
     'contact.map.pretitle':       'Ou nous trouver',
     'contact.map.title':          'Notre adresse',
-    'contact.offices.pretitle':   'Nos implantations',
-    'contact.offices.title':      'Nos bureaux en Afrique',
+    'contact.offices.pretitle':   'Notre implantation',
+    'contact.offices.title':      'Notre agence à Lomé',
     'contact.offices.tg.city':    'Lomé',
     'contact.offices.tg.country': "Togo — Siège social",
-    'contact.offices.sn.city':    'Dakar',
-    'contact.offices.sn.country': 'Senegal — Bureau regional',
-    'contact.offices.gh.city':    'Accra',
-    'contact.offices.gh.country': 'Ghana — Bureau regional',
-    'contact.offices.cm.city':    'Douala',
-    'contact.offices.cm.country': 'Cameroun — Bureau regional',
   },
 
   en: {
@@ -274,14 +272,14 @@ const translations = {
     'nav.blog':        'Blog',
     'nav.contact':     'Contact',
 
-    'hero.pretitle':  'Luxury wines & premium spirits agency',
-    'hero.title':     "The finest wines & spirits,<br>at the heart of Africa",
-    'hero.subtitle':  "Exclusive selection of grand crus and premium spirits, elegantly delivered across Africa.",
+    'hero.pretitle':  'Luxury wines, spirits & distillery agency',
+    'hero.title':     "The finest wines, spirits & distilleries,<br>at the heart of Africa",
+    'hero.subtitle':  "Exclusive selection of grand crus, premium spirits and distilleries, elegantly delivered across Africa.",
     'hero.cta':       'Explore our catalogue',
 
     'univers.pretitle':  'Our selection',
     'univers.title':     'Our World',
-    'univers.subtitle':  "Four universes of viticultural excellence and exceptional spirits.",
+    'univers.subtitle':  "Five universes of viticultural excellence, spirits and exceptional distilleries.",
     'univers.c1.title':  'Red, White & Rosé Wines',
     'univers.c1.desc':   "Classified grands crus and hidden gems from around the world, carefully selected by our experts.",
     'univers.c1.cta':    'Explore →',
@@ -294,6 +292,10 @@ const translations = {
     'univers.c4.title':  'Rare Collections',
     'univers.c4.desc':   "Exceptional vintages, limited editions and collectible bottles for the most discerning connoisseurs.",
     'univers.c4.cta':    'Explore →',
+
+    'univers.c5.title':  'Crémants & Sparkling Wines',
+    'univers.c5.desc':   "Crémants from Alsace, Burgundy, Jura and other exceptional sparkling wines — elegant effervescence at accessible prices.",
+    'univers.c5.cta':    'Explore →',
 
     'pourquoi.pretitle':  'Our difference',
     'pourquoi.title':     'Why choose us',
@@ -467,7 +469,7 @@ const translations = {
     'contact.call':               '📞 Call directly',
     'contact.map':                'Administrative District, Lomé — Togo',
 
-    'footer.slogan':        "The finest wines & spirits, at the heart of Africa.",
+    'footer.slogan':        "The finest wines, spirits & distilleries, at the heart of Africa.",
     'footer.nav.title':     'Navigation',
     'footer.cat.title':     'Our products',
     'footer.contact.title': 'Contact',
@@ -513,16 +515,10 @@ const translations = {
     'contact.info.hours':         'Opening hours',
     'contact.map.pretitle':       'Find us',
     'contact.map.title':          'Our address',
-    'contact.offices.pretitle':   'Our locations',
-    'contact.offices.title':      'Our offices across Africa',
+    'contact.offices.pretitle':   'Our location',
+    'contact.offices.title':      'Our agency in Lomé',
     'contact.offices.tg.city':    'Lomé',
     'contact.offices.tg.country': "Togo — Head office",
-    'contact.offices.sn.city':    'Dakar',
-    'contact.offices.sn.country': 'Senegal — Regional office',
-    'contact.offices.gh.city':    'Accra',
-    'contact.offices.gh.country': 'Ghana — Regional office',
-    'contact.offices.cm.city':    'Douala',
-    'contact.offices.cm.country': 'Cameroon — Regional office',
   }
 };
 
@@ -1560,10 +1556,15 @@ function initCommandePage() {
     if (cart.length === 0) {
       emptyEl.hidden = false;
       gridEl.hidden  = true;
+      if (orderForm)    orderForm.hidden    = true;
+      if (orderSuccess) orderSuccess.hidden = true;
       return;
     }
     emptyEl.hidden = true;
     gridEl.hidden  = false;
+    if (orderForm    && orderSuccess && !orderSuccess.hidden) return; // succès déjà affiché
+    if (orderForm)    orderForm.hidden    = false;
+    if (orderSuccess) orderSuccess.hidden = true;
 
     listEl.innerHTML = '';
     let totalQty = 0;

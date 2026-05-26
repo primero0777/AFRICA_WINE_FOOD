@@ -2,6 +2,7 @@
 <html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' images.unsplash.com data: blob:; connect-src 'self' api.exchangerate-api.com; frame-src 'none'; object-src 'none'; base-uri 'self';" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#4D0F1C" />
@@ -27,7 +28,7 @@
   <div class="nav-container">
     <a href="index.html" class="nav-logo" aria-label="Africa Wine Food - Accueil">
       <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
-      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
+      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span>
     </a>
     <div class="nav-menu" id="nav-menu">
       <ul class="nav-links" role="list">
@@ -45,7 +46,7 @@
       <span id="currency-rate-display" class="currency-rate" aria-live="polite"></span>
     </div>
     <div class="nav-actions">
-      <button id="currency-toggle" class="currency-btn" aria-label="Afficher en USD" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-usd">USD</span></button>
+      <button id="currency-toggle" class="currency-btn" aria-label="Afficher en Euro" aria-pressed="false"><span class="cur cur-xof cur-active">XOF</span><span class="cur-sep">|</span><span class="cur cur-eur">EUR</span></button>
       <a href="commande.html" class="cart-nav-btn" id="cart-nav-btn" aria-label="Voir le panier">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
         <span class="cart-badge" id="cart-badge" hidden>0</span>
@@ -202,7 +203,7 @@
         <div class="footer-brand">
           <a href="index.html" class="footer-logo" aria-label="Africa Wine Food">
             <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
-            <span class="logo-text">Africa <span class="logo-accent">Wine</span> Food</span>
+            <span class="logo-text">Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span>
           </a>
           <p class="footer-slogan">L'excellence viticole, au cœur de l'Afrique.</p>
           <div class="footer-social">
