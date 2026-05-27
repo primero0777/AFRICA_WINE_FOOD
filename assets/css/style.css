@@ -167,6 +167,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  overflow: hidden;
 }
 .nav-logo {
   display: flex;
@@ -182,6 +183,8 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .logo-icon { color: var(--gold); }
 .logo-text { font-family: var(--ff-serif); font-size: 1.15rem; color: var(--cream); font-weight: 600; letter-spacing: .03em; white-space: nowrap; }
+.logo-full  { display: inline; }
+.logo-short { display: none; }
 .logo-accent { color: var(--gold); }
 .nav-menu { display: flex; align-items: center; gap: 2rem; }
 .nav-links { display: flex; align-items: center; gap: .25rem; }
@@ -540,11 +543,13 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   border-radius: 2px;
   margin-bottom: .6rem;
 }
-.badge-rouge   { background: rgba(107,26,43,.12); color: var(--bordeaux); }
-.badge-blanc   { background: rgba(201,168,76,.15); color: #7a5e10; }
-.badge-champagne { background: rgba(201,168,76,.2); color: var(--gold-d); }
-.badge-spirits { background: rgba(26,26,26,.1); color: #444; }
-.badge-rare    { background: linear-gradient(135deg,rgba(77,15,28,.15),rgba(201,168,76,.15)); color: var(--bordeaux); border: 1px solid var(--border); }
+.badge-rouge    { background: rgba(107,26,43,.12); color: var(--bordeaux); }
+.badge-blanc    { background: rgba(201,168,76,.15); color: #7a5e10; }
+.badge-champagne{ background: rgba(201,168,76,.2); color: var(--gold-d); }
+.badge-spirits  { background: rgba(26,26,26,.1); color: #444; }
+.badge-rare     { background: linear-gradient(135deg,rgba(77,15,28,.15),rgba(201,168,76,.15)); color: var(--bordeaux); border: 1px solid var(--border); }
+.badge-rose     { background: rgba(220,130,140,.15); color: #9b3a4a; }
+.badge-cremant  { background: rgba(180,210,230,.2); color: #2a6080; }
 .product-name { font-size: 1rem; margin-bottom: .25rem; color: var(--noir); }
 .product-appellation { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; }
 .product-price { font-size: .875rem; color: var(--bordeaux); }
@@ -1361,9 +1366,13 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .nav-logo .logo-img { height: 42px; }
   .nav-logo { padding: 2px 7px; }
 
+  /* Logo abrégé sur mobile */
+  .logo-full { display: none; }
+  .logo-short { display: inline; }
+
   /* Nav mobile */
-  .nav-actions { position: relative; z-index: 20; }
-  .hamburger { display: flex; }
+  .nav-actions { position: relative; z-index: 20; flex-shrink: 0; }
+  .hamburger { display: flex; cursor: pointer; -webkit-tap-highlight-color: transparent; }
   .nav-menu {
     position: absolute;
     top: 100%; right: -100vw;

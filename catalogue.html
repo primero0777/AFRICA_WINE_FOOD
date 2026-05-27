@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
   <div class="nav-container">
     <a href="index.html" class="nav-logo" aria-label="Africa Wine Food - Accueil">
       <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" aria-hidden="true"><path d="M8 2v4M16 2v4M12 2v4M5 8c0 7 3 12 7 12s7-5 7-12H5z"/><path d="M9 14c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg>
-      <span class="logo-text">Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span>
+      <span class="logo-text"><span class="logo-full">Africa <span class="logo-accent">Wine</span> Spirits &amp; Food</span><span class="logo-short">A<span class="logo-accent">W</span>S&amp;F</span></span>
     </a>
     <div class="nav-menu" id="nav-menu">
       <ul class="nav-links" role="list">
@@ -86,12 +86,13 @@
 
       <!-- Filtres -->
       <div class="catalogue-filters" role="group" aria-label="Filtrer par categorie">
-        <button class="filter-btn active" data-filter="all"       data-i18n="catalogue.filter.all">Tous</button>
-        <button class="filter-btn"        data-filter="rouge"     data-i18n="catalogue.filter.rouge">Vins Rouges</button>
-        <button class="filter-btn"        data-filter="blanc-rose" data-i18n="catalogue.filter.blanc">Blancs &amp; Roses</button>
-        <button class="filter-btn"        data-filter="champagne" data-i18n="catalogue.filter.champagne">Champagnes</button>
-        <button class="filter-btn"        data-filter="spirits"   data-i18n="catalogue.filter.spirits">Whisky &amp; Cognac</button>
-        <button class="filter-btn"        data-filter="rare"      data-i18n="catalogue.filter.rare">Collections Rares</button>
+        <button class="filter-btn active" data-filter="all"        data-i18n="catalogue.filter.all">Tous</button>
+        <button class="filter-btn"        data-filter="rouge"      data-i18n="catalogue.filter.rouge">Vins Rouges</button>
+        <button class="filter-btn"        data-filter="blanc-rose" data-i18n="catalogue.filter.blanc">Blancs &amp; Rosés</button>
+        <button class="filter-btn"        data-filter="champagne"  data-i18n="catalogue.filter.champagne">Champagnes</button>
+        <button class="filter-btn"        data-filter="cremant"    data-i18n="catalogue.filter.cremant">Crémants</button>
+        <button class="filter-btn"        data-filter="spirits"    data-i18n="catalogue.filter.spirits">Spiritueux</button>
+        <button class="filter-btn"        data-filter="rare"       data-i18n="catalogue.filter.rare">Collections Rares</button>
       </div>
 
       <!-- Grille produits -->
@@ -321,6 +322,228 @@
               <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
               </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── NOUVEAUX PRODUITS ─────────────────────────── -->
+        <article class="product-card animate-on-scroll" data-category="blanc-rose" data-product-id="provence-rose-2023" role="button" tabindex="0" aria-label="Voir les détails de Whispering Angel">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Whispering Angel Rosé Provence 2023" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-rose">Vin Rosé</span>
+            <h3 class="product-name">Whispering Angel</h3>
+            <p class="product-appellation">AOC Côtes de Provence &mdash; 2023</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="42000">42 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="rouge" data-product-id="barolo-2017" role="button" tabindex="0" aria-label="Voir les détails de Barolo Brunate Ceretto">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&q=80&auto=format&fit=crop" alt="Barolo Brunate Ceretto 2017 Piémont Italie" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-rouge">Vin Rouge</span>
+            <h3 class="product-name">Barolo Brunate — Ceretto</h3>
+            <p class="product-appellation">DOCG Barolo, Piémont &mdash; 2017</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="128000">128 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="champagne" data-product-id="taittinger-prestige" role="button" tabindex="0" aria-label="Voir les détails de Taittinger Comtes de Champagne">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80&auto=format&fit=crop" alt="Taittinger Comtes de Champagne Blanc de Blancs 2013" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-champagne">Champagne</span>
+            <h3 class="product-name">Taittinger Comtes de Champagne</h3>
+            <p class="product-appellation">Blanc de Blancs AOC &mdash; 2013</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="43000">43 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="cremant" data-product-id="cremant-alsace-dopff" role="button" tabindex="0" aria-label="Voir les détails de Crémant d'Alsace Dopff">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80&auto=format&fit=crop" alt="Crémant d'Alsace Brut Dopff au Moulin" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-cremant">Crémant</span>
+            <h3 class="product-name">Crémant d'Alsace Brut</h3>
+            <p class="product-appellation">AOC Crémant d'Alsace &mdash; Dopff au Moulin</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="24900">24 900 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="spirits" data-product-id="rhum-barbancourt-15" role="button" tabindex="0" aria-label="Voir les détails de Rhum Barbancourt 15 ans">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=600&q=80&auto=format&fit=crop" alt="Rhum Barbancourt Réserve Spéciale 15 ans Haïti" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-spirits">Rhum</span>
+            <h3 class="product-name">Barbancourt Réserve Spéciale 15 ans</h3>
+            <p class="product-appellation">Rhum Agricole, Haïti &mdash; 43% vol.</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="62000">62 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="spirits" data-product-id="armagnac-darroze-1990" role="button" tabindex="0" aria-label="Voir les détails de Armagnac Darroze 1990">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?w=600&q=80&auto=format&fit=crop" alt="Armagnac Darroze 1990 Bas-Armagnac 33 ans" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-spirits">Armagnac</span>
+            <h3 class="product-name">Armagnac Darroze 1990</h3>
+            <p class="product-appellation">AOC Bas-Armagnac &mdash; Millésime 1990</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="210000">210 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="rouge" data-product-id="malbec-catena-zapata-2020" role="button" tabindex="0" aria-label="Voir les détails de Malbec Catena Zapata">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80&auto=format&fit=crop" alt="Catena Zapata Adrianna Malbec 2020 Mendoza Argentine" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-rouge">Vin Rouge</span>
+            <h3 class="product-name">Adrianna Vineyard Malbec</h3>
+            <p class="product-appellation">Mendoza, Argentine &mdash; 2020</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="72000">72 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="spirits" data-product-id="gin-hendricks-flora" role="button" tabindex="0" aria-label="Voir les détails de Hendrick's Flora Adora">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=600&q=80&auto=format&fit=crop" alt="Hendrick's Flora Adora Gin Premium Edition Limitée" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-spirits">Gin Premium</span>
+            <h3 class="product-name">Hendrick's Flora Adora</h3>
+            <p class="product-appellation">Gin Édition Limitée &mdash; Écosse</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="51000">51 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="blanc-rose" data-product-id="chablis-raveneau-2021" role="button" tabindex="0" aria-label="Voir les détails de Chablis Grand Cru Raveneau">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80&auto=format&fit=crop" alt="Chablis Grand Cru Les Clos Raveneau 2021 Bourgogne" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-blanc">Vin Blanc</span>
+            <h3 class="product-name">Chablis Grand Cru Les Clos</h3>
+            <p class="product-appellation">AOC Chablis Grand Cru &mdash; Raveneau 2021</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="95000">95 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="rouge" data-product-id="sassicaia-2019" role="button" tabindex="0" aria-label="Voir les détails de Sassicaia 2019">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&q=80&auto=format&fit=crop" alt="Sassicaia DOC Tenuta San Guido 2019 Toscane Italie" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-rouge">Vin Rouge</span>
+            <h3 class="product-name">Sassicaia — Tenuta San Guido</h3>
+            <p class="product-appellation">DOC Bolgheri Sassicaia, Toscane &mdash; 2019</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="190000">190 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="spirits" data-product-id="johnnie-walker-blue" role="button" tabindex="0" aria-label="Voir les détails de Johnnie Walker Blue Label">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=600&q=80&auto=format&fit=crop" alt="Johnnie Walker Blue Label Blended Scotch Whisky" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-spirits">Blended Scotch</span>
+            <h3 class="product-name">Johnnie Walker Blue Label</h3>
+            <p class="product-appellation">Scotch Whisky Prestige &mdash; Écosse</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="144000">144 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="rare" data-product-id="yquem-2016" role="button" tabindex="0" aria-label="Voir les détails de Château d'Yquem 2016">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Château d'Yquem 2016 Sauternes 1er Cru Supérieur" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-rare">Collection Rare</span>
+            <h3 class="product-name">Château d'Yquem</h3>
+            <p class="product-appellation">AOC Sauternes 1er Cru Supérieur &mdash; 2016</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="492000">492 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card animate-on-scroll" data-category="champagne" data-product-id="veuve-clicquot-rose" role="button" tabindex="0" aria-label="Voir les détails de Veuve Clicquot Rosé Vintage">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80&auto=format&fit=crop" alt="Veuve Clicquot Rosé Vintage 2015 Champagne AOC" loading="lazy" />
+            <div class="product-overlay"><a href="contact.html" class="btn btn-overlay" data-i18n="catalogue.devis">Demander un devis</a></div>
+          </div>
+          <div class="product-info">
+            <span class="product-badge badge-champagne">Champagne Rosé</span>
+            <h3 class="product-name">Veuve Clicquot Rosé Vintage</h3>
+            <p class="product-appellation">Champagne AOC Rosé &mdash; 2015</p>
+            <p class="product-price"><span data-i18n="catalogue.from">A partir de</span> <strong data-price-xof="56000">56 000 F CFA</strong></p>
+            <div class="product-card-actions">
+              <button class="btn-details" data-i18n="modal.details">Détails</button>
+              <button class="btn-add-cart" data-i18n="cart.add" title="Ajouter à ma sélection" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></button>
             </div>
           </div>
         </article>
