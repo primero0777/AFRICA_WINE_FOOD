@@ -64,7 +64,7 @@
 
   <!-- PAGE HEADER -->
   <header class="page-header">
-    <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1543253687-c931c8e01820?w=1600&q=80&auto=format&fit=crop')"></div>
+    <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80&auto=format&fit=crop')"></div>
     <div class="page-header-overlay"></div>
     <div class="container page-header-content animate-on-scroll">
       <p class="section-pretitle" data-i18n="contact.pretitle">Parlons-en</p>
@@ -131,19 +131,42 @@
                 <label for="d-product" data-i18n="contact.devis.product">Produit souhaité</label>
                 <select id="d-product" name="product">
                   <option value="" disabled selected>— Sélectionnez un produit —</option>
-                  <option value="Château Margaux">Château Margaux</option>
-                  <option value="Opus One">Opus One</option>
-                  <option value="Dom Pérignon Vintage">Dom Pérignon Vintage</option>
-                  <option value="Cristal Roederer">Cristal Roederer</option>
-                  <option value="Puligny-Montrachet 1er Cru">Puligny-Montrachet 1er Cru</option>
-                  <option value="The Macallan 25 Years">The Macallan 25 Years</option>
-                  <option value="Hennessy Paradis Impérial">Hennessy Paradis Impérial</option>
-                  <option value="Krug Grande Cuvée">Krug Grande Cuvée</option>
-                  <option value="Pétrus">Pétrus</option>
-                  <option value="Sancerre Henri Bourgeois">Sancerre Henri Bourgeois</option>
-                  <option value="Romanée-Conti DRC">Romanée-Conti DRC</option>
-                  <option value="Glenfarclas 50 Years">Glenfarclas 50 Years</option>
-                  <option value="autre">Autre(s)</option>
+                  <optgroup label="Vins Rouges">
+                    <option value="Château Margaux 2018">Château Margaux 2018</option>
+                    <option value="Opus One 2019">Opus One 2019</option>
+                    <option value="Pétrus 2018">Pétrus 2018</option>
+                    <option value="Barolo Brunate Ceretto 2017">Barolo Brunate Ceretto 2017</option>
+                    <option value="Sassicaia DOC 2019">Sassicaia DOC 2019</option>
+                    <option value="Malbec Catena Zapata 2020">Malbec Catena Zapata 2020</option>
+                  </optgroup>
+                  <optgroup label="Vins Blancs &amp; Rosés">
+                    <option value="Puligny-Montrachet 1er Cru 2020">Puligny-Montrachet 1er Cru 2020</option>
+                    <option value="Sancerre Henri Bourgeois 2022">Sancerre Henri Bourgeois 2022</option>
+                    <option value="Chablis Grand Cru Raveneau 2021">Chablis Grand Cru Raveneau 2021</option>
+                    <option value="Château d'Yquem 2016">Château d'Yquem 2016</option>
+                    <option value="Whispering Angel Rosé 2023">Whispering Angel Rosé 2023</option>
+                  </optgroup>
+                  <optgroup label="Champagnes &amp; Crémants">
+                    <option value="Dom Pérignon Vintage 2015">Dom Pérignon Vintage 2015</option>
+                    <option value="Cristal Roederer 2016">Cristal Roederer 2016</option>
+                    <option value="Krug Grande Cuvée">Krug Grande Cuvée</option>
+                    <option value="Taittinger Comtes de Champagne 2013">Taittinger Comtes de Champagne 2013</option>
+                    <option value="Veuve Clicquot Rosé Vintage 2015">Veuve Clicquot Rosé Vintage 2015</option>
+                    <option value="Crémant d'Alsace Dopff">Crémant d'Alsace Dopff</option>
+                  </optgroup>
+                  <optgroup label="Spiritueux Premium">
+                    <option value="The Macallan 25 Years">The Macallan 25 Years</option>
+                    <option value="Hennessy Paradis Impérial">Hennessy Paradis Impérial</option>
+                    <option value="Rhum Barbancourt 15 ans">Rhum Barbancourt 15 ans</option>
+                    <option value="Armagnac Darroze 1990">Armagnac Darroze 1990</option>
+                    <option value="Gin Hendrick's Flora Adora">Gin Hendrick's Flora Adora</option>
+                    <option value="Johnnie Walker Blue Label">Johnnie Walker Blue Label</option>
+                  </optgroup>
+                  <optgroup label="Collections Rares">
+                    <option value="Romanée-Conti DRC 2015">Romanée-Conti DRC 2015</option>
+                    <option value="Glenfarclas 50 Years">Glenfarclas 50 Years</option>
+                  </optgroup>
+                  <option value="autre">Autre(s) — préciser</option>
                 </select>
               </div>
               <div class="form-group" id="d-product-other-group" hidden>
@@ -294,11 +317,11 @@
         <div class="footer-col">
           <h4 data-i18n="footer.cat.title">Nos produits</h4>
           <ul role="list">
-            <li><a href="catalogue.html" data-i18n="badge.rouge">Vins Rouges</a></li>
-            <li><a href="catalogue.html" data-i18n="badge.blanc">Vins Blancs &amp; Roses</a></li>
-            <li><a href="catalogue.html" data-i18n="badge.champagne">Champagnes</a></li>
-            <li><a href="catalogue.html" data-i18n="badge.spirits">Whisky &amp; Cognac</a></li>
-            <li><a href="catalogue.html" data-i18n="badge.rare">Collections Rares</a></li>
+            <li><a href="catalogue.html?filter=rouge" data-i18n="badge.rouge">Vins Rouges</a></li>
+            <li><a href="catalogue.html?filter=blanc-rose" data-i18n="badge.blanc">Vins Blancs &amp; Roses</a></li>
+            <li><a href="catalogue.html?filter=champagne" data-i18n="badge.champagne">Champagnes</a></li>
+            <li><a href="catalogue.html?filter=spirits" data-i18n="badge.spirits">Whisky &amp; Cognac</a></li>
+            <li><a href="catalogue.html?filter=rare" data-i18n="badge.rare">Collections Rares</a></li>
           </ul>
         </div>
         <div class="footer-col">

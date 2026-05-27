@@ -748,33 +748,43 @@ function initCarousel() {
 }
 
 /* ---- Catalogue Filters ---- */
+function applyFilter(filterBtns, cards, filter) {
+  filterBtns.forEach(b => b.classList.remove('active'));
+  const target = [...filterBtns].find(b => b.dataset.filter === filter) || filterBtns[0];
+  target.classList.add('active');
+  cards.forEach(card => {
+    const show = filter === 'all' || card.dataset.category === filter;
+    if (show) {
+      card.style.display = '';
+      requestAnimationFrame(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      });
+    } else {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(16px)';
+      setTimeout(() => { if (card.dataset.category !== filter && filter !== 'all') card.style.display = 'none'; }, 300);
+    }
+  });
+}
+
 function initFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.product-card');
   if (!filterBtns.length) return;
 
   filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      cards.forEach(card => {
-        const show = filter === 'all' || card.dataset.category === filter;
-        /* Animate hide/show */
-        if (show) {
-          card.style.display = '';
-          requestAnimationFrame(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(16px)';
-          setTimeout(() => { if (card.dataset.category !== filter && btn.dataset.filter !== 'all') card.style.display = 'none'; }, 300);
-        }
-      });
-    });
+    btn.addEventListener('click', () => applyFilter(filterBtns, cards, btn.dataset.filter));
   });
+
+  /* Lire ?filter= dans l'URL et activer le filtre correspondant */
+  const urlFilter = new URLSearchParams(window.location.search).get('filter');
+  if (urlFilter && urlFilter !== 'all') {
+    applyFilter(filterBtns, cards, urlFilter);
+    /* Scroll doux vers la grille produits */
+    const grid = document.getElementById('products-grid');
+    if (grid) setTimeout(() => grid.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+  }
 }
 
 /* ---- Blog Category Filters ---- */
