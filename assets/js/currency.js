@@ -12,7 +12,8 @@ window.AWF_CURRENCY = (function () {
   const _KEY      = 'awf_xof_eur_rate_v1';
   const _TTL      = 3600000; /* 1 heure */
 
-  let _current = 'XOF';
+  const _PREF  = 'awf_currency_pref';
+  let _current = localStorage.getItem(_PREF) || 'XOF';
   let _rate    = _FALLBACK;
 
   /* ---- Formatters ---- */
@@ -95,6 +96,7 @@ window.AWF_CURRENCY = (function () {
     if (btn) {
       btn.addEventListener('click', () => {
         _current = _current === 'XOF' ? 'EUR' : 'XOF';
+        localStorage.setItem(_PREF, _current);
         _renderAll();
         _syncToggle();
       });
