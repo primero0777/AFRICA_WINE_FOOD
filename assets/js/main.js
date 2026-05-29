@@ -1050,7 +1050,7 @@ function initCart() {
 const productsData = [
   {
     id: 'margaux-2018',
-    img: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-rafael-cordioli.jpg',
     badgeClass: 'badge-rouge',
     price: '650 €',
     priceXof: 425000,
@@ -1083,7 +1083,7 @@ const productsData = [
   },
   {
     id: 'opus-one-2019',
-    img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-maison-castel-cabernet.jpg',
     badgeClass: 'badge-rouge',
     price: '380 €',
     priceXof: 249000,
@@ -1116,7 +1116,7 @@ const productsData = [
   },
   {
     id: 'dom-perignon-2015',
-    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/champagne-bottle.jpg',
     badgeClass: 'badge-champagne',
     price: '220 €',
     priceXof: 144000,
@@ -1149,7 +1149,7 @@ const productsData = [
   },
   {
     id: 'cristal-2016',
-    img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vignoble-campagne.jpg',
     badgeClass: 'badge-champagne',
     price: '350 €',
     priceXof: 230000,
@@ -1182,7 +1182,7 @@ const productsData = [
   },
   {
     id: 'puligny-2020',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/oenologue-machine.jpg',
     badgeClass: 'badge-blanc',
     price: '180 €',
     priceXof: 118000,
@@ -1215,7 +1215,7 @@ const productsData = [
   },
   {
     id: 'macallan-25',
-    img: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-chivas-royal-salute-21.jpg',
     badgeClass: 'badge-spirits',
     price: '1 200 €',
     priceXof: 787000,
@@ -1248,7 +1248,7 @@ const productsData = [
   },
   {
     id: 'hennessy-paradis',
-    img: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-hennessy-cognac.jpg',
     badgeClass: 'badge-spirits',
     price: '2 500 €',
     priceXof: 1640000,
@@ -1281,7 +1281,7 @@ const productsData = [
   },
   {
     id: 'krug-grande-cuvee',
-    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/champagne-bottle.jpg',
     badgeClass: 'badge-champagne',
     price: '280 €',
     priceXof: 184000,
@@ -1314,7 +1314,7 @@ const productsData = [
   },
   {
     id: 'petrus-2018',
-    img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-rioja-cosme-palacio.jpg',
     badgeClass: 'badge-rouge',
     price: '3 500 €',
     priceXof: 2296000,
@@ -1347,7 +1347,7 @@ const productsData = [
   },
   {
     id: 'sancerre-2022',
-    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/champagne-bottle.jpg',
     badgeClass: 'badge-blanc',
     price: '75 €',
     priceXof: 49000,
@@ -1380,7 +1380,7 @@ const productsData = [
   },
   {
     id: 'romanee-conti-2015',
-    img: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/collection-rare-decanteur-cristal-cerf.jpg',
     badgeClass: 'badge-rare',
     price: '18 000 €',
     priceXof: 11807000,
@@ -1414,7 +1414,7 @@ const productsData = [
   /* ── NOUVEAUX PRODUITS ─────────────────────────────── */
   {
     id: 'provence-rose-2023',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/oenologue-machine.jpg',
     badgeClass: 'badge-rose',
     price: '65 €',
     priceXof: 42000,
@@ -1447,7 +1447,7 @@ const productsData = [
   },
   {
     id: 'barolo-2017',
-    img: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-cabernet-jacobs-creek.jpg',
     badgeClass: 'badge-rouge',
     price: '195 €',
     priceXof: 128000,
@@ -1480,7 +1480,7 @@ const productsData = [
   },
   {
     id: 'taittinger-prestige',
-    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/champagne-bottle.jpg',
     badgeClass: 'badge-champagne',
     price: '65 €',
     priceXof: 43000,
@@ -1513,7 +1513,7 @@ const productsData = [
   },
   {
     id: 'cremant-alsace-dopff',
-    img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vignoble-campagne.jpg',
     badgeClass: 'badge-cremant',
     price: '38 €',
     priceXof: 24900,
@@ -1546,7 +1546,7 @@ const productsData = [
   },
   {
     id: 'rhum-barbancourt-15',
-    img: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-rhum-black-mamba.jpg',
     badgeClass: 'badge-spirits',
     price: '95 €',
     priceXof: 62000,
@@ -1579,7 +1579,7 @@ const productsData = [
   },
   {
     id: 'armagnac-darroze-1990',
-    img: 'https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-bourbon-jr-ewing.jpg',
     badgeClass: 'badge-spirits',
     price: '320 €',
     priceXof: 210000,
@@ -1612,7 +1612,7 @@ const productsData = [
   },
   {
     id: 'malbec-catena-zapata-2020',
-    img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-bordeaux-grand-reserve.jpg',
     badgeClass: 'badge-rouge',
     price: '110 €',
     priceXof: 72000,
@@ -1645,7 +1645,7 @@ const productsData = [
   },
   {
     id: 'gin-hendricks-flora',
-    img: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-grey-goose-vodka.jpg',
     badgeClass: 'badge-spirits',
     price: '78 €',
     priceXof: 51000,
@@ -1678,7 +1678,7 @@ const productsData = [
   },
   {
     id: 'chablis-raveneau-2021',
-    img: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-vignoble-lac.jpg',
     badgeClass: 'badge-blanc',
     price: '145 €',
     priceXof: 95000,
@@ -1711,7 +1711,7 @@ const productsData = [
   },
   {
     id: 'sassicaia-2019',
-    img: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/vin-rouge-crimson-legacy.jpg',
     badgeClass: 'badge-rouge',
     price: '290 €',
     priceXof: 190000,
@@ -1744,7 +1744,7 @@ const productsData = [
   },
   {
     id: 'johnnie-walker-blue',
-    img: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-johnnie-walker-collection.jpg',
     badgeClass: 'badge-spirits',
     price: '220 €',
     priceXof: 144000,
@@ -1777,7 +1777,7 @@ const productsData = [
   },
   {
     id: 'yquem-2016',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/accessoire-decanteur-cristal.jpg',
     badgeClass: 'badge-rare',
     price: '750 €',
     priceXof: 492000,
@@ -1810,7 +1810,7 @@ const productsData = [
   },
   {
     id: 'veuve-clicquot-rose',
-    img: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/champagne-bottle.jpg',
     badgeClass: 'badge-champagne',
     price: '85 €',
     priceXof: 56000,
@@ -1843,7 +1843,7 @@ const productsData = [
   },
   {
     id: 'glenfarclas-50',
-    img: 'https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?w=800&q=85&auto=format&fit=crop',
+    img: 'assets/images/spiritueux-whistlepig-boss-hog.jpg',
     badgeClass: 'badge-rare',
     price: '5 800 €',
     priceXof: 3805000,

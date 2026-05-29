@@ -2,7 +2,7 @@
 <html lang="fr" data-lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' images.unsplash.com data: blob:; connect-src 'self' api.exchangerate-api.com; frame-src 'none'; object-src 'none'; base-uri 'self';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' api.exchangerate-api.com; frame-src 'none'; object-src 'none'; base-uri 'self';" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#4D0F1C" />
@@ -15,7 +15,7 @@
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap"
@@ -25,7 +25,7 @@
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
     </noscript>
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&q=80&auto=format&fit=crop" />
+    <link rel="preload" as="image" href="assets/images/restaurant-gastronomique.jpg" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://www.africawinefood.com/" />
@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="Africa Wine Food">
     <meta property="og:title" content="Africa Wine Food — L'excellence viticole et distillerie au cœur de l'Afrique">
     <meta property="og:description" content="Sélection exclusive de vins de luxe, spiritueux premium et produits de distillerie livrés avec élégance partout en Afrique.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80">
+    <meta property="og:image" content="assets/images/restaurant-gastronomique.jpg">
   </head>
   <body data-page="home">
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
@@ -186,7 +186,7 @@
           </div>
           <div class="univers-grid">
             <div class="univers-card animate-on-scroll" data-delay="0">
-              <div class="univers-icon" aria-hidden="true">🍷</div>
+              <img class="univers-img" src="assets/images/vin-rouge-bordeaux-grand-reserve.jpg" alt="Vins Rouges, Blancs & Rosés" loading="lazy" />
               <h3 data-i18n="univers.c1.title">
                 Vins Rouges, Blancs &amp; Roses
               </h3>
@@ -202,7 +202,7 @@
               >
             </div>
             <div class="univers-card animate-on-scroll" data-delay="100">
-              <div class="univers-icon" aria-hidden="true">🥂</div>
+              <img class="univers-img" src="assets/images/champagne-bottle.jpg" alt="Champagnes & Pétillants" loading="lazy" />
               <h3 data-i18n="univers.c2.title">Champagnes &amp; Petillants</h3>
               <p data-i18n="univers.c2.desc">
                 Des grandes maisons aux petits recoltants, les meilleures bulles
@@ -216,7 +216,7 @@
               >
             </div>
             <div class="univers-card animate-on-scroll" data-delay="200">
-              <div class="univers-icon" aria-hidden="true">🥃</div>
+              <img class="univers-img" src="assets/images/spiritueux-hennessy-cognac.jpg" alt="Spiritueux Premium" loading="lazy" />
               <h3 data-i18n="univers.c3.title">Spiritueux Premium</h3>
               <p data-i18n="univers.c3.desc">
                 Whiskies single malt, cognacs d'exception, rhums agricoles et
@@ -230,7 +230,7 @@
               >
             </div>
             <div class="univers-card animate-on-scroll" data-delay="300">
-              <div class="univers-icon" aria-hidden="true">💎</div>
+              <img class="univers-img" src="assets/images/collection-rare-decanteur-cristal-cerf.jpg" alt="Collections Rares" loading="lazy" />
               <h3 data-i18n="univers.c4.title">Collections Rares</h3>
               <p data-i18n="univers.c4.desc">
                 Millesimes exceptionnels, editions limitees et bouteilles de
@@ -244,7 +244,7 @@
               >
             </div>
             <div class="univers-card animate-on-scroll" data-delay="400">
-              <div class="univers-icon" aria-hidden="true">🍾</div>
+              <img class="univers-img" src="assets/images/amis-trinquer-rouge.jpg" alt="Crémants & Effervescents" loading="lazy" />
               <h3 data-i18n="univers.c5.title">Crémants &amp; Effervescents</h3>
               <p data-i18n="univers.c5.desc">
                 Crémants d'Alsace, de Bourgogne, du Jura et autres effervescents
@@ -523,10 +523,10 @@
             >
               <div class="preview-img">
                 <img
-                  src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=500&q=80&auto=format&fit=crop"
-                  srcset="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=400&q=75&auto=format&fit=crop 400w,
-                          https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&q=80&auto=format&fit=crop 600w,
-                          https://images.unsplash.com/photo-1474722883778-792e7990302f?w=900&q=80&auto=format&fit=crop 900w"
+                  src="assets/images/red-wine-bottle.jpg"
+                  srcset="assets/images/red-wine-bottle.jpg 400w,
+                          assets/images/red-wine-bottle.jpg 600w,
+                          assets/images/red-wine-bottle.jpg 900w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt="Grands vins rouges"
                   loading="lazy"
@@ -547,10 +547,10 @@
             >
               <div class="preview-img">
                 <img
-                  src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=500&q=80&auto=format&fit=crop"
-                  srcset="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=400&q=75&auto=format&fit=crop 400w,
-                          https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&q=80&auto=format&fit=crop 600w,
-                          https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=900&q=80&auto=format&fit=crop 900w"
+                  src="assets/images/champagne-bottle.jpg"
+                  srcset="assets/images/champagne-bottle.jpg 400w,
+                          assets/images/champagne-bottle.jpg 600w,
+                          assets/images/champagne-bottle.jpg 900w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt="Champagnes de prestige"
                   loading="lazy"
@@ -573,10 +573,10 @@
             >
               <div class="preview-img">
                 <img
-                  src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=500&q=80&auto=format&fit=crop"
-                  srcset="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400&q=75&auto=format&fit=crop 400w,
-                          https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=600&q=80&auto=format&fit=crop 600w,
-                          https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=900&q=80&auto=format&fit=crop 900w"
+                  src="assets/images/whisky-glass.jpg"
+                  srcset="assets/images/whisky-glass.jpg 400w,
+                          assets/images/whisky-glass.jpg 600w,
+                          assets/images/whisky-glass.jpg 900w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   alt="Spiritueux premium single malt"
                   loading="lazy"
@@ -667,7 +667,7 @@
             >
               <div class="blog-img-wrapper">
                 <img
-                  src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=700&q=80&auto=format&fit=crop"
+                  src="assets/images/vin-rouge-vignoble-lac.jpg"
                   alt="Vignobles de Bordeaux au coucher du soleil"
                   loading="lazy"
                 />
@@ -696,7 +696,7 @@
             >
               <div class="blog-img-wrapper">
                 <img
-                  src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700&q=80&auto=format&fit=crop"
+                  src="assets/images/vin-rouge-vignoble-lac.jpg"
                   alt="Grappe de raisin et verre de vin rouge sur fond de vigne"
                   loading="lazy"
                 />
@@ -715,7 +715,7 @@
             >
               <div class="blog-img-wrapper">
                 <img
-                  src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=700&q=80&auto=format&fit=crop"
+                  src="assets/images/red-wine-bottle.jpg"
                   alt="Cinq verres de vin différents rouge blanc rosé mousseux dessert"
                   loading="lazy"
                 />
