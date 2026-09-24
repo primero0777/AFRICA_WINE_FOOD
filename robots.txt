@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://africawinefood.com/sitemap.xml
+Sitemap: https://www.africawinespiritsfood.com/sitemap.xml
