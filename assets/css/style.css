@@ -1132,7 +1132,8 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   border-radius: 1px;
 }
 .article-body { padding: 2.5rem 3rem; color: var(--text); }
-.article-body h1 {
+.article-body h1,
+.article-body .article-title {
   font-family: var(--ff-serif);
   font-size: 2rem;
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -1258,7 +1259,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 @media (max-width: 768px) {
   .blog-sidebar { grid-template-columns: 1fr; }
   .article-body { padding: 1.5rem; }
-  .article-body h1 { font-size: 1.5rem; }
+  .article-body h1, .article-body .article-title { font-size: 1.5rem; }
   .article-hero-img { height: 240px; }
   .article-meta-bar { padding: .75rem 1.25rem; }
   .keywords-grid { grid-template-columns: repeat(2, 1fr); }

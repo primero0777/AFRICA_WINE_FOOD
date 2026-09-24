@@ -1,7 +1,7 @@
 /* =======================================================
    AFRICA WINE FOOD — devis.js
    Génération dynamique du devis depuis awf-cart
-   Dépendances : productsData (main.js), jsPDF CDN, EmailJS CDN
+   Dépendances : productsData (main.js), jsPDF CDN
    ======================================================= */
 
 'use strict';
@@ -116,18 +116,6 @@ function sendWhatsApp(data) {
   const WA_NUMBER = '22899072912';
   const text = buildWhatsAppMessage(data);
   window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
-}
-
-/* ── Envoi EmailJS ───────────────────────────────────── */
-function sendEmail(data) {
-  if (typeof emailjs === 'undefined') return;
-  const { number, dateStr, client, items, total, delivery } = data;
-  const itemsTxt = items.map(i =>
-    `${i.name} × ${i.qty}  →  ${fmtXof(i.unitPrice)} / bouteille  =  ${fmtXof(i.subtotal)}`
-  ).join('\n');
-  const waText = buildWhatsAppMessage(data);
-
-  /* EmailJS non configuré — envoi WhatsApp uniquement */
 }
 
 /* ── Génération PDF (retourne une Promise) ───────────── */
@@ -418,9 +406,6 @@ async function confirmOrder(devisData) {
 
   /* 4. Ouvrir WhatsApp avec le texte préformaté */
   sendWhatsApp(updatedData);
-
-  /* 5. Envoyer l'email en arrière-plan */
-  sendEmail(updatedData);
 
   if (btn) { btn.disabled = false; btn.textContent = '✓ Confirmer la commande'; }
 }
