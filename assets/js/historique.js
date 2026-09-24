@@ -239,7 +239,7 @@ function renderHistory() {
 
     li.querySelector('.hist-btn--wa').addEventListener('click', () => {
       const text = buildWhatsAppMessage(entry);
-      window.open('https://wa.me/22890112233?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+      window.open('https://wa.me/22899072912?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
     });
 
     li.querySelector('.hist-btn--delete').addEventListener('click', () => {

@@ -113,7 +113,7 @@ function buildWhatsAppMessage(data) {
 
 /* ── Envoi WhatsApp ──────────────────────────────────── */
 function sendWhatsApp(data) {
-  const WA_NUMBER = '22890112233';
+  const WA_NUMBER = '22899072912';
   const text = buildWhatsAppMessage(data);
   window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
 }
@@ -229,7 +229,7 @@ function showConfirmModal(devisData) {
                 <option value="+41">🇨🇭 +41</option>
                 <option value="+1">🇺🇸 +1</option>
               </select>
-              <input id="cf-phone" type="tel" placeholder="90 11 22 33" autocomplete="tel"
+              <input id="cf-phone" type="tel" placeholder="99 07 29 12" autocomplete="tel"
                 style="flex:1;padding:10px 14px;border:1.5px solid #e8e0d5;border-radius:3px;font-family:inherit;font-size:.9rem;outline:none;" />
             </div>
           </div>

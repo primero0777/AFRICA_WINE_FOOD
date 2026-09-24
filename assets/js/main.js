@@ -862,7 +862,7 @@ function initBackToTop() {
 }
 
 /* ---- Form Handling ---- */
-const WA_NUMBER = '22890112233';
+const WA_NUMBER = '22899072912';
 function sendToWhatsApp(text) {
   window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
 }
