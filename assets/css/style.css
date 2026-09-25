@@ -3584,6 +3584,6 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 .atelier-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 768px) { .atelier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* image du distributeur en coloris et vignettes dans les cartes video */
+/* photo dans les cartes video */
 .video-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .video-frame.is-photo { aspect-ratio: 986 / 796; }
