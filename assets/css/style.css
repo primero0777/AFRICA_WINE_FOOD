@@ -3262,3 +3262,8 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 /* photo dans les cartes video */
 .video-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .video-frame.is-photo { aspect-ratio: 986 / 796; }
+
+/* apercu produits de l accueil: photos entieres au format portrait */
+.preview-img { height: auto; aspect-ratio: 3 / 4; background: var(--cream-dark, #f3ede3); }
+.preview-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+@media (max-width: 768px) { .preview-card { max-width: 340px; width: 100%; margin-left: auto; margin-right: auto; } }
