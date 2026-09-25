@@ -57,8 +57,8 @@ const translations = {
     'univers.c4.desc':   "Notre marque : le sodabi, eau-de-vie traditionnelle d'Afrique de l'Ouest, en édition Natural Infusion.",
     'univers.c4.cta':    'Explorer →',
 
-    'univers.c5.title':  "Distributeurs Ukko",
-    'univers.c5.desc':   "Des distributeurs de boissons bag-in-box conçus en Finlande, personnalisables à votre marque.",
+    'univers.c5.title':  "Nos distributeurs de boissons",
+    'univers.c5.desc':   "Des distributeurs de boissons bag-in-box aux couleurs de notre marque.",
     'univers.c5.cta':    'Explorer →',
 
     'pourquoi.pretitle':  'Notre différence',
@@ -128,7 +128,6 @@ const translations = {
     'catalogue.note': 'Prix indicatifs en F CFA, hors TVA.',
     'catalogue.onrequest': 'Prix sur demande',
     'catalogue.featured': 'À la une',
-    'catalogue.filter.equipement': 'Distributeurs',
     'order.total.note':  'Prix indicatifs HT. Un devis personnalisé et les modalités de paiement vous seront transmis par notre équipe.',
     'order.continue':    '← Continuer mes achats',
     'order.form.title':  'Vos coordonnées',
@@ -327,8 +326,8 @@ const translations = {
     'univers.c4.desc':   "Our brand: sodabi, the traditional West African spirit, in a Natural Infusion edition.",
     'univers.c4.cta':    'Explore →',
 
-    'univers.c5.title':  "Ukko dispensers",
-    'univers.c5.desc':   "Bag-in-box drinks dispensers designed in Finland, customisable with your brand.",
+    'univers.c5.title':  "Our drinks dispensers",
+    'univers.c5.desc':   "Bag-in-box drinks dispensers in the colours of our brand.",
     'univers.c5.cta':    'Explore →',
 
     'pourquoi.pretitle':  'Our difference',
@@ -398,7 +397,6 @@ const translations = {
     'catalogue.note': 'Indicative prices in F CFA, excluding VAT.',
     'catalogue.onrequest': 'Price on request',
     'catalogue.featured': 'Featured',
-    'catalogue.filter.equipement': 'Dispensers',
     'order.total.note':  'Indicative prices excl. VAT. A personalised quote and payment terms will be provided by our team.',
     'order.continue':    '← Continue shopping',
     'order.form.title':  'Your details',
@@ -1074,38 +1072,6 @@ function initCart() {
 
 /* Products Data */
 const productsData = [
-  {
-    id: "ukko-tonkka-distributeur",
-    img: "assets/images/produits/equipement-ukko-tonkka-distributeur.jpg",
-    badgeClass: "badge-rare",
-    price: "Sur devis",
-    fr: {
-      badge: "Distributeur",
-      name: "Ukko Tonkka, distributeur de boissons",
-      appellation: "Distributeur bag-in-box, Finlande",
-      desc: "Un distributeur de boissons bag-in-box conçu en Finlande par Ukko, au robinet rouge, disponible en blanc et en noir. Il se personnalise, comme la version Africa Wine Food et Africa Spirits Sodabi.",
-      cepage: "Distributeur de vin et de boissons en bag-in-box",
-      region: "Finlande",
-      service: "Tous types de boissons en bag-in-box",
-      garde: "Non précisé",
-      alcohol: "Non précisé",
-      tasting: "Non précisé",
-      pairing: "Non précisé"
-    },
-    en: {
-      badge: "Dispenser",
-      name: "Ukko Tonkka, distributeur de boissons",
-      appellation: "Bag-in-box dispenser, Finland",
-      desc: "A bag-in-box drinks dispenser designed in Finland by Ukko, with a red tap, available in white and black. It can be customised, like the Africa Wine Food and Africa Spirits Sodabi versions.",
-      cepage: "Wine and drinks bag-in-box dispenser",
-      region: "Finland",
-      service: "All bag-in-box drinks",
-      garde: "Not specified",
-      alcohol: "Not specified",
-      tasting: "Not specified",
-      pairing: "Not specified"
-    }
-  },
   {
     id: "whaletale-xo-brandy",
     img: "assets/images/produits/spiritueux-whaletale-xo-brandy.jpg",
