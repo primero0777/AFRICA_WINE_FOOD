@@ -575,6 +575,7 @@ function initLangSwitcher() {
 /* Sticky Navbar */
 function initNavbar() {
   const navbar  = document.getElementById('navbar');
+  if (!navbar) return;
   const navLinks = document.querySelectorAll('.nav-link');
 
   /* Transparent → opaque au scroll */

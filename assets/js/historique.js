@@ -2,7 +2,7 @@
 
 'use strict';
 
-/* SHA-256 de AWF@Lome - mot de passe jamais stocké en clair */
+/* empreinte SHA-256 du mot de passe */
 const ADMIN_HASH  = '1c2900019142a8119cd85d0ab828416d1539fdcb23cfc7f08fd44d9e4cc01fbb';
 const SESSION_KEY = 'awf-admin-auth';
 const LOCKOUT_KEY = 'awf-admin-lockout';
