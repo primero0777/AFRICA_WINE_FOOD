@@ -3,7 +3,7 @@
 'use strict';
 
 /* empreinte SHA-256 du mot de passe */
-const ADMIN_HASH  = '1c2900019142a8119cd85d0ab828416d1539fdcb23cfc7f08fd44d9e4cc01fbb';
+const ADMIN_HASH  = '2c0fe815e9d642844ece0e4a3de52c6361b1040d542f0bab0e7c944c54f4c4d6';
 const SESSION_KEY = 'awf-admin-auth';
 const LOCKOUT_KEY = 'awf-admin-lockout';
 const MAX_ATTEMPTS = 5;
