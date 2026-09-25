@@ -13,6 +13,10 @@ const translations = {
     'nav.events':      'Événements',
     "events.pretitle": "En images",
     "events.title": "Événements",
+    "events.tour.pretitle": "Tournée",
+    "events.tour.title": "Wine Cellar Villa Melnik en Afrique",
+    "events.source.pretitle": "Chez nos producteurs",
+    "events.source.title": "À la source",
     "events.subtitle": "Soirées de dégustation, salons professionnels et rendez-vous Africa Wine Food.",
     "events.next.pretitle": "À venir",
     "events.next.title": "Prochains événements",
@@ -279,6 +283,10 @@ const translations = {
     'nav.events':      'Events',
     "events.pretitle": "In pictures",
     "events.title": "Events",
+    "events.tour.pretitle": "Tour",
+    "events.tour.title": "Wine Cellar Villa Melnik in Africa",
+    "events.source.pretitle": "At our producers",
+    "events.source.title": "At the source",
     "events.subtitle": "Tasting evenings, trade fairs and Africa Wine Food gatherings.",
     "events.next.pretitle": "Coming up",
     "events.next.title": "Upcoming events",
@@ -1563,6 +1571,8 @@ const productsData = [
     badgeClass: "badge-spirits",
     price: "39 €",
     priceXof: 25500,
+    video: "assets/videos/produits/gin-km12-distillerie-du-fjord.mp4",
+    videoPoster: "assets/images/posters/video-gin-km12-distillerie-du-fjord-poster.jpg",
     fr: {
       badge: "Gin",
       name: "Gin Km12",
@@ -2146,6 +2156,8 @@ const productsData = [
     badgeClass: "badge-rouge",
     price: "12 €",
     priceXof: 8000,
+    video: "assets/videos/produits/pipa-rosa-tradicao-360.mp4",
+    videoPoster: "assets/images/posters/video-pipa-rosa-tradicao-360-poster.jpg",
     fr: {
       badge: "Vin Rouge",
       name: "Pipa Rosa Tradição",
@@ -2268,6 +2280,108 @@ const productsData = [
       alcohol: "Not specified",
       tasting: "A structured red with black fruit and spice notes.",
       pairing: "Grilled meats, slow-cooked dishes, aged cheeses."
+    }
+  },
+  {
+    id: "ijalba-gamme-vins",
+    img: "assets/images/produits/vin-rouge-ijalba-gamme.jpg",
+    badgeClass: "badge-rare",
+    price: "Sur devis",
+    video: "assets/videos/produits/ijalba-gamme-vins.mp4",
+    videoPoster: "assets/images/posters/video-ijalba-gamme-vins-poster.jpg",
+    fr: {
+      badge: "Gamme de vins",
+      name: "Ijalba, gamme de vins",
+      appellation: "Vins de Rioja, Espagne",
+      desc: "La gamme Ijalba, des vins espagnols aux étiquettes colorées, orange, bleu et jaune. La maison propose aussi une huile d'olive à l'étiquette assortie.",
+      cepage: "Non précisé",
+      region: "Rioja, Espagne",
+      service: "Selon la cuvée",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Des vins frais et fruités, à découvrir cuvée par cuvée.",
+      pairing: "Tapas, grillades, cuisine méditerranéenne."
+    },
+    en: {
+      badge: "Wine range",
+      name: "Ijalba, gamme de vins",
+      appellation: "Rioja wines, Spain",
+      desc: "The Ijalba range, Spanish wines with colourful orange, blue and yellow labels. The house also offers an olive oil with a matching label.",
+      cepage: "Not specified",
+      region: "Rioja, Spain",
+      service: "Depending on the cuvée",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "Fresh, fruity wines to discover cuvée by cuvée.",
+      pairing: "Tapas, grills, Mediterranean cuisine."
+    }
+  },
+  {
+    id: "aplauz-cabernet-sauvignon-reserve",
+    img: "assets/images/produits/vin-rouge-aplauz-cabernet-sauvignon-reserve.jpg",
+    badgeClass: "badge-rouge",
+    price: "Sur devis",
+    video: "assets/videos/evenements/villa-melnik-tournee-afrique.mp4",
+    videoPoster: "assets/images/posters/video-villa-melnik-tournee-afrique-poster.jpg",
+    fr: {
+      badge: "Vin Rouge",
+      name: "Aplauz Cabernet Sauvignon Réserve",
+      appellation: "Vin rouge, Bulgarie",
+      desc: "Un Cabernet Sauvignon Réserve de Bulgarie, à l'étiquette noire et or ornée d'un blason. Un rouge structuré et élégant.",
+      cepage: "Cabernet Sauvignon",
+      region: "Bulgarie",
+      service: "16–18 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un rouge structuré aux notes de cassis et d'épices douces.",
+      pairing: "Viandes rouges grillées, agneau, fromages affinés."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "Aplauz Cabernet Sauvignon Réserve",
+      appellation: "Red wine, Bulgaria",
+      desc: "A Cabernet Sauvignon Reserve from Bulgaria, with a black and gold label featuring a crest. A structured, elegant red.",
+      cepage: "Cabernet Sauvignon",
+      region: "Bulgaria",
+      service: "16–18 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A structured red with blackcurrant and sweet spice notes.",
+      pairing: "Grilled red meats, lamb, aged cheeses."
+    }
+  },
+  {
+    id: "aplauz-merlot-reserve",
+    img: "assets/images/produits/vin-rouge-aplauz-merlot-reserve.jpg",
+    badgeClass: "badge-rouge",
+    price: "Sur devis",
+    video: "assets/videos/evenements/villa-melnik-tournee-afrique.mp4",
+    videoPoster: "assets/images/posters/video-villa-melnik-tournee-afrique-poster.jpg",
+    fr: {
+      badge: "Vin Rouge",
+      name: "Aplauz Merlot Réserve",
+      appellation: "Vin rouge, Bulgarie",
+      desc: "Un Merlot Réserve de Bulgarie, à l'étiquette noire et or ornée d'un blason. Un rouge rond et souple.",
+      cepage: "Merlot",
+      region: "Bulgarie",
+      service: "16–18 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un rouge rond aux notes de prune et de fruits rouges mûrs.",
+      pairing: "Volailles rôties, plats mijotés, fromages doux."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "Aplauz Merlot Réserve",
+      appellation: "Red wine, Bulgaria",
+      desc: "A Merlot Reserve from Bulgaria, with a black and gold label featuring a crest. A round, supple red.",
+      cepage: "Merlot",
+      region: "Bulgaria",
+      service: "16–18 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A round red with plum and ripe red fruit notes.",
+      pairing: "Roast poultry, slow-cooked dishes, mild cheeses."
     }
   },
   {
@@ -2758,6 +2872,74 @@ const productsData = [
       tasting: "A fresh rosé with strawberry and cherry notes.",
       pairing: "Aperitif, salads, light cuisine."
     }
+  },
+  {
+    id: "casal-amado-original",
+    img: "assets/images/produits/vin-blanc-casal-amado-original.jpg",
+    badgeClass: "badge-blanc",
+    price: "Sur devis",
+    video: "assets/videos/produits/casal-amado-vinho-verde.mp4",
+    videoPoster: "assets/images/posters/video-casal-amado-vinho-verde-poster.jpg",
+    fr: {
+      badge: "Vin Blanc",
+      name: "Casal Amado Original",
+      appellation: "Vinho Verde, Portugal",
+      desc: "Un Vinho Verde blanc de la marque Casal Amado, signé Osvaldo Amado, à l'étiquette bleue et blanche. Un vin léger et frais, à boire jeune.",
+      cepage: "Non précisé",
+      region: "Vinho Verde, Portugal",
+      service: "6–8 °C",
+      garde: "Non précisé",
+      alcohol: "8,5 % vol.",
+      tasting: "Un blanc léger, vif et légèrement perlant, aux notes d'agrumes.",
+      pairing: "Fruits de mer, poissons grillés, salades, apéritif."
+    },
+    en: {
+      badge: "White Wine",
+      name: "Casal Amado Original",
+      appellation: "Vinho Verde, Portugal",
+      desc: "A white Vinho Verde from the Casal Amado brand, signed Osvaldo Amado, with a blue and white label. A light, fresh wine to drink young.",
+      cepage: "Not specified",
+      region: "Vinho Verde, Portugal",
+      service: "6–8 °C",
+      garde: "Not specified",
+      alcohol: "8.5% vol.",
+      tasting: "A light, lively, lightly spritzy white with citrus notes.",
+      pairing: "Seafood, grilled fish, salads, aperitif."
+    }
+  },
+  {
+    id: "aplauz-rose",
+    img: "assets/images/produits/vin-rose-aplauz.jpg",
+    badgeClass: "badge-rose",
+    price: "Sur devis",
+    video: "assets/videos/evenements/villa-melnik-tournee-afrique.mp4",
+    videoPoster: "assets/images/posters/video-villa-melnik-tournee-afrique-poster.jpg",
+    fr: {
+      badge: "Vin Rosé",
+      name: "Aplauz Rosé",
+      appellation: "Vin rosé, Bulgarie",
+      desc: "Un vin rosé de Bulgarie, à la robe pâle et à l'étiquette claire ornée d'un blason. Frais et délicat.",
+      cepage: "Non précisé",
+      region: "Bulgarie",
+      service: "8–10 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un rosé frais et délicat, aux notes de fraise et de pêche blanche.",
+      pairing: "Apéritif, salades, cuisine légère."
+    },
+    en: {
+      badge: "Rosé Wine",
+      name: "Aplauz Rosé",
+      appellation: "Rosé wine, Bulgaria",
+      desc: "A rosé from Bulgaria, with a pale robe and a light label featuring a crest. Fresh and delicate.",
+      cepage: "Not specified",
+      region: "Bulgaria",
+      service: "8–10 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A fresh, delicate rosé with strawberry and white peach notes.",
+      pairing: "Aperitif, salads, light cuisine."
+    }
   }
 ];
 
@@ -2794,6 +2976,15 @@ function initProductModal() {
     document.getElementById('modal-alcohol').textContent      = t.alcohol;
     document.getElementById('modal-tasting').textContent      = t.tasting;
     document.getElementById('modal-pairing').textContent      = t.pairing;
+
+    /* video du produit, si elle existe */
+    const mv = document.getElementById('modal-video');
+    if (mv) {
+      const vid = mv.querySelector('video');
+      vid.pause();
+      if (data.video) { vid.poster = data.videoPoster || ''; vid.src = data.video; mv.hidden = false; }
+      else { vid.removeAttribute('src'); vid.removeAttribute('poster'); mv.hidden = true; }
+    }
 
     /* masque les lignes dont la valeur est inconnue */
     ['cepage', 'region', 'service', 'garde', 'alcohol'].forEach(k => {
@@ -2833,6 +3024,8 @@ function initProductModal() {
   }
 
   function closeModal() {
+    const mvc = document.getElementById('modal-video');
+    if (mvc) { const v = mvc.querySelector('video'); v.pause(); }
     modal.hidden = true;
     document.body.style.overflow = '';
     currentModalId = null;
