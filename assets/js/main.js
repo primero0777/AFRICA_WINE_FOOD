@@ -1827,6 +1827,70 @@ const productsData = [
     }
   },
   {
+    id: "bikkun-vatted-malt",
+    img: "assets/images/produits/spiritueux-bikkun-vatted-malt.jpg",
+    badgeClass: "badge-spirits",
+    price: "Sur devis",
+    fr: {
+      badge: "Whisky",
+      name: "Bikkun Vatted Malt",
+      appellation: "Vatted malt whisky, Pays basque, Espagne",
+      desc: "Un whisky de malt assemblé par Basque Moonshiners & Co., présenté dans un étui cylindrique. Il marie un malt tourbé d'Islay, un malt des Highlands vieilli en fûts de sherry et un malt basque vieilli en fûts de Rioja Alavesa.",
+      cepage: "Non applicable",
+      region: "Pays basque, Espagne",
+      service: "Sec, à température ambiante",
+      garde: "Non précisé",
+      alcohol: "46 %",
+      tasting: "Une robe or vieil or. Au nez, de la fumée de tourbe, une touche saline, des notes de pâtisserie, de fruits secs et de sherry. En bouche, un corps moyen et rond, avec du miel, de la réglisse et des épices.",
+      pairing: "Fromages affinés, chocolat noir, charcuteries."
+    },
+    en: {
+      badge: "Whisky",
+      name: "Bikkun Vatted Malt",
+      appellation: "Vatted malt whisky, Basque Country, Spain",
+      desc: "A vatted malt whisky by Basque Moonshiners & Co., presented in a cylindrical tube. It blends a peated Islay malt, a Highland malt aged in sherry casks and a Basque malt aged in Rioja Alavesa casks.",
+      cepage: "Not applicable",
+      region: "Basque Country, Spain",
+      service: "Neat, at room temperature",
+      garde: "Not specified",
+      alcohol: "46%",
+      tasting: "An old gold colour. On the nose, peat smoke, a salty touch, pastry, dried fruit and sherry notes. On the palate, a medium, mellow body with honey, liquorice and spice.",
+      pairing: "Aged cheeses, dark chocolate, cured meats."
+    }
+  },
+  {
+    id: "infante-gran-reserva-especial",
+    img: "assets/images/produits/spiritueux-infante-gran-reserva-especial.jpg",
+    badgeClass: "badge-spirits",
+    price: "Sur devis",
+    fr: {
+      badge: "Brandy",
+      name: "Infante Gran Reserva Especial",
+      appellation: "Brandy Gran Reserva, Espagne",
+      desc: "Un brandy espagnol de la maison Infante, vieilli plus de quinze ans en fûts de chêne américain imprégnés de vin Oloroso, selon le système des criaderas et soleras.",
+      cepage: "Non applicable",
+      region: "Espagne",
+      service: "Sec, à température ambiante",
+      garde: "Plus de 15 ans",
+      alcohol: "40 %",
+      tasting: "Une robe acajou aux reflets cuivrés. Au nez, de la vanille, de la réglisse, des épices, du cuir et du bois noble. Une bouche très douce et chaleureuse, avec une finale longue.",
+      pairing: "Chocolat noir, fruits secs, cigare."
+    },
+    en: {
+      badge: "Brandy",
+      name: "Infante Gran Reserva Especial",
+      appellation: "Gran Reserva brandy, Spain",
+      desc: "A Spanish brandy from the house of Infante, aged for over fifteen years in American oak casks seasoned with Oloroso wine, using the criaderas and soleras system.",
+      cepage: "Not applicable",
+      region: "Spain",
+      service: "Neat, at room temperature",
+      garde: "Over 15 years",
+      alcohol: "40%",
+      tasting: "A mahogany colour with coppery reflections. On the nose, vanilla, liquorice, spice, leather and noble wood. A very smooth, warm palate with a long finish.",
+      pairing: "Dark chocolate, dried fruit, cigar."
+    }
+  },
+  {
     id: "ron-heredero-gran-reserva",
     img: "assets/images/produits/spiritueux-ron-heredero-gran-reserva.jpg",
     badgeClass: "badge-spirits",
@@ -2448,6 +2512,39 @@ const productsData = [
       alcohol: "Non précisé",
       tasting: "Light golden robe. Floral, muscat nose. Fruity, supple palate.",
       pairing: "Mildly spiced dishes, fresh cheeses, fruit desserts."
+    }
+  },
+  {
+    id: "lakeside-chardonnay",
+    img: "assets/images/produits/vin-blanc-lakeside-chardonnay.jpg",
+    badgeClass: "badge-blanc",
+    price: "14 €",
+    priceXof: 9000,
+    fr: {
+      badge: "Vin Blanc",
+      name: "Lakeside Chardonnay",
+      appellation: "Slanchevo Single Vineyard, Bulgarie",
+      desc: "Un Chardonnay de la gamme Lakeside du Château Boshnakoff, sous une étiquette qui évoque le lac de Varna. Un blanc net et élégant.",
+      cepage: "Chardonnay",
+      region: "Varna, Bulgarie",
+      service: "8–10 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un blanc sec et frais, à la bouche nette.",
+      pairing: "Poissons, volailles, fromages frais."
+    },
+    en: {
+      badge: "White Wine",
+      name: "Lakeside Chardonnay",
+      appellation: "Slanchevo Single Vineyard, Bulgaria",
+      desc: "A Chardonnay from the Lakeside range by Château Boshnakoff, under a label that evokes Lake Varna. A clean, elegant white.",
+      cepage: "Chardonnay",
+      region: "Varna, Bulgaria",
+      service: "8–10 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A dry, fresh white with a clean palate.",
+      pairing: "Fish, poultry, fresh cheese."
     }
   },
   {
@@ -3190,11 +3287,10 @@ function setVh() {
 /* chaque initialisation est isolee : une erreur n'arrete pas les suivantes */
 /* videos du catalogue : lecture automatique, sans son, bouton lecture/pause au clic */
 function initClipAutoplay() {
-  const grid = document.querySelector('.clip-grid.clip-auto');
-  if (!grid) return;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const canObserve = 'IntersectionObserver' in window && !reduce;
-  const clips = grid.querySelectorAll('.clip-card video');
+  const clips = document.querySelectorAll('.clip-grid.clip-auto .clip-card video, video.auto-clip');
+  if (!clips.length) return;
 
   clips.forEach(v => {
     v.muted = true; v.loop = true; v.playsInline = true; v.removeAttribute('controls');
