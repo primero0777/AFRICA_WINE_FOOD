@@ -553,3 +553,5 @@ tbody td:last-child {
 @supports not (backdrop-filter: blur(1px)) {
   .page { border-radius: 4px; }
 }
+/* numeros detectes par le telephone: meme style que le texte */
+a[href^="tel"], .party-info a { color: inherit; text-decoration: none; }
