@@ -1,4 +1,3 @@
-/* AFRICA WINE FOOD - devis.css */
 /* Styles for the devis (quote) document page */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -213,8 +212,6 @@ tbody tr {
 
 tbody tr:hover { background: #fdf9f4; }
 
-tbody tr.subtotal-row { background: #fdf6ee; }
-
 tbody td {
   padding: 13px 16px;
   vertical-align: top;
@@ -245,18 +242,6 @@ tbody td:last-child {
   font-size: .78rem;
   color: var(--muted);
   line-height: 1.5;
-}
-
-/* séparateur catégorie */
-.cat-row td {
-  background: #f4ece0;
-  padding: 7px 16px;
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--bordeaux);
-  border-bottom: none;
 }
 
 /* totaux */
@@ -452,8 +437,7 @@ tbody td:last-child {
 }
 .devis-btn--primary { background: var(--bordeaux-d); color: var(--cream); }
 .devis-btn--primary:hover { background: var(--bordeaux); }
-.devis-btn--secondary { background: var(--gold); color: var(--bordeaux-d); }
-.devis-btn--secondary:hover { background: var(--gold-l); }
+
 .devis-btn--outline { background: transparent; color: var(--bordeaux-d); border: 1.5px solid var(--border); }
 .devis-btn--outline:hover { border-color: var(--bordeaux-d); }
 
@@ -536,8 +520,7 @@ tbody td:last-child {
 @media (pointer: coarse) {
   .devis-btn { min-height: 44px; }
   .print-btn { min-height: 44px; }
-  .devis-btn--primary:hover,
-  .devis-btn--secondary:hover { transform: none; box-shadow: none; }
+  .devis-btn--primary:hover { transform: none; box-shadow: none; }
 }
 
 /* Glassmorphism - devis.html */
@@ -559,9 +542,7 @@ tbody td:last-child {
 .devis-btn--primary:hover {
   box-shadow: 0 6px 20px rgba(77,15,28,.35), 0 0 0 3px rgba(201,168,76,.15);
 }
-.devis-btn--secondary:hover {
-  box-shadow: 0 6px 20px rgba(201,168,76,.4), 0 0 0 3px rgba(201,168,76,.18);
-}
+
 .print-btn {
   border-radius: 50px;
 }
