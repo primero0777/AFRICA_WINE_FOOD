@@ -210,7 +210,7 @@ const translations = {
     'contact.info.address':       'Adresse',
     'contact.info.phone':         'Téléphone',
     'contact.call':               '📞 Appeler directement',
-    'contact.map':                'Quartier Administratif, Lomé, Togo',
+    'contact.map':                '34 rue Marne, Nyékonakpoè, Lomé, Togo',
 
     'footer.slogan':        "L'excellence viticole et distillerie, au cœur de l'Afrique.",
     'footer.nav.title':     'Navigation',
@@ -2670,6 +2670,171 @@ const productsData = [
       alcohol: "14% vol.",
       tasting: "A generous, round red with notes of ripe black fruit and spice.",
       pairing: "Grilled red meats, slow-cooked dishes, aged cheeses."
+    }
+  },
+  {
+    id: "blacks-maple-mayhem",
+    img: 'assets/images/spiritueux-blacks-maple-mayhem-irish-whiskey.jpg',
+    badgeClass: 'badge-spirits',
+    price: '56 €',
+    priceXof: 37000,
+    fr: {
+      badge: "Whiskey",
+      name: "Blacks Maple Mayhem",
+      appellation: "Whiskey irlandais, Maple Bourbon Cask, Irlande",
+      desc: "Un whiskey irlandais vieilli en fûts de bourbon à l'érable, pour une douceur d'érable et de vanille. Non filtré à froid, embouteillé à 43 %. Distillé à Kinsale par Blacks.",
+      cepage: "Irish whiskey, fûts de bourbon à l'érable",
+      region: "Kinsale, Irlande",
+      service: "Sec ou avec un glaçon",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "43 % vol.",
+      tasting: "Nez de sucre chaud, de fumée légère, de vanille, de caramel d'érable et de pruneaux cuits. Bouche onctueuse aux noix enrobées d'érable, cannelle et épices. Finale moyenne d'érable, de bois et de fumée.",
+      pairing: "Crêpes, desserts au caramel, fromages affinés, digestif."
+    },
+    en: {
+      badge: "Whiskey",
+      name: "Blacks Maple Mayhem",
+      appellation: "Irish whiskey, Maple Bourbon Cask, Ireland",
+      desc: "An Irish whiskey aged in maple bourbon casks for a sweet kiss of maple and vanilla. Non chill filtered, bottled at 43%. Distilled in Kinsale by Blacks.",
+      cepage: "Irish whiskey, maple bourbon casks",
+      region: "Kinsale, Ireland",
+      service: "Neat or on the rocks",
+      garde: "Keeps well once opened",
+      alcohol: "43% vol.",
+      tasting: "Warm sugar, hints of smoke, vanilla, maple caramel and baked prunes on the nose. A smooth, oily palate of maple-coated nuts, cinnamon and spice. A medium finish of maple, oak and smoke.",
+      pairing: "Pancakes, caramel desserts, aged cheeses, digestif."
+    }
+  },
+  {
+    id: "blacks-triple-threat",
+    img: 'assets/images/spiritueux-blacks-triple-threat-irish-whiskey.jpg',
+    badgeClass: 'badge-spirits',
+    price: '55 €',
+    priceXof: 36000,
+    fr: {
+      badge: "Whiskey",
+      name: "Blacks Triple Threat",
+      appellation: "Whiskey irlandais, Three Cask Blend, Irlande",
+      desc: "Un whiskey irlandais vieilli en fûts de bourbon, de sherry et de chêne vierge. Un assemblage de trois fûts aux notes de vanille, de bois toasté et de miel. Distillé à Kinsale par Blacks.",
+      cepage: "Irish whiskey, assemblage de trois fûts",
+      region: "Kinsale, Irlande",
+      service: "Sec ou avec un glaçon",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "40 % vol.",
+      tasting: "Nez de fruits d'été complexes et de petits pains à la cannelle. Bouche d'abord épicée puis adoucie par le caramel, le caramel au beurre et la vanille. Finale moyenne de fruits secs, de sucre caramélisé et d'épices de chêne.",
+      pairing: "Chocolat noir, fruits secs, fromages affinés, digestif."
+    },
+    en: {
+      badge: "Whiskey",
+      name: "Blacks Triple Threat",
+      appellation: "Irish whiskey, Three Cask Blend, Ireland",
+      desc: "An Irish whiskey aged in bourbon, sherry and virgin oak casks. A three cask blend with notes of vanilla, toasted wood and honey. Distilled in Kinsale by Blacks.",
+      cepage: "Irish whiskey, three cask blend",
+      region: "Kinsale, Ireland",
+      service: "Neat or on the rocks",
+      garde: "Keeps well once opened",
+      alcohol: "40% vol.",
+      tasting: "Complex summer fruits and fresh cinnamon buns on the nose. Initially spicy on the palate, quickly mellowed by caramel, butterscotch and vanilla. A medium finish of dry fruit, caramelised sugar and oak spice.",
+      pairing: "Dark chocolate, dried fruit, aged cheeses, digestif."
+    }
+  },
+  {
+    id: "blacks-black-beak-juniper-tempest",
+    img: 'assets/images/spiritueux-blacks-black-beak-juniper-tempest-gin.jpg',
+    badgeClass: 'badge-spirits',
+    price: '59 €',
+    priceXof: 39000,
+    fr: {
+      badge: "Gin",
+      name: "Black Beak Juniper Tempest",
+      appellation: "Gin irlandais, Kinsale, Irlande",
+      desc: "Un gin irlandais aux baies de genièvre, à la bruyère irlandaise et à la verveine, relevé de zestes d'agrumes. Distillé et embouteillé à Kinsale par Blacks.",
+      cepage: "Gin, genièvre, bruyère irlandaise, verveine, zestes d'agrumes",
+      region: "Kinsale, Irlande",
+      service: "Bien frais, avec un tonic premium et un quartier de pamplemousse rose",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "42 % vol.",
+      tasting: "Genièvre franc et parfumé, notes salées, zestes d'agrumes et de pamplemousse rose, finale fraîche.",
+      pairing: "Gin tonic, cocktails, fruits de mer, apéritif."
+    },
+    en: {
+      badge: "Gin",
+      name: "Black Beak Juniper Tempest",
+      appellation: "Irish gin, Kinsale, Ireland",
+      desc: "An Irish gin with juniper berries, Irish heather and vervain, lifted with citrus zest. Distilled and bottled in Kinsale by Blacks.",
+      cepage: "Gin, juniper, Irish heather, vervain, citrus zest",
+      region: "Kinsale, Ireland",
+      service: "Well chilled, with premium tonic and a wedge of pink grapefruit",
+      garde: "Keeps well once opened",
+      alcohol: "42% vol.",
+      tasting: "Bold, fragrant juniper, sea-salted notes, citrus and pink grapefruit zest, with a fresh finish.",
+      pairing: "Gin and tonic, cocktails, seafood, aperitif."
+    }
+  },
+  {
+    id: "zantho-zweigelt",
+    img: 'assets/images/vin-rouge-zantho-zweigelt-burgenland.jpg',
+    badgeClass: 'badge-rouge',
+    price: '14 €',
+    priceXof: 9500,
+    fr: {
+      badge: "Vin Rouge",
+      name: "Zantho Zweigelt",
+      appellation: "Burgenland, Autriche",
+      desc: "Un Zweigelt du Burgenland, issu de jeunes vignes du sud-est du lac de Neusiedl. Un rouge autrichien frais, fruité et facile à boire.",
+      cepage: "Zweigelt",
+      region: "Burgenland, Autriche",
+      service: "14–16 °C",
+      garde: "2–4 ans",
+      alcohol: "Non précisé",
+      tasting: "Un rouge juteux aux notes de cerise et de baies rouges, tannins souples, finale fraîche.",
+      pairing: "Charcuteries, volaille rôtie, pâtes, viandes blanches."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "Zantho Zweigelt",
+      appellation: "Burgenland, Austria",
+      desc: "A Zweigelt from Burgenland, made from young vines at the south-eastern end of Lake Neusiedl. A fresh, fruity Austrian red that is easy to drink.",
+      cepage: "Zweigelt",
+      region: "Burgenland, Austria",
+      service: "14–16 °C",
+      garde: "2–4 years",
+      alcohol: "Not specified",
+      tasting: "A juicy red with cherry and red berry notes, supple tannins and a fresh finish.",
+      pairing: "Cured meats, roast poultry, pasta, white meats."
+    }
+  },
+  {
+    id: "portal-da-vinha",
+    img: 'assets/images/vin-blanc-portal-da-vinha.jpg',
+    badgeClass: 'badge-blanc',
+    price: '12 €',
+    priceXof: 8000,
+    fr: {
+      badge: "Vin Blanc",
+      name: "Portal da Vinha",
+      appellation: "Vin blanc",
+      desc: "Un vin blanc à l'étiquette vert d'eau ornée d'un portail de vigne, photographié au milieu des raisins.",
+      cepage: "Non précisé",
+      region: "Non précisé",
+      service: "8–10 °C",
+      garde: "1–3 ans",
+      alcohol: "Non précisé",
+      tasting: "Un blanc frais et fruité, léger en bouche.",
+      pairing: "Apéritif, salades, poissons, fruits de mer."
+    },
+    en: {
+      badge: "White Wine",
+      name: "Portal da Vinha",
+      appellation: "White wine",
+      desc: "A white wine with a soft green label featuring a vineyard gate, photographed among the grapes.",
+      cepage: "Not specified",
+      region: "Not specified",
+      service: "8–10 °C",
+      garde: "1–3 years",
+      alcohol: "Not specified",
+      tasting: "A fresh, fruity white, light on the palate.",
+      pairing: "Aperitif, salads, fish, seafood."
     }
   }
 ];

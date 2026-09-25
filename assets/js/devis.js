@@ -295,7 +295,7 @@ function showConfirmModal(devisData) {
             <select id="cf-livraison" style="${inp}">
               <option value="Livraison standard (5–7 jours ouvrés)">Livraison standard, 5 à 7 jours ouvrés</option>
               <option value="Livraison express (2–3 jours ouvrés)">Livraison express, 2 à 3 jours ouvrés</option>
-              <option value="Retrait en agence, Lomé">Retrait en agence, Lomé, Quartier Administratif</option>
+              <option value="Retrait en agence, Lomé">Retrait en agence, Lomé, Nyékonakpoè</option>
             </select>
           </div>
 
