@@ -1,9 +1,7 @@
-/* =============================================
-   AFRICA WINE FOOD - style.css
-   Palette: Creme #FAF7F2 | Bordeaux #6B1A2B | Or #C9A84C | Noir #1A1A1A
-   ============================================= */
+/* AFRICA WINE FOOD - style.css */
+/* Palette: Creme #FAF7F2 | Bordeaux #6B1A2B | Or #C9A84C | Noir #1A1A1A */
 
-/* ---- Variables ---- */
+/* Variables */
 :root {
   --cream:        #FAF7F2;
   --bordeaux:     #6B1A2B;
@@ -26,7 +24,7 @@
   --shadow-lg:    0 12px 48px rgba(26,26,26,.18);
 }
 
-/* ---- Skip link accessibilité ---- */
+/* Skip link accessibilité */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -44,7 +42,7 @@
 }
 .skip-link:focus { top: 0; }
 
-/* ---- Utilitaire screen-reader ---- */
+/* Utilitaire screen-reader */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -57,7 +55,7 @@
   border: 0;
 }
 
-/* ---- Reset & Base ---- */
+/* Reset & Base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -76,13 +74,13 @@ button { cursor: pointer; font-family: var(--ff-sans); border: none; background:
 :focus:not(:focus-visible) { outline: none; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-/* ---- Typography ---- */
+/* Typography */
 h1,h2,h3,h4 { font-family: var(--ff-serif); font-weight: 600; line-height: 1.25; }
 h1 { font-size: 3.5rem; font-size: clamp(2rem, 5vw, 3.5rem); }
 h2 { font-size: 2.75rem; font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
 h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 
-/* ---- Layout ---- */
+/* Layout */
 .container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 1.5rem; }
 .section { padding: 5rem 0; }
 .section-dark { background: var(--noir); color: var(--cream); }
@@ -104,7 +102,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .section-dark .section-subtitle,
 .section-gold .section-subtitle { color: rgba(250,247,242,.65); }
 
-/* ---- Buttons ---- */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -146,9 +144,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .btn-call:hover { background: var(--gold); color: var(--noir); }
 .btn-full { width: 100%; justify-content: center; }
 
-/* =============================================
-   NAVBAR
-   ============================================= */
+/* navbar */
 #navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -239,9 +235,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); width: 100%; }
 
-/* =============================================
-   HERO
-   ============================================= */
+/* hero */
 .hero {
   position: relative;
   height: 100vh; /* fallback */
@@ -317,9 +311,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 @keyframes scrollPulse { 0%,100% { opacity: .3; transform: scaleY(.6); } 50% { opacity: 1; transform: scaleY(1); } }
 
-/* =============================================
-   NOS UNIVERS
-   ============================================= */
+/* nos univers */
 .univers-grid {
   display: flex;
   flex-wrap: wrap;
@@ -360,9 +352,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .card-link { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); transition: gap var(--tr), color var(--tr); }
 .card-link:hover { color: var(--bordeaux); }
 
-/* =============================================
-   PILLARS
-   ============================================= */
+/* pillars */
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -379,9 +369,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .pillar h3 { color: var(--cream); margin-bottom: .75rem; font-size: 1.15rem; }
 .pillar p { color: rgba(250,247,242,.65); font-size: .9rem; font-weight: 300; }
 
-/* =============================================
-   CLIENTELE
-   ============================================= */
+/* clientele */
 .clientele-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -399,9 +387,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .clientele-card h3 { font-size: 1.05rem; margin-bottom: .5rem; color: var(--bordeaux); }
 .clientele-card p { font-size: .875rem; color: var(--muted); }
 
-/* =============================================
-   CAROUSEL / TEMOIGNAGES
-   ============================================= */
+/* carousel / temoignages */
 .carousel { overflow: hidden; position: relative; }
 .carousel-track {
   display: flex;
@@ -481,9 +467,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .dot.active { background: var(--gold); transform: scale(1.3); }
 
-/* =============================================
-   CATALOGUE
-   ============================================= */
+/* catalogue */
 .catalogue-filters {
   display: flex;
   flex-wrap: wrap;
@@ -554,9 +538,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .product-price { font-size: .875rem; color: var(--bordeaux); }
 .product-price strong { font-family: var(--ff-serif); font-size: 1.05rem; }
 
-/* =============================================
-   A PROPOS
-   ============================================= */
+/* a propos */
 .about-story {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -619,9 +601,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .team-role { color: var(--gold); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; margin-bottom: .75rem; }
 .team-bio { color: rgba(250,247,242,.6); font-size: .875rem; font-weight: 300; line-height: 1.7; }
 
-/* =============================================
-   BLOG
-   ============================================= */
+/* blog */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -648,9 +628,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .blog-card h3 { font-size: 1.05rem; color: var(--noir); margin-bottom: .75rem; line-height: 1.4; }
 .blog-card p { font-size: .875rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
 
-/* =============================================
-   CONTACT
-   ============================================= */
+/* contact */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -732,9 +710,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .map-pin { font-size: 2rem; }
 .map-placeholder p { font-size: .875rem; color: rgba(250,247,242,.6); }
 
-/* =============================================
-   FOOTER
-   ============================================= */
+/* footer */
 .footer { background: var(--dark); }
 .footer-main { padding: 5rem 0 3rem; border-bottom: 1px solid rgba(201,168,76,.12); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; }
@@ -781,9 +757,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .footer-copy { font-size: .8rem; color: rgba(250,247,242,.35); }
 .footer-warning { font-size: .75rem; color: rgba(250,247,242,.25); max-width: 600px; }
 
-/* =============================================
-   FLOATING BUTTONS
-   ============================================= */
+/* floating buttons */
 .whatsapp-fab {
   position: fixed;
   bottom: 5.5rem;
@@ -820,9 +794,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .back-to-top.visible { opacity: 1; transform: none; pointer-events: auto; }
 .back-to-top:hover { background: var(--bordeaux-d); }
 
-/* =============================================
-   PAGE HEADER (pages internes)
-   ============================================= */
+/* PAGE HEADER (pages internes) */
 .page-header {
   position: relative;
   padding: calc(var(--nav-h) + 5rem) 0 4rem;
@@ -864,9 +836,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .breadcrumb a:hover { color: var(--gold-l); }
 .breadcrumb span { color: rgba(250,247,242,.35); }
 
-/* =============================================
-   APERCU CATALOGUE & BLOG (home)
-   ============================================= */
+/* APERCU CATALOGUE & BLOG (home) */
 .preview-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -895,9 +865,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .home-blog-preview .blog-card p { color: rgba(250,247,242,.6); }
 .home-blog-preview .blog-date { color: var(--gold); }
 
-/* =============================================
-   CATALOGUE CTA
-   ============================================= */
+/* catalogue cta */
 .catalogue-cta {
   text-align: center;
   margin-top: 4rem;
@@ -907,9 +875,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .catalogue-cta p { color: var(--muted); margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
 
-/* =============================================
-   A PROPOS - variantes light (about.html)
-   ============================================= */
+/* A PROPOS - variantes light (about.html) */
 .mvv-grid-light {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -945,9 +911,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .about-cta p { color: rgba(250,247,242,.65); max-width: 520px; margin: 0 auto 2rem; }
 .about-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-/* =============================================
-   BLOG - article vedette & newsletter
-   ============================================= */
+/* BLOG - article vedette & newsletter */
 .blog-featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -993,9 +957,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .newsletter-form input:focus { outline: none; border-color: var(--gold); }
 .newsletter-form input::placeholder { color: rgba(250,247,242,.35); }
 
-/* =============================================
-   BLOG - article complet, sidebar, filtres, SEO
-   ============================================= */
+/* BLOG - article complet, sidebar, filtres, SEO */
 
 /* Layout principal: articles + sidebar */
 .blog-page-layout {
@@ -1266,9 +1228,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .blog-article-full-wrap { margin-bottom: 2.5rem; }
 }
 
-/* =============================================
-   CONTACT - carte pleine & bureaux
-   ============================================= */
+/* CONTACT - carte pleine & bureaux */
 .map-full { border: 1px solid rgba(201,168,76,.15); overflow: hidden; border-radius: 2px; }
 .map-full-inner { position: relative; height: 400px; }
 .map-full-inner img { height: 100%; object-fit: cover; }
@@ -1320,9 +1280,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .contact-info-box h3 { margin-top: 0; }
 .contact-info-box .btn-call { margin-top: 1.5rem; }
 
-/* =============================================
-   ANIMATIONS (IntersectionObserver)
-   ============================================= */
+/* ANIMATIONS (IntersectionObserver) */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(32px);
@@ -1330,9 +1288,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .animate-on-scroll.animated { opacity: 1; transform: none; }
 
-/* =============================================
-   MEDIA QUERIES
-   ============================================= */
+/* media queries */
 
 /* 1440px+ - widescreen tweaks */
 @media (min-width: 1440px) {
@@ -1488,9 +1444,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .page-header { padding: calc(var(--nav-h) + 2.5rem) 0 2.5rem; }
 }
 
-/* =============================================
-   ACCESSIBILITÉ - prefers-reduced-motion
-   ============================================= */
+/* ACCESSIBILITÉ - prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -1505,9 +1459,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .hero-scroll { animation: none; }
 }
 
-/* =============================================
-   TOUCH - pointer: coarse (smartphones, tablettes)
-   ============================================= */
+/* TOUCH - pointer: coarse (smartphones, tablettes) */
 @media (pointer: coarse) {
   /* Cibles tactiles minimum 44px */
   .btn { min-height: 44px; }
@@ -1528,9 +1480,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .hist-btn:hover { transform: none; }
 }
 
-/* =============================================
-   PRODUCT MODAL
-   ============================================= */
+/* product modal */
 
 .btn-details {
   display: inline-block;
@@ -1789,9 +1739,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .modal-img-wrapper { width: 100%; max-width: 200px; }
 }
 
-/* =============================================
-   NAV ACTIONS (panier + hamburger)
-   ============================================= */
+/* NAV ACTIONS (panier + hamburger) */
 
 .nav-actions {
   display: flex;
@@ -1839,9 +1787,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .cart-badge[hidden] { display: none; }
 @keyframes badgePop { from { transform: scale(0); } to { transform: scale(1); } }
 
-/* =============================================
-   PRODUCT CARD ACTIONS
-   ============================================= */
+/* product card actions */
 
 .product-card-actions {
   display: flex;
@@ -1915,9 +1861,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   padding: .7rem 1rem;
 }
 
-/* =============================================
-   CART TOAST NOTIFICATION
-   ============================================= */
+/* cart toast notification */
 
 .cart-toast {
   position: fixed;
@@ -1952,9 +1896,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   text-underline-offset: 2px;
 }
 
-/* =============================================
-   PAGE COMMANDE
-   ============================================= */
+/* page commande */
 
 /* Empty state */
 .cart-empty {
@@ -1988,7 +1930,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   line-height: 1.7;
 }
 
-/* ── Formulaire commande ── */
+/* Formulaire commande */
 .order-form-wrap {
   margin-top: 3rem;
   background: rgba(250, 247, 242, 0.6);
@@ -2069,7 +2011,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .order-form-actions { margin-top: 1.75rem; display: flex; justify-content: center; }
 .order-submit-btn { min-width: 280px; justify-content: center; }
 
-/* ── Carte de succès ── */
+/* Carte de succès */
 .order-success-wrap {
   margin-top: 3rem;
   display: flex;
@@ -2381,9 +2323,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   font-style: italic;
 }
 
-/* =============================================
-   SECTION TÉLÉCHARGEMENT CATALOGUE
-   ============================================= */
+/* section téléchargement catalogue */
 .section-download-catalogue {
   background: linear-gradient(135deg, var(--bordeaux-d) 0%, #3A0A14 50%, var(--bordeaux-d) 100%);
   position: relative;
@@ -2665,7 +2605,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   text-align: center;
 }
 
-/* ── Guide commande ──────────────────────────── */
+/* Guide commande */
 .order-guide {
   padding: 28px 28px 24px;
   background: #FAF7F2;
@@ -2742,7 +2682,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
    HISTORIQUE - Page historique.html (Admin)
    ═══════════════════════════════════════════════ */
 
-/* ── Stats bar ──────────────────────────────── */
+/* Stats bar */
 .hist-stats {
   display: flex;
   gap: 2px;
@@ -2777,7 +2717,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   color: #7A7069;
 }
 
-/* ── Toolbar ────────────────────────────────── */
+/* Toolbar */
 .hist-toolbar {
   display: flex;
   align-items: center;
@@ -2809,7 +2749,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .hist-btn-clear:hover { border-color: #c0392b; color: #c0392b; }
 
-/* ── Tri ────────────────────────────────────── */
+/* Tri */
 .hist-sort {
   display: flex;
   align-items: center;
@@ -2843,7 +2783,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   color: #FAF7F2;
 }
 
-/* ── Grille carrée ──────────────────────────── */
+/* Grille carrée */
 .historique-list {
   list-style: none;
   padding: 0;
@@ -2959,7 +2899,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .hist-btn--delete { background: transparent; border: 1.5px solid #e8e0d5; color: #7A7069; }
 .hist-btn--delete:hover { border-color: #c0392b; color: #c0392b; }
 
-/* ── Empty state ────────────────────────────── */
+/* Empty state */
 .historique-empty {
   text-align: center;
   padding: 80px 20px;
@@ -2995,7 +2935,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .hist-toolbar { flex-direction: column; align-items: flex-start; }
 }
 
-/* ── Admin overlay ──────────────────────────── */
+/* Admin overlay */
 #admin-overlay {
   position: fixed;
   inset: 0;
@@ -3108,7 +3048,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .admin-login-card.shake { animation: shake .4s ease; }
 
-/* ── Admin badge + logout ───────────────────── */
+/* Admin badge + logout */
 .admin-badge {
   display: inline-flex;
   align-items: center;
@@ -3240,12 +3180,10 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   justify-content: center;
 }
 
-/* =============================================
-   GLASSMORPHISM - Africa Wine Food
-   Liquid glass adapté à la palette bordeaux/or
-   ============================================= */
+/* GLASSMORPHISM - Africa Wine Food */
+/* Liquid glass adapté à la palette bordeaux/or */
 
-/* ── Variables verre ── */
+/* Variables verre */
 :root {
   --glass-dark:     rgba(15, 8, 5, 0.45);
   --glass-light:    rgba(250, 247, 242, 0.55);
@@ -3260,7 +3198,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   --radius-sm:      10px;
 }
 
-/* ── Boutons arrondis supplémentaires ── */
+/* Boutons arrondis supplémentaires */
 .btn-overlay      { border-radius: var(--radius-pill); }
 .btn-call         { border-radius: var(--radius-pill); }
 .filter-btn       { border-radius: var(--radius-pill) !important; }
@@ -3272,7 +3210,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .newsletter-input { border-radius: var(--radius-pill) !important; }
 .newsletter-btn   { border-radius: 0 var(--radius-pill) var(--radius-pill) 0 !important; }
 
-/* ── Cards sur fond clair → glass bordeaux subtil ── */
+/* Cards sur fond clair → glass bordeaux subtil */
 .univers-card {
   background: var(--glass-light) !important;
   -webkit-backdrop-filter: var(--glass-blur);
@@ -3287,7 +3225,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   border-color: var(--gold) !important;
 }
 
-/* ── Cards clientèle ── */
+/* Cards clientèle */
 .clientele-card {
   background: var(--glass-light) !important;
   -webkit-backdrop-filter: var(--glass-blur);
@@ -3302,7 +3240,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   border-color: rgba(201,168,76,.4) !important;
 }
 
-/* ── Testimonial sur fond sombre → glass doré ── */
+/* Testimonial sur fond sombre → glass doré */
 .testimonial-content {
   background: rgba(15, 8, 5, 0.35) !important;
   -webkit-backdrop-filter: blur(20px) saturate(160%);
@@ -3312,7 +3250,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(201,168,76,.12);
 }
 
-/* ── Product cards ── */
+/* Product cards */
 .product-card {
   background: var(--glass-light) !important;
   -webkit-backdrop-filter: blur(12px) saturate(160%);
@@ -3330,7 +3268,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 
 /* .pillar-icon - pas de glassmorphism, style original conservé */
 
-/* ── Office card ── */
+/* Office card */
 .office-card {
   background: rgba(15, 8, 5, 0.35) !important;
   -webkit-backdrop-filter: blur(16px) saturate(160%);
@@ -3345,7 +3283,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: 0 16px 48px rgba(77, 15, 28, 0.3), 0 0 0 1px rgba(201,168,76,.2);
 }
 
-/* ── Hero content (boite principale) ── */
+/* Hero content (boite principale) */
 .hero-content {
   background: rgba(10, 5, 3, 0.28);
   -webkit-backdrop-filter: blur(8px) saturate(140%);
@@ -3356,7 +3294,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: 0 24px 64px rgba(0,0,0,.35), inset 0 1px 0 rgba(201,168,76,.1);
 }
 
-/* ── Sidebar boxes (blog) ── */
+/* Sidebar boxes (blog) */
 .sidebar-box {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -3365,7 +3303,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   overflow: hidden;
 }
 
-/* ── Newsletter ── */
+/* Newsletter */
 .newsletter-box {
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   backdrop-filter: blur(16px) saturate(160%);
@@ -3373,7 +3311,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: var(--glass-shadow);
 }
 
-/* ── Download catalogue ── */
+/* Download catalogue */
 .download-catalogue-box {
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   backdrop-filter: blur(14px) saturate(160%);
@@ -3381,7 +3319,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: var(--glass-shadow);
 }
 
-/* ── FABs (WhatsApp + back-to-top) ── */
+/* FABs (WhatsApp + back-to-top) */
 .whatsapp-fab {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -3395,7 +3333,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: 0 8px 24px rgba(77,15,28,.35), inset 0 1px 0 rgba(201,168,76,.15) !important;
 }
 
-/* ── Page header overlay ── */
+/* Page header overlay */
 .page-header-overlay {
   background: linear-gradient(135deg,
     rgba(77, 15, 28, 0.65) 0%,
@@ -3404,28 +3342,28 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   backdrop-filter: blur(2px);
 }
 
-/* ── Keyword chips SEO ── */
+/* Keyword chips SEO */
 .keyword-chip {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-sm) !important;
 }
 
-/* ── Carousel buttons ── */
+/* Carousel buttons */
 .carousel-btn {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: rgba(15,8,5,.35) !important;
 }
 
-/* ── Modal panier ── */
+/* Modal panier */
 .cart-modal, .order-confirm-overlay > div {
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   backdrop-filter: blur(16px) saturate(160%);
   border-radius: var(--radius-card) !important;
 }
 
-/* ── Glow doré au hover des boutons primaires ── */
+/* Glow doré au hover des boutons primaires */
 .btn-primary:hover {
   box-shadow: 0 6px 20px rgba(107,26,43,.35), 0 0 0 3px rgba(201,168,76,.18) !important;
 }
@@ -3433,7 +3371,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   box-shadow: 0 6px 20px rgba(201,168,76,.45), 0 0 0 3px rgba(201,168,76,.2) !important;
 }
 
-/* ── Reduced motion : désactiver backdrop-filter ── */
+/* Reduced motion : désactiver backdrop-filter */
 @media (prefers-reduced-motion: reduce) {
   .univers-card, .clientele-card, .testimonial-content,
   .product-card, .office-card, .hero-content, .newsletter-box,
@@ -3445,7 +3383,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   }
 }
 
-/* ── Fallback : navigateurs sans backdrop-filter (ex: FF sans flag) ── */
+/* Fallback : navigateurs sans backdrop-filter (ex: FF sans flag) */
 @supports not (backdrop-filter: blur(1px)) {
   .univers-card   { background: rgba(250,247,242,.95) !important; }
   .clientele-card { background: rgba(250,247,242,.95) !important; }
@@ -3458,7 +3396,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 
-/* ---- Videos evenements ---- */
+/* Videos evenements */
 .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .video-card { margin: 0; background: rgba(255,255,255,.04); border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,168,76,.25); }
 .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
@@ -3468,7 +3406,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } }
 
 
-/* ---- Cartes bouteille : photo portrait entiere ---- */
+/* Cartes bouteille : photo portrait entiere */
 .product-card.is-bottle .product-img-wrapper { height: auto; aspect-ratio: 3 / 4; background: var(--cream-dark, #f3ede3); }
 .product-card.is-bottle .product-img-wrapper img { object-fit: cover; object-position: center; }
 @media (max-width: 600px) {
@@ -3476,14 +3414,14 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .product-card.is-bottle .product-img-wrapper img { object-fit: contain; }
 }
 
-/* ---- Video mise en avant ---- */
+/* Video mise en avant */
 .video-feature { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 3rem; align-items: center; justify-content: center; }
 .video-feature-player video { width: 100%; max-height: 600px; border-radius: 12px; background: #000; display: block; }
 .video-feature-text h2 { color: var(--cream); margin-bottom: 1rem; }
 .video-feature-text p { color: rgba(250,247,242,.8); margin-bottom: 1.5rem; }
 @media (max-width: 768px) { .video-feature { grid-template-columns: 1fr; gap: 1.5rem; } .video-feature-player { max-width: 320px; margin: 0 auto; } }
 
-/* ---- Galerie photos ---- */
+/* Galerie photos */
 .gallery-title { text-align: center; color: var(--cream); margin: 3rem 0 1.5rem; }
 .photo-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
 .gallery-item { display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 10px; }
@@ -3495,14 +3433,14 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .lightbox img { max-width: 96vw; max-height: 88vh; border-radius: 8px; display: block; }
 .lightbox-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
 
-/* ---- Mobile : les boutons longs passent a la ligne au lieu de deborder ---- */
+/* Mobile : les boutons longs passent a la ligne au lieu de deborder */
 @media (max-width: 600px) {
   .btn { white-space: normal; text-align: center; justify-content: center; max-width: 100%; }
   .catalogue-cta { padding: 2rem 1.25rem; }
 }
 
 
-/* ---- Clips video produits ---- */
+/* Clips video produits */
 .clip-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; max-width: 960px; margin: 0 auto; }
 .clip-card { margin: 0; text-align: center; }
 .clip-card video { width: 100%; aspect-ratio: 9 / 16; max-height: 520px; object-fit: cover; border-radius: 12px; background: #000; display: block; }
@@ -3511,14 +3449,12 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 @media (max-width: 768px) { .clip-grid { grid-template-columns: 1fr; } .clip-card { max-width: 300px; margin: 0 auto; } }
 
 
-/* ---- Font Awesome : alignement avec le texte ---- */
+/* Font Awesome : alignement avec le texte */
 i.fa-solid, i.fa-regular, i.fa-brands { line-height: 1; vertical-align: -.1em; }
 .whatsapp-fab i { font-size: 26px; }
 .social-link i { font-size: 18px; }
 
-/* =============================================
-   NAVIGATION RESPONSIVE (correctif)
-   ============================================= */
+/* navigation responsive */
 body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 .nav-link { white-space: nowrap; }
 .nav-logo, .logo-text { flex-shrink: 0; }

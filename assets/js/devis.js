@@ -1,15 +1,13 @@
-/* =======================================================
-   AFRICA WINE FOOD - devis.js
-   Génération dynamique du devis depuis awf-cart
-   Dépendances : productsData (main.js), jsPDF CDN
-   ======================================================= */
+/* AFRICA WINE FOOD - devis.js */
+/* Génération dynamique du devis depuis awf-cart */
+/* Dépendances : productsData (main.js), jsPDF CDN */
 
 'use strict';
 
-/* ── Devise choisie par le client dans le modal ──────── */
+/* Devise choisie par le client dans le modal */
 let _devisCurrency = 'XOF'; // 'XOF' ou 'EUR', défini au moment de la confirmation
 
-/* ── Échappement HTML (protection XSS) ──────────────── */
+/* Échappement HTML (protection XSS) */
 function esc(str) {
   return String(str == null ? '' : str)
     .replace(/&/g, '&amp;')
@@ -19,7 +17,7 @@ function esc(str) {
     .replace(/'/g, '&#39;');
 }
 
-/* ── Numéro de devis ─────────────────────────────────── */
+/* Numéro de devis */
 function generateDevisNumber() {
   const now   = new Date();
   const year  = now.getFullYear();
@@ -29,13 +27,13 @@ function generateDevisNumber() {
   return `AWF-${year}-${day}${month}-${rand}`;
 }
 
-/* ── Lecture du panier ───────────────────────────────── */
+/* Lecture du panier */
 function getCart() {
   try { return JSON.parse(localStorage.getItem('awf-cart') || '[]'); }
   catch(e) { return []; }
 }
 
-/* ── Lecture des données client depuis sessionStorage ── */
+/* Lecture des données client depuis sessionStorage */
 function getClientData() {
   try {
     const raw = sessionStorage.getItem('awf-devis-client');
@@ -47,12 +45,12 @@ function getClientData() {
   return { prenom: '', nom: '', email: '', phone: '', ville: '', pays: '', delivery: '', occasion: '', notes: '' };
 }
 
-/* ── Lecture du ?id= pour consultation historique ────── */
+/* Lecture du ?id= pour consultation historique */
 function getHistoryId() {
   return new URLSearchParams(window.location.search).get('id') || null;
 }
 
-/* ── Formatage prix selon la devise choisie par le client */
+/* Formatage prix selon la devise choisie par le client */
 function fmtXof(n) {
   const num = Number(n);
   if (!num) return 'Sur devis';
@@ -63,19 +61,19 @@ function fmtXof(n) {
   return num.toLocaleString('fr-FR') + ' F CFA';
 }
 
-/* ── Label devise pour l'en-tête du devis ────────────── */
+/* Label devise pour l'en-tête du devis */
 function getCurrencyLabel() {
   if (_devisCurrency !== 'EUR' || !window.AWF_CURRENCY) return null;
   const rate = Math.round(window.AWF_CURRENCY.rate);
   return `Devis établi en EUR, taux de conversion : 1 EUR = ${rate} F CFA`;
 }
 
-/* ── Date lisible ────────────────────────────────────── */
+/* Date lisible */
 function fmtDate(date) {
   return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-/* ── Sauvegarde historique ───────────────────────────── */
+/* Sauvegarde historique */
 function saveToHistory(entry) {
   let history = [];
   try { history = JSON.parse(localStorage.getItem('awf-devis-history') || '[]'); } catch(e) {}
@@ -83,7 +81,7 @@ function saveToHistory(entry) {
   localStorage.setItem('awf-devis-history', JSON.stringify(history));
 }
 
-/* ── Chargement depuis historique (mode ?id=) ────────── */
+/* Chargement depuis historique (mode ?id=) */
 function loadFromHistory(id) {
   try {
     const history = JSON.parse(localStorage.getItem('awf-devis-history') || '[]');
@@ -91,7 +89,7 @@ function loadFromHistory(id) {
   } catch(e) { return null; }
 }
 
-/* ── Construction du message WhatsApp ────────────────── */
+/* Construction du message WhatsApp */
 function buildWhatsAppMessage(data) {
   const { number, client, items, total, delivery } = data;
   let lines = '\u{1F377} Nouvelle commande Africa Wine Food\n\n';
@@ -112,14 +110,14 @@ function buildWhatsAppMessage(data) {
   return lines;
 }
 
-/* ── Envoi WhatsApp ──────────────────────────────────── */
+/* Envoi WhatsApp */
 function sendWhatsApp(data) {
   const WA_NUMBER = '22899072912';
   const text = buildWhatsAppMessage(data);
   window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
 }
 
-/* ── Génération PDF (retourne une Promise) ───────────── */
+/* Génération PDF (retourne une Promise) */
 function generatePDF(devisNumber) {
   const pageEl = document.querySelector('.page');
   if (!pageEl) return Promise.resolve(null);
@@ -139,7 +137,7 @@ function generatePDF(devisNumber) {
   });
 }
 
-/* ── Export PDF seul (bouton Télécharger) ────────────── */
+/* Export PDF seul (bouton Télécharger) */
 function exportPDF(devisNumber) {
   const btnBar = document.getElementById('devis-actions');
   if (btnBar) btnBar.style.display = 'none';
@@ -157,7 +155,7 @@ function exportPDF(devisNumber) {
   });
 }
 
-/* ── Modal de confirmation client ────────────────────── */
+/* Modal de confirmation client */
 function showConfirmModal(devisData) {
   return new Promise((resolve, reject) => {
     const overlay = document.createElement('div');
@@ -347,7 +345,7 @@ function showConfirmModal(devisData) {
   });
 }
 
-/* ── Mise à jour section client dans le DOM ──────────── */
+/* Mise à jour section client dans le DOM */
 function updateClientSection(client) {
   const elName    = document.getElementById('devis-client-name');
   const elDetails = document.getElementById('devis-client-details');
@@ -363,7 +361,7 @@ function updateClientSection(client) {
   }
 }
 
-/* ── Confirmation commande : Modal → PDF + WhatsApp + Email ── */
+/* Confirmation commande : Modal → PDF + WhatsApp + Email */
 async function confirmOrder(devisData) {
   const btn = document.getElementById('btn-devis-wa');
 
@@ -411,7 +409,7 @@ async function confirmOrder(devisData) {
   if (btn) { btn.disabled = false; btn.textContent = '✓ Confirmer la commande'; }
 }
 
-/* ── Remplissage du DOM de devis.html ────────────────── */
+/* Remplissage du DOM de devis.html */
 function populateDevis(devisData) {
   const { number, dateStr, client, items, total, delivery } = devisData;
 
@@ -508,7 +506,7 @@ function populateDevis(devisData) {
   }
 }
 
-/* ── Point d'entrée principal ────────────────────────── */
+/* Point d'entrée principal */
 function initDevis() {
   /* Lire la devise choisie avant la génération (sessionStorage, effacé après lecture) */
   const savedCurrency = sessionStorage.getItem('awf-devis-currency');

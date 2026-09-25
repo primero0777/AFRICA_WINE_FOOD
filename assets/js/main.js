@@ -1,13 +1,11 @@
-/* =============================================
-   AFRICA WINE FOOD - main.js
-   Fonctionnalites : bilingue FR/EN, parallaxe,
-   carousel, filtres, compteurs, sticky nav,
-   hamburger, back-to-top, smooth scroll, formulaires
-   ============================================= */
+/* AFRICA WINE FOOD - main.js */
+/* Fonctionnalites : bilingue FR/EN, parallaxe, */
+/* carousel, filtres, compteurs, sticky nav, */
+/* hamburger, back-to-top, smooth scroll, formulaires */
 
 'use strict';
 
-/* ---- Translations ---- */
+/* Translations */
 const translations = {
   fr: {
     'nav.home':        'Accueil',
@@ -223,7 +221,7 @@ const translations = {
     'footer.warning':       "⚠️ L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Interdit aux mineurs de moins de 18 ans.",
     'whatsapp.label':       'WhatsApp',
 
-    /* ---- Nouvelles cles multipage ---- */
+    /* Nouvelles cles multipage */
     'home.preview.pretitle': 'Nos sélections du moment',
     'home.preview.title':    'À la une',
     'home.preview.subtitle': "Un avant-goût de notre catalogue d'exception.",
@@ -482,7 +480,7 @@ const translations = {
     'footer.warning':       "⚠️ Alcohol abuse is dangerous for your health. Drink responsibly. Sale prohibited to persons under 18.",
     'whatsapp.label':       'WhatsApp',
 
-    /* ---- New multipage keys ---- */
+    /* New multipage keys */
     'home.preview.pretitle': 'Featured selections',
     'home.preview.title':    'Featured',
     'home.preview.subtitle': 'A taste of our exceptional catalogue.',
@@ -528,10 +526,10 @@ const translations = {
   }
 };
 
-/* ---- State ---- */
+/* State */
 let currentLang = 'fr';
 
-/* ---- Apply translations ---- */
+/* Apply translations */
 function applyTranslations(lang) {
   const t = translations[lang];
   const year = new Date().getFullYear();
@@ -554,7 +552,7 @@ function applyTranslations(lang) {
   document.documentElement.lang = lang;
 }
 
-/* ---- Language Switcher ---- */
+/* Language Switcher */
 function initLangSwitcher() {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -570,7 +568,7 @@ function initLangSwitcher() {
   });
 }
 
-/* ---- Sticky Navbar ---- */
+/* Sticky Navbar */
 function initNavbar() {
   const navbar  = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -598,7 +596,7 @@ function initNavbar() {
   });
 }
 
-/* ---- Hamburger Menu ---- */
+/* Hamburger Menu */
 function initHamburger() {
   const hamburger = document.getElementById('hamburger');
   const navMenu   = document.getElementById('nav-menu');
@@ -626,7 +624,7 @@ function initHamburger() {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 }
 
-/* ---- Smooth Scroll (cross-browser) ---- */
+/* Smooth Scroll (cross-browser) */
 function smoothScrollTo(top) {
   if ('scrollBehavior' in document.documentElement.style) {
     window.scrollTo({ top, behavior: 'smooth' });
@@ -658,7 +656,7 @@ function initSmoothScroll() {
   });
 }
 
-/* ---- Hero Parallax ---- */
+/* Hero Parallax */
 function initParallax() {
   const heroBg = document.getElementById('hero-bg');
   if (!heroBg) return;
@@ -675,7 +673,7 @@ function initParallax() {
   }, { passive: true });
 }
 
-/* ---- IntersectionObserver Animations ---- */
+/* IntersectionObserver Animations */
 function initScrollAnimations() {
   const elements = document.querySelectorAll('.animate-on-scroll');
   if (!elements.length) return;
@@ -698,7 +696,7 @@ function initScrollAnimations() {
   elements.forEach(el => observer.observe(el));
 }
 
-/* ---- Testimonials Carousel ---- */
+/* Testimonials Carousel */
 function initCarousel() {
   const track   = document.getElementById('carousel-track');
   const dots    = document.querySelectorAll('.dot');
@@ -751,7 +749,7 @@ function initCarousel() {
   startAutoplay();
 }
 
-/* ---- Catalogue Filters ---- */
+/* Catalogue Filters */
 function applyFilter(filterBtns, cards, filter) {
   filterBtns.forEach(b => b.classList.remove('active'));
   const target = [...filterBtns].find(b => b.dataset.filter === filter) || filterBtns[0];
@@ -791,7 +789,7 @@ function initFilters() {
   }
 }
 
-/* ---- Blog Category Filters ---- */
+/* Blog Category Filters */
 function initBlogFilters() {
   const filterBtns = document.querySelectorAll('.blog-filter-btn');
   const cards      = document.querySelectorAll('.blog-card');
@@ -826,7 +824,7 @@ function initBlogFilters() {
   });
 }
 
-/* ---- Animated Counters ---- */
+/* Animated Counters */
 function animateCounter(el, target, duration) {
   const start = performance.now();
   function step(now) {
@@ -855,7 +853,7 @@ function initCounters() {
   observer.observe(statsSection);
 }
 
-/* ---- Back to Top ---- */
+/* Back to Top */
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
@@ -865,7 +863,7 @@ function initBackToTop() {
   btn.addEventListener('click', () => smoothScrollTo(0));
 }
 
-/* ---- Form Handling ---- */
+/* Form Handling */
 const WA_NUMBER = '22899072912';
 function sendToWhatsApp(text) {
   window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
@@ -960,7 +958,7 @@ function initForms() {
   });
 }
 
-/* ---- Cart ---- */
+/* Cart */
 let cart = [];
 
 function loadCart() {
@@ -1050,7 +1048,7 @@ function initCart() {
   });
 }
 
-/* ---- Products Data ---- */
+/* Products Data */
 const productsData = [
   {
     id: 'margaux-2018',
@@ -1415,7 +1413,7 @@ const productsData = [
       pairing: "Out of respect for its singularity, Romanée-Conti is best enjoyed alone, in meditation. If paired with food: noble game (woodcock, truffle pheasant), or perhaps just an old Burgundy cheese."
     }
   },
-  /* ── NOUVEAUX PRODUITS ─────────────────────────────── */
+  /* nouveaux produits */
   {
     id: 'provence-rose-2023',
     img: 'assets/images/oenologue-machine.jpg',
@@ -2639,7 +2637,7 @@ const productsData = [
   }
 ];
 
-/* ---- Product Modal ---- */
+/* Product Modal */
 function initProductModal() {
   const modal    = document.getElementById('product-modal');
   if (!modal) return;
@@ -2745,7 +2743,7 @@ function initProductModal() {
   });
 }
 
-/* ---- Page Commande ---- */
+/* Page Commande */
 function initCommandePage() {
   const emptyEl  = document.getElementById('cart-empty');
   const gridEl   = document.getElementById('commande-grid');
@@ -2894,12 +2892,12 @@ function initCommandePage() {
   }
 }
 
-/* ---- iOS viewport height fix ---- */
+/* iOS viewport height fix */
 function setVh() {
   document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
 }
 
-/* ---- Init ---- */
+/* Init */
 function init() {
   setVh();
   window.addEventListener('resize', setVh, { passive: true });
@@ -2929,7 +2927,7 @@ if (document.readyState === 'loading') {
 }
 
 
-/* ---- Lightbox galerie photos ---- */
+/* Lightbox galerie photos */
 (function initLightbox() {
   const dlg = document.getElementById('lightbox');
   if (!dlg || typeof dlg.showModal !== 'function') return;

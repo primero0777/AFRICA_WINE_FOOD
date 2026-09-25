@@ -1,6 +1,4 @@
-/* =======================================================
-   AFRICA WINE FOOD - historique.js  (Admin only)
-   ======================================================= */
+/* AFRICA WINE FOOD - historique.js  (Admin only) */
 
 'use strict';
 
@@ -11,7 +9,7 @@ const LOCKOUT_KEY = 'awf-admin-lockout';
 const MAX_ATTEMPTS = 5;
 let _sortKey = 'date-desc';
 
-/* ── Utils ──────────────────────────────────────── */
+/* Utils */
 
 function esc(str) {
   return String(str == null ? '' : str)
@@ -40,7 +38,7 @@ function saveHistory(h) {
   localStorage.setItem('awf-devis-history', JSON.stringify(pruned));
 }
 
-/* ── Auth ──────────────────────────────────────── */
+/* Auth */
 
 async function sha256hex(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -128,7 +126,7 @@ function handleLogin(e) {
   });
 }
 
-/* ── History ────────────────────────────────────── */
+/* History */
 
 function sortHistory(history) {
   const arr = [...history];
@@ -278,7 +276,7 @@ function initAdmin() {
   }
 }
 
-/* ── Boot ───────────────────────────────────────── */
+/* Boot */
 
 document.addEventListener('DOMContentLoaded', () => {
   /* Auth form handlers - always registered */

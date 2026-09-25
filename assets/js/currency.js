@@ -1,8 +1,6 @@
-/* =============================================
-   AFRICA WINE FOOD - currency.js
-   Convertisseur XOF <-> EUR  |  taux live, cache 1h
-   Note: 1 EUR = 655.957 XOF (parité fixe CFA)
-   ============================================= */
+/* AFRICA WINE FOOD - currency.js */
+/* Convertisseur XOF <-> EUR  |  taux live, cache 1h */
+/* Note: 1 EUR = 655.957 XOF (parité fixe CFA) */
 'use strict';
 
 window.AWF_CURRENCY = (function () {
@@ -16,7 +14,7 @@ window.AWF_CURRENCY = (function () {
   let _current = localStorage.getItem(_PREF) || 'XOF';
   let _rate    = _FALLBACK;
 
-  /* ---- Formatters ---- */
+  /* Formatters */
   function fmtXOF(n) {
     return Math.round(n).toLocaleString('fr-FR') + ' F CFA';
   }
@@ -27,7 +25,7 @@ window.AWF_CURRENCY = (function () {
     return _current === 'XOF' ? fmtXOF(xofAmount) : fmtEUR(xofAmount / _rate);
   }
 
-  /* ---- Cache + API ---- */
+  /* Cache + API */
   async function _fetchRate() {
     try {
       const raw = localStorage.getItem(_KEY);
@@ -51,7 +49,7 @@ window.AWF_CURRENCY = (function () {
     }
   }
 
-  /* ---- DOM: met a jour tous les [data-price-xof] ---- */
+  /* DOM: met a jour tous les [data-price-xof] */
   function _renderAll() {
     document.querySelectorAll('[data-price-xof]').forEach(el => {
       const xof = parseInt(el.dataset.priceXof, 10);
@@ -84,7 +82,7 @@ window.AWF_CURRENCY = (function () {
     el.classList.toggle('rate-fallback', fallback);
   }
 
-  /* ---- Init ---- */
+  /* Init */
   async function _init() {
     const { r, fallback } = await _fetchRate();
     _rate = r;
@@ -105,7 +103,7 @@ window.AWF_CURRENCY = (function () {
 
   document.addEventListener('DOMContentLoaded', _init);
 
-  /* ---- API publique ---- */
+  /* API publique */
   return {
     get current() { return _current; },
     get rate()    { return _rate;    },

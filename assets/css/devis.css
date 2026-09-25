@@ -1,7 +1,5 @@
-/* =======================================================
-   AFRICA WINE FOOD - devis.css
-   Styles for the devis (quote) document page
-   ======================================================= */
+/* AFRICA WINE FOOD - devis.css */
+/* Styles for the devis (quote) document page */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -36,7 +34,7 @@ body {
   box-shadow: 0 8px 48px rgba(0,0,0,.13);
 }
 
-/* ── HEADER ── */
+/* header */
 .header {
   background: var(--bordeaux-d);
   padding: 44px 52px 36px;
@@ -95,13 +93,13 @@ body {
   font-weight: 300;
 }
 
-/* ── BAND OR ── */
+/* band or */
 .gold-band {
   height: 4px;
   background: linear-gradient(90deg, var(--gold-l), var(--gold), var(--gold-l));
 }
 
-/* ── INFOS PARTIES ── */
+/* infos parties */
 .parties {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -141,7 +139,7 @@ body {
   font-weight: 400;
 }
 
-/* ── OBJET ── */
+/* objet */
 .objet-section {
   padding: 24px 52px;
   background: var(--cream);
@@ -166,7 +164,7 @@ body {
   color: var(--bordeaux-d);
 }
 
-/* ── TABLEAU PRESTATIONS ── */
+/* tableau prestations */
 .table-section { padding: 36px 52px; }
 
 .table-title {
@@ -261,7 +259,7 @@ tbody td:last-child {
   border-bottom: none;
 }
 
-/* ── TOTAUX ── */
+/* totaux */
 .totaux {
   display: flex;
   justify-content: flex-end;
@@ -310,7 +308,7 @@ tbody td:last-child {
   color: var(--gold);
 }
 
-/* ── MODALITÉS ── */
+/* modalités */
 .modalites {
   padding: 28px 52px;
   background: var(--cream);
@@ -352,7 +350,7 @@ tbody td:last-child {
 
 .modal-text strong { color: var(--bordeaux-d); font-weight: 600; }
 
-/* ── NOTE ── */
+/* note */
 .note-section {
   padding: 20px 52px;
   border-top: 1px solid var(--border);
@@ -373,7 +371,7 @@ tbody td:last-child {
   line-height: 1.7;
 }
 
-/* ── FOOTER ── */
+/* footer */
 .footer {
   background: var(--bordeaux-d);
   padding: 20px 52px;
@@ -394,7 +392,7 @@ tbody td:last-child {
   font-weight: 500;
 }
 
-/* ── PRINT ── */
+/* print */
 .print-btn {
   display: block;
   width: fit-content;
@@ -422,7 +420,7 @@ tbody td:last-child {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
 
-/* ── BARRE D'ACTIONS ── */
+/* barre d'actions */
 .devis-actions {
   max-width: 820px;
   margin: 0 auto 16px;
@@ -542,7 +540,7 @@ tbody td:last-child {
   .devis-btn--secondary:hover { transform: none; box-shadow: none; }
 }
 
-/* ── Glassmorphism - devis.html ── */
+/* Glassmorphism - devis.html */
 .page {
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
