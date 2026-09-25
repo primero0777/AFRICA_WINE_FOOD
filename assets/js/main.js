@@ -233,6 +233,8 @@ const translations = {
     'catalogue.cta.btn':  'Demander un conseil personnalisé',
 
     'about.header.subtitle': "Depuis 2009, la référence du vin de luxe en Afrique de l'Ouest.",
+    'about.events.pretitle': 'En images',
+    'about.events.title':    'Nos événements',
     'about.mvv.pretitle':    'Ce qui nous guide',
     'about.mvv.title':       'Mission, Vision & Valeurs',
     'about.stats.pretitle':  'En chiffres',
@@ -490,6 +492,8 @@ const translations = {
     'catalogue.cta.btn':  'Request personalised advice',
 
     'about.header.subtitle': 'Since 2009, the reference for luxury wine in West Africa.',
+    'about.events.pretitle': 'In pictures',
+    'about.events.title':    'Our events',
     'about.mvv.pretitle':    'What drives us',
     'about.mvv.title':       'Mission, Vision & Values',
     'about.stats.pretitle':  'By the numbers',

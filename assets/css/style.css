@@ -3456,3 +3456,13 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   #navbar.scrolled { background: rgba(15,10,8,.97) !important; }
   .back-to-top    { background: var(--bordeaux-d) !important; }
 }
+
+
+/* ---- Videos evenements ---- */
+.video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.video-card { margin: 0; background: rgba(255,255,255,.04); border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,168,76,.25); }
+.video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-card figcaption { padding: 1rem 1.25rem 1.25rem; display: flex; flex-direction: column; gap: .25rem; color: rgba(250,247,242,.75); font-size: .9rem; }
+.video-card figcaption strong { color: var(--cream); font-family: var(--ff-serif); font-size: 1.1rem; }
+@media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } }
