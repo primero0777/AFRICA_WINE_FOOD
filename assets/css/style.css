@@ -3575,3 +3575,11 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 .clip-toggle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 3.5rem; height: 3.5rem; border-radius: 50%; border: 0; background: rgba(0,0,0,.6); color: #fff; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .25s ease; cursor: pointer; }
 .clip-media.show-btn .clip-toggle, .clip-media.user-paused .clip-toggle, .clip-media.manual .clip-toggle { opacity: 1; }
 .clip-media:focus-within .clip-toggle { opacity: 1; }
+
+/* atelier du distributeur */
+.atelier-block { max-width: 960px; margin: 3rem auto 0; text-align: center; }
+.atelier-block h3 { margin-bottom: 1.25rem; }
+.atelier-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.atelier-grid .gallery-item { display: block; aspect-ratio: 2 / 3; overflow: hidden; border-radius: 12px; }
+.atelier-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 768px) { .atelier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
