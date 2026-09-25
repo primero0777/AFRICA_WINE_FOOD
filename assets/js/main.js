@@ -173,11 +173,6 @@ const translations = {
     'about.vision.desc':      "Devenir la maison de référence du vin de luxe en Afrique subsaharienne, et faire rayonner la culture du vin auprès des nouvelles générations africaines.",
     'about.values.title':     'Nos Valeurs',
     'about.values.desc':      "Excellence, authenticité, intégrité et passion guident chacune de nos décisions, du choix d'un millésime à la relation avec nos clients.",
-    'about.team.pretitle':    "L'expertise humaine",
-    'about.team.title':       'Notre équipe',
-    'about.team.m1.name':     'Tintin Kokou BARBOZA',
-    'about.team.m1.role':     'Fondateur & Directeur général',
-    'about.team.m1.bio':      "Fondateur et directeur général d'Africa Wine Food, à Lomé.",
 
     'blog.pretitle':          'Actualités & conseils',
     'blog.title':             'Le Blog',
@@ -442,11 +437,6 @@ const translations = {
     'about.vision.desc':      "To become the reference house for luxury wine in Sub-Saharan Africa, and to spread wine culture among new African generations.",
     'about.values.title':     'Our Values',
     'about.values.desc':      "Excellence, authenticity, integrity and passion guide every decision we make, from choosing a vintage to our relationship with clients.",
-    'about.team.pretitle':    'Human expertise',
-    'about.team.title':       'Our team',
-    'about.team.m1.name':     'Tintin Kokou BARBOZA',
-    'about.team.m1.role':     'Founder & CEO',
-    'about.team.m1.bio':      "Founder and CEO of Africa Wine Food, based in Lomé.",
 
     'blog.pretitle':          'News & advice',
     'blog.title':             'The Blog',
