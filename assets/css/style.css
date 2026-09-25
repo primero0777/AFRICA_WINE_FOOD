@@ -3515,3 +3515,50 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 i.fa-solid, i.fa-regular, i.fa-brands { line-height: 1; vertical-align: -.1em; }
 .whatsapp-fab i { font-size: 26px; }
 .social-link i { font-size: 18px; }
+
+/* =============================================
+   NAVIGATION RESPONSIVE (correctif)
+   ============================================= */
+body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+.nav-link { white-space: nowrap; }
+.nav-logo, .logo-text { flex-shrink: 0; }
+
+/* Ordinateurs moyens : en-tete compact, le taux de change passe dans le menu */
+@media (max-width: 1500px) {
+  .nav-container { gap: 1rem; }
+  .nav-menu { gap: 1rem; }
+  .nav-link { padding: .5rem .55rem; font-size: .76rem; letter-spacing: .07em; }
+  .lang-switcher { margin-left: .25rem; }
+  .nav-menu .currency-rate { display: none; }
+}
+
+/* Tablettes et petits portables : menu burger */
+@media (max-width: 1180px) {
+  .nav-actions { position: relative; z-index: 20; flex-shrink: 0; }
+  .hamburger { display: flex; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .logo-text { font-size: 1.05rem; }
+  .nav-menu {
+    position: absolute;
+    top: 100%; right: -100vw;
+    width: min(340px, 88vw);
+    height: 100vh; height: 100dvh;
+    background: rgba(10,5,3,.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 2.5rem;
+    transition: right .35s cubic-bezier(.4,0,.2,1);
+    z-index: 19;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-menu.open { right: 0; }
+  .nav-menu.open::before { content: ''; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,.45); z-index: -1; pointer-events: none; }
+  .nav-links { flex-direction: column; align-items: flex-start; gap: .25rem; width: 100%; }
+  .nav-link { font-size: 1rem; letter-spacing: .08em; padding: .65rem 0; width: 100%; }
+  .lang-switcher { margin-left: 0; }
+  .nav-menu .currency-rate { display: block; padding: .4rem 0 0; }
+}
