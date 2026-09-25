@@ -2649,6 +2649,39 @@ const productsData = [
     }
   },
   {
+    id: "moft-rose",
+    img: "assets/images/produits/vin-rose-moft-rose.jpg",
+    badgeClass: "badge-rose",
+    price: "16 €",
+    priceXof: 10500,
+    fr: {
+      badge: "Vin Rosé",
+      name: "MOFT Rosé",
+      appellation: "Vin rosé demi-sec, Murfatlar, Roumanie",
+      desc: "Un rosé délicat de la cave Rasova, en Dobrogea, sous une étiquette épurée. Des arômes de fruits rouges sauvages, relevés de notes florales.",
+      cepage: "Pinot Noir",
+      region: "Murfatlar, Dobrogea, Roumanie",
+      service: "10–12 °C",
+      garde: "Non précisé",
+      alcohol: "12,7 %",
+      tasting: "Une robe rose pâle, un nez de fruits rouges sauvages et de violette. Une bouche équilibrée entre fruit et fraîcheur, avec une finale longue.",
+      pairing: "Apéritif, salades, charcuteries, cuisine asiatique, desserts aux fruits rouges."
+    },
+    en: {
+      badge: "Rosé Wine",
+      name: "MOFT Rosé",
+      appellation: "Off-dry rosé, Murfatlar, Romania",
+      desc: "A delicate rosé from the Rasova winery in Dobrogea, under a clean label. Aromas of wild red berries lifted by floral notes.",
+      cepage: "Pinot Noir",
+      region: "Murfatlar, Dobrogea, Romania",
+      service: "10–12 °C",
+      garde: "Not specified",
+      alcohol: "12.7%",
+      tasting: "A pale pink colour, with wild red berries and violet on the nose. A palate balanced between fruit and freshness, with a long finish.",
+      pairing: "Aperitif, salads, cured meats, Asian cuisine, red berry desserts."
+    }
+  },
+  {
     id: "portal-da-vinha",
     img: "assets/images/produits/vin-blanc-portal-da-vinha.jpg",
     badgeClass: "badge-blanc",
