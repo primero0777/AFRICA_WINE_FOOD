@@ -2638,6 +2638,39 @@ const productsData = [
       tasting: "Notes of juniper, maple caramel and wood, with a soft finish.",
       pairing: "Cocktails, cheeses, desserts, sipping neat."
     }
+  },
+  {
+    id: "pipa-rosa-tradicao",
+    img: 'assets/images/vin-rouge-pipa-rosa-tradicao.jpg',
+    badgeClass: 'badge-rouge',
+    price: '14 €',
+    priceXof: 9500,
+    fr: {
+      badge: "Vin Rouge",
+      name: "Pipa Rosa Tradição",
+      appellation: "Vin rouge, Portugal",
+      desc: "Un vin rouge portugais de la maison Pipa Rosa, à la belle étiquette noire ornée de fleurs et d’une rose gravée sur fût. Un rouge chaleureux, dans la tradition portugaise.",
+      cepage: "Non précisé",
+      region: "Portugal",
+      service: "16–18 °C",
+      garde: "3–6 ans",
+      alcohol: "14 % vol.",
+      tasting: "Un rouge généreux et rond, aux notes de fruits noirs mûrs et d’épices.",
+      pairing: "Viandes rouges grillées, plats mijotés, fromages affinés."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "Pipa Rosa Tradição",
+      appellation: "Red wine, Portugal",
+      desc: "A Portuguese red wine from Pipa Rosa, with a striking black label decorated with flowers and a rose engraved on a barrel. A warm red in the Portuguese tradition.",
+      cepage: "Not specified",
+      region: "Portugal",
+      service: "16–18 °C",
+      garde: "3–6 years",
+      alcohol: "14% vol.",
+      tasting: "A generous, round red with notes of ripe black fruit and spice.",
+      pairing: "Grilled red meats, slow-cooked dishes, aged cheeses."
+    }
   }
 ];
 
