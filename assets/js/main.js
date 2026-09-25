@@ -2843,6 +2843,13 @@ function initProductModal() {
     document.getElementById('modal-tasting').textContent      = t.tasting;
     document.getElementById('modal-pairing').textContent      = t.pairing;
 
+    /* masque les lignes dont la valeur est inconnue */
+    ['cepage', 'region', 'service', 'garde', 'alcohol'].forEach(k => {
+      const row = document.getElementById('modal-' + k).closest('.modal-spec');
+      const unknown = /^(non précisé|not specified)$/i.test(String(t[k] || '').trim());
+      if (row) row.style.display = unknown ? 'none' : '';
+    });
+
     /* re-apply i18n labels */
     modal.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
