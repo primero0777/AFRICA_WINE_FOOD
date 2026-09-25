@@ -2,7 +2,7 @@
 <html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' api.exchangerate-api.com; frame-src 'none'; object-src 'none'; base-uri 'self';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self';" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#4D0F1C" />
@@ -96,7 +96,7 @@
             <li><a href="#art-12">Mineurs</a></li>
             <li><a href="#art-13">Modifications</a></li>
           </ol>
-          <p class="privacy-meta">Dernière mise à jour :<br><strong>Mai 2026</strong></p>
+          <p class="privacy-meta">Dernière mise à jour :<br><strong>Septembre 2026</strong></p>
         </aside>
 
         <!-- Articles -->
@@ -258,7 +258,7 @@
               </li>
               <li>
                 <span class="privacy-tag privacy-tag--local">localStorage</span>
-                <strong>awf_xof_eur_rate_v1</strong>, taux de change EUR / F CFA mis en cache 1 heure. Aucune donnée personnelle.
+                <strong>awf-admin-auth</strong> et <strong>awf-admin-lockout</strong>, réservés à l'espace d'administration : état de connexion et nombre d'essais. Aucune donnée de visiteur.
               </li>
               <li>
                 <span class="privacy-tag privacy-tag--local">localStorage</span>
@@ -293,8 +293,14 @@
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité Google →</a>
               </li>
               <li>
-                <span class="privacy-tag privacy-tag--local">Taux de change</span>
-                L'API <em>exchangerate-api.com</em> est consultée de façon anonyme pour obtenir le taux EUR / F CFA en temps réel. Aucune donnée personnelle n'est transmise.
+                <span class="privacy-tag privacy-tag--local">Google Fonts</span>
+                Les polices du site (Playfair Display et Raleway) sont chargées depuis les serveurs de Google (fonts.googleapis.com et fonts.gstatic.com, États-Unis). Google peut recevoir votre adresse IP et les informations techniques de votre navigateur.
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité Google →</a>
+              </li>
+              <li>
+                <span class="privacy-tag privacy-tag--local">GitHub Pages</span>
+                Le site est hébergé par GitHub Pages (GitHub, Inc., filiale de Microsoft, États-Unis). Comme tout hébergeur, il enregistre techniquement votre adresse IP lors de la consultation des pages.
+                <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Déclaration de confidentialité GitHub →</a>
               </li>
             </ul>
             <div class="privacy-highlight">

@@ -1,18 +1,15 @@
 /* AFRICA WINE FOOD - currency.js */
-/* Convertisseur XOF <-> EUR  |  taux live, cache 1h */
+/* convertisseur XOF <-> EUR, parité fixe du franc CFA */
 /* Note: 1 EUR = 655.957 XOF (parité fixe CFA) */
 'use strict';
 
 window.AWF_CURRENCY = (function () {
 
-  const _FALLBACK = 656;  /* parité fixe CFA : 1 EUR ≈ 655.957 XOF */
-  const _API      = 'https://api.exchangerate-api.com/v4/latest/EUR';
-  const _KEY      = 'awf_xof_eur_rate_v1';
-  const _TTL      = 3600000; /* 1 heure */
+  const _RATE = 655.957;  /* parité fixe : 1 EUR = 655,957 F CFA */
 
   const _PREF  = 'awf_currency_pref';
   let _current = localStorage.getItem(_PREF) || 'XOF';
-  let _rate    = _FALLBACK;
+  let _rate    = _RATE;
 
   /* Formatters */
   function fmtXOF(n) {
@@ -23,30 +20,6 @@ window.AWF_CURRENCY = (function () {
   }
   function fmtPrice(xofAmount) {
     return _current === 'XOF' ? fmtXOF(xofAmount) : fmtEUR(xofAmount / _rate);
-  }
-
-  /* Cache + API */
-  async function _fetchRate() {
-    try {
-      const raw = localStorage.getItem(_KEY);
-      if (raw) {
-        const { r, ts } = JSON.parse(raw);
-        if (Date.now() - ts < _TTL) return { r, fallback: false };
-      }
-    } catch (_) {}
-    try {
-      const ctrl = new AbortController();
-      const tid  = setTimeout(() => ctrl.abort(), 5000);
-      const res  = await fetch(_API, { signal: ctrl.signal });
-      clearTimeout(tid);
-      const data = await res.json();
-      const r    = data.rates && data.rates.XOF;
-      if (!r || isNaN(r)) throw new Error('invalid XOF rate');
-      localStorage.setItem(_KEY, JSON.stringify({ r, ts: Date.now() }));
-      return { r, fallback: false };
-    } catch (_) {
-      return { r: _FALLBACK, fallback: true };
-    }
   }
 
   /* DOM: met a jour tous les [data-price-xof] */
@@ -69,24 +42,16 @@ window.AWF_CURRENCY = (function () {
     btn.setAttribute('aria-label', isEUR ? 'Afficher les prix en F CFA' : 'Afficher les prix en Euro');
   }
 
-  function _syncRateBadge(fallback) {
+  function _syncRateBadge() {
     const el = document.getElementById('currency-rate-display');
     if (!el) return;
-    const r = Math.round(_rate);
-    el.textContent = fallback
-      ? `1 EUR ≈ ${r} F CFA ⚠️`
-      : `1 EUR = ${r} F CFA (live)`;
-    el.title = fallback
-      ? 'Taux de secours, API temporairement indisponible'
-      : 'Taux de change en temps réel';
-    el.classList.toggle('rate-fallback', fallback);
+    el.textContent = '1 EUR = 655,957 F CFA';
+    el.title = 'Parité fixe du franc CFA';
   }
 
   /* Init */
-  async function _init() {
-    const { r, fallback } = await _fetchRate();
-    _rate = r;
-    _syncRateBadge(fallback);
+  function _init() {
+    _syncRateBadge();
     _renderAll();
     _syncToggle();
 

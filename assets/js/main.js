@@ -103,6 +103,7 @@ const translations = {
     'order.recap':       'Votre sélection',
     'order.items':       'Articles',
     'order.total':       'Total estimé',
+    'catalogue.note': 'Prix indicatifs en F CFA, hors TVA.',
     'order.total.note':  'Prix indicatifs HT. Un devis personnalisé et les modalités de paiement vous seront transmis par notre équipe.',
     'order.continue':    '← Continuer mes achats',
     'order.form.title':  'Vos coordonnées',
@@ -347,6 +348,7 @@ const translations = {
     'order.recap':       'Your selection',
     'order.items':       'Items',
     'order.total':       'Estimated total',
+    'catalogue.note': 'Indicative prices in F CFA, excluding VAT.',
     'order.total.note':  'Indicative prices excl. VAT. A personalised quote and payment terms will be provided by our team.',
     'order.continue':    '← Continue shopping',
     'order.form.title':  'Your details',
@@ -571,6 +573,7 @@ function initNavbar() {
 function initHamburger() {
   const hamburger = document.getElementById('hamburger');
   const navMenu   = document.getElementById('nav-menu');
+  if (!hamburger || !navMenu) return;
   function closeMenu() {
     hamburger.classList.remove('open');
     navMenu.classList.remove('open');
@@ -1851,8 +1854,8 @@ const productsData = [
     id: "harvest-day-original",
     img: 'assets/images/spiritueux-harvest-day-vodka-original.jpg',
     badgeClass: 'badge-spirits',
-    price: '18 €',
-    priceXof: 11500,
+    price: '14 €',
+    priceXof: 9500,
     fr: {
       badge: "Vodka",
       name: "Harvest Day Original",
@@ -1884,8 +1887,8 @@ const productsData = [
     id: "harvest-day-classic",
     img: 'assets/images/spiritueux-harvest-day-vodka-classic.jpg',
     badgeClass: 'badge-spirits',
-    price: '19 €',
-    priceXof: 12500,
+    price: '16 €',
+    priceXof: 10500,
     fr: {
       badge: "Vodka",
       name: "Harvest Day Classic",
@@ -1917,8 +1920,8 @@ const productsData = [
     id: "harvest-day-melon",
     img: 'assets/images/spiritueux-harvest-day-vodka-melon.jpg',
     badgeClass: 'badge-spirits',
-    price: '18 €',
-    priceXof: 12000,
+    price: '15 €',
+    priceXof: 10000,
     fr: {
       badge: "Vodka",
       name: "Harvest Day Melon",
@@ -1950,8 +1953,8 @@ const productsData = [
     id: "lakeside-cabernet-franc",
     img: 'assets/images/vin-rouge-lakeside-cabernet-franc.jpg',
     badgeClass: 'badge-rouge',
-    price: '17 €',
-    priceXof: 11000,
+    price: '14 €',
+    priceXof: 9500,
     fr: {
       badge: "Vin Rouge",
       name: "Lakeside Cabernet Franc",
@@ -1983,8 +1986,8 @@ const productsData = [
     id: "the-wave-pinot-grigio",
     img: 'assets/images/vin-blanc-the-wave-pinot-grigio.jpg',
     badgeClass: 'badge-blanc',
-    price: '13 €',
-    priceXof: 8500,
+    price: '11 €',
+    priceXof: 7000,
     fr: {
       badge: "Vin Blanc",
       name: "The Wave Pinot Grigio",
@@ -2016,8 +2019,8 @@ const productsData = [
     id: "lakeside-varnenski-misket",
     img: 'assets/images/vin-blanc-lakeside-varnenski-misket.jpg',
     badgeClass: 'badge-blanc',
-    price: '16 €',
-    priceXof: 10500,
+    price: '14 €',
+    priceXof: 9000,
     fr: {
       badge: "Vin Blanc",
       name: "Lakeside Varnenski Misket",
@@ -2049,8 +2052,8 @@ const productsData = [
     id: "the-wave-rubin",
     img: 'assets/images/vin-rouge-the-wave-rubin.jpg',
     badgeClass: 'badge-rouge',
-    price: '13 €',
-    priceXof: 8500,
+    price: '11 €',
+    priceXof: 7000,
     fr: {
       badge: "Vin Rouge",
       name: "The Wave Rubin",
@@ -2082,8 +2085,8 @@ const productsData = [
     id: "the-wave-riesling",
     img: 'assets/images/vin-blanc-the-wave-riesling.jpg',
     badgeClass: 'badge-blanc',
-    price: '13 €',
-    priceXof: 8500,
+    price: '11 €',
+    priceXof: 7000,
     fr: {
       badge: "Vin Blanc",
       name: "The Wave Riesling",
@@ -2115,8 +2118,8 @@ const productsData = [
     id: "lakeside-traminer",
     img: 'assets/images/vin-blanc-lakeside-traminer.jpg',
     badgeClass: 'badge-blanc',
-    price: '16 €',
-    priceXof: 10500,
+    price: '14 €',
+    priceXof: 9000,
     fr: {
       badge: "Vin Blanc",
       name: "Lakeside Traminer",
@@ -2148,8 +2151,8 @@ const productsData = [
     id: "lakeside-sauvignon-blanc",
     img: 'assets/images/vin-blanc-lakeside-sauvignon-blanc.jpg',
     badgeClass: 'badge-blanc',
-    price: '16 €',
-    priceXof: 10500,
+    price: '14 €',
+    priceXof: 9000,
     fr: {
       badge: "Vin Blanc",
       name: "Lakeside Sauvignon Blanc",
@@ -2181,8 +2184,8 @@ const productsData = [
     id: "la-plage-rosu",
     img: 'assets/images/vin-rouge-la-plage-rosu.jpg',
     badgeClass: 'badge-rouge',
-    price: '14 €',
-    priceXof: 9000,
+    price: '11 €',
+    priceXof: 7500,
     fr: {
       badge: "Vin Rouge",
       name: "La Plage Roșu",
@@ -2214,8 +2217,8 @@ const productsData = [
     id: "la-plage-damour-blanc",
     img: 'assets/images/vin-blanc-la-plage-damour.jpg',
     badgeClass: 'badge-blanc',
-    price: '14 €',
-    priceXof: 9000,
+    price: '11 €',
+    priceXof: 7500,
     fr: {
       badge: "Vin Blanc",
       name: "La Plage D'Amour Blanc",
@@ -2247,8 +2250,8 @@ const productsData = [
     id: "la-plage-damour-rose",
     img: 'assets/images/vin-rose-la-plage-damour.jpg',
     badgeClass: 'badge-rose',
-    price: '14 €',
-    priceXof: 9000,
+    price: '11 €',
+    priceXof: 7500,
     fr: {
       badge: "Vin Rosé",
       name: "La Plage D'Amour Rosé",
@@ -2280,8 +2283,8 @@ const productsData = [
     id: "moft-cuvee-alb",
     img: 'assets/images/vin-blanc-moft-cuvee-alb.jpg',
     badgeClass: 'badge-blanc',
-    price: '19 €',
-    priceXof: 12500,
+    price: '16 €',
+    priceXof: 10500,
     fr: {
       badge: "Vin Blanc",
       name: "MOFT Cuvée Alb",
@@ -2313,8 +2316,8 @@ const productsData = [
     id: "moft-cuvee-rosu",
     img: 'assets/images/vin-rouge-moft-cuvee-rosu.jpg',
     badgeClass: 'badge-rouge',
-    price: '21 €',
-    priceXof: 13500,
+    price: '18 €',
+    priceXof: 11500,
     fr: {
       badge: "Vin Rouge",
       name: "MOFT Cuvée Roșu",
@@ -2346,8 +2349,8 @@ const productsData = [
     id: "natterjack-irish-whiskey",
     img: 'assets/images/spiritueux-natterjack-irish-whiskey.jpg',
     badgeClass: 'badge-spirits',
-    price: '70 €',
-    priceXof: 46000,
+    price: '59 €',
+    priceXof: 39000,
     fr: {
       badge: "Whiskey",
       name: "Natterjack Irish Whiskey",
@@ -2379,8 +2382,8 @@ const productsData = [
     id: "natterjack-the-mistake",
     img: 'assets/images/spiritueux-natterjack-the-mistake.jpg',
     badgeClass: 'badge-spirits',
-    price: '81 €',
-    priceXof: 53000,
+    price: '69 €',
+    priceXof: 45000,
     fr: {
       badge: "Whiskey",
       name: "Natterjack The Mistake",
@@ -2412,8 +2415,8 @@ const productsData = [
     id: "whaletale-xo-brandy",
     img: 'assets/images/spiritueux-whaletale-xo-brandy.jpg',
     badgeClass: 'badge-spirits',
-    price: '67 €',
-    priceXof: 44000,
+    price: '57 €',
+    priceXof: 37500,
     fr: {
       badge: "Brandy",
       name: "Whaletale XO Brandy",
@@ -2445,8 +2448,8 @@ const productsData = [
     id: "whaletale-whisky",
     img: 'assets/images/spiritueux-whaletale-whisky.jpg',
     badgeClass: 'badge-spirits',
-    price: '40 €',
-    priceXof: 26000,
+    price: '34 €',
+    priceXof: 22000,
     fr: {
       badge: "Whisky",
       name: "Whaletale Whisky",
@@ -2478,8 +2481,8 @@ const productsData = [
     id: "marula-gin",
     img: 'assets/images/spiritueux-marula-gin.jpg',
     badgeClass: 'badge-spirits',
-    price: '34 €',
-    priceXof: 22000,
+    price: '28 €',
+    priceXof: 18500,
     fr: {
       badge: "Gin Premium",
       name: "Marula Gin",
@@ -2511,8 +2514,8 @@ const productsData = [
     id: "le-mousquet-armagnac-orange",
     img: 'assets/images/spiritueux-le-mousquet-liqueur-armagnac-orange.jpg',
     badgeClass: 'badge-spirits',
-    price: '19 €',
-    priceXof: 12500,
+    price: '16 €',
+    priceXof: 10500,
     fr: {
       badge: "Liqueur",
       name: "Le Mousquet Liqueur d'Armagnac à l'orange",
@@ -2544,8 +2547,8 @@ const productsData = [
     id: "les-prunelles-cabernet-sauvignon",
     img: 'assets/images/vin-rouge-les-prunelles-cabernet-sauvignon.jpg',
     badgeClass: 'badge-rouge',
-    price: '11 €',
-    priceXof: 7500,
+    price: '10 €',
+    priceXof: 6500,
     fr: {
       badge: "Vin Rouge",
       name: "Les Prunelles Cabernet Sauvignon",
@@ -2577,8 +2580,8 @@ const productsData = [
     id: "gin-km12",
     img: 'assets/images/spiritueux-gin-km12-erable.jpg',
     badgeClass: 'badge-spirits',
-    price: '46 €',
-    priceXof: 30000,
+    price: '39 €',
+    priceXof: 25500,
     fr: {
       badge: "Gin",
       name: "Gin Km12",
@@ -2610,8 +2613,8 @@ const productsData = [
     id: "pipa-rosa-tradicao",
     img: 'assets/images/vin-rouge-pipa-rosa-tradicao.jpg',
     badgeClass: 'badge-rouge',
-    price: '14 €',
-    priceXof: 9500,
+    price: '12 €',
+    priceXof: 8000,
     fr: {
       badge: "Vin Rouge",
       name: "Pipa Rosa Tradição",
@@ -2643,8 +2646,8 @@ const productsData = [
     id: "blacks-maple-mayhem",
     img: 'assets/images/spiritueux-blacks-maple-mayhem-irish-whiskey.jpg',
     badgeClass: 'badge-spirits',
-    price: '56 €',
-    priceXof: 37000,
+    price: '48 €',
+    priceXof: 31500,
     fr: {
       badge: "Whiskey",
       name: "Blacks Maple Mayhem",
@@ -2676,8 +2679,8 @@ const productsData = [
     id: "blacks-triple-threat",
     img: 'assets/images/spiritueux-blacks-triple-threat-irish-whiskey.jpg',
     badgeClass: 'badge-spirits',
-    price: '55 €',
-    priceXof: 36000,
+    price: '46 €',
+    priceXof: 30500,
     fr: {
       badge: "Whiskey",
       name: "Blacks Triple Threat",
@@ -2709,8 +2712,8 @@ const productsData = [
     id: "blacks-black-beak-juniper-tempest",
     img: 'assets/images/spiritueux-blacks-black-beak-juniper-tempest-gin.jpg',
     badgeClass: 'badge-spirits',
-    price: '59 €',
-    priceXof: 39000,
+    price: '50 €',
+    priceXof: 33000,
     fr: {
       badge: "Gin",
       name: "Black Beak Juniper Tempest",
@@ -2742,8 +2745,8 @@ const productsData = [
     id: "zantho-zweigelt",
     img: 'assets/images/vin-rouge-zantho-zweigelt-burgenland.jpg',
     badgeClass: 'badge-rouge',
-    price: '14 €',
-    priceXof: 9500,
+    price: '12 €',
+    priceXof: 8000,
     fr: {
       badge: "Vin Rouge",
       name: "Zantho Zweigelt",
@@ -2775,8 +2778,8 @@ const productsData = [
     id: "portal-da-vinha",
     img: 'assets/images/vin-blanc-portal-da-vinha.jpg',
     badgeClass: 'badge-blanc',
-    price: '12 €',
-    priceXof: 8000,
+    price: '11 €',
+    priceXof: 7000,
     fr: {
       badge: "Vin Blanc",
       name: "Portal da Vinha",
@@ -3067,26 +3070,31 @@ function setVh() {
 }
 
 /* Init */
+/* chaque initialisation est isolee : une erreur n'arrete pas les suivantes */
+function safe(fn) {
+  try { fn(); } catch (e) { console.warn('init', fn.name, e); }
+}
+
 function init() {
   setVh();
   window.addEventListener('resize', setVh, { passive: true });
   window.addEventListener('orientationchange', setVh, { passive: true });
   applyTranslations(currentLang);
-  initLangSwitcher();
-  initNavbar();
-  initHamburger();
-  initSmoothScroll();
-  initParallax();
-  initScrollAnimations();
-  initCarousel();
-  initFilters();
-  initBlogFilters();
-  initCounters();
-  initBackToTop();
-  initForms();
-  initCart();
-  initProductModal();
-  initCommandePage();
+  safe(initLangSwitcher);
+  safe(initNavbar);
+  safe(initHamburger);
+  safe(initSmoothScroll);
+  safe(initParallax);
+  safe(initScrollAnimations);
+  safe(initCarousel);
+  safe(initFilters);
+  safe(initBlogFilters);
+  safe(initCounters);
+  safe(initBackToTop);
+  safe(initForms);
+  safe(initCart);
+  safe(initProductModal);
+  safe(initCommandePage);
 }
 
 if (document.readyState === 'loading') {

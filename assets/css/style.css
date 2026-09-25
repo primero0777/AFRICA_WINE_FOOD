@@ -3532,3 +3532,6 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 .download-catalogue-inner > *, .download-catalogue-body { min-width: 0; }
 .download-catalogue-body .section-pretitle { white-space: normal; overflow-wrap: anywhere; }
 @media (max-width: 480px) { .section-download-catalogue .container { padding-left: 1rem; padding-right: 1rem; } }
+
+/* note de prix du catalogue */
+.catalogue-note { text-align: center; color: var(--muted); font-size: .85rem; margin: 0 0 1.5rem; }
