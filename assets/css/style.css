@@ -1,5 +1,5 @@
 /* =============================================
-   AFRICA WINE FOOD — style.css
+   AFRICA WINE FOOD - style.css
    Palette: Creme #FAF7F2 | Bordeaux #6B1A2B | Or #C9A84C | Noir #1A1A1A
    ============================================= */
 
@@ -245,7 +245,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .hero {
   position: relative;
   height: 100vh; /* fallback */
-  height: 100dvh; /* dynamic viewport height — hides iOS browser chrome */
+  height: 100dvh; /* dynamic viewport height - hides iOS browser chrome */
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -908,7 +908,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .catalogue-cta p { color: var(--muted); margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
 
 /* =============================================
-   A PROPOS — variantes light (about.html)
+   A PROPOS - variantes light (about.html)
    ============================================= */
 .mvv-grid-light {
   display: grid;
@@ -946,7 +946,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .about-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* =============================================
-   BLOG — article vedette & newsletter
+   BLOG - article vedette & newsletter
    ============================================= */
 .blog-featured {
   display: grid;
@@ -994,7 +994,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .newsletter-form input::placeholder { color: rgba(250,247,242,.35); }
 
 /* =============================================
-   BLOG — article complet, sidebar, filtres, SEO
+   BLOG - article complet, sidebar, filtres, SEO
    ============================================= */
 
 /* Layout principal: articles + sidebar */
@@ -1245,7 +1245,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   text-transform: uppercase;
 }
 
-/* Blog grid (page blog) — cards en dark context */
+/* Blog grid (page blog) - cards en dark context */
 .section-dark .blog-card { background: rgba(26,26,26,.7); border-color: var(--border-light); }
 .section-dark .blog-card h3 { color: var(--cream); }
 .section-dark .blog-card p { color: rgba(250,247,242,.55); }
@@ -1267,7 +1267,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* =============================================
-   CONTACT — carte pleine & bureaux
+   CONTACT - carte pleine & bureaux
    ============================================= */
 .map-full { border: 1px solid rgba(201,168,76,.15); overflow: hidden; border-radius: 2px; }
 .map-full-inner { position: relative; height: 400px; }
@@ -1334,7 +1334,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
    MEDIA QUERIES
    ============================================= */
 
-/* 1440px+ — widescreen tweaks */
+/* 1440px+ - widescreen tweaks */
 @media (min-width: 1440px) {
   .products-grid { grid-template-columns: repeat(4, 1fr); }
 }
@@ -1442,7 +1442,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .whatsapp-label { display: none; }
   .whatsapp-fab { border-radius: 50%; padding: .875rem; }
 
-  /* Article CTA boxes — boutons pleine largeur, texte wrappé */
+  /* Article CTA boxes - boutons pleine largeur, texte wrappé */
   .article-cta-box { padding: 1.5rem 1rem; }
   .article-cta-box .btn {
     display: flex;
@@ -1456,7 +1456,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   }
   .article-cta-box .btn:last-child { margin-bottom: 0; }
 
-  /* Article body — réduire padding sur petits écrans */
+  /* Article body - réduire padding sur petits écrans */
   .article-body { padding: 1.25rem; }
   .article-toc { padding: 1rem; }
 }
@@ -1474,7 +1474,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .page-header { padding: calc(var(--nav-h) + 3rem) 0 3rem; }
 }
 
-/* 360px — très petits écrans (Galaxy A, iPhone SE 1ère gen) */
+/* 360px - très petits écrans (Galaxy A, iPhone SE 1ère gen) */
 @media (max-width: 360px) {
   .container { padding: 0 1rem; }
   .section { padding: 2.75rem 0; }
@@ -1489,7 +1489,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* =============================================
-   ACCESSIBILITÉ — prefers-reduced-motion
+   ACCESSIBILITÉ - prefers-reduced-motion
    ============================================= */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1506,7 +1506,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* =============================================
-   TOUCH — pointer: coarse (smartphones, tablettes)
+   TOUCH - pointer: coarse (smartphones, tablettes)
    ============================================= */
 @media (pointer: coarse) {
   /* Cibles tactiles minimum 44px */
@@ -2516,7 +2516,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   z-index: 10;
   overflow: hidden;
 }
-/* Leaflet controls — thème bordeaux/or */
+/* Leaflet controls - thème bordeaux/or */
 .delivery-map .leaflet-control-zoom a {
   background: var(--bordeaux) !important;
   color: var(--gold-l) !important;
@@ -2597,7 +2597,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* ═══════════════════════════════════════════════
-   DEVIS — Barre d'actions (devis.html)
+   DEVIS - Barre d'actions (devis.html)
    ═══════════════════════════════════════════════ */
 .devis-actions {
   max-width: 820px;
@@ -2656,7 +2656,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .devis-btn--outline:hover { border-color: var(--bordeaux-d); }
 
 /* ═══════════════════════════════════════════════
-   COMMANDE — Bouton "Générer mon devis"
+   COMMANDE - Bouton "Générer mon devis"
    ═══════════════════════════════════════════════ */
 .cart-devis-btn {
   display: block;
@@ -2739,7 +2739,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* ═══════════════════════════════════════════════
-   HISTORIQUE — Page historique.html (Admin)
+   HISTORIQUE - Page historique.html (Admin)
    ═══════════════════════════════════════════════ */
 
 /* ── Stats bar ──────────────────────────────── */
@@ -3139,7 +3139,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .admin-logout-btn:hover { background: #4D0F1C; color: #FAF7F2; }
 
 /* ═══════════════════════════════════════════════
-   CONFIDENTIALITE — Page confidentialite.html
+   CONFIDENTIALITE - Page confidentialite.html
    ═══════════════════════════════════════════════ */
 
 .privacy-section { padding: 80px 0 100px; }
@@ -3194,7 +3194,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* ═══════════════════════════════════════════════
-   404 — Page 404.html
+   404 - Page 404.html
    ═══════════════════════════════════════════════ */
 
 .error-page {
@@ -3241,7 +3241,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 
 /* =============================================
-   GLASSMORPHISM — Africa Wine Food
+   GLASSMORPHISM - Africa Wine Food
    Liquid glass adapté à la palette bordeaux/or
    ============================================= */
 
@@ -3328,7 +3328,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .product-badge { border-radius: var(--radius-pill); }
 
-/* .pillar-icon — pas de glassmorphism, style original conservé */
+/* .pillar-icon - pas de glassmorphism, style original conservé */
 
 /* ── Office card ── */
 .office-card {
@@ -3466,3 +3466,52 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .video-card figcaption { padding: 1rem 1.25rem 1.25rem; display: flex; flex-direction: column; gap: .25rem; color: rgba(250,247,242,.75); font-size: .9rem; }
 .video-card figcaption strong { color: var(--cream); font-family: var(--ff-serif); font-size: 1.1rem; }
 @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } }
+
+
+/* ---- Cartes bouteille : photo portrait entiere ---- */
+.product-card.is-bottle .product-img-wrapper { height: auto; aspect-ratio: 3 / 4; background: var(--cream-dark, #f3ede3); }
+.product-card.is-bottle .product-img-wrapper img { object-fit: cover; object-position: center; }
+@media (max-width: 600px) {
+  .product-card.is-bottle .product-img-wrapper { aspect-ratio: auto; height: 380px; }
+  .product-card.is-bottle .product-img-wrapper img { object-fit: contain; }
+}
+
+/* ---- Video mise en avant ---- */
+.video-feature { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 3rem; align-items: center; justify-content: center; }
+.video-feature-player video { width: 100%; max-height: 600px; border-radius: 12px; background: #000; display: block; }
+.video-feature-text h2 { color: var(--cream); margin-bottom: 1rem; }
+.video-feature-text p { color: rgba(250,247,242,.8); margin-bottom: 1.5rem; }
+@media (max-width: 768px) { .video-feature { grid-template-columns: 1fr; gap: 1.5rem; } .video-feature-player { max-width: 320px; margin: 0 auto; } }
+
+/* ---- Galerie photos ---- */
+.gallery-title { text-align: center; color: var(--cream); margin: 3rem 0 1.5rem; }
+.photo-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+.gallery-item { display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 10px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.gallery-item:hover img { transform: scale(1.06); }
+@media (max-width: 768px) { .photo-gallery { grid-template-columns: repeat(2, 1fr); } }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 92vh; overflow: visible; }
+.lightbox::backdrop { background: rgba(0,0,0,.88); }
+.lightbox img { max-width: 96vw; max-height: 88vh; border-radius: 8px; display: block; }
+.lightbox-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+
+/* ---- Mobile : les boutons longs passent a la ligne au lieu de deborder ---- */
+@media (max-width: 600px) {
+  .btn { white-space: normal; text-align: center; justify-content: center; max-width: 100%; }
+  .catalogue-cta { padding: 2rem 1.25rem; }
+}
+
+
+/* ---- Clips video produits ---- */
+.clip-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; max-width: 960px; margin: 0 auto; }
+.clip-card { margin: 0; text-align: center; }
+.clip-card video { width: 100%; aspect-ratio: 9 / 16; max-height: 520px; object-fit: cover; border-radius: 12px; background: #000; display: block; }
+.clip-card figcaption { padding-top: .75rem; display: flex; flex-direction: column; gap: .2rem; font-size: .9rem; color: var(--muted); }
+.clip-card figcaption strong { color: var(--dark); font-family: var(--ff-serif); font-size: 1.05rem; }
+@media (max-width: 768px) { .clip-grid { grid-template-columns: 1fr; } .clip-card { max-width: 300px; margin: 0 auto; } }
+
+
+/* ---- Font Awesome : alignement avec le texte ---- */
+i.fa-solid, i.fa-regular, i.fa-brands { line-height: 1; vertical-align: -.1em; }
+.whatsapp-fab i { font-size: 26px; }
+.social-link i { font-size: 18px; }

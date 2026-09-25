@@ -1,5 +1,5 @@
 /* =======================================================
-   AFRICA WINE FOOD — devis.css
+   AFRICA WINE FOOD - devis.css
    Styles for the devis (quote) document page
    ======================================================= */
 
@@ -484,7 +484,7 @@ tbody td:last-child {
   /* Objet */
   .objet-section { padding: 16px 20px; flex-direction: column; align-items: flex-start; gap: 6px; }
 
-  /* Tableau — masquer colonne numéro, réduire tailles */
+  /* Tableau - masquer colonne numéro, réduire tailles */
   .table-section { padding: 24px 20px; }
   .td-num { display: none; }
   table { font-size: .82rem; }
@@ -512,7 +512,7 @@ tbody td:last-child {
   .print-btn { width: 100%; text-align: center; }
 }
 
-/* 360px — très petits écrans */
+/* 360px - très petits écrans */
 @media (max-width: 360px) {
   body { padding: 12px 8px; }
   .header { padding: 20px 14px; }
@@ -526,7 +526,7 @@ tbody td:last-child {
   .devis-number { font-size: 1.1rem; }
 }
 
-/* Accessibilité — prefers-reduced-motion */
+/* Accessibilité - prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -534,7 +534,7 @@ tbody td:last-child {
   }
 }
 
-/* Touch — boutons minimum 44px */
+/* Touch - boutons minimum 44px */
 @media (pointer: coarse) {
   .devis-btn { min-height: 44px; }
   .print-btn { min-height: 44px; }
@@ -542,7 +542,7 @@ tbody td:last-child {
   .devis-btn--secondary:hover { transform: none; box-shadow: none; }
 }
 
-/* ── Glassmorphism — devis.html ── */
+/* ── Glassmorphism - devis.html ── */
 .page {
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);

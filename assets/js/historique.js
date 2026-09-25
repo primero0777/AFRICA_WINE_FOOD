@@ -1,10 +1,10 @@
 /* =======================================================
-   AFRICA WINE FOOD — historique.js  (Admin only)
+   AFRICA WINE FOOD - historique.js  (Admin only)
    ======================================================= */
 
 'use strict';
 
-/* SHA-256 de AWF@Lome — mot de passe jamais stocké en clair */
+/* SHA-256 de AWF@Lome - mot de passe jamais stocké en clair */
 const ADMIN_HASH  = '1c2900019142a8119cd85d0ab828416d1539fdcb23cfc7f08fd44d9e4cc01fbb';
 const SESSION_KEY = 'awf-admin-auth';
 const LOCKOUT_KEY = 'awf-admin-lockout';
@@ -202,13 +202,13 @@ function renderHistory() {
   const sorted = sortHistory(history);
   sorted.forEach(entry => {
     const originalIndex = history.indexOf(entry);
-    const clientName = [entry.client?.prenom, entry.client?.nom].filter(Boolean).join(' ') || '—';
+    const clientName = [entry.client?.prenom, entry.client?.nom].filter(Boolean).join(' ') || '-';
     const dateStr    = entry.date
       ? new Date(entry.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
-      : entry.dateStr || '—';
+      : entry.dateStr || '-';
     const itemCount = (entry.items || []).reduce((s, i) => s + i.qty, 0);
     const prodCount = (entry.items || []).length;
-    const delivery  = entry.delivery || entry.client?.delivery || '—';
+    const delivery  = entry.delivery || entry.client?.delivery || '-';
 
     const li = document.createElement('li');
     li.className = 'historique-item';
@@ -281,7 +281,7 @@ function initAdmin() {
 /* ── Boot ───────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* Auth form handlers — always registered */
+  /* Auth form handlers - always registered */
   document.getElementById('admin-login-form')?.addEventListener('submit', handleLogin);
 
   document.getElementById('admin-pwd-toggle')?.addEventListener('click', () => {

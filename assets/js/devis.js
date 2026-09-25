@@ -1,5 +1,5 @@
 /* =======================================================
-   AFRICA WINE FOOD — devis.js
+   AFRICA WINE FOOD - devis.js
    Génération dynamique du devis depuis awf-cart
    Dépendances : productsData (main.js), jsPDF CDN
    ======================================================= */
@@ -67,7 +67,7 @@ function fmtXof(n) {
 function getCurrencyLabel() {
   if (_devisCurrency !== 'EUR' || !window.AWF_CURRENCY) return null;
   const rate = Math.round(window.AWF_CURRENCY.rate);
-  return `Devis établi en EUR — taux de conversion : 1 EUR = ${rate} F CFA`;
+  return `Devis établi en EUR, taux de conversion : 1 EUR = ${rate} F CFA`;
 }
 
 /* ── Date lisible ────────────────────────────────────── */
@@ -101,7 +101,7 @@ function buildWhatsAppMessage(data) {
   if (client.occasion) lines += '\u{1F3AF} Occasion : ' + client.occasion + '\n';
   lines += '\n\u{1F6D2} Commande :\n';
   items.forEach(item => {
-    lines += '• ' + item.name + ' x' + item.qty + ' — ' + fmtXof(item.subtotal) + '\n';
+    lines += '• ' + item.name + ' x' + item.qty + ', ' + fmtXof(item.subtotal) + '\n';
   });
   lines += '\n\u{1F4B0} Total : ' + fmtXof(total) + '\n';
   lines += '\u{1F69A} Livraison : ' + (delivery || 'À définir') + '\n';
@@ -227,7 +227,7 @@ function showConfirmModal(devisData) {
             <div>
               <label style="${lbl}">Pays *</label>
               <select id="cf-pays" style="${inp}">
-                <option value="">— Choisir un pays —</option>
+                <option value="">Choisir un pays</option>
                 <optgroup label="Afrique de l'Ouest">
                   <option value="Togo">Togo</option>
                   <option value="Côte d'Ivoire">Côte d'Ivoire</option>
@@ -295,9 +295,9 @@ function showConfirmModal(devisData) {
           <div style="${grp}">
             <label style="${lbl}">Mode de livraison *</label>
             <select id="cf-livraison" style="${inp}">
-              <option value="Livraison standard (5–7 jours ouvrés)">Livraison standard — 5 à 7 jours ouvrés</option>
-              <option value="Livraison express (2–3 jours ouvrés)">Livraison express — 2 à 3 jours ouvrés</option>
-              <option value="Retrait en agence — Lomé">Retrait en agence — Lomé, Quartier Administratif</option>
+              <option value="Livraison standard (5–7 jours ouvrés)">Livraison standard, 5 à 7 jours ouvrés</option>
+              <option value="Livraison express (2–3 jours ouvrés)">Livraison express, 2 à 3 jours ouvrés</option>
+              <option value="Retrait en agence, Lomé">Retrait en agence, Lomé, Quartier Administratif</option>
             </select>
           </div>
 
@@ -415,7 +415,7 @@ async function confirmOrder(devisData) {
 function populateDevis(devisData) {
   const { number, dateStr, client, items, total, delivery } = devisData;
 
-  /* Header — textContent uniquement, pas de risque XSS */
+  /* Header - textContent uniquement, pas de risque XSS */
   const elNum  = document.getElementById('devis-number');
   const elDate = document.getElementById('devis-date');
   if (elNum)  elNum.textContent  = `N° ${number}`;
@@ -456,7 +456,7 @@ function populateDevis(devisData) {
         <td class="td-num">${String(i + 1).padStart(2, '0')}</td>
         <td class="td-desc">
           <strong>${esc(item.name)}</strong>
-          <span>${esc(item.appellation)} — 75 cl</span>
+          <span>${esc(item.appellation)}, 75 cl</span>
         </td>
         <td style="text-align:right">${esc(item.qty)}</td>
         <td style="text-align:right">${fmtXof(item.unitPrice)}</td>
@@ -473,9 +473,9 @@ function populateDevis(devisData) {
         <strong>Livraison express sécurisée</strong>
         <span>Emballage luxe sur mesure, transport température contrôlée. Mode : ${esc(delivery || 'À définir')}.</span>
       </td>
-      <td style="text-align:right">—</td>
-      <td style="text-align:right">—</td>
-      <td style="text-align:right;color:#7A7069">—</td>
+      <td style="text-align:right">-</td>
+      <td style="text-align:right">-</td>
+      <td style="text-align:right;color:#7A7069">-</td>
       <td style="text-align:right;font-weight:600">Sur devis</td>`;
     tbody.appendChild(trLiv);
   }
@@ -500,7 +500,7 @@ function populateDevis(devisData) {
   /* Footer */
   const elFooterRef   = document.getElementById('devis-footer-ref');
   const elFooterValid = document.getElementById('devis-footer-valid');
-  if (elFooterRef)   elFooterRef.textContent = `Africa Wine Food — Devis N° ${number} — Lomé, Togo`;
+  if (elFooterRef)   elFooterRef.textContent = `Africa Wine Food, Devis N° ${number}, Lomé, Togo`;
   if (elFooterValid) {
     const validDate = new Date();
     validDate.setDate(validDate.getDate() + 15);

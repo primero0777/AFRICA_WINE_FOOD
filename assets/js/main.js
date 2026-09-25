@@ -1,5 +1,5 @@
 /* =============================================
-   AFRICA WINE FOOD — main.js
+   AFRICA WINE FOOD - main.js
    Fonctionnalites : bilingue FR/EN, parallaxe,
    carousel, filtres, compteurs, sticky nav,
    hamburger, back-to-top, smooth scroll, formulaires
@@ -38,7 +38,7 @@ const translations = {
     'univers.c4.cta':    'Explorer →',
 
     'univers.c5.title':  'Crémants & Effervescents',
-    'univers.c5.desc':   "Crémants d'Alsace, de Bourgogne, du Jura et autres effervescents d'exception — l'élégance pétillante à prix accessible.",
+    'univers.c5.desc':   "Crémants d'Alsace, de Bourgogne, du Jura et autres effervescents d'exception, l'élégance pétillante à prix accessible.",
     'univers.c5.cta':    'Explorer →',
 
     'pourquoi.pretitle':  'Notre différence',
@@ -131,7 +131,7 @@ const translations = {
     'order.form.delivery': 'Mode de livraison',
     'order.delivery.standard': 'Livraison standard (5–7 jours ouvrés)',
     'order.delivery.express':  'Livraison express (2–3 jours ouvrés)',
-    'order.delivery.pickup':   'Retrait en agence — Lomé',
+    'order.delivery.pickup':   'Retrait en agence, Lomé',
     'order.form.occasion': 'Occasion',
     'order.form.occasion.placeholder': 'Sélectionner (optionnel)...',
     'order.occasion.perso':   'Cave personnelle',
@@ -153,23 +153,23 @@ const translations = {
     'about.title':            'À propos',
     'about.story.title':      'Une passion née entre deux continents',
     'about.story.p1':         "Fondée en 2009 à Lomé par des passionnés de vin ayant fait leurs armes dans les plus grandes maisons bordelaises et bourguignonnes, Africa Wine Food est née d'une conviction : l'Afrique mérite un accès aux plus grands vins du monde, avec le service et l'expertise qui leur sont dus.",
-    'about.story.p2':         "Depuis plus de 15 ans, nous sillonnons les vignobles du monde entier — Bordeaux, Bourgogne, Champagne, Napa Valley, Toscane — pour sélectionner avec rigueur les bouteilles qui méritent une place dans vos caves et vos tables d'exception.",
+    'about.story.p2':         "Depuis plus de 15 ans, nous sillonnons les vignobles du monde entier, Bordeaux, Bourgogne, Champagne, Napa Valley, Toscane, pour sélectionner avec rigueur les bouteilles qui méritent une place dans vos caves et vos tables d'exception.",
     'about.story.p3':         "Basés à Lomé, Togo, nous servons une clientèle exigeante partout en Afrique et à l'international. Nous sommes la référence incontournable pour les amateurs et professionnels du grand vin sur l'ensemble du continent.",
     'about.mission.title':    'Notre Mission',
     'about.mission.desc':     "Démocratiser l'accès aux grands vins et spiritueux d'exception en Afrique, en proposant une sélection pointue, un service irréprochable et une expertise authentique.",
     'about.vision.title':     'Notre Vision',
     'about.vision.desc':      "Devenir la maison de référence du vin de luxe en Afrique subsaharienne, et faire rayonner la culture du vin auprès des nouvelles générations africaines.",
     'about.values.title':     'Nos Valeurs',
-    'about.values.desc':      "Excellence, authenticité, intégrité et passion guident chacune de nos décisions — du choix d'un millésime à la relation avec nos clients.",
+    'about.values.desc':      "Excellence, authenticité, intégrité et passion guident chacune de nos décisions, du choix d'un millésime à la relation avec nos clients.",
     'about.stats.refs':       'Références',
     'about.stats.pays':       'Pays desservis',
     'about.stats.years':      "Ans d'expertise",
     'about.stats.clients':    'Clients satisfaits',
     'about.team.pretitle':    "L'expertise humaine",
     'about.team.title':       'Notre équipe',
-    'about.team.m1.name':     'Jean-Philippe Konan',
+    'about.team.m1.name':     'Tintin Kokou BARBOZA',
     'about.team.m1.role':     'Fondateur & Directeur général',
-    'about.team.m1.bio':      "Diplômé de l'École du Vin de Bordeaux, 20 ans d'expérience dans la distribution de vins fins en Afrique et en Europe.",
+    'about.team.m1.bio':      "Fondateur et directeur général d'Africa Wine Food, à Lomé.",
 
     'blog.pretitle':          'Actualités & conseils',
     'blog.title':             'Le Blog',
@@ -180,7 +180,7 @@ const translations = {
     'blog.a1.title':          "Les meilleurs Bordeaux 2024 : notre sélection exclusive",
     'blog.a1.excerpt':        "Le millésime 2024 s'annonce historique pour le Bordelais. Découvrez les châteaux qui ont transcendé des conditions climatiques exceptionnelles pour produire des vins d'anthologie...",
     'blog.a2.title':          "Guide complet du whisky single malt pour les connaisseurs",
-    'blog.a2.excerpt':        "Du Speyside à l'Islay, des Highlands aux Lowlands — notre guide vous accompagne dans l'univers fascinant du whisky single malt d'exception et de ses subtilités aromatiques...",
+    'blog.a2.excerpt':        "Du Speyside à l'Islay, des Highlands aux Lowlands, notre guide vous accompagne dans l'univers fascinant du whisky single malt d'exception et de ses subtilités aromatiques...",
     'blog.a3.title':          "Accords mets-vins : réussir un dîner d'affaires de prestige",
     'blog.a3.excerpt':        "Notre sommelière Sophie Traoré vous livre ses conseils pour composer une carte des vins qui impressionne vos convives sans ostentation, du champagne d'accueil au digestif...",
     'blog.read':              'Lire la suite →',
@@ -212,7 +212,7 @@ const translations = {
     'contact.info.address':       'Adresse',
     'contact.info.phone':         'Téléphone',
     'contact.call':               '📞 Appeler directement',
-    'contact.map':                'Quartier Administratif, Lomé — Togo',
+    'contact.map':                'Quartier Administratif, Lomé, Togo',
 
     'footer.slogan':        "L'excellence viticole et distillerie, au cœur de l'Afrique.",
     'footer.nav.title':     'Navigation',
@@ -265,7 +265,7 @@ const translations = {
     'contact.offices.pretitle':   'Notre implantation',
     'contact.offices.title':      'Notre agence à Lomé',
     'contact.offices.tg.city':    'Lomé',
-    'contact.offices.tg.country': "Togo — Siège social",
+    'contact.offices.tg.country': "Togo, Siège social",
   },
 
   en: {
@@ -297,7 +297,7 @@ const translations = {
     'univers.c4.cta':    'Explore →',
 
     'univers.c5.title':  'Crémants & Sparkling Wines',
-    'univers.c5.desc':   "Crémants from Alsace, Burgundy, Jura and other exceptional sparkling wines — elegant effervescence at accessible prices.",
+    'univers.c5.desc':   "Crémants from Alsace, Burgundy, Jura and other exceptional sparkling wines, elegant effervescence at accessible prices.",
     'univers.c5.cta':    'Explore →',
 
     'pourquoi.pretitle':  'Our difference',
@@ -390,7 +390,7 @@ const translations = {
     'order.form.delivery': 'Delivery method',
     'order.delivery.standard': 'Standard delivery (5–7 business days)',
     'order.delivery.express':  'Express delivery (2–3 business days)',
-    'order.delivery.pickup':   'Agency pick-up — Lomé',
+    'order.delivery.pickup':   'Agency pick-up, Lomé',
     'order.form.occasion': 'Occasion',
     'order.form.occasion.placeholder': 'Select (optional)...',
     'order.occasion.perso':   'Personal cellar',
@@ -412,23 +412,23 @@ const translations = {
     'about.title':            'About us',
     'about.story.title':      'A passion born between two continents',
     'about.story.p1':         "Founded in 2009 in Lomé by wine enthusiasts who trained at the greatest Bordeaux and Burgundy houses, Africa Wine Food was born from a conviction: Africa deserves access to the world's finest wines, with the service and expertise they deserve.",
-    'about.story.p2':         "For over 15 years, we have travelled the world's vineyards — Bordeaux, Burgundy, Champagne, Napa Valley, Tuscany — to rigorously select the bottles that deserve a place in your cellars and exceptional dining tables.",
+    'about.story.p2':         "For over 15 years, we have travelled the world's vineyards, Bordeaux, Burgundy, Champagne, Napa Valley, Tuscany, to rigorously select the bottles that deserve a place in your cellars and exceptional dining tables.",
     'about.story.p3':         "Based in Lomé, Togo, we serve a discerning clientele across Africa and internationally. We are the unmissable reference for fine wine enthusiasts and professionals across the continent.",
     'about.mission.title':    'Our Mission',
     'about.mission.desc':     "To democratize access to exceptional fine wines and spirits in Africa, offering a curated selection, impeccable service and genuine expertise.",
     'about.vision.title':     'Our Vision',
     'about.vision.desc':      "To become the reference house for luxury wine in Sub-Saharan Africa, and to spread wine culture among new African generations.",
     'about.values.title':     'Our Values',
-    'about.values.desc':      "Excellence, authenticity, integrity and passion guide every decision we make — from choosing a vintage to our relationship with clients.",
+    'about.values.desc':      "Excellence, authenticity, integrity and passion guide every decision we make, from choosing a vintage to our relationship with clients.",
     'about.stats.refs':       'References',
     'about.stats.pays':       'Countries served',
     'about.stats.years':      "Years of expertise",
     'about.stats.clients':    'Satisfied clients',
     'about.team.pretitle':    'Human expertise',
     'about.team.title':       'Our team',
-    'about.team.m1.name':     'Jean-Philippe Konan',
+    'about.team.m1.name':     'Tintin Kokou BARBOZA',
     'about.team.m1.role':     'Founder & CEO',
-    'about.team.m1.bio':      "Graduate of the Bordeaux Wine School, 20 years of experience in fine wine distribution across Africa and Europe.",
+    'about.team.m1.bio':      "Founder and CEO of Africa Wine Food, based in Lomé.",
 
     'blog.pretitle':          'News & advice',
     'blog.title':             'The Blog',
@@ -439,7 +439,7 @@ const translations = {
     'blog.a1.title':          "The best Bordeaux 2024: our exclusive selection",
     'blog.a1.excerpt':        "The 2024 vintage promises to be historic for the Bordeaux region. Discover the châteaux that transcended exceptional climatic conditions to produce remarkable wines...",
     'blog.a2.title':          "Complete guide to single malt whisky for connoisseurs",
-    'blog.a2.excerpt':        "From Speyside to Islay, from the Highlands to the Lowlands — our guide takes you through the fascinating world of exceptional single malt whisky and its aromatic subtleties...",
+    'blog.a2.excerpt':        "From Speyside to Islay, from the Highlands to the Lowlands, our guide takes you through the fascinating world of exceptional single malt whisky and its aromatic subtleties...",
     'blog.a3.title':          "Food & wine pairings: hosting a prestigious business dinner",
     'blog.a3.excerpt':        "Our sommelier Sophie Traoré shares her advice on composing a wine list that impresses your guests without ostentation, from the welcome champagne to the digestif...",
     'blog.read':              'Read more →',
@@ -471,7 +471,7 @@ const translations = {
     'contact.info.address':       'Address',
     'contact.info.phone':         'Phone',
     'contact.call':               '📞 Call directly',
-    'contact.map':                'Administrative District, Lomé — Togo',
+    'contact.map':                'Administrative District, Lomé, Togo',
 
     'footer.slogan':        "The finest wines, spirits & distilleries, at the heart of Africa.",
     'footer.nav.title':     'Navigation',
@@ -524,7 +524,7 @@ const translations = {
     'contact.offices.pretitle':   'Our location',
     'contact.offices.title':      'Our agency in Lomé',
     'contact.offices.tg.city':    'Lomé',
-    'contact.offices.tg.country': "Togo — Head office",
+    'contact.offices.tg.country': "Togo, Head office",
   }
 };
 
@@ -735,7 +735,7 @@ function initCarousel() {
   carousel.addEventListener('mouseenter', stopAutoplay);
   carousel.addEventListener('mouseleave', startAutoplay);
 
-  /* Pause when tab is hidden — saves CPU/battery */
+  /* Pause when tab is hidden - saves CPU/battery */
   document.addEventListener('visibilitychange', () => {
     document.hidden ? stopAutoplay() : startAutoplay();
   });
@@ -886,10 +886,10 @@ function initForms() {
       if (!email || !msg) return;
       const text =
         'Bonjour Africa Wine Food 🍷\n\n' +
-        'Nom : ' + (name || '—') + '\n' +
-        'Type de demande : ' + (type || '—') + '\n' +
+        'Nom : ' + (name || '-') + '\n' +
+        'Type de demande : ' + (type || '-') + '\n' +
         'Email : ' + email + '\n' +
-        'Téléphone : ' + (phone || '—') + '\n\n' +
+        'Téléphone : ' + (phone || '-') + '\n\n' +
         'Message :\n' + msg;
       sendToWhatsApp(text);
       formSuccess.hidden = false;
@@ -917,9 +917,9 @@ function initForms() {
       e.preventDefault();
       const email    = (devisForm.querySelector('#d-email')?.value || '').trim();
       if (!email) return;
-      const product  = (otherInput?.value || productSelect?.value || '—').trim();
+      const product  = (otherInput?.value || productSelect?.value || '-').trim();
       const qty      = devisForm.querySelector('#d-qty')?.value || '1';
-      const occasion = devisForm.querySelector('#d-occasion')?.value || '—';
+      const occasion = devisForm.querySelector('#d-occasion')?.value || '-';
       const text =
         'Bonjour Africa Wine Food 🍷\n\n' +
         'Demande de devis :\n' +
@@ -936,7 +936,7 @@ function initForms() {
     });
   }
 
-  /* Newsletter forms — confirmation uniquement */
+  /* Newsletter forms - confirmation uniquement */
   [
     { formId: 'newsletter-form',  successId: 'nl-success' },
     { formId: 'nl-sidebar-form',  successId: null }
@@ -1061,10 +1061,10 @@ const productsData = [
     fr: {
       badge: 'Vin Rouge',
       name: 'Château Margaux',
-      appellation: 'AOC Margaux, Bordeaux — Millésime 2018',
+      appellation: 'AOC Margaux, Bordeaux, Millésime 2018',
       desc: "Premier Grand Cru Classé de Bordeaux, Château Margaux 2018 est l'expression ultime de l'élégance bordelaise. Ce millésime exceptionnel conjugue puissance et finesse avec une complexité aromatique remarquable.",
       cepage: 'Cabernet Sauvignon 87%, Merlot 8%, Petit Verdot 3%, Cabernet Franc 2%',
-      region: 'Médoc, Bordeaux — France',
+      region: 'Médoc, Bordeaux, France',
       service: '17–18 °C',
       garde: '30–40 ans',
       alcohol: '13,5 % vol.',
@@ -1074,10 +1074,10 @@ const productsData = [
     en: {
       badge: 'Red Wine',
       name: 'Château Margaux',
-      appellation: 'AOC Margaux, Bordeaux — Vintage 2018',
+      appellation: 'AOC Margaux, Bordeaux, Vintage 2018',
       desc: "Premier Grand Cru Classé of Bordeaux, Château Margaux 2018 is the ultimate expression of Bordeaux elegance. This exceptional vintage combines power and finesse with remarkable aromatic complexity.",
       cepage: 'Cabernet Sauvignon 87%, Merlot 8%, Petit Verdot 3%, Cabernet Franc 2%',
-      region: 'Médoc, Bordeaux — France',
+      region: 'Médoc, Bordeaux, France',
       service: '17–18 °C',
       garde: '30–40 years',
       alcohol: '13.5% vol.',
@@ -1094,10 +1094,10 @@ const productsData = [
     fr: {
       badge: 'Vin Rouge',
       name: 'Opus One',
-      appellation: 'Napa Valley, Californie — Millésime 2019',
+      appellation: 'Napa Valley, Californie, Millésime 2019',
       desc: "Fruit de la collaboration légendaire entre Robert Mondavi et Baron Philippe de Rothschild, Opus One 2019 est l'ambassadeur du Nouveau Monde. Une cuvée d'assemblage d'une précision et d'une élégance remarquables.",
       cepage: 'Cabernet Sauvignon 76%, Merlot 12%, Cabernet Franc 6%, Petit Verdot 4%, Malbec 2%',
-      region: 'Napa Valley, Californie — États-Unis',
+      region: 'Napa Valley, Californie, États-Unis',
       service: '17–18 °C',
       garde: '20–30 ans',
       alcohol: '14,5 % vol.',
@@ -1107,10 +1107,10 @@ const productsData = [
     en: {
       badge: 'Red Wine',
       name: 'Opus One',
-      appellation: 'Napa Valley, California — Vintage 2019',
-      desc: "Born of the legendary collaboration between Robert Mondavi and Baron Philippe de Rothschild, Opus One 2019 is the ambassador of the New World — a blend of remarkable precision and elegance.",
+      appellation: 'Napa Valley, California, Vintage 2019',
+      desc: "Born of the legendary collaboration between Robert Mondavi and Baron Philippe de Rothschild, Opus One 2019 is the ambassador of the New World, a blend of remarkable precision and elegance.",
       cepage: 'Cabernet Sauvignon 76%, Merlot 12%, Cabernet Franc 6%, Petit Verdot 4%, Malbec 2%',
-      region: 'Napa Valley, California — USA',
+      region: 'Napa Valley, California, USA',
       service: '17–18 °C',
       garde: '20–30 years',
       alcohol: '14.5% vol.',
@@ -1127,10 +1127,10 @@ const productsData = [
     fr: {
       badge: 'Champagne',
       name: 'Dom Pérignon Vintage',
-      appellation: 'Champagne AOC — Millésime 2015',
+      appellation: 'Champagne AOC, Millésime 2015',
       desc: "Dom Pérignon Vintage 2015 incarne la dualité entre l'ardeur solaire d'une année chaude et la maîtrise absolue de la maison Moët & Chandon. Un champagne d'une intensité et d'une précision rares.",
       cepage: 'Chardonnay 53%, Pinot Noir 47%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '9–11 °C',
       garde: '20–30 ans',
       alcohol: '12,5 % vol.',
@@ -1140,10 +1140,10 @@ const productsData = [
     en: {
       badge: 'Champagne',
       name: 'Dom Pérignon Vintage',
-      appellation: 'Champagne AOC — Vintage 2015',
+      appellation: 'Champagne AOC, Vintage 2015',
       desc: "Dom Pérignon Vintage 2015 embodies the duality between the solar warmth of a hot year and the absolute mastery of Moët & Chandon. A champagne of rare intensity and precision.",
       cepage: 'Chardonnay 53%, Pinot Noir 47%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '9–11 °C',
       garde: '20–30 years',
       alcohol: '12.5% vol.',
@@ -1160,10 +1160,10 @@ const productsData = [
     fr: {
       badge: 'Champagne',
       name: 'Cristal Roederer',
-      appellation: 'Champagne AOC — Millésime 2016',
+      appellation: 'Champagne AOC, Millésime 2016',
       desc: "Né en 1876 pour le Tsar Alexandre II, Cristal Roederer 2016 est le champagne de prestige absolu. Ce millésime frais et élégant illustre le style inimitable de la Maison Roederer, fondé sur la précision et la minéralité.",
       cepage: 'Pinot Noir 60%, Chardonnay 40%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '8–10 °C',
       garde: '15–25 ans',
       alcohol: '12 % vol.',
@@ -1173,10 +1173,10 @@ const productsData = [
     en: {
       badge: 'Champagne',
       name: 'Cristal Roederer',
-      appellation: 'Champagne AOC — Vintage 2016',
+      appellation: 'Champagne AOC, Vintage 2016',
       desc: "Created in 1876 for Tsar Alexander II, Cristal Roederer 2016 is the champagne of absolute prestige. This fresh and elegant vintage illustrates the inimitable Roederer style, built on precision and minerality.",
       cepage: 'Pinot Noir 60%, Chardonnay 40%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '8–10 °C',
       garde: '15–25 years',
       alcohol: '12% vol.',
@@ -1193,10 +1193,10 @@ const productsData = [
     fr: {
       badge: 'Vin Blanc',
       name: 'Puligny-Montrachet 1er Cru',
-      appellation: 'AOC Bourgogne — Millésime 2020',
+      appellation: 'AOC Bourgogne, Millésime 2020',
       desc: "Érigé en symbole du grand vin blanc de Bourgogne, ce Puligny-Montrachet Premier Cru 2020 illustre la quintessence du Chardonnay en Côte de Beaune. Élégance, minéralité et longueur : une trinité accomplie.",
       cepage: 'Chardonnay 100%',
-      region: 'Côte de Beaune, Bourgogne — France',
+      region: 'Côte de Beaune, Bourgogne, France',
       service: '12–14 °C',
       garde: '10–15 ans',
       alcohol: '13 % vol.',
@@ -1206,10 +1206,10 @@ const productsData = [
     en: {
       badge: 'White Wine',
       name: 'Puligny-Montrachet 1er Cru',
-      appellation: 'AOC Burgundy — Vintage 2020',
+      appellation: 'AOC Burgundy, Vintage 2020',
       desc: "Erected as a symbol of great white Burgundy, this Puligny-Montrachet Premier Cru 2020 illustrates the quintessence of Chardonnay on the Côte de Beaune. Elegance, minerality and length: a perfect trinity.",
       cepage: 'Chardonnay 100%',
-      region: 'Côte de Beaune, Burgundy — France',
+      region: 'Côte de Beaune, Burgundy, France',
       service: '12–14 °C',
       garde: '10–15 years',
       alcohol: '13% vol.',
@@ -1226,10 +1226,10 @@ const productsData = [
     fr: {
       badge: 'Whisky Single Malt',
       name: 'The Macallan 25 Years',
-      appellation: 'Speyside, Scotland — Single Malt',
+      appellation: 'Speyside, Scotland, Single Malt',
       desc: "Vieilli 25 ans dans des fûts de chêne sherry d'Oloroso espagnol, The Macallan 25 ans est l'un des whiskies les plus convoités au monde. Une profondeur aromatique sans égale, fruit d'un savoir-faire centenaire.",
-      cepage: 'Orge maltée — Single Malt',
-      region: 'Speyside, Écosse — Royaume-Uni',
+      cepage: 'Orge maltée, Single Malt',
+      region: 'Speyside, Écosse, Royaume-Uni',
       service: '18–20 °C (sans glaçons)',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '43 % vol.',
@@ -1239,10 +1239,10 @@ const productsData = [
     en: {
       badge: 'Single Malt Whisky',
       name: 'The Macallan 25 Years',
-      appellation: 'Speyside, Scotland — Single Malt',
+      appellation: 'Speyside, Scotland, Single Malt',
       desc: "Aged 25 years in Spanish Oloroso sherry oak casks, The Macallan 25 Year Old is one of the most coveted whiskies in the world. Unparalleled aromatic depth, born of a century-long craft.",
-      cepage: 'Malted barley — Single Malt',
-      region: 'Speyside, Scotland — United Kingdom',
+      cepage: 'Malted barley, Single Malt',
+      region: 'Speyside, Scotland, United Kingdom',
       service: '18–20 °C (no ice)',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '43% vol.',
@@ -1261,8 +1261,8 @@ const productsData = [
       name: 'Hennessy Paradis Impérial',
       appellation: 'Cognac AOC, Grande Champagne',
       desc: "Hennessy Paradis Impérial est l'expression suprême du savoir-faire Hennessy. Assemblage de très vieilles eaux-de-vie sélectionnées parmi les plus précieuses réserves centenaires, il représente l'apogée de l'art du cognac.",
-      cepage: 'Ugni Blanc — Grande Champagne',
-      region: 'Grande Champagne, Cognac — France',
+      cepage: 'Ugni Blanc, Grande Champagne',
+      region: 'Grande Champagne, Cognac, France',
       service: '18–20 °C',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '40 % vol.',
@@ -1274,8 +1274,8 @@ const productsData = [
       name: 'Hennessy Paradis Impérial',
       appellation: 'Cognac AOC, Grande Champagne',
       desc: "Hennessy Paradis Impérial is the supreme expression of Hennessy's craftsmanship. A blend of very old eaux-de-vie selected from the most precious century-old reserves, it represents the pinnacle of the art of cognac.",
-      cepage: 'Ugni Blanc — Grande Champagne',
-      region: 'Grande Champagne, Cognac — France',
+      cepage: 'Ugni Blanc, Grande Champagne',
+      region: 'Grande Champagne, Cognac, France',
       service: '18–20 °C',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '40% vol.',
@@ -1292,10 +1292,10 @@ const productsData = [
     fr: {
       badge: 'Champagne',
       name: 'Krug Grande Cuvée',
-      appellation: 'Champagne AOC — 170ème Édition',
+      appellation: 'Champagne AOC, 170ème Édition',
       desc: "Krug Grande Cuvée est bien plus qu'un champagne : c'est une philosophie. Assemblage de plus de 120 vins provenant de 10 années différentes et de 3 cépages champenois, chaque édition est une création unique qui exprime la vision de la maison Krug.",
       cepage: 'Pinot Noir 47%, Chardonnay 35%, Meunier 18%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '10–12 °C',
       garde: '10–20 ans',
       alcohol: '12 % vol.',
@@ -1305,10 +1305,10 @@ const productsData = [
     en: {
       badge: 'Champagne',
       name: 'Krug Grande Cuvée',
-      appellation: 'Champagne AOC — 170th Edition',
+      appellation: 'Champagne AOC, 170th Edition',
       desc: "Krug Grande Cuvée is far more than a champagne: it is a philosophy. A blend of over 120 wines from 10 different years and 3 Champagne grape varieties, each edition is a unique creation expressing the Krug house's vision.",
       cepage: 'Pinot Noir 47%, Chardonnay 35%, Meunier 18%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '10–12 °C',
       garde: '10–20 years',
       alcohol: '12% vol.',
@@ -1325,10 +1325,10 @@ const productsData = [
     fr: {
       badge: 'Vin Rouge',
       name: 'Pétrus',
-      appellation: 'AOC Pomerol, Bordeaux — Millésime 2018',
+      appellation: 'AOC Pomerol, Bordeaux, Millésime 2018',
       desc: "Produit sur à peine 11,4 hectares d'argile bleue unique au monde, Pétrus 2018 est le mythe absolu du vin rouge. Issu presque exclusivement du cépage Merlot, ce millésime exceptionnel défie toutes les lois du vin.",
       cepage: 'Merlot 95%, Cabernet Franc 5%',
-      region: 'Pomerol, Bordeaux — France',
+      region: 'Pomerol, Bordeaux, France',
       service: '17–18 °C',
       garde: '40–50 ans',
       alcohol: '14 % vol.',
@@ -1338,10 +1338,10 @@ const productsData = [
     en: {
       badge: 'Red Wine',
       name: 'Pétrus',
-      appellation: 'AOC Pomerol, Bordeaux — Vintage 2018',
+      appellation: 'AOC Pomerol, Bordeaux, Vintage 2018',
       desc: "Produced on just 11.4 hectares of unique blue clay, Pétrus 2018 is the absolute myth of red wine. Derived almost entirely from the Merlot grape, this exceptional vintage defies all the laws of wine.",
       cepage: 'Merlot 95%, Cabernet Franc 5%',
-      region: 'Pomerol, Bordeaux — France',
+      region: 'Pomerol, Bordeaux, France',
       service: '17–18 °C',
       garde: '40–50 years',
       alcohol: '14% vol.',
@@ -1358,10 +1358,10 @@ const productsData = [
     fr: {
       badge: 'Vin Blanc',
       name: 'Sancerre Henri Bourgeois',
-      appellation: 'AOC Sancerre, Loire — Millésime 2022',
+      appellation: 'AOC Sancerre, Loire, Millésime 2022',
       desc: "Henri Bourgeois, figure emblématique du Sancerre depuis neuf générations, signe avec ce 2022 un vin blanc d'une pureté cristalline. L'expression parfaite du Sauvignon Blanc dans la vallée de la Loire.",
       cepage: 'Sauvignon Blanc 100%',
-      region: 'Sancerre, Vallée de la Loire — France',
+      region: 'Sancerre, Vallée de la Loire, France',
       service: '10–12 °C',
       garde: '5–8 ans',
       alcohol: '13 % vol.',
@@ -1371,10 +1371,10 @@ const productsData = [
     en: {
       badge: 'White Wine',
       name: 'Sancerre Henri Bourgeois',
-      appellation: 'AOC Sancerre, Loire — Vintage 2022',
+      appellation: 'AOC Sancerre, Loire, Vintage 2022',
       desc: "Henri Bourgeois, an emblematic figure of Sancerre for nine generations, signs with this 2022 a white wine of crystalline purity. The perfect expression of Sauvignon Blanc in the Loire Valley.",
       cepage: 'Sauvignon Blanc 100%',
-      region: 'Sancerre, Loire Valley — France',
+      region: 'Sancerre, Loire Valley, France',
       service: '10–12 °C',
       garde: '5–8 years',
       alcohol: '13% vol.',
@@ -1391,10 +1391,10 @@ const productsData = [
     fr: {
       badge: 'Collection Rare',
       name: 'Romanée-Conti DRC',
-      appellation: 'AOC Grand Cru Bourgogne — Millésime 2015',
-      desc: "La Romanée-Conti est le Graal absolu des amateurs de vin. Issu d'un monopole de 1,8 hectare classé Grand Cru depuis le XVIe siècle, ce millésime 2015 — solaire et d'une concentration légendaire — est peut-être le plus grand vin rouge jamais produit.",
+      appellation: 'AOC Grand Cru Bourgogne, Millésime 2015',
+      desc: "La Romanée-Conti est le Graal absolu des amateurs de vin. Issu d'un monopole de 1,8 hectare classé Grand Cru depuis le XVIe siècle, ce millésime 2015, solaire et d'une concentration légendaire, est peut-être le plus grand vin rouge jamais produit.",
       cepage: 'Pinot Noir 100%',
-      region: 'Vosne-Romanée, Bourgogne — France',
+      region: 'Vosne-Romanée, Bourgogne, France',
       service: '16–17 °C',
       garde: '50+ ans',
       alcohol: '13 % vol.',
@@ -1404,10 +1404,10 @@ const productsData = [
     en: {
       badge: 'Rare Collection',
       name: 'Romanée-Conti DRC',
-      appellation: 'AOC Grand Cru Burgundy — Vintage 2015',
-      desc: "Romanée-Conti is the absolute Holy Grail for wine lovers. From a 1.8-hectare monopole classified as Grand Cru since the 16th century, this 2015 vintage — sunny and of legendary concentration — may be the greatest red wine ever produced.",
+      appellation: 'AOC Grand Cru Burgundy, Vintage 2015',
+      desc: "Romanée-Conti is the absolute Holy Grail for wine lovers. From a 1.8-hectare monopole classified as Grand Cru since the 16th century, this 2015 vintage, sunny and of legendary concentration, may be the greatest red wine ever produced.",
       cepage: 'Pinot Noir 100%',
-      region: 'Vosne-Romanée, Burgundy — France',
+      region: 'Vosne-Romanée, Burgundy, France',
       service: '16–17 °C',
       garde: '50+ years',
       alcohol: '13% vol.',
@@ -1425,10 +1425,10 @@ const productsData = [
     fr: {
       badge: 'Vin Rosé',
       name: 'Château d\'Esclans Whispering Angel',
-      appellation: 'AOC Côtes de Provence — Millésime 2023',
+      appellation: 'AOC Côtes de Provence, Millésime 2023',
       desc: "Whispering Angel est devenu le rosé de référence mondial, symbole du lifestyle méditerranéen de luxe. Ce 2023 incarne l'élégance provençale dans toute sa splendeur : pâle, délicat et d'une fraîcheur incomparable.",
       cepage: 'Grenache 45%, Cinsault 35%, Vermentino 20%',
-      region: 'Côtes de Provence — France',
+      region: 'Côtes de Provence, France',
       service: '8–10 °C',
       garde: '3–5 ans',
       alcohol: '13 % vol.',
@@ -1438,10 +1438,10 @@ const productsData = [
     en: {
       badge: 'Rosé Wine',
       name: 'Château d\'Esclans Whispering Angel',
-      appellation: 'AOC Côtes de Provence — Vintage 2023',
+      appellation: 'AOC Côtes de Provence, Vintage 2023',
       desc: "Whispering Angel has become the world reference rosé, symbol of the luxurious Mediterranean lifestyle. This 2023 embodies Provençal elegance in all its splendour: pale, delicate and incomparably fresh.",
       cepage: 'Grenache 45%, Cinsault 35%, Vermentino 20%',
-      region: 'Côtes de Provence — France',
+      region: 'Côtes de Provence, France',
       service: '8–10 °C',
       garde: '3–5 years',
       alcohol: '13% vol.',
@@ -1457,11 +1457,11 @@ const productsData = [
     priceXof: 128000,
     fr: {
       badge: 'Vin Rouge',
-      name: 'Barolo Brunate — Ceretto',
-      appellation: 'DOCG Barolo, Piémont — Millésime 2017',
+      name: 'Barolo Brunate, Ceretto',
+      appellation: 'DOCG Barolo, Piémont, Millésime 2017',
       desc: "Le Barolo est le \"Roi des vins italiens\". Ceretto signe avec ce Brunate 2017 un vin d'une noblesse absolue, issu de l'un des meilleurs crus du Piémont. Puissant, complexe, fait pour traverser les décennies.",
       cepage: 'Nebbiolo 100%',
-      region: 'La Morra, Piémont — Italie',
+      region: 'La Morra, Piémont, Italie',
       service: '18–20 °C',
       garde: '20–30 ans',
       alcohol: '14,5 % vol.',
@@ -1470,11 +1470,11 @@ const productsData = [
     },
     en: {
       badge: 'Red Wine',
-      name: 'Barolo Brunate — Ceretto',
-      appellation: 'DOCG Barolo, Piedmont — Vintage 2017',
+      name: 'Barolo Brunate, Ceretto',
+      appellation: 'DOCG Barolo, Piedmont, Vintage 2017',
       desc: "Barolo is the 'King of Italian wines'. Ceretto signs this Brunate 2017 as a wine of absolute nobility, from one of Piedmont's finest crus. Powerful, complex, built to last decades.",
       cepage: 'Nebbiolo 100%',
-      region: 'La Morra, Piedmont — Italy',
+      region: 'La Morra, Piedmont, Italy',
       service: '18–20 °C',
       garde: '20–30 years',
       alcohol: '14.5% vol.',
@@ -1491,10 +1491,10 @@ const productsData = [
     fr: {
       badge: 'Champagne',
       name: 'Taittinger Comtes de Champagne',
-      appellation: 'Champagne AOC Blanc de Blancs — Millésime 2013',
+      appellation: 'Champagne AOC Blanc de Blancs, Millésime 2013',
       desc: "Le Taittinger Comtes de Champagne est l'un des grands Blancs de Blancs de Champagne. Ce 2013, issu exclusivement de Chardonnay Grand Cru de la Côte des Blancs, est d'une élégance et d'une finesse absolues.",
       cepage: 'Chardonnay 100%',
-      region: 'Champagne, Côte des Blancs — France',
+      region: 'Champagne, Côte des Blancs, France',
       service: '8–10 °C',
       garde: '15–20 ans',
       alcohol: '12,5 % vol.',
@@ -1504,10 +1504,10 @@ const productsData = [
     en: {
       badge: 'Champagne',
       name: 'Taittinger Comtes de Champagne',
-      appellation: 'Champagne AOC Blanc de Blancs — Vintage 2013',
+      appellation: 'Champagne AOC Blanc de Blancs, Vintage 2013',
       desc: "Taittinger Comtes de Champagne is one of the great Blanc de Blancs champagnes. This 2013, made exclusively from Grand Cru Chardonnay from the Côte des Blancs, is of absolute elegance and finesse.",
       cepage: 'Chardonnay 100%',
-      region: 'Champagne, Côte des Blancs — France',
+      region: 'Champagne, Côte des Blancs, France',
       service: '8–10 °C',
       garde: '15–20 years',
       alcohol: '12.5% vol.',
@@ -1523,11 +1523,11 @@ const productsData = [
     priceXof: 24900,
     fr: {
       badge: 'Crémant',
-      name: 'Crémant d\'Alsace Brut — Dopff au Moulin',
-      appellation: 'AOC Crémant d\'Alsace — Méthode Traditionnelle',
+      name: 'Crémant d\'Alsace Brut, Dopff au Moulin',
+      appellation: 'AOC Crémant d\'Alsace, Méthode Traditionnelle',
       desc: "Dopff au Moulin, pionnier du Crémant d'Alsace depuis 1900, propose avec ce Brut un effervescent d'une élégance et d'une fraîcheur remarquables. L'alliance parfaite entre la finesse alsacienne et la tradition champenoise.",
       cepage: 'Pinot Blanc 80%, Auxerrois 20%',
-      region: 'Alsace — France',
+      region: 'Alsace, France',
       service: '7–9 °C',
       garde: '3–5 ans',
       alcohol: '12 % vol.',
@@ -1536,11 +1536,11 @@ const productsData = [
     },
     en: {
       badge: 'Crémant',
-      name: 'Crémant d\'Alsace Brut — Dopff au Moulin',
-      appellation: 'AOC Crémant d\'Alsace — Traditional Method',
+      name: 'Crémant d\'Alsace Brut, Dopff au Moulin',
+      appellation: 'AOC Crémant d\'Alsace, Traditional Method',
       desc: "Dopff au Moulin, pioneer of Crémant d'Alsace since 1900, presents this Brut as a sparkling of remarkable elegance and freshness. The perfect alliance between Alsatian finesse and Champagne tradition.",
       cepage: 'Pinot Blanc 80%, Auxerrois 20%',
-      region: 'Alsace — France',
+      region: 'Alsace, France',
       service: '7–9 °C',
       garde: '3–5 years',
       alcohol: '12% vol.',
@@ -1557,10 +1557,10 @@ const productsData = [
     fr: {
       badge: 'Rhum',
       name: 'Rhum Barbancourt Réserve Spéciale 15 ans',
-      appellation: 'Rhum Agricole Haïtien — Vieilli 15 ans',
+      appellation: 'Rhum Agricole Haïtien, Vieilli 15 ans',
       desc: "Barbancourt Réserve Spéciale 15 ans est le fleuron de la distillerie haïtienne fondée en 1862. Vieilli en fûts de chêne du Limousin, ce rhum d'exception est une référence absolue en Afrique et dans les Caraïbes.",
-      cepage: 'Canne à sucre — Rhum Agricole',
-      region: 'Haïti — Caraïbes',
+      cepage: 'Canne à sucre, Rhum Agricole',
+      region: 'Haïti, Caraïbes',
       service: '18–20 °C (pur ou avec un glaçon)',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '43 % vol.',
@@ -1570,10 +1570,10 @@ const productsData = [
     en: {
       badge: 'Rum',
       name: 'Barbancourt Reserve Spéciale 15 Years',
-      appellation: 'Haitian Agricultural Rum — Aged 15 years',
+      appellation: 'Haitian Agricultural Rum, Aged 15 years',
       desc: "Barbancourt Réserve Spéciale 15 Year Old is the flagship of the Haitian distillery founded in 1862. Aged in Limousin oak casks, this exceptional rum is an absolute reference across Africa and the Caribbean.",
-      cepage: 'Sugar cane — Agricultural Rum',
-      region: 'Haiti — Caribbean',
+      cepage: 'Sugar cane, Agricultural Rum',
+      region: 'Haiti, Caribbean',
       service: '18–20 °C (neat or with one ice cube)',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '43% vol.',
@@ -1590,10 +1590,10 @@ const productsData = [
     fr: {
       badge: 'Armagnac',
       name: 'Armagnac Darroze 1990',
-      appellation: 'AOC Bas-Armagnac — Millésime 1990 — 33 ans',
+      appellation: 'AOC Bas-Armagnac, Millésime 1990, 33 ans',
       desc: "Francis Darroze sélectionne les meilleures propriétés du Bas-Armagnac depuis 1974. Ce millésime 1990, vieilli plus de 33 ans en fûts de chêne noir de Gascogne, est une pièce de collection d'une complexité rare.",
       cepage: 'Baco 22A, Ugni Blanc',
-      region: 'Bas-Armagnac, Gascogne — France',
+      region: 'Bas-Armagnac, Gascogne, France',
       service: '18–20 °C',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '47 % vol.',
@@ -1603,10 +1603,10 @@ const productsData = [
     en: {
       badge: 'Armagnac',
       name: 'Armagnac Darroze 1990',
-      appellation: 'AOC Bas-Armagnac — Vintage 1990 — 33 years',
+      appellation: 'AOC Bas-Armagnac, Vintage 1990, 33 years',
       desc: "Francis Darroze has been selecting the finest estates in Bas-Armagnac since 1974. This 1990 vintage, aged over 33 years in Gascon black oak casks, is a collector's piece of rare complexity.",
       cepage: 'Baco 22A, Ugni Blanc',
-      region: 'Bas-Armagnac, Gascogne — France',
+      region: 'Bas-Armagnac, Gascogne, France',
       service: '18–20 °C',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '47% vol.',
@@ -1622,11 +1622,11 @@ const productsData = [
     priceXof: 72000,
     fr: {
       badge: 'Vin Rouge',
-      name: 'Adrianna Vineyard Malbec — Catena Zapata',
-      appellation: 'Mendoza, Argentine — Millésime 2020',
+      name: 'Adrianna Vineyard Malbec, Catena Zapata',
+      appellation: 'Mendoza, Argentine, Millésime 2020',
       desc: "Issu du vignoble Adrianna planté à 1 500 m d'altitude dans la Cordillère des Andes, ce Malbec de Catena Zapata est considéré comme l'un des plus grands vins d'Amérique du Sud. Concentration, fraîcheur et terroir d'exception.",
       cepage: 'Malbec 100%',
-      region: 'Mendoza, Patagonie — Argentine',
+      region: 'Mendoza, Patagonie, Argentine',
       service: '17–18 °C',
       garde: '15–20 ans',
       alcohol: '14 % vol.',
@@ -1635,11 +1635,11 @@ const productsData = [
     },
     en: {
       badge: 'Red Wine',
-      name: 'Adrianna Vineyard Malbec — Catena Zapata',
-      appellation: 'Mendoza, Argentina — Vintage 2020',
+      name: 'Adrianna Vineyard Malbec, Catena Zapata',
+      appellation: 'Mendoza, Argentina, Vintage 2020',
       desc: "From the Adrianna vineyard planted at 1,500m altitude in the Andes, this Catena Zapata Malbec is considered one of the greatest wines in South America. Concentration, freshness and exceptional terroir.",
       cepage: 'Malbec 100%',
-      region: 'Mendoza, Patagonia — Argentina',
+      region: 'Mendoza, Patagonia, Argentina',
       service: '17–18 °C',
       garde: '15–20 years',
       alcohol: '14% vol.',
@@ -1656,10 +1656,10 @@ const productsData = [
     fr: {
       badge: 'Gin Premium',
       name: 'Hendrick\'s Flora Adora',
-      appellation: 'Gin Premium — Édition Limitée Florale',
+      appellation: 'Gin Premium, Édition Limitée Florale',
       desc: "Hendrick's Flora Adora est une ode au monde des fleurs. Cette édition limitée de la distillerie écossaise Hendrick's célèbre la floraison avec des notes d'hibiscus, de rose et de fleurs de sureau d'une délicatesse exquise.",
-      cepage: 'Gin distillé — Infusions florales',
-      region: 'Girvan, Écosse — Royaume-Uni',
+      cepage: 'Gin distillé, Infusions florales',
+      region: 'Girvan, Écosse, Royaume-Uni',
       service: 'Sur glace avec eau tonique premium',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '43,4 % vol.',
@@ -1669,10 +1669,10 @@ const productsData = [
     en: {
       badge: 'Premium Gin',
       name: 'Hendrick\'s Flora Adora',
-      appellation: 'Premium Gin — Limited Floral Edition',
+      appellation: 'Premium Gin, Limited Floral Edition',
       desc: "Hendrick's Flora Adora is an ode to the world of flowers. This limited edition from Scottish distillery Hendrick's celebrates flowering with notes of hibiscus, rose and elderflower of exquisite delicacy.",
-      cepage: 'Distilled gin — Floral infusions',
-      region: 'Girvan, Scotland — United Kingdom',
+      cepage: 'Distilled gin, Floral infusions',
+      region: 'Girvan, Scotland, United Kingdom',
       service: 'Over ice with premium tonic water',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '43.4% vol.',
@@ -1688,11 +1688,11 @@ const productsData = [
     priceXof: 95000,
     fr: {
       badge: 'Vin Blanc',
-      name: 'Chablis Grand Cru Les Clos — Raveneau',
-      appellation: 'AOC Chablis Grand Cru, Bourgogne — Millésime 2021',
+      name: 'Chablis Grand Cru Les Clos, Raveneau',
+      appellation: 'AOC Chablis Grand Cru, Bourgogne, Millésime 2021',
       desc: "François et Jean-Marie Raveneau sont les gardiens de la quintessence de Chablis. Leur Grand Cru Les Clos 2021 est un vin blanc d'une minéralité absolue, expression ultime du terroir kimméridgien de Chablis.",
       cepage: 'Chardonnay 100%',
-      region: 'Chablis, Bourgogne — France',
+      region: 'Chablis, Bourgogne, France',
       service: '12–14 °C',
       garde: '10–20 ans',
       alcohol: '13 % vol.',
@@ -1701,11 +1701,11 @@ const productsData = [
     },
     en: {
       badge: 'White Wine',
-      name: 'Chablis Grand Cru Les Clos — Raveneau',
-      appellation: 'AOC Chablis Grand Cru, Burgundy — Vintage 2021',
+      name: 'Chablis Grand Cru Les Clos, Raveneau',
+      appellation: 'AOC Chablis Grand Cru, Burgundy, Vintage 2021',
       desc: "François and Jean-Marie Raveneau are the guardians of the quintessence of Chablis. Their Grand Cru Les Clos 2021 is a white wine of absolute minerality, the ultimate expression of Chablis' Kimmeridgian terroir.",
       cepage: 'Chardonnay 100%',
-      region: 'Chablis, Burgundy — France',
+      region: 'Chablis, Burgundy, France',
       service: '12–14 °C',
       garde: '10–20 years',
       alcohol: '13% vol.',
@@ -1721,11 +1721,11 @@ const productsData = [
     priceXof: 190000,
     fr: {
       badge: 'Vin Rouge',
-      name: 'Sassicaia DOC — Tenuta San Guido',
-      appellation: 'DOC Bolgheri Sassicaia, Toscane — Millésime 2019',
+      name: 'Sassicaia DOC, Tenuta San Guido',
+      appellation: 'DOC Bolgheri Sassicaia, Toscane, Millésime 2019',
       desc: "Le Sassicaia est le vin qui a créé la révolution des \"Super Tuscans\". Premier vin italien à obtenir sa propre AOC, ce 2019 de Tenuta San Guido est un concentré d'élégance italienne et de caractère bordelais transalpin.",
       cepage: 'Cabernet Sauvignon 85%, Cabernet Franc 15%',
-      region: 'Bolgheri, Toscane — Italie',
+      region: 'Bolgheri, Toscane, Italie',
       service: '17–18 °C',
       garde: '20–25 ans',
       alcohol: '14 % vol.',
@@ -1734,11 +1734,11 @@ const productsData = [
     },
     en: {
       badge: 'Red Wine',
-      name: 'Sassicaia DOC — Tenuta San Guido',
-      appellation: 'DOC Bolgheri Sassicaia, Tuscany — Vintage 2019',
+      name: 'Sassicaia DOC, Tenuta San Guido',
+      appellation: 'DOC Bolgheri Sassicaia, Tuscany, Vintage 2019',
       desc: "Sassicaia is the wine that created the 'Super Tuscans' revolution. The first Italian wine to obtain its own DOC, this 2019 from Tenuta San Guido is a concentration of Italian elegance and transalpine Bordeaux character.",
       cepage: 'Cabernet Sauvignon 85%, Cabernet Franc 15%',
-      region: 'Bolgheri, Tuscany — Italy',
+      region: 'Bolgheri, Tuscany, Italy',
       service: '17–18 °C',
       garde: '20–25 years',
       alcohol: '14% vol.',
@@ -1755,10 +1755,10 @@ const productsData = [
     fr: {
       badge: 'Blended Scotch',
       name: 'Johnnie Walker Blue Label',
-      appellation: 'Scotch Whisky — Blended — Édition Prestige',
+      appellation: 'Scotch Whisky, Blended, Édition Prestige',
       desc: "Johnnie Walker Blue Label est le summum de l'art du blending écossais. Assemblage de whiskies rarissimes issus de distilleries parfois disparues, dont seulement 1 fût sur 10 000 atteint la qualité requise pour cette cuvée d'exception.",
-      cepage: 'Malt et grain — Blended Scotch Whisky',
-      region: 'Écosse — Royaume-Uni',
+      cepage: 'Malt et grain, Blended Scotch Whisky',
+      region: 'Écosse, Royaume-Uni',
       service: '18 °C ou sur un glaçon sphérique',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '40 % vol.',
@@ -1768,10 +1768,10 @@ const productsData = [
     en: {
       badge: 'Blended Scotch',
       name: 'Johnnie Walker Blue Label',
-      appellation: 'Scotch Whisky — Blended — Prestige Edition',
+      appellation: 'Scotch Whisky, Blended, Prestige Edition',
       desc: "Johnnie Walker Blue Label is the pinnacle of Scottish blending art. A blend of extremely rare whiskies from sometimes-closed distilleries, where only 1 cask in 10,000 reaches the quality required for this exceptional blend.",
-      cepage: 'Malt and grain — Blended Scotch Whisky',
-      region: 'Scotland — United Kingdom',
+      cepage: 'Malt and grain, Blended Scotch Whisky',
+      region: 'Scotland, United Kingdom',
       service: '18 °C or over a spherical ice cube',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '40% vol.',
@@ -1788,10 +1788,10 @@ const productsData = [
     fr: {
       badge: 'Collection Rare',
       name: 'Château d\'Yquem',
-      appellation: 'AOC Sauternes 1er Cru Supérieur — Millésime 2016',
-      desc: "Château d'Yquem est le seul Premier Cru Supérieur de Sauternes — un statut unique dans le classement des vins de Bordeaux de 1855. Ce 2016, issu de raisins gorgés de botrytis cinerea, est l'une des plus grandes expressions de vins liquoreux au monde.",
+      appellation: 'AOC Sauternes 1er Cru Supérieur, Millésime 2016',
+      desc: "Château d'Yquem est le seul Premier Cru Supérieur de Sauternes, un statut unique dans le classement des vins de Bordeaux de 1855. Ce 2016, issu de raisins gorgés de botrytis cinerea, est l'une des plus grandes expressions de vins liquoreux au monde.",
       cepage: 'Sémillon 80%, Sauvignon Blanc 20%',
-      region: 'Sauternes, Bordeaux — France',
+      region: 'Sauternes, Bordeaux, France',
       service: '12–14 °C',
       garde: '30–50 ans',
       alcohol: '13,5 % vol.',
@@ -1801,10 +1801,10 @@ const productsData = [
     en: {
       badge: 'Rare Collection',
       name: 'Château d\'Yquem',
-      appellation: 'AOC Sauternes 1er Cru Supérieur — Vintage 2016',
-      desc: "Château d'Yquem is the only Premier Cru Supérieur of Sauternes — a unique status in the 1855 Bordeaux wine classification. This 2016, from grapes laden with botrytis cinerea, is one of the greatest expressions of dessert wine in the world.",
+      appellation: 'AOC Sauternes 1er Cru Supérieur, Vintage 2016',
+      desc: "Château d'Yquem is the only Premier Cru Supérieur of Sauternes, a unique status in the 1855 Bordeaux wine classification. This 2016, from grapes laden with botrytis cinerea, is one of the greatest expressions of dessert wine in the world.",
       cepage: 'Sémillon 80%, Sauvignon Blanc 20%',
-      region: 'Sauternes, Bordeaux — France',
+      region: 'Sauternes, Bordeaux, France',
       service: '12–14 °C',
       garde: '30–50 years',
       alcohol: '13.5% vol.',
@@ -1821,10 +1821,10 @@ const productsData = [
     fr: {
       badge: 'Champagne Rosé',
       name: 'Veuve Clicquot Rosé Vintage',
-      appellation: 'Champagne AOC Rosé — Millésime 2015',
+      appellation: 'Champagne AOC Rosé, Millésime 2015',
       desc: "La Grande Dame de Champagne propose avec ce Rosé Vintage 2015 une célébration de la féminité et de l'élégance. Audacieux, fruité et raffiné, il incarne la signature audacieuse de Madame Clicquot.",
       cepage: 'Pinot Noir 59%, Chardonnay 23%, Meunier 11%, Pinot Gris 4%, Pinot Blanc 3%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '9–11 °C',
       garde: '10–15 ans',
       alcohol: '12,5 % vol.',
@@ -1834,10 +1834,10 @@ const productsData = [
     en: {
       badge: 'Rosé Champagne',
       name: 'Veuve Clicquot Rosé Vintage',
-      appellation: 'Champagne AOC Rosé — Vintage 2015',
+      appellation: 'Champagne AOC Rosé, Vintage 2015',
       desc: "The Grande Dame of Champagne presents this Rosé Vintage 2015 as a celebration of femininity and elegance. Bold, fruity and refined, it embodies Madame Clicquot's audacious signature.",
       cepage: 'Pinot Noir 59%, Chardonnay 23%, Meunier 11%, Pinot Gris 4%, Pinot Blanc 3%',
-      region: 'Champagne — France',
+      region: 'Champagne, France',
       service: '9–11 °C',
       garde: '10–15 years',
       alcohol: '12.5% vol.',
@@ -1854,10 +1854,10 @@ const productsData = [
     fr: {
       badge: 'Collection Rare',
       name: 'Glenfarclas 50 Years',
-      appellation: 'Speyside, Scotland — Édition Limitée',
+      appellation: 'Speyside, Scotland, Édition Limitée',
       desc: "Glenfarclas 50 ans est l'un des single malts les plus rares et les plus recherchés d'Écosse. Distillé et vieilli 50 ans dans des fûts de sherry en chêne européen, c'est une déclaration d'amour au whisky de tradition.",
-      cepage: 'Orge maltée — Single Malt',
-      region: 'Speyside, Écosse — Royaume-Uni',
+      cepage: 'Orge maltée, Single Malt',
+      region: 'Speyside, Écosse, Royaume-Uni',
       service: '18–20 °C (sans glaçons)',
       garde: 'Indéfinie (bouteille fermée)',
       alcohol: '50 % vol.',
@@ -1867,10 +1867,10 @@ const productsData = [
     en: {
       badge: 'Rare Collection',
       name: 'Glenfarclas 50 Years',
-      appellation: 'Speyside, Scotland — Limited Edition',
+      appellation: 'Speyside, Scotland, Limited Edition',
       desc: "Glenfarclas 50 Year Old is one of the rarest and most sought-after single malts in Scotland. Distilled and aged 50 years in European oak sherry casks, it is a love letter to traditional whisky-making.",
-      cepage: 'Malted barley — Single Malt',
-      region: 'Speyside, Scotland — United Kingdom',
+      cepage: 'Malted barley, Single Malt',
+      region: 'Speyside, Scotland, United Kingdom',
       service: '18–20 °C (no ice)',
       garde: 'Indefinite (sealed bottle)',
       alcohol: '50% vol.',
@@ -1886,26 +1886,26 @@ const productsData = [
     fr: {
       badge: "Vodka",
       name: "Harvest Day Original",
-      appellation: "Vodka Premium — Ukraine",
+      appellation: "Vodka Premium, Ukraine",
       desc: "Vodka premium ukrainienne à la bouteille gravée et à l'étiquette dorée. Un profil net et pur, pensé pour se déguster frappée ou en cocktail.",
       cepage: "Vodka de grain",
       region: "Ukraine",
       service: "Bien frappée, 0–4 °C",
       garde: "Ne se bonifie pas en bouteille",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe cristalline. Nez neutre et net. Bouche douce et ronde, finale propre.",
       pairing: "Caviar, poissons fumés, blinis, cornichons, charcuteries."
     },
     en: {
       badge: "Vodka",
       name: "Harvest Day Original",
-      appellation: "Premium Vodka — Ukraine",
+      appellation: "Premium Vodka, Ukraine",
       desc: "Premium Ukrainian vodka in an embossed bottle with a gold label. A clean, pure profile made to be served chilled or in cocktails.",
       cepage: "Grain vodka",
       region: "Ukraine",
       service: "Well chilled, 0–4 °C",
       garde: "Does not improve in the bottle",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Crystal-clear. Clean, neutral nose. Soft, round palate with a clean finish.",
       pairing: "Caviar, smoked fish, blinis, pickles, cured meats."
     }
@@ -1918,7 +1918,7 @@ const productsData = [
     fr: {
       badge: "Vodka",
       name: "Harvest Day Classic",
-      appellation: "Vodka Pure Grain — Ukraine",
+      appellation: "Vodka Pure Grain, Ukraine",
       desc: "Vodka pure de grain dans une bouteille originale à anse, reconnaissable entre toutes. Le choix classique pour le service traditionnel comme pour les cocktails.",
       cepage: "Vodka pure de grain",
       region: "Ukraine",
@@ -1931,7 +1931,7 @@ const productsData = [
     en: {
       badge: "Vodka",
       name: "Harvest Day Classic",
-      appellation: "Pure Grain Vodka — Ukraine",
+      appellation: "Pure Grain Vodka, Ukraine",
       desc: "Pure grain vodka in an original handled bottle. The classic choice for traditional service and for cocktails.",
       cepage: "Pure grain vodka",
       region: "Ukraine",
@@ -1950,7 +1950,7 @@ const productsData = [
     fr: {
       badge: "Vodka",
       name: "Harvest Day Melon",
-      appellation: "Vodka aromatisée Melon — Ukraine",
+      appellation: "Vodka aromatisée Melon, Ukraine",
       desc: "Vodka aromatisée au melon, fruitée et gourmande. Idéale glacée en shot, en long drink ou dans les cocktails d'été.",
       cepage: "Vodka aromatisée melon",
       region: "Ukraine",
@@ -1963,7 +1963,7 @@ const productsData = [
     en: {
       badge: "Vodka",
       name: "Harvest Day Melon",
-      appellation: "Melon Flavoured Vodka — Ukraine",
+      appellation: "Melon Flavoured Vodka, Ukraine",
       desc: "Melon-flavoured vodka, fruity and easy to enjoy. Ideal ice-cold, as a long drink or in summer cocktails.",
       cepage: "Melon flavoured vodka",
       region: "Ukraine",
@@ -1982,26 +1982,26 @@ const productsData = [
     fr: {
       badge: "Vin Rouge",
       name: "Lakeside Cabernet Franc",
-      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      appellation: "Ignatievo Single Vineyard, Bulgarie",
       desc: "Cabernet Franc issu d'un vignoble unique, à l'étiquette marquée d'une vague bleue. Un rouge frais et structuré.",
       cepage: "Cabernet Franc",
-      region: "Ignatievo, Varna — Bulgarie",
+      region: "Ignatievo, Varna, Bulgarie",
       service: "16–18 °C",
       garde: "3–5 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe rubis. Nez de fruits rouges et de note poivrée. Bouche fraîche aux tannins souples.",
       pairing: "Viandes rouges grillées, volaille rôtie, fromages à pâte pressée."
     },
     en: {
       badge: "Red Wine",
       name: "Lakeside Cabernet Franc",
-      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      appellation: "Ignatievo Single Vineyard, Bulgaria",
       desc: "Single-vineyard Cabernet Franc with a signature blue wave label. A fresh, structured red.",
       cepage: "Cabernet Franc",
-      region: "Ignatievo, Varna — Bulgaria",
+      region: "Ignatievo, Varna, Bulgaria",
       service: "16–18 °C",
       garde: "3–5 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Ruby robe. Red fruit and peppery notes. Fresh palate with supple tannins.",
       pairing: "Grilled red meats, roast poultry, pressed cheeses."
     }
@@ -2014,26 +2014,26 @@ const productsData = [
     fr: {
       badge: "Vin Blanc",
       name: "The Wave Pinot Grigio",
-      appellation: "Pinot Grigio — Bulgarie",
+      appellation: "Pinot Grigio, Bulgarie",
       desc: "Pinot Grigio léger et élégant, à l'étiquette ondulée The Wave. Un blanc désaltérant pour tous les jours.",
       cepage: "Pinot Grigio",
-      region: "Varna — Bulgarie",
+      region: "Varna, Bulgarie",
       service: "8–10 °C",
       garde: "1–3 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe paille claire. Nez de poire et d'agrumes. Bouche vive et légère.",
       pairing: "Poissons grillés, salades, fruits de mer, apéritif."
     },
     en: {
       badge: "White Wine",
       name: "The Wave Pinot Grigio",
-      appellation: "Pinot Grigio — Bulgaria",
+      appellation: "Pinot Grigio, Bulgaria",
       desc: "Light, elegant Pinot Grigio with The Wave wavy label. A refreshing everyday white.",
       cepage: "Pinot Grigio",
-      region: "Varna — Bulgaria",
+      region: "Varna, Bulgaria",
       service: "8–10 °C",
       garde: "1–3 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Pale straw robe. Pear and citrus on the nose. Lively, light palate.",
       pairing: "Grilled fish, salads, seafood, aperitif."
     }
@@ -2046,26 +2046,26 @@ const productsData = [
     fr: {
       badge: "Vin Blanc",
       name: "Lakeside Varnenski Misket",
-      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      appellation: "Ignatievo Single Vineyard, Bulgarie",
       desc: "Varnenski Misket, cépage aromatique emblématique de la région de Varna. Un blanc parfumé et expressif.",
       cepage: "Varnenski Misket",
-      region: "Ignatievo, Varna — Bulgarie",
+      region: "Ignatievo, Varna, Bulgarie",
       service: "8–10 °C",
       garde: "1–3 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe dorée claire. Nez floral et muscaté. Bouche fruitée et souple.",
       pairing: "Cuisine épicée douce, fromages frais, desserts aux fruits."
     },
     en: {
       badge: "White Wine",
       name: "Lakeside Varnenski Misket",
-      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      appellation: "Ignatievo Single Vineyard, Bulgaria",
       desc: "Varnenski Misket, an aromatic grape emblematic of the Varna region. A fragrant, expressive white.",
       cepage: "Varnenski Misket",
-      region: "Ignatievo, Varna — Bulgaria",
+      region: "Ignatievo, Varna, Bulgaria",
       service: "8–10 °C",
       garde: "1–3 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Light golden robe. Floral, muscat nose. Fruity, supple palate.",
       pairing: "Mildly spiced dishes, fresh cheeses, fruit desserts."
     }
@@ -2078,26 +2078,26 @@ const productsData = [
     fr: {
       badge: "Vin Rouge",
       name: "The Wave Rubin",
-      appellation: "Rubin — Bulgarie",
+      appellation: "Rubin, Bulgarie",
       desc: "Rubin, cépage rouge bulgare, sous l'étiquette The Wave. Un rouge charnu et fruité.",
       cepage: "Rubin",
-      region: "Varna — Bulgarie",
+      region: "Varna, Bulgarie",
       service: "16–18 °C",
       garde: "3–5 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe rubis intense. Nez de fruits noirs et d'épices. Bouche ronde et généreuse.",
       pairing: "Grillades, plats mijotés, fromages affinés."
     },
     en: {
       badge: "Red Wine",
       name: "The Wave Rubin",
-      appellation: "Rubin — Bulgaria",
+      appellation: "Rubin, Bulgaria",
       desc: "Rubin, a Bulgarian red grape, under The Wave label. A full-bodied, fruity red.",
       cepage: "Rubin",
-      region: "Varna — Bulgaria",
+      region: "Varna, Bulgaria",
       service: "16–18 °C",
       garde: "3–5 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Deep ruby robe. Black fruit and spice on the nose. Round, generous palate.",
       pairing: "Grills, slow-cooked dishes, aged cheeses."
     }
@@ -2110,26 +2110,26 @@ const productsData = [
     fr: {
       badge: "Vin Blanc",
       name: "The Wave Riesling",
-      appellation: "Riesling — Bulgarie",
+      appellation: "Riesling, Bulgarie",
       desc: "Riesling frais et aromatique, à l'acidité vive. Un blanc précis, parfait à l'apéritif.",
       cepage: "Riesling",
-      region: "Varna — Bulgarie",
+      region: "Varna, Bulgarie",
       service: "8–10 °C",
       garde: "2–4 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe citron pâle. Nez d'agrumes et de fleurs blanches. Bouche tendue et fraîche.",
       pairing: "Fruits de mer, sushis, poissons, cuisine asiatique."
     },
     en: {
       badge: "White Wine",
       name: "The Wave Riesling",
-      appellation: "Riesling — Bulgaria",
+      appellation: "Riesling, Bulgaria",
       desc: "Fresh, aromatic Riesling with lively acidity. A precise white, perfect as an aperitif.",
       cepage: "Riesling",
-      region: "Varna — Bulgaria",
+      region: "Varna, Bulgaria",
       service: "8–10 °C",
       garde: "2–4 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Pale lemon robe. Citrus and white flowers. Tense, fresh palate.",
       pairing: "Seafood, sushi, fish, Asian cuisine."
     }
@@ -2142,26 +2142,26 @@ const productsData = [
     fr: {
       badge: "Vin Blanc",
       name: "Lakeside Traminer",
-      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      appellation: "Ignatievo Single Vineyard, Bulgarie",
       desc: "Traminer aromatique et floral issu d'un vignoble unique. Un blanc expressif aux notes de rose et de fruits exotiques.",
       cepage: "Traminer",
-      region: "Ignatievo, Varna — Bulgarie",
+      region: "Ignatievo, Varna, Bulgarie",
       service: "8–10 °C",
       garde: "2–4 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe dorée. Nez de rose et de litchi. Bouche ample et parfumée.",
       pairing: "Cuisine épicée, foie gras, fromages bleus, desserts."
     },
     en: {
       badge: "White Wine",
       name: "Lakeside Traminer",
-      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      appellation: "Ignatievo Single Vineyard, Bulgaria",
       desc: "Aromatic, floral single-vineyard Traminer. An expressive white with notes of rose and exotic fruit.",
       cepage: "Traminer",
-      region: "Ignatievo, Varna — Bulgaria",
+      region: "Ignatievo, Varna, Bulgaria",
       service: "8–10 °C",
       garde: "2–4 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Golden robe. Rose and lychee on the nose. Ample, perfumed palate.",
       pairing: "Spicy cuisine, foie gras, blue cheeses, desserts."
     }
@@ -2174,28 +2174,444 @@ const productsData = [
     fr: {
       badge: "Vin Blanc",
       name: "Lakeside Sauvignon Blanc",
-      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      appellation: "Ignatievo Single Vineyard, Bulgarie",
       desc: "Sauvignon Blanc vif et aromatique issu d'un vignoble unique. Un blanc frais aux notes d'agrumes et d'herbes.",
       cepage: "Sauvignon Blanc",
-      region: "Ignatievo, Varna — Bulgarie",
+      region: "Ignatievo, Varna, Bulgarie",
       service: "8–10 °C",
       garde: "1–3 ans",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Robe pâle aux reflets verts. Nez de pamplemousse et d'herbe fraîche. Bouche vive.",
       pairing: "Poissons, fruits de mer, fromages de chèvre, salades."
     },
     en: {
       badge: "White Wine",
       name: "Lakeside Sauvignon Blanc",
-      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      appellation: "Ignatievo Single Vineyard, Bulgaria",
       desc: "Lively, aromatic single-vineyard Sauvignon Blanc. A fresh white with citrus and herbal notes.",
       cepage: "Sauvignon Blanc",
-      region: "Ignatievo, Varna — Bulgaria",
+      region: "Ignatievo, Varna, Bulgaria",
       service: "8–10 °C",
       garde: "1–3 years",
-      alcohol: "—",
+      alcohol: "Non précisé",
       tasting: "Pale robe with green hints. Grapefruit and fresh grass. Lively palate.",
       pairing: "Fish, seafood, goat cheese, salads."
+    }
+  },
+  {
+    id: "la-plage-rosu",
+    img: 'assets/images/vin-rouge-la-plage-rosu.jpg',
+    badgeClass: 'badge-rouge',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Rouge",
+      name: "La Plage Roșu",
+      appellation: "Vin rouge, Roumanie",
+      desc: "Un vin rouge à l'étiquette turquoise ornée de petits bateaux, pensé pour les moments d'été et de partage.",
+      cepage: "Non précisé",
+      region: "Roumanie",
+      service: "16–18 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un rouge souple et fruité, facile à boire.",
+      pairing: "Grillades, charcuteries, plats en sauce, fromages doux."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "La Plage Roșu",
+      appellation: "Red wine, Romania",
+      desc: "A red wine with a turquoise label decorated with little boats, made for summer moments and sharing.",
+      cepage: "Not specified",
+      region: "Romania",
+      service: "16–18 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A supple, fruity red that is easy to drink.",
+      pairing: "Grills, cured meats, dishes in sauce, mild cheeses."
+    }
+  },
+  {
+    id: "la-plage-damour-blanc",
+    img: 'assets/images/vin-blanc-la-plage-damour.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "La Plage D'Amour Blanc",
+      appellation: "Vin blanc, Roumanie",
+      desc: "Un vin blanc à l'étiquette illustrée d'une scène de plage colorée. Frais et convivial, idéal à l'apéritif.",
+      cepage: "Non précisé",
+      region: "Roumanie",
+      service: "8–10 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un blanc frais et fruité, léger en bouche.",
+      pairing: "Apéritif, salades, poissons, fruits de mer."
+    },
+    en: {
+      badge: "White Wine",
+      name: "La Plage D'Amour Blanc",
+      appellation: "White wine, Romania",
+      desc: "A white wine with a colourful illustrated beach-scene label. Fresh and convivial, ideal as an aperitif.",
+      cepage: "Not specified",
+      region: "Romania",
+      service: "8–10 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A fresh, fruity white, light on the palate.",
+      pairing: "Aperitif, salads, fish, seafood."
+    }
+  },
+  {
+    id: "la-plage-damour-rose",
+    img: 'assets/images/vin-rose-la-plage-damour.jpg',
+    badgeClass: 'badge-rose',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Rosé",
+      name: "La Plage D'Amour Rosé",
+      appellation: "Vin rosé, Roumanie",
+      desc: "Un vin rosé à la robe pâle et à l'étiquette de serviettes de plage colorées. Un rosé d'été par excellence.",
+      cepage: "Non précisé",
+      region: "Roumanie",
+      service: "8–10 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un rosé frais et gourmand aux notes de fruits rouges.",
+      pairing: "Salades composées, grillades légères, cuisine méditerranéenne."
+    },
+    en: {
+      badge: "Rosé Wine",
+      name: "La Plage D'Amour Rosé",
+      appellation: "Rosé wine, Romania",
+      desc: "A rosé with a pale robe and a label of colourful beach towels. A summer rosé par excellence.",
+      cepage: "Not specified",
+      region: "Romania",
+      service: "8–10 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A fresh, gourmet rosé with red fruit notes.",
+      pairing: "Composed salads, light grills, Mediterranean cuisine."
+    }
+  },
+  {
+    id: "moft-cuvee-alb",
+    img: 'assets/images/vin-blanc-moft-cuvee-alb.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "MOFT Cuvée Alb",
+      appellation: "Vin blanc, Roumanie",
+      desc: "Une cuvée blanche à l'étiquette épurée et élégante signée MOFT. Un blanc de caractère au style contemporain.",
+      cepage: "Non précisé",
+      region: "Roumanie",
+      service: "8–10 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un blanc sec, net et frais.",
+      pairing: "Poissons, volailles, fromages de chèvre."
+    },
+    en: {
+      badge: "White Wine",
+      name: "MOFT Cuvée Alb",
+      appellation: "White wine, Romania",
+      desc: "A white cuvée with a clean, elegant label by MOFT. A white with character and a contemporary style.",
+      cepage: "Not specified",
+      region: "Romania",
+      service: "8–10 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A dry, crisp and fresh white.",
+      pairing: "Fish, poultry, goat cheese."
+    }
+  },
+  {
+    id: "moft-cuvee-rosu",
+    img: 'assets/images/vin-rouge-moft-cuvee-rosu.jpg',
+    badgeClass: 'badge-rouge',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Rouge",
+      name: "MOFT Cuvée Roșu",
+      appellation: "Vin rouge, Roumanie",
+      desc: "Une cuvée rouge à l'étiquette épurée et élégante signée MOFT. Un rouge structuré au style contemporain.",
+      cepage: "Non précisé",
+      region: "Roumanie",
+      service: "16–18 °C",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Un rouge structuré aux tannins souples.",
+      pairing: "Viandes rouges, plats mijotés, fromages affinés."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "MOFT Cuvée Roșu",
+      appellation: "Red wine, Romania",
+      desc: "A red cuvée with a clean, elegant label by MOFT. A structured red with a contemporary style.",
+      cepage: "Not specified",
+      region: "Romania",
+      service: "16–18 °C",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "A structured red with supple tannins.",
+      pairing: "Red meats, slow-cooked dishes, aged cheeses."
+    }
+  },
+  {
+    id: "natterjack-irish-whiskey",
+    img: 'assets/images/spiritueux-natterjack-irish-whiskey.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Whiskey",
+      name: "Natterjack Irish Whiskey",
+      appellation: "Whiskey irlandais, Irlande",
+      desc: "Un whiskey irlandais reconnaissable à son étiquette ornée d'un crapaud calamite, l'animal emblème de la marque. Un caractère affirmé et une belle rondeur.",
+      cepage: "Irish whiskey",
+      region: "Irlande",
+      service: "Sec ou avec un glaçon",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "Non précisé",
+      tasting: "Notes de vanille, de fruits secs et de bois toasté, finale douce et persistante.",
+      pairing: "Chocolat noir, fromages affinés, cigare, digestif."
+    },
+    en: {
+      badge: "Whiskey",
+      name: "Natterjack Irish Whiskey",
+      appellation: "Irish whiskey, Ireland",
+      desc: "An Irish whiskey recognisable by its label featuring a natterjack toad, the brand's emblem. Strong character and a lovely roundness.",
+      cepage: "Irish whiskey",
+      region: "Ireland",
+      service: "Neat or on the rocks",
+      garde: "Keeps well once opened",
+      alcohol: "Not specified",
+      tasting: "Notes of vanilla, dried fruit and toasted oak, with a soft, lingering finish.",
+      pairing: "Dark chocolate, aged cheeses, cigar, digestif."
+    }
+  },
+  {
+    id: "natterjack-the-mistake",
+    img: 'assets/images/spiritueux-natterjack-the-mistake.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Whiskey",
+      name: "Natterjack The Mistake",
+      appellation: "Whiskey irlandais triple distillation, Irlande",
+      desc: "L'édition The Mistake du Natterjack : un whiskey irlandais triple distillé et fortement vieilli en fût, reconnaissable à son étiquette jaune.",
+      cepage: "Irish whiskey triple distillation",
+      region: "Irlande",
+      service: "Sec ou avec un glaçon",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "46 % vol.",
+      tasting: "Un profil boisé et puissant, aux notes de fût et d'épices douces.",
+      pairing: "Chocolat noir, fromages affinés, cigare, digestif."
+    },
+    en: {
+      badge: "Whiskey",
+      name: "Natterjack The Mistake",
+      appellation: "Triple distilled Irish whiskey, Ireland",
+      desc: "The Mistake edition of Natterjack: a triple distilled, heavily oaked Irish whiskey with a distinctive yellow label.",
+      cepage: "Triple distilled Irish whiskey",
+      region: "Ireland",
+      service: "Neat or on the rocks",
+      garde: "Keeps well once opened",
+      alcohol: "46% vol.",
+      tasting: "A woody, powerful profile with cask and sweet spice notes.",
+      pairing: "Dark chocolate, aged cheeses, cigar, digestif."
+    }
+  },
+  {
+    id: "whaletale-xo-brandy",
+    img: 'assets/images/spiritueux-whaletale-xo-brandy.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Brandy",
+      name: "Whaletale XO Brandy",
+      appellation: "Potstill XO Brandy, Afrique du Sud",
+      desc: "Un brandy XO sud-africain distillé en alambic (potstill), présenté dans un flacon élégant orné d'une queue de baleine. Un digestif de prestige aux couleurs ambrées.",
+      cepage: "Brandy de vin, distillation potstill",
+      region: "Afrique du Sud",
+      service: "Sec, à température ambiante",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "38 % vol.",
+      tasting: "Robe ambrée. Notes de fruits secs, de vanille et de bois précieux, bouche ronde et longue.",
+      pairing: "Chocolat noir, fruits secs, cigare, café."
+    },
+    en: {
+      badge: "Brandy",
+      name: "Whaletale XO Brandy",
+      appellation: "Potstill XO Brandy, South Africa",
+      desc: "A South African XO brandy distilled in a pot still, presented in an elegant decanter featuring a whale tail. A prestige digestif with an amber colour.",
+      cepage: "Wine brandy, pot still distillation",
+      region: "South Africa",
+      service: "Neat, at room temperature",
+      garde: "Keeps well once opened",
+      alcohol: "38% vol.",
+      tasting: "Amber robe. Notes of dried fruit, vanilla and precious wood, with a round, long palate.",
+      pairing: "Dark chocolate, dried fruit, cigar, coffee."
+    }
+  },
+  {
+    id: "whaletale-whisky",
+    img: 'assets/images/spiritueux-whaletale-whisky.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Whisky",
+      name: "Whaletale Whisky",
+      appellation: "Whisky, Afrique du Sud et Écosse",
+      desc: "Un whisky de la maison Whaletale, dans le même flacon élégant que le XO Brandy. Produit d'Afrique du Sud et d'Écosse.",
+      cepage: "Whisky",
+      region: "Afrique du Sud et Écosse",
+      service: "Sec ou avec un glaçon",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "43 % vol.",
+      tasting: "Robe dorée. Un whisky souple aux notes de miel et de céréales.",
+      pairing: "Fromages affinés, fruits secs, chocolat."
+    },
+    en: {
+      badge: "Whisky",
+      name: "Whaletale Whisky",
+      appellation: "Whisky, South Africa and Scotland",
+      desc: "A whisky from Whaletale, in the same elegant decanter as the XO Brandy. Product of South Africa and Scotland.",
+      cepage: "Whisky",
+      region: "South Africa and Scotland",
+      service: "Neat or on the rocks",
+      garde: "Keeps well once opened",
+      alcohol: "43% vol.",
+      tasting: "Golden robe. A supple whisky with notes of honey and cereal.",
+      pairing: "Aged cheeses, dried fruit, chocolate."
+    }
+  },
+  {
+    id: "marula-gin",
+    img: 'assets/images/spiritueux-marula-gin.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Gin Premium",
+      name: "Marula Gin",
+      appellation: "Gin premium, Afrique du Sud",
+      desc: "Un gin premium sud-africain à infusion naturelle de marula, le fruit de l'éléphant. Une étiquette inspirée de la savane.",
+      cepage: "Gin, infusion naturelle de marula",
+      region: "Afrique du Sud",
+      service: "Bien frais, avec tonic et zeste",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "Non précisé",
+      tasting: "Notes de genièvre, d'agrumes et de fruit exotique, finale fraîche.",
+      pairing: "Gin tonic, cocktails, tapas, fruits de mer."
+    },
+    en: {
+      badge: "Premium Gin",
+      name: "Marula Gin",
+      appellation: "Premium gin, South Africa",
+      desc: "A South African premium gin with a natural marula infusion, the elephant fruit. A label inspired by the savannah.",
+      cepage: "Gin, natural marula infusion",
+      region: "South Africa",
+      service: "Well chilled, with tonic and a twist",
+      garde: "Keeps well once opened",
+      alcohol: "Not specified",
+      tasting: "Notes of juniper, citrus and exotic fruit, with a fresh finish.",
+      pairing: "Gin and tonic, cocktails, tapas, seafood."
+    }
+  },
+  {
+    id: "le-mousquet-armagnac-orange",
+    img: 'assets/images/spiritueux-le-mousquet-liqueur-armagnac-orange.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Liqueur",
+      name: "Le Mousquet Liqueur d'Armagnac à l'orange",
+      appellation: "Liqueur d'Armagnac à l'orange, France",
+      desc: "Une liqueur française qui associe l'armagnac et l'orange. Une douceur parfumée, à servir en digestif.",
+      cepage: "Armagnac et orange",
+      region: "France",
+      service: "Frais ou avec un glaçon",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "30 % vol.",
+      tasting: "Notes d'écorce d'orange confite et de raisin, bouche douce et chaleureuse.",
+      pairing: "Desserts au chocolat, crêpes, glaces, digestif."
+    },
+    en: {
+      badge: "Liqueur",
+      name: "Le Mousquet Liqueur d'Armagnac à l'orange",
+      appellation: "Armagnac and orange liqueur, France",
+      desc: "A French liqueur combining armagnac and orange. A fragrant sweetness, served as a digestif.",
+      cepage: "Armagnac and orange",
+      region: "France",
+      service: "Chilled or on the rocks",
+      garde: "Keeps well once opened",
+      alcohol: "30% vol.",
+      tasting: "Notes of candied orange peel and grape, with a soft, warming palate.",
+      pairing: "Chocolate desserts, crêpes, ice cream, digestif."
+    }
+  },
+  {
+    id: "les-prunelles-cabernet-sauvignon",
+    img: 'assets/images/vin-rouge-les-prunelles-cabernet-sauvignon.jpg',
+    badgeClass: 'badge-rouge',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Rouge",
+      name: "Les Prunelles Cabernet Sauvignon",
+      appellation: "IGP Pays d'Oc, France",
+      desc: "Un Cabernet Sauvignon du Pays d'Oc de la collection Les Prunelles. Un rouge du sud de la France, généreux et facile à apprécier.",
+      cepage: "Cabernet Sauvignon",
+      region: "Pays d'Oc, France",
+      service: "16–18 °C",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "Non précisé",
+      tasting: "Notes de cassis et de poivron doux, tannins souples.",
+      pairing: "Viandes rouges grillées, agneau, fromages affinés."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "Les Prunelles Cabernet Sauvignon",
+      appellation: "IGP Pays d'Oc, France",
+      desc: "A Cabernet Sauvignon from the Pays d'Oc, Les Prunelles collection. A generous red from the south of France, easy to enjoy.",
+      cepage: "Cabernet Sauvignon",
+      region: "Pays d'Oc, France",
+      service: "16–18 °C",
+      garde: "Keeps well once opened",
+      alcohol: "Not specified",
+      tasting: "Notes of blackcurrant and sweet pepper, with supple tannins.",
+      pairing: "Grilled red meats, lamb, aged cheeses."
+    }
+  },
+  {
+    id: "gin-km12",
+    img: 'assets/images/spiritueux-gin-km12-erable.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Gin",
+      name: "Gin Km12",
+      appellation: "Gin au sirop d'érable, Monts-Valin",
+      desc: "Un gin artisanal du Québec affiné au sirop d'érable. Une douceur boisée rare, pour amateurs de spiritueux originaux.",
+      cepage: "Gin au sirop d'érable",
+      region: "Monts-Valin, Québec (Canada)",
+      service: "Sec, avec un glaçon ou en cocktail",
+      garde: "Se conserve bien une fois ouvert",
+      alcohol: "40 % vol.",
+      tasting: "Notes de genièvre, de caramel d'érable et de bois, finale douce.",
+      pairing: "Cocktails, fromages, desserts, dégustation seul."
+    },
+    en: {
+      badge: "Gin",
+      name: "Gin Km12",
+      appellation: "Gin with maple syrup, Monts-Valin",
+      desc: "A craft gin from Quebec made with maple syrup. A rare, woody sweetness for lovers of original spirits.",
+      cepage: "Gin with maple syrup",
+      region: "Monts-Valin, Quebec (Canada)",
+      service: "Neat, on the rocks or in cocktails",
+      garde: "Keeps well once opened",
+      alcohol: "40% vol.",
+      tasting: "Notes of juniper, maple caramel and wood, with a soft finish.",
+      pairing: "Cocktails, cheeses, desserts, sipping neat."
     }
   }
 ];
@@ -2439,12 +2855,12 @@ function initCommandePage() {
         'Coordonnées :\n' +
         'Nom : ' + prenom + ' ' + nom + '\n' +
         'Email : ' + email + '\n' +
-        'Tél : ' + (phone || '—') + '\n' +
-        'Pays : ' + (pays || '—') + ' | Ville : ' + (ville || '—') + '\n' +
-        'Adresse : ' + (adresse || '—') + '\n' +
-        'Livraison : ' + (delivery || '—') + '\n' +
-        'Occasion : ' + (occasion || '—') + '\n' +
-        'Notes : ' + (notes || '—');
+        'Tél : ' + (phone || '-') + '\n' +
+        'Pays : ' + (pays || '-') + ' | Ville : ' + (ville || '-') + '\n' +
+        'Adresse : ' + (adresse || '-') + '\n' +
+        'Livraison : ' + (delivery || '-') + '\n' +
+        'Occasion : ' + (occasion || '-') + '\n' +
+        'Notes : ' + (notes || '-');
 
       sendToWhatsApp(text);
       orderForm.hidden = true;
@@ -2488,3 +2904,20 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
+
+/* ---- Lightbox galerie photos ---- */
+(function initLightbox() {
+  const dlg = document.getElementById('lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  const big = dlg.querySelector('img');
+  document.querySelectorAll('[data-lightbox]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      big.src = a.getAttribute('href');
+      big.alt = (a.querySelector('img') || {}).alt || '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function (e) { if (e.target !== big) dlg.close(); });
+})();

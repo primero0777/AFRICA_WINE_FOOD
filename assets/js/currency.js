@@ -1,5 +1,5 @@
 /* =============================================
-   AFRICA WINE FOOD — currency.js
+   AFRICA WINE FOOD - currency.js
    Convertisseur XOF <-> EUR  |  taux live, cache 1h
    Note: 1 EUR = 655.957 XOF (parité fixe CFA)
    ============================================= */
@@ -79,7 +79,7 @@ window.AWF_CURRENCY = (function () {
       ? `1 EUR ≈ ${r} F CFA ⚠️`
       : `1 EUR = ${r} F CFA (live)`;
     el.title = fallback
-      ? 'Taux de secours — API temporairement indisponible'
+      ? 'Taux de secours, API temporairement indisponible'
       : 'Taux de change en temps réel';
     el.classList.toggle('rate-fallback', fallback);
   }
