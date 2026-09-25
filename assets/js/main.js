@@ -240,7 +240,7 @@ const translations = {
     'catalogue.cta.text': "Vous recherchez une bouteille en particulier ? Notre équipe est disponible pour vous aider.",
     'catalogue.cta.btn':  'Demander un conseil personnalisé',
 
-    'about.header.subtitle': "Vins et spiritueux d'exception, à Lomé, au Togo.",
+    'about.header.subtitle': "Vins et spiritueux d'exception en Afrique.",
     'about.dispenser.pretitle': 'Fabriqué en Finlande',
     'about.dispenser.title': 'Notre distributeur de boissons',
     'about.events.pretitle': 'En images',
@@ -509,7 +509,7 @@ const translations = {
     'catalogue.cta.text': 'Looking for a specific bottle? Our team is available to help you.',
     'catalogue.cta.btn':  'Request personalised advice',
 
-    'about.header.subtitle': "Exceptional wines and spirits, from Lomé, Togo.",
+    'about.header.subtitle': "Exceptional wines and spirits in Africa.",
     'about.dispenser.pretitle': 'Made in Finland',
     'about.dispenser.title': 'Our drinks dispenser',
     'about.events.pretitle': 'In pictures',
