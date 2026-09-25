@@ -55,6 +55,7 @@ function getHistoryId() {
 /* ── Formatage prix selon la devise choisie par le client */
 function fmtXof(n) {
   const num = Number(n);
+  if (!num) return 'Sur devis';
   if (_devisCurrency === 'EUR' && window.AWF_CURRENCY) {
     return window.AWF_CURRENCY.fmtEUR(num / window.AWF_CURRENCY.rate);
   }

@@ -1873,6 +1873,326 @@ const productsData = [
       tasting: "Deep mahogany robe with copper highlights, of striking beauty. Enchanting nose of dried fruits (prune, date, currant), dark chocolate, aged oak, oriental spices and a hint of dried herbs. Dense and complex palate, with a finish of prodigious length.",
       pairing: "Christmas pudding, dark chocolate with pecans, quality charcuterie, Montecristo cigars, blue cheeses (Roquefort, Stilton)."
     }
+  },
+  {
+    id: "harvest-day-original",
+    img: 'assets/images/spiritueux-harvest-day-vodka-original.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vodka",
+      name: "Harvest Day Original",
+      appellation: "Vodka Premium — Ukraine",
+      desc: "Vodka premium ukrainienne à la bouteille gravée et à l'étiquette dorée. Un profil net et pur, pensé pour se déguster frappée ou en cocktail.",
+      cepage: "Vodka de grain",
+      region: "Ukraine",
+      service: "Bien frappée, 0–4 °C",
+      garde: "Ne se bonifie pas en bouteille",
+      alcohol: "—",
+      tasting: "Robe cristalline. Nez neutre et net. Bouche douce et ronde, finale propre.",
+      pairing: "Caviar, poissons fumés, blinis, cornichons, charcuteries."
+    },
+    en: {
+      badge: "Vodka",
+      name: "Harvest Day Original",
+      appellation: "Premium Vodka — Ukraine",
+      desc: "Premium Ukrainian vodka in an embossed bottle with a gold label. A clean, pure profile made to be served chilled or in cocktails.",
+      cepage: "Grain vodka",
+      region: "Ukraine",
+      service: "Well chilled, 0–4 °C",
+      garde: "Does not improve in the bottle",
+      alcohol: "—",
+      tasting: "Crystal-clear. Clean, neutral nose. Soft, round palate with a clean finish.",
+      pairing: "Caviar, smoked fish, blinis, pickles, cured meats."
+    }
+  },
+  {
+    id: "harvest-day-classic",
+    img: 'assets/images/spiritueux-harvest-day-vodka-classic.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vodka",
+      name: "Harvest Day Classic",
+      appellation: "Vodka Pure Grain — Ukraine",
+      desc: "Vodka pure de grain dans une bouteille originale à anse, reconnaissable entre toutes. Le choix classique pour le service traditionnel comme pour les cocktails.",
+      cepage: "Vodka pure de grain",
+      region: "Ukraine",
+      service: "Bien frappée, 0–4 °C",
+      garde: "Ne se bonifie pas en bouteille",
+      alcohol: "40 % vol.",
+      tasting: "Robe cristalline. Nez franc de céréale. Bouche souple et nette, finale rafraîchissante.",
+      pairing: "Viandes froides, poissons marinés, harengs, plats épicés."
+    },
+    en: {
+      badge: "Vodka",
+      name: "Harvest Day Classic",
+      appellation: "Pure Grain Vodka — Ukraine",
+      desc: "Pure grain vodka in an original handled bottle. The classic choice for traditional service and for cocktails.",
+      cepage: "Pure grain vodka",
+      region: "Ukraine",
+      service: "Well chilled, 0–4 °C",
+      garde: "Does not improve in the bottle",
+      alcohol: "40 % vol.",
+      tasting: "Crystal-clear. Honest cereal nose. Supple, clean palate with a refreshing finish.",
+      pairing: "Cold cuts, marinated fish, herring, spicy dishes."
+    }
+  },
+  {
+    id: "harvest-day-melon",
+    img: 'assets/images/spiritueux-harvest-day-vodka-melon.jpg',
+    badgeClass: 'badge-spirits',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vodka",
+      name: "Harvest Day Melon",
+      appellation: "Vodka aromatisée Melon — Ukraine",
+      desc: "Vodka aromatisée au melon, fruitée et gourmande. Idéale glacée en shot, en long drink ou dans les cocktails d'été.",
+      cepage: "Vodka aromatisée melon",
+      region: "Ukraine",
+      service: "Bien frappée, 0–4 °C",
+      garde: "Ne se bonifie pas en bouteille",
+      alcohol: "40 % vol.",
+      tasting: "Nez de melon mûr. Bouche fruitée et douce, finale fraîche.",
+      pairing: "Cocktails, desserts fruités, fromages frais, apéritif."
+    },
+    en: {
+      badge: "Vodka",
+      name: "Harvest Day Melon",
+      appellation: "Melon Flavoured Vodka — Ukraine",
+      desc: "Melon-flavoured vodka, fruity and easy to enjoy. Ideal ice-cold, as a long drink or in summer cocktails.",
+      cepage: "Melon flavoured vodka",
+      region: "Ukraine",
+      service: "Well chilled, 0–4 °C",
+      garde: "Does not improve in the bottle",
+      alcohol: "40 % vol.",
+      tasting: "Ripe melon on the nose. Fruity, soft palate with a fresh finish.",
+      pairing: "Cocktails, fruity desserts, fresh cheeses, aperitif."
+    }
+  },
+  {
+    id: "lakeside-cabernet-franc",
+    img: 'assets/images/vin-rouge-lakeside-cabernet-franc.jpg',
+    badgeClass: 'badge-rouge',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Rouge",
+      name: "Lakeside Cabernet Franc",
+      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      desc: "Cabernet Franc issu d'un vignoble unique, à l'étiquette marquée d'une vague bleue. Un rouge frais et structuré.",
+      cepage: "Cabernet Franc",
+      region: "Ignatievo, Varna — Bulgarie",
+      service: "16–18 °C",
+      garde: "3–5 ans",
+      alcohol: "—",
+      tasting: "Robe rubis. Nez de fruits rouges et de note poivrée. Bouche fraîche aux tannins souples.",
+      pairing: "Viandes rouges grillées, volaille rôtie, fromages à pâte pressée."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "Lakeside Cabernet Franc",
+      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      desc: "Single-vineyard Cabernet Franc with a signature blue wave label. A fresh, structured red.",
+      cepage: "Cabernet Franc",
+      region: "Ignatievo, Varna — Bulgaria",
+      service: "16–18 °C",
+      garde: "3–5 years",
+      alcohol: "—",
+      tasting: "Ruby robe. Red fruit and peppery notes. Fresh palate with supple tannins.",
+      pairing: "Grilled red meats, roast poultry, pressed cheeses."
+    }
+  },
+  {
+    id: "the-wave-pinot-grigio",
+    img: 'assets/images/vin-blanc-the-wave-pinot-grigio.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "The Wave Pinot Grigio",
+      appellation: "Pinot Grigio — Bulgarie",
+      desc: "Pinot Grigio léger et élégant, à l'étiquette ondulée The Wave. Un blanc désaltérant pour tous les jours.",
+      cepage: "Pinot Grigio",
+      region: "Varna — Bulgarie",
+      service: "8–10 °C",
+      garde: "1–3 ans",
+      alcohol: "—",
+      tasting: "Robe paille claire. Nez de poire et d'agrumes. Bouche vive et légère.",
+      pairing: "Poissons grillés, salades, fruits de mer, apéritif."
+    },
+    en: {
+      badge: "White Wine",
+      name: "The Wave Pinot Grigio",
+      appellation: "Pinot Grigio — Bulgaria",
+      desc: "Light, elegant Pinot Grigio with The Wave wavy label. A refreshing everyday white.",
+      cepage: "Pinot Grigio",
+      region: "Varna — Bulgaria",
+      service: "8–10 °C",
+      garde: "1–3 years",
+      alcohol: "—",
+      tasting: "Pale straw robe. Pear and citrus on the nose. Lively, light palate.",
+      pairing: "Grilled fish, salads, seafood, aperitif."
+    }
+  },
+  {
+    id: "lakeside-varnenski-misket",
+    img: 'assets/images/vin-blanc-lakeside-varnenski-misket.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "Lakeside Varnenski Misket",
+      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      desc: "Varnenski Misket, cépage aromatique emblématique de la région de Varna. Un blanc parfumé et expressif.",
+      cepage: "Varnenski Misket",
+      region: "Ignatievo, Varna — Bulgarie",
+      service: "8–10 °C",
+      garde: "1–3 ans",
+      alcohol: "—",
+      tasting: "Robe dorée claire. Nez floral et muscaté. Bouche fruitée et souple.",
+      pairing: "Cuisine épicée douce, fromages frais, desserts aux fruits."
+    },
+    en: {
+      badge: "White Wine",
+      name: "Lakeside Varnenski Misket",
+      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      desc: "Varnenski Misket, an aromatic grape emblematic of the Varna region. A fragrant, expressive white.",
+      cepage: "Varnenski Misket",
+      region: "Ignatievo, Varna — Bulgaria",
+      service: "8–10 °C",
+      garde: "1–3 years",
+      alcohol: "—",
+      tasting: "Light golden robe. Floral, muscat nose. Fruity, supple palate.",
+      pairing: "Mildly spiced dishes, fresh cheeses, fruit desserts."
+    }
+  },
+  {
+    id: "the-wave-rubin",
+    img: 'assets/images/vin-rouge-the-wave-rubin.jpg',
+    badgeClass: 'badge-rouge',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Rouge",
+      name: "The Wave Rubin",
+      appellation: "Rubin — Bulgarie",
+      desc: "Rubin, cépage rouge bulgare, sous l'étiquette The Wave. Un rouge charnu et fruité.",
+      cepage: "Rubin",
+      region: "Varna — Bulgarie",
+      service: "16–18 °C",
+      garde: "3–5 ans",
+      alcohol: "—",
+      tasting: "Robe rubis intense. Nez de fruits noirs et d'épices. Bouche ronde et généreuse.",
+      pairing: "Grillades, plats mijotés, fromages affinés."
+    },
+    en: {
+      badge: "Red Wine",
+      name: "The Wave Rubin",
+      appellation: "Rubin — Bulgaria",
+      desc: "Rubin, a Bulgarian red grape, under The Wave label. A full-bodied, fruity red.",
+      cepage: "Rubin",
+      region: "Varna — Bulgaria",
+      service: "16–18 °C",
+      garde: "3–5 years",
+      alcohol: "—",
+      tasting: "Deep ruby robe. Black fruit and spice on the nose. Round, generous palate.",
+      pairing: "Grills, slow-cooked dishes, aged cheeses."
+    }
+  },
+  {
+    id: "the-wave-riesling",
+    img: 'assets/images/vin-blanc-the-wave-riesling.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "The Wave Riesling",
+      appellation: "Riesling — Bulgarie",
+      desc: "Riesling frais et aromatique, à l'acidité vive. Un blanc précis, parfait à l'apéritif.",
+      cepage: "Riesling",
+      region: "Varna — Bulgarie",
+      service: "8–10 °C",
+      garde: "2–4 ans",
+      alcohol: "—",
+      tasting: "Robe citron pâle. Nez d'agrumes et de fleurs blanches. Bouche tendue et fraîche.",
+      pairing: "Fruits de mer, sushis, poissons, cuisine asiatique."
+    },
+    en: {
+      badge: "White Wine",
+      name: "The Wave Riesling",
+      appellation: "Riesling — Bulgaria",
+      desc: "Fresh, aromatic Riesling with lively acidity. A precise white, perfect as an aperitif.",
+      cepage: "Riesling",
+      region: "Varna — Bulgaria",
+      service: "8–10 °C",
+      garde: "2–4 years",
+      alcohol: "—",
+      tasting: "Pale lemon robe. Citrus and white flowers. Tense, fresh palate.",
+      pairing: "Seafood, sushi, fish, Asian cuisine."
+    }
+  },
+  {
+    id: "lakeside-traminer",
+    img: 'assets/images/vin-blanc-lakeside-traminer.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "Lakeside Traminer",
+      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      desc: "Traminer aromatique et floral issu d'un vignoble unique. Un blanc expressif aux notes de rose et de fruits exotiques.",
+      cepage: "Traminer",
+      region: "Ignatievo, Varna — Bulgarie",
+      service: "8–10 °C",
+      garde: "2–4 ans",
+      alcohol: "—",
+      tasting: "Robe dorée. Nez de rose et de litchi. Bouche ample et parfumée.",
+      pairing: "Cuisine épicée, foie gras, fromages bleus, desserts."
+    },
+    en: {
+      badge: "White Wine",
+      name: "Lakeside Traminer",
+      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      desc: "Aromatic, floral single-vineyard Traminer. An expressive white with notes of rose and exotic fruit.",
+      cepage: "Traminer",
+      region: "Ignatievo, Varna — Bulgaria",
+      service: "8–10 °C",
+      garde: "2–4 years",
+      alcohol: "—",
+      tasting: "Golden robe. Rose and lychee on the nose. Ample, perfumed palate.",
+      pairing: "Spicy cuisine, foie gras, blue cheeses, desserts."
+    }
+  },
+  {
+    id: "lakeside-sauvignon-blanc",
+    img: 'assets/images/vin-blanc-lakeside-sauvignon-blanc.jpg',
+    badgeClass: 'badge-blanc',
+    price: 'Sur devis',
+    fr: {
+      badge: "Vin Blanc",
+      name: "Lakeside Sauvignon Blanc",
+      appellation: "Ignatievo Single Vineyard — Bulgarie",
+      desc: "Sauvignon Blanc vif et aromatique issu d'un vignoble unique. Un blanc frais aux notes d'agrumes et d'herbes.",
+      cepage: "Sauvignon Blanc",
+      region: "Ignatievo, Varna — Bulgarie",
+      service: "8–10 °C",
+      garde: "1–3 ans",
+      alcohol: "—",
+      tasting: "Robe pâle aux reflets verts. Nez de pamplemousse et d'herbe fraîche. Bouche vive.",
+      pairing: "Poissons, fruits de mer, fromages de chèvre, salades."
+    },
+    en: {
+      badge: "White Wine",
+      name: "Lakeside Sauvignon Blanc",
+      appellation: "Ignatievo Single Vineyard — Bulgaria",
+      desc: "Lively, aromatic single-vineyard Sauvignon Blanc. A fresh white with citrus and herbal notes.",
+      cepage: "Sauvignon Blanc",
+      region: "Ignatievo, Varna — Bulgaria",
+      service: "8–10 °C",
+      garde: "1–3 years",
+      alcohol: "—",
+      tasting: "Pale robe with green hints. Grapefruit and fresh grass. Lively palate.",
+      pairing: "Fish, seafood, goat cheese, salads."
+    }
   }
 ];
 
@@ -2031,7 +2351,7 @@ function initCommandePage() {
           <p class="cart-item-badge">${t.badge}</p>
           <p class="cart-item-name">${t.name}</p>
           <p class="cart-item-appellation">${t.appellation}</p>
-          <p class="cart-item-price">${itemPriceStr} / bouteille</p>
+          <p class="cart-item-price">${itemPriceStr}${data.priceXof ? ' / bouteille' : ''}</p>
         </div>
         <div class="cart-item-controls">
           <div class="qty-stepper" role="group" aria-label="Quantité">
