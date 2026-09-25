@@ -1229,6 +1229,38 @@ const productsData = [
     }
   },
   {
+    id: "el-cabron-spiced-rum",
+    img: "assets/images/produits/spiritueux-el-cabron-spiced-rum.jpg",
+    badgeClass: "badge-spirits",
+    price: "Sur devis",
+    fr: {
+      badge: "Rhum",
+      name: "El Cabrón Spiced Rum",
+      appellation: "Rhum épicé, fûts de bourbon",
+      desc: "Un rhum épicé finalisé en fûts de bourbon, qui allie la force jamaïcaine et le charme de l'île de la Réunion. Il est présenté dans une bouteille scellée de cire rouge, avec son étui cylindrique.",
+      cepage: "Rhum épicé, finition en fûts de bourbon",
+      region: "Jamaïque et île de la Réunion",
+      service: "Sec ou avec des glaçons",
+      garde: "Non précisé",
+      alcohol: "Non précisé",
+      tasting: "Ambre sombre, riche et engageant. Notes de caramel au beurre, de tabac et une touche de vanille, avec une première gorgée souple et assurée.",
+      pairing: "Cigare, chocolat noir, desserts au caramel."
+    },
+    en: {
+      badge: "Rum",
+      name: "El Cabrón Spiced Rum",
+      appellation: "Spiced rum, bourbon casks",
+      desc: "A spiced rum finished in bourbon casks, combining Jamaican strength and the charm of Réunion Island. It comes in a bottle sealed with red wax, with its cylindrical tube.",
+      cepage: "Spiced rum, bourbon cask finish",
+      region: "Jamaica and Réunion Island",
+      service: "Neat or on the rocks",
+      garde: "Not specified",
+      alcohol: "Not specified",
+      tasting: "Dark amber, rich and inviting. Notes of butterscotch, tobacco and a touch of vanilla, with a smooth, confident first sip.",
+      pairing: "Cigar, dark chocolate, caramel desserts."
+    }
+  },
+  {
     id: "moft-cuvee-rosu",
     img: "assets/images/produits/vin-rouge-moft-cuvee-rosu.jpg",
     badgeClass: "badge-rouge",
