@@ -3223,6 +3223,63 @@ function setVh() {
 
 /* Init */
 /* chaque initialisation est isolee : une erreur n'arrete pas les suivantes */
+/* videos du catalogue : lecture automatique, sans son, bouton lecture/pause au clic */
+function initClipAutoplay() {
+  const grid = document.querySelector('.clip-grid.clip-auto');
+  if (!grid) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canObserve = 'IntersectionObserver' in window && !reduce;
+  const clips = grid.querySelectorAll('.clip-card video');
+
+  clips.forEach(v => {
+    v.muted = true; v.loop = true; v.playsInline = true; v.removeAttribute('controls');
+    const wrap = document.createElement('div');
+    wrap.className = 'clip-media' + (canObserve ? '' : ' manual');
+    v.parentNode.insertBefore(wrap, v);
+    wrap.appendChild(v);
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'clip-toggle';
+    btn.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i>';
+    wrap.appendChild(btn);
+
+    let userPaused = false, timer;
+    const sync = () => {
+      const playing = !v.paused;
+      btn.querySelector('i').className = 'fa-solid ' + (playing ? 'fa-pause' : 'fa-play');
+      btn.setAttribute('aria-label', playing ? 'Mettre en pause' : 'Lire la vidéo');
+    };
+    const flash = () => {
+      wrap.classList.add('show-btn');
+      clearTimeout(timer);
+      if (!v.paused) timer = setTimeout(() => wrap.classList.remove('show-btn'), 1800);
+    };
+    wrap.addEventListener('click', () => {
+      if (v.paused) { userPaused = false; v.play().catch(() => {}); }
+      else { userPaused = true; v.pause(); }
+      wrap.classList.toggle('user-paused', userPaused);
+      sync(); flash();
+    });
+    v.addEventListener('play', sync);
+    v.addEventListener('pause', sync);
+    v._auto = { paused: () => userPaused, reset: () => { userPaused = false; wrap.classList.remove('user-paused'); } };
+    sync();
+  });
+
+  if (!canObserve) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      const v = en.target;
+      if (en.isIntersecting && en.intersectionRatio >= 0.5) {
+        if (!v._auto.paused()) v.play().catch(() => {});
+      } else {
+        v.pause(); v._auto.reset();
+      }
+    });
+  }, { threshold: [0, 0.5, 1] });
+  clips.forEach(v => io.observe(v));
+}
+
+
 function safe(fn) {
   try { fn(); } catch (e) { console.warn('init', fn.name, e); }
 }
@@ -3247,6 +3304,7 @@ function init() {
   safe(initCart);
   safe(initProductModal);
   safe(initCommandePage);
+  safe(initClipAutoplay);
 }
 
 if (document.readyState === 'loading') {
