@@ -454,12 +454,11 @@ function populateDevis(devisData) {
         <td class="td-num">${String(i + 1).padStart(2, '0')}</td>
         <td class="td-desc">
           <strong>${esc(item.name)}</strong>
-          <span>${esc(item.appellation)}, 75 cl</span>
+          <span>${esc(item.appellation)}</span>
         </td>
-        <td style="text-align:right">${esc(item.qty)}</td>
-        <td style="text-align:right">${fmtXof(item.unitPrice)}</td>
-        <td style="text-align:right;color:#7A7069">0 %</td>
-        <td style="text-align:right;font-weight:600">${fmtXof(item.subtotal)}</td>`;
+        <td class="c-qty" data-label="Quantité">${esc(item.qty)}</td>
+        <td class="c-unit" data-label="Prix unitaire">${fmtXof(item.unitPrice)}</td>
+        <td class="c-total" data-label="Total">${fmtXof(item.subtotal)}</td>`;
       tbody.appendChild(tr);
     });
 
@@ -468,13 +467,12 @@ function populateDevis(devisData) {
     trLiv.innerHTML = `
       <td class="td-num">${String(items.length + 1).padStart(2, '0')}</td>
       <td class="td-desc">
-        <strong>Livraison express sécurisée</strong>
-        <span>Emballage luxe sur mesure, transport température contrôlée. Mode : ${esc(delivery || 'À définir')}.</span>
+        <strong>Livraison</strong>
+        <span>Mode : ${esc(delivery || 'À définir')}. Frais communiqués sur devis.</span>
       </td>
-      <td style="text-align:right">-</td>
-      <td style="text-align:right">-</td>
-      <td style="text-align:right;color:#7A7069">-</td>
-      <td style="text-align:right;font-weight:600">Sur devis</td>`;
+      <td class="c-qty no-mobile"></td>
+      <td class="c-unit no-mobile"></td>
+      <td class="c-total" data-label="Total">Sur devis</td>`;
     tbody.appendChild(trLiv);
   }
 
@@ -487,9 +485,12 @@ function populateDevis(devisData) {
       <span class="val">${fmtXof(total)}</span>
     </div>`;
     html += `<div class="totaux-line"><span class="lbl">Livraison</span><span class="val">Sur devis</span></div>`;
-    html += `<div class="totaux-line"><span class="lbl">TVA</span><span class="val">Non applicable</span></div>`;
+    html += `<div class="totaux-line"><span class="lbl">TVA</span><span class="val">Non incluse</span></div>`;
+    if (items.some(i => !i.unitPrice)) {
+      html += `<div class="totaux-line"><span class="lbl">Articles sur devis</span><span class="val">Non inclus</span></div>`;
+    }
     html += `<div class="totaux-final">
-      <span class="lbl">Total TTC</span>
+      <span class="lbl">Total HT</span>
       <span class="val">${fmtXof(total)}</span>
     </div>`;
     totauxBox.innerHTML = html;
