@@ -148,10 +148,6 @@ const translations = {
     'about.vision.desc':      "Devenir la maison de référence du vin de luxe en Afrique subsaharienne, et faire rayonner la culture du vin auprès des nouvelles générations africaines.",
     'about.values.title':     'Nos Valeurs',
     'about.values.desc':      "Excellence, authenticité, intégrité et passion guident chacune de nos décisions, du choix d'un millésime à la relation avec nos clients.",
-    'about.stats.refs':       'Références',
-    'about.stats.pays':       'Pays desservis',
-    'about.stats.years':      "Ans d'expertise",
-    'about.stats.clients':    'Clients satisfaits',
     'about.team.pretitle':    "L'expertise humaine",
     'about.team.title':       'Notre équipe',
     'about.team.m1.name':     'Tintin Kokou BARBOZA',
@@ -207,7 +203,7 @@ const translations = {
     'footer.contact.title': 'Contact',
     'footer.hours':         'Lun–Ven : 9h–18h · Sam : 10h–18h',
     'footer.legal':         '© {{year}} Africa Wine Food. Tous droits réservés. &nbsp;·&nbsp; <a href="confidentialite.html" style="color:inherit;text-decoration:underline;">Politique de confidentialité</a>',
-    'footer.warning':       "⚠️ L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Interdit aux mineurs de moins de 18 ans.",
+    'footer.warning':       "<i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Interdit aux mineurs de moins de 18 ans.",
     'whatsapp.label':       'WhatsApp',
 
     /* Nouvelles cles multipage */
@@ -226,8 +222,6 @@ const translations = {
     'about.events.title':    'Nos événements',
     'about.mvv.pretitle':    'Ce qui nous guide',
     'about.mvv.title':       'Mission, Vision & Valeurs',
-    'about.stats.pretitle':  'En chiffres',
-    'about.stats.title':     'Africa Wine Food en quelques chiffres',
     'about.cta.pretitle':    'Travaillons ensemble',
     'about.cta.title':       'Prêt à découvrir notre sélection ?',
     'about.cta.desc':        'Consultez notre catalogue ou contactez directement nos experts pour un accompagnement sur mesure.',
@@ -244,9 +238,9 @@ const translations = {
     'blog.a7.excerpt':            "De la Grande Champagne à l'Armagnac, notre immersion dans l'univers du cognac d'exception pour mieux comprendre ce spiritueux iconique aux multiples nuances...",
     'blog.a1.body':               "Bordeaux 2024 est marqué par un été chaud et sec, tempéré par des pluies automnales salvatrices. Les châteaux ayant les meilleures expositions et des sols à bonne rétention hydrique ont produit des vins d'une concentration et d'une finesse rares.",
     'blog.newsletter.title':      'Restez informe',
-    'blog.newsletter.desc':       "Recevez nos conseils, nos nouveautes et nos offres exclusives directement dans votre boite mail.",
+    'blog.newsletter.desc':       "Recevez nos conseils, nos nouveautés et nos offres exclusives directement dans votre boite mail.",
     'blog.newsletter.btn':        "S'inscrire",
-    'blog.newsletter.success':    "Merci ! Vous etes inscrit a notre newsletter.",
+    'blog.newsletter.success':    "Merci ! Vous êtes inscrit à notre newsletter.",
 
     'contact.info.hours':         'Horaires',
     'contact.map.pretitle':       'Ou nous trouver',
@@ -398,10 +392,6 @@ const translations = {
     'about.vision.desc':      "To become the reference house for luxury wine in Sub-Saharan Africa, and to spread wine culture among new African generations.",
     'about.values.title':     'Our Values',
     'about.values.desc':      "Excellence, authenticity, integrity and passion guide every decision we make, from choosing a vintage to our relationship with clients.",
-    'about.stats.refs':       'References',
-    'about.stats.pays':       'Countries served',
-    'about.stats.years':      "Years of expertise",
-    'about.stats.clients':    'Satisfied clients',
     'about.team.pretitle':    'Human expertise',
     'about.team.title':       'Our team',
     'about.team.m1.name':     'Tintin Kokou BARBOZA',
@@ -457,7 +447,7 @@ const translations = {
     'footer.contact.title': 'Contact',
     'footer.hours':         'Mon–Fri: 9am–6pm · Sat: 10am–6pm',
     'footer.legal':         '© {{year}} Africa Wine Food. All rights reserved. &nbsp;·&nbsp; <a href="confidentialite.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a>',
-    'footer.warning':       "⚠️ Alcohol abuse is dangerous for your health. Drink responsibly. Sale prohibited to persons under 18.",
+    'footer.warning':       "<i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Alcohol abuse is dangerous for your health. Drink responsibly. Sale prohibited to persons under 18.",
     'whatsapp.label':       'WhatsApp',
 
     /* New multipage keys */
@@ -476,8 +466,6 @@ const translations = {
     'about.events.title':    'Our events',
     'about.mvv.pretitle':    'What drives us',
     'about.mvv.title':       'Mission, Vision & Values',
-    'about.stats.pretitle':  'By the numbers',
-    'about.stats.title':     'Africa Wine Food in figures',
     'about.cta.pretitle':    "Let's work together",
     'about.cta.title':       'Ready to discover our selection?',
     'about.cta.desc':        'Browse our catalogue or contact our experts directly for personalised guidance.',
@@ -519,7 +507,7 @@ function applyTranslations(lang) {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) {
       const val = typeof t[key] === 'string' ? t[key].replace('{{year}}', year) : t[key];
-      if (key === 'hero.title' || key === 'footer.legal') {
+      if (key === 'hero.title' || key === 'footer.legal' || key === 'footer.warning') {
         el.innerHTML = val;
       } else {
         el.textContent = val;
