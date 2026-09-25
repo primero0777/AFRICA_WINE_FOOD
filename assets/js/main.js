@@ -231,6 +231,8 @@ const translations = {
     'catalogue.cta.btn':  'Demander un conseil personnalisé',
 
     'about.header.subtitle': "Depuis 2009, la référence du vin de luxe en Afrique de l'Ouest.",
+    'about.dispenser.pretitle': 'Fabriqué en Finlande',
+    'about.dispenser.title': 'Notre distributeur de boissons',
     'about.events.pretitle': 'En images',
     'about.events.title':    'Nos événements',
     'about.mvv.pretitle':    'Ce qui nous guide',
@@ -490,6 +492,8 @@ const translations = {
     'catalogue.cta.btn':  'Request personalised advice',
 
     'about.header.subtitle': 'Since 2009, the reference for luxury wine in West Africa.',
+    'about.dispenser.pretitle': 'Made in Finland',
+    'about.dispenser.title': 'Our drinks dispenser',
     'about.events.pretitle': 'In pictures',
     'about.events.title':    'Our events',
     'about.mvv.pretitle':    'What drives us',
