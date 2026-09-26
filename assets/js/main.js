@@ -92,9 +92,7 @@ const translations = {
     'catalogue.from':           'À partir de',
     'badge.rouge':              'Vin Rouge',
     'badge.blanc':              'Vin Blanc',
-    'badge.champagne':          'Champagne',
     'badge.spirits':            'Whisky',
-    'badge.rare':               'Collection Rare',
 
     'modal.details':  'Détails',
     'modal.cepage':   'Cépage(s)',
@@ -324,9 +322,7 @@ const translations = {
     'catalogue.from':           'From',
     'badge.rouge':              'Red Wine',
     'badge.blanc':              'White Wine',
-    'badge.champagne':          'Champagne',
     'badge.spirits':            'Whisky',
-    'badge.rare':               'Rare Collection',
 
     'modal.details':  'Details',
     'modal.cepage':   'Grape variety',
