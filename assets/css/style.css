@@ -3157,3 +3157,14 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 /* nom complet du site sur mobile, sur deux lignes */
 @media (max-width: 768px) { .logo-text { white-space: normal; width: 8.6em; font-size: .95rem; line-height: 1.1; letter-spacing: .01em; } }
 @media (max-width: 400px) { .nav-container { padding: 0 .75rem; gap: .5rem; } .logo-text { font-size: .82rem; width: 8.2em; } .currency-btn { padding: .4rem .55rem; font-size: .75rem; } .cart-nav-btn { width: 2rem; } .nav-actions { gap: .25rem; } }
+
+/* legendes lisibles sur fond clair */
+.section:not(.section-dark) .video-card { background: #fff; border-color: rgba(201,168,76,.35); }
+.section:not(.section-dark) .video-card figcaption { color: var(--muted); }
+.section:not(.section-dark) .video-card figcaption strong { color: var(--noir); }
+
+/* galerie de portraits: cadrage sur le haut de la photo */
+.photo-gallery.is-portrait { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.photo-gallery.is-portrait .gallery-item { aspect-ratio: 3 / 4; }
+.photo-gallery.is-portrait .gallery-item img { object-position: center 28%; }
+@media (max-width: 768px) { .photo-gallery.is-portrait { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
