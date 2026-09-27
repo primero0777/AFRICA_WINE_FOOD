@@ -3815,20 +3815,84 @@ if (document.readyState === 'loading') {
 }
 
 
-/* Lightbox galerie photos */
-(function initLightbox() {
+/* galeries photos : trois vignettes, le reste dans une visionneuse */
+(function initGalleries() {
   const dlg = document.getElementById('lightbox');
   if (!dlg || typeof dlg.showModal !== 'function') return;
-  const big = dlg.querySelector('img');
-  document.querySelectorAll('[data-lightbox]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      big.src = a.getAttribute('href');
-      big.alt = (a.querySelector('img') || {}).alt || '';
-      dlg.showModal();
+  dlg.innerHTML = '<button type="button" class="lb-close" aria-label="Fermer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>' +
+    '<div class="lb-count" aria-live="polite"></div>' +
+    '<button type="button" class="lb-nav lb-prev" aria-label="Photo précédente"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>' +
+    '<div class="lb-stage"><img alt="" /></div>' +
+    '<button type="button" class="lb-nav lb-next" aria-label="Photo suivante"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>' +
+    '<div class="lb-thumbs"></div>';
+  const big = dlg.querySelector('.lb-stage img'), count = dlg.querySelector('.lb-count'), thumbs = dlg.querySelector('.lb-thumbs');
+  let items = [], cur = 0;
+
+  function show(i) {
+    cur = (i + items.length) % items.length;
+    const a = items[cur];
+    big.src = a.getAttribute('href');
+    big.alt = (a.querySelector('img') || {}).alt || '';
+    count.textContent = (cur + 1) + ' / ' + items.length;
+    thumbs.querySelectorAll('.lb-thumb').forEach(function (t, k) {
+      t.classList.toggle('is-active', k === cur);
+      if (k === cur) t.scrollIntoView({ block: 'nearest', inline: 'center' });
+    });
+    [cur + 1, cur - 1].forEach(function (k) { new Image().src = items[(k + items.length) % items.length].getAttribute('href'); });
+  }
+
+  function open(group, start) {
+    items = group;
+    thumbs.innerHTML = '';
+    thumbs.hidden = items.length < 2;
+    dlg.classList.toggle('is-single', items.length < 2);
+    items.forEach(function (a, k) {
+      const t = document.createElement('button');
+      t.type = 'button'; t.className = 'lb-thumb'; t.setAttribute('aria-label', 'Photo ' + (k + 1));
+      const im = document.createElement('img');
+      im.src = a.getAttribute('href'); im.alt = ''; im.loading = 'lazy';
+      t.appendChild(im);
+      t.addEventListener('click', function () { show(k); });
+      thumbs.appendChild(t);
+    });
+    show(start);
+    dlg.showModal();
+  }
+
+  document.querySelectorAll('.photo-gallery, .atelier-grid').forEach(function (box) {
+    const group = Array.prototype.slice.call(box.querySelectorAll('[data-lightbox]'));
+    const keep = parseInt(box.getAttribute('data-collapse'), 10);
+    if (keep && group.length > keep) {
+      group.forEach(function (a, k) { if (k >= keep) a.classList.add('is-collapsed-item'); });
+      const last = group[keep - 1];
+      last.classList.add('has-more');
+      const more = document.createElement('span');
+      more.className = 'gallery-more';
+      more.textContent = '+' + (group.length - keep);
+      more.setAttribute('aria-hidden', 'true');
+      last.appendChild(more);
+      last.setAttribute('aria-label', 'Voir les ' + group.length + ' photos');
+    }
+    group.forEach(function (a, k) {
+      a.addEventListener('click', function (e) { e.preventDefault(); open(group, k); });
     });
   });
-  dlg.addEventListener('click', function (e) { if (e.target !== big) dlg.close(); });
+
+  dlg.querySelector('.lb-prev').addEventListener('click', function () { show(cur - 1); });
+  dlg.querySelector('.lb-next').addEventListener('click', function () { show(cur + 1); });
+  dlg.querySelector('.lb-close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.classList.contains('lb-stage')) dlg.close(); });
+  dlg.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    else if (e.key === 'ArrowRight') show(cur + 1);
+  });
+  let x0 = null;
+  big.addEventListener('pointerdown', function (e) { x0 = e.clientX; });
+  big.addEventListener('pointerup', function (e) {
+    if (x0 === null) return;
+    const dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
 })();
 
 /* fiche d'un evenement au clic sur son affiche */
