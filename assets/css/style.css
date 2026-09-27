@@ -3187,3 +3187,7 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
   .event-grid .poster-card figcaption strong { font-size: .72rem; line-height: 1.25; }
   .event-grid .poster-card figcaption span { display: none; }
 }
+
+/* fenetres de dialogue centrees malgre la remise a zero des marges */
+dialog[open] { position: fixed; inset: 0; margin: auto; }
+.event-dialog[open], .lightbox[open] { max-width: 96vw; }
