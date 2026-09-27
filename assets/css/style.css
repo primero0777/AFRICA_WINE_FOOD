@@ -3191,3 +3191,5 @@ body { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 /* fenetres de dialogue centrees malgre la remise a zero des marges */
 dialog[open] { position: fixed; inset: 0; margin: auto; }
 .event-dialog[open], .lightbox[open] { max-width: 96vw; }
+@media (max-width: 768px) { .event-grid .poster-logo img { padding: .4rem; } .event-grid.poster-grid-small { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.event-hint { margin-bottom: 1.5rem; }

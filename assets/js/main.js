@@ -3843,7 +3843,9 @@ if (document.readyState === 'loading') {
       img.src = a.getAttribute('href');
       img.alt = (a.querySelector('img') || {}).alt || '';
       title.textContent = card.querySelector('strong').textContent;
-      info.textContent = card.querySelector('span').textContent;
+      const detail = card.querySelector('span');
+      info.textContent = detail ? detail.textContent : '';
+      info.hidden = !detail;
       dlg.showModal();
     });
   });
