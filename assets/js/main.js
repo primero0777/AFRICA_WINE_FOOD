@@ -20,6 +20,8 @@ const translations = {
     "events.subtitle": "Soirées de dégustation, salons professionnels et rendez-vous Africa Wine Food.",
     "events.next.pretitle": "À venir",
     "events.next.title": "Prochains événements",
+    "events.next.hint": "Touchez une affiche pour voir les détails de l'événement.",
+    "events.next.cta": "Nous contacter",
     "events.night.pretitle": "La soirée",
     "events.night.title": "La Nuit du Vin en photos",
     "events.ouaga.pretitle": "Ouagadougou",
@@ -252,6 +254,8 @@ const translations = {
     "events.subtitle": "Tasting evenings, trade fairs and Africa Wine Food gatherings.",
     "events.next.pretitle": "Coming up",
     "events.next.title": "Upcoming events",
+    "events.next.hint": "Tap a poster to see the event details.",
+    "events.next.cta": "Contact us",
     "events.night.pretitle": "The evening",
     "events.night.title": "The Night of Wine in pictures",
     "events.ouaga.pretitle": "Ouagadougou",
@@ -3825,4 +3829,23 @@ if (document.readyState === 'loading') {
     });
   });
   dlg.addEventListener('click', function (e) { if (e.target !== big) dlg.close(); });
+})();
+
+/* fiche d'un evenement au clic sur son affiche */
+(function initEventDialog() {
+  const dlg = document.getElementById('event-dialog');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  const img = dlg.querySelector('img'), title = dlg.querySelector('h3'), info = dlg.querySelector('.event-info p');
+  document.querySelectorAll('[data-event]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      const card = a.closest('.poster-card');
+      img.src = a.getAttribute('href');
+      img.alt = (a.querySelector('img') || {}).alt || '';
+      title.textContent = card.querySelector('strong').textContent;
+      info.textContent = card.querySelector('span').textContent;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.classList.contains('lightbox-close')) dlg.close(); });
 })();

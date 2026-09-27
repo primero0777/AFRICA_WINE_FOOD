@@ -89,20 +89,21 @@
         <p class="section-pretitle" data-i18n="events.next.pretitle">À venir</p>
         <h2 data-i18n="events.next.title">Prochains événements</h2>
       </div>
-      <div class="poster-grid animate-on-scroll">
+      <div class="poster-grid event-grid animate-on-scroll">
         <figure class="poster-card">
-          <a href="assets/images/evenements/affiches/affiche-night-of-wine-28-novembre-2026.jpg" data-lightbox><img src="assets/images/evenements/affiches/affiche-night-of-wine-28-novembre-2026.jpg" alt="The Night of Wine" loading="lazy" /></a>
+          <a href="assets/images/evenements/affiches/affiche-night-of-wine-28-novembre-2026.jpg" data-event role="button" aria-haspopup="dialog"><img src="assets/images/evenements/affiches/affiche-night-of-wine-28-novembre-2026.jpg" alt="The Night of Wine" loading="lazy" /></a>
           <figcaption><strong>The Night of Wine</strong><span>28 novembre 2026, Alliance Française</span></figcaption>
         </figure>
         <figure class="poster-card">
-          <a href="assets/images/evenements/affiches/affiche-nuit-du-vin-12-decembre-2026.jpg" data-lightbox><img src="assets/images/evenements/affiches/affiche-nuit-du-vin-12-decembre-2026.jpg" alt="La Nuit du Vin" loading="lazy" /></a>
+          <a href="assets/images/evenements/affiches/affiche-nuit-du-vin-12-decembre-2026.jpg" data-event role="button" aria-haspopup="dialog"><img src="assets/images/evenements/affiches/affiche-nuit-du-vin-12-decembre-2026.jpg" alt="La Nuit du Vin" loading="lazy" /></a>
           <figcaption><strong>La Nuit du Vin</strong><span>12 décembre 2026, jardin de l'Hôtel Lebéné</span></figcaption>
         </figure>
         <figure class="poster-card">
-          <a href="assets/images/evenements/affiches/affiche-nuit-du-vin-cotonou-19-decembre-2026.jpg" data-lightbox><img src="assets/images/evenements/affiches/affiche-nuit-du-vin-cotonou-19-decembre-2026.jpg" alt="La Nuit du Vin à Cotonou" loading="lazy" /></a>
+          <a href="assets/images/evenements/affiches/affiche-nuit-du-vin-cotonou-19-decembre-2026.jpg" data-event role="button" aria-haspopup="dialog"><img src="assets/images/evenements/affiches/affiche-nuit-du-vin-cotonou-19-decembre-2026.jpg" alt="La Nuit du Vin à Cotonou" loading="lazy" /></a>
           <figcaption><strong>La Nuit du Vin à Cotonou</strong><span>19 décembre 2026, jardin de l'Hôtel Golden Tulip</span></figcaption>
         </figure>
       </div>
+      <p class="event-hint" data-i18n="events.next.hint">Touchez une affiche pour voir les détails de l'événement.</p>
     </div>
   </section>
 
@@ -460,5 +461,6 @@
 <script src="assets/js/currency.js" defer></script>
 <script src="assets/js/main.js" defer></script>
   <dialog class="lightbox" id="lightbox" aria-label="Photo agrandie"><button type="button" class="lightbox-close" aria-label="Fermer">×</button><img alt="" /></dialog>
+  <dialog class="event-dialog" id="event-dialog" aria-label="Détails de l'événement"><button type="button" class="lightbox-close" aria-label="Fermer">×</button><img alt="" /><div class="event-info"><h3></h3><p></p><a href="contact.html" class="btn btn-gold" data-i18n="events.next.cta">Nous contacter</a></div></dialog>
 </body>
 </html>
