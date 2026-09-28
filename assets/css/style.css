@@ -3227,3 +3227,15 @@ dialog[open] { position: fixed; inset: 0; margin: auto; }
 #lightbox .lb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 #lightbox .lb-thumb.is-active { border-color: var(--gold); opacity: 1; }
 @media (max-width: 600px) { #lightbox .lb-nav { width: 2.3rem; height: 2.3rem; } #lightbox .lb-thumb { width: 3.4rem; height: 2.6rem; } }
+
+/* equipe : fondateur et photos sur le terrain */
+.team-grid-solo { display: flex; justify-content: center; }
+.team-grid-solo .team-card-light { max-width: 360px; width: 100%; }
+.team-card-light { text-align: center; background: var(--cream); padding: 2.5rem 1.5rem; border: 1px solid rgba(201,168,76,.15); transition: transform var(--tr), box-shadow var(--tr); }
+.team-card-light:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.team-card-light h3 { color: var(--noir); }
+.team-card-light .team-bio { color: var(--muted); }
+.team-img-wrapper { width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 3px solid var(--gold); }
+.team-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.team-role { color: var(--gold); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; margin-bottom: .75rem; }
+.team-field-title { text-align: center; font-family: var(--ff-serif); font-size: 1.05rem; color: var(--muted); margin: 2.5rem 0 1.25rem; }
