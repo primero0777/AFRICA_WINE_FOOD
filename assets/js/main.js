@@ -3789,6 +3789,19 @@ function initClipAutoplay() {
 }
 
 
+/* videos au format telephone : cadre vertical au lieu du 16/9 avec bandes noires */
+function initPortraitVideos() {
+  document.querySelectorAll('.video-frame:not(.is-photo) video').forEach(v => {
+    const mark = () => {
+      if (v.videoWidth && v.videoHeight && v.videoHeight > v.videoWidth) {
+        v.closest('.video-frame').classList.add('is-portrait');
+      }
+    };
+    if (v.readyState >= 1) mark();
+    else v.addEventListener('loadedmetadata', mark, { once: true });
+  });
+}
+
 function safe(fn) {
   try { fn(); } catch (e) { console.warn('init', fn.name, e); }
 }
@@ -3814,6 +3827,7 @@ function init() {
   safe(initProductModal);
   safe(initCommandePage);
   safe(initClipAutoplay);
+  safe(initPortraitVideos);
 }
 
 if (document.readyState === 'loading') {
