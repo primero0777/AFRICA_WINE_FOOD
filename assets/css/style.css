@@ -1121,7 +1121,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   .stats-section       { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   .about-story         { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-story-img     { height: 300px; }
-  .offices-grid        { grid-template-columns: repeat(2, 1fr); }
+  .offices-grid:not(.offices-grid--single) { grid-template-columns: repeat(2, 1fr); }
   .mvv-grid-light      { grid-template-columns: 1fr 1fr; }
   
   .blog-featured       { grid-template-columns: 1fr; }
@@ -1193,7 +1193,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .offices-grid { grid-template-columns: 1fr 1fr; }
+  .offices-grid:not(.offices-grid--single) { grid-template-columns: 1fr 1fr; }
   .blog-featured { grid-template-columns: 1fr; }
   .blog-featured-img { height: 220px; }
   .blog-featured-content { padding: 1.5rem; }
