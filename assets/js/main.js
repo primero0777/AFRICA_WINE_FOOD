@@ -3789,6 +3789,18 @@ function initClipAutoplay() {
 }
 
 
+/* une seule video avec le son a la fois : lancer une video met les autres en pause */
+function initExclusiveVideoPlayback() {
+  const videos = Array.from(document.querySelectorAll('video')).filter(
+    v => !v.classList.contains('auto-clip') && !v.closest('.clip-grid.clip-auto')
+  );
+  videos.forEach(v => {
+    v.addEventListener('play', () => {
+      videos.forEach(other => { if (other !== v && !other.paused) other.pause(); });
+    });
+  });
+}
+
 /* videos au format telephone : cadre vertical au lieu du 16/9 avec bandes noires */
 function initPortraitVideos() {
   document.querySelectorAll('.video-frame:not(.is-photo) video').forEach(v => {
@@ -3828,6 +3840,7 @@ function init() {
   safe(initCommandePage);
   safe(initClipAutoplay);
   safe(initPortraitVideos);
+  safe(initExclusiveVideoPlayback);
 }
 
 if (document.readyState === 'loading') {
