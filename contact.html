@@ -94,16 +94,16 @@
           <form class="contact-form" id="contact-form" novalidate>
             <div class="form-group">
               <label for="c-name" data-i18n="contact.form.name">Nom complet</label>
-              <div class="field-icon"><input type="text" id="c-name" name="name" required autocomplete="name" /><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <div class="field-icon"><input type="text" id="c-name" name="name" required autocomplete="name" placeholder="Jean Dupont" /><i class="fa-solid fa-user" aria-hidden="true"></i></div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="c-email" data-i18n="contact.form.email">Email</label>
-                <div class="field-icon"><input type="email" id="c-email" name="email" required autocomplete="email" /><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                <div class="field-icon"><input type="email" id="c-email" name="email" required autocomplete="email" placeholder="jean.dupont@email.com" /><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
               </div>
               <div class="form-group">
                 <label for="c-phone" data-i18n="contact.form.phone">Téléphone</label>
-                <div class="field-icon"><input type="tel" id="c-phone" name="phone" autocomplete="tel" /><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+                <div class="field-icon"><input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="+228 90 00 00 00" /><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
               </div>
             </div>
             <div class="form-group">
@@ -118,7 +118,7 @@
             </div>
             <div class="form-group">
               <label for="c-message" data-i18n="contact.form.message">Message</label>
-              <div class="field-icon"><textarea id="c-message" name="message" rows="6" required></textarea><i class="fa-solid fa-comment" aria-hidden="true"></i></div>
+              <div class="field-icon"><textarea id="c-message" name="message" rows="6" required data-i18n-placeholder="contact.form.message.placeholder" placeholder="Bonjour, je souhaite en savoir plus sur vos vins et vos conditions de livraison..."></textarea><i class="fa-solid fa-comment" aria-hidden="true"></i></div>
             </div>
             <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.send">Envoyer le message</button>
             <div class="form-success" id="form-success" role="alert" hidden data-i18n="contact.form.success">Message envoyé ! Nous vous répondrons sous 24h.</div>
@@ -247,7 +247,7 @@
               </div>
               <div class="form-group">
                 <label for="d-email" data-i18n="contact.devis.email">Email de contact</label>
-                <input type="email" id="d-email" name="devis-email" autocomplete="email" required />
+                <input type="email" id="d-email" name="devis-email" autocomplete="email" required placeholder="jean.dupont@email.com" />
               </div>
               <button type="submit" class="btn btn-gold btn-full" data-i18n="contact.devis.send">Obtenir un devis</button>
               <div class="form-success" id="devis-success" role="alert" hidden data-i18n="contact.devis.success">Devis demandé ! Nous vous contactons rapidement.</div>
