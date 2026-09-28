@@ -615,7 +615,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   margin-bottom: 1rem;
 }
 .footer-logo .logo-icon { width: 32px; height: 32px; }
-.footer-logo .logo-text { font-size: 1.3rem; }
+.footer-logo .logo-text { font-size: 1.3rem; color: #fff; }
 
 .footer-slogan { font-size: .875rem; color: rgba(250,247,242,.5); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6; }
 .footer-social { display: flex; gap: .75rem; }
