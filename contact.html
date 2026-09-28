@@ -94,31 +94,31 @@
           <form class="contact-form" id="contact-form" novalidate>
             <div class="form-group">
               <label for="c-name" data-i18n="contact.form.name">Nom complet</label>
-              <input type="text" id="c-name" name="name" required autocomplete="name" />
+              <div class="field-icon"><input type="text" id="c-name" name="name" required autocomplete="name" /><i class="fa-solid fa-user" aria-hidden="true"></i></div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="c-email" data-i18n="contact.form.email">Email</label>
-                <input type="email" id="c-email" name="email" required autocomplete="email" />
+                <div class="field-icon"><input type="email" id="c-email" name="email" required autocomplete="email" /><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
               </div>
               <div class="form-group">
                 <label for="c-phone" data-i18n="contact.form.phone">Téléphone</label>
-                <input type="tel" id="c-phone" name="phone" autocomplete="tel" />
+                <div class="field-icon"><input type="tel" id="c-phone" name="phone" autocomplete="tel" /><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
               </div>
             </div>
             <div class="form-group">
               <label for="c-type" data-i18n="contact.form.type">Type de demande</label>
-              <select id="c-type" name="type">
+              <div class="field-icon"><select id="c-type" name="type">
                 <option value=""             data-i18n="contact.form.select">Sélectionner...</option>
                 <option value="particulier"  data-i18n="contact.form.opt.particulier">Particulier</option>
                 <option value="restaurant"   data-i18n="contact.form.opt.restaurant">Restaurant / Hotel</option>
                 <option value="entreprise"   data-i18n="contact.form.opt.entreprise">Entreprise</option>
                 <option value="collectionneur" data-i18n="contact.form.opt.collector">Collectionneur</option>
-              </select>
+              </select><i class="fa-solid fa-tag" aria-hidden="true"></i></div>
             </div>
             <div class="form-group">
               <label for="c-message" data-i18n="contact.form.message">Message</label>
-              <textarea id="c-message" name="message" rows="6" required></textarea>
+              <div class="field-icon"><textarea id="c-message" name="message" rows="6" required></textarea><i class="fa-solid fa-comment" aria-hidden="true"></i></div>
             </div>
             <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.send">Envoyer le message</button>
             <div class="form-success" id="form-success" role="alert" hidden data-i18n="contact.form.success">Message envoyé ! Nous vous répondrons sous 24h.</div>
