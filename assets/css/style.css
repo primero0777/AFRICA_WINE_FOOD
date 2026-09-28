@@ -2880,7 +2880,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .product-badge { border-radius: var(--radius-pill); }
 
 /* Office card */
-.office-card {
+.section-dark .office-card {
   background: rgba(15, 8, 5, 0.35) !important;
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   backdrop-filter: blur(16px) saturate(160%);
@@ -2888,6 +2888,14 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   border-radius: var(--radius-card) !important;
   box-shadow: var(--glass-shadow);
 }
+/* carte de l'agence sur fond clair */
+.section:not(.section-dark) .office-card {
+  background: var(--cream);
+  border: 1px solid rgba(201,168,76,.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+.section:not(.section-dark) .office-card h3 { color: var(--noir); }
+.section:not(.section-dark) .office-card p { color: var(--muted); }
 .office-card:hover {
   background: rgba(30, 12, 8, 0.5) !important;
   border-color: var(--gold) !important;
