@@ -1079,7 +1079,7 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
 }
 .offices-grid--single {
   grid-template-columns: 1fr;
-  max-width: 340px;
+  max-width: 400px;
   margin: 0 auto;
 }
 .office-card {
@@ -1088,6 +1088,8 @@ h3 { font-size: 1.4rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
   text-align: center;
   transition: border-color var(--tr), background var(--tr);
 }
+.offices-grid--single .office-card .office-country,
+.offices-grid--single .office-card a { white-space: nowrap; }
 .office-card:hover { border-color: var(--gold); background: rgba(201,168,76,.04); }
 .office-flag { font-size: 2rem; margin-bottom: 1rem; display: block; color: var(--gold); }
 .office-card h3 { color: var(--cream); font-size: 1.1rem; margin-bottom: .25rem; }
