@@ -237,8 +237,6 @@ const translations = {
 
 
     'contact.info.hours':         'Horaires',
-    'contact.map.pretitle':       'Ou nous trouver',
-    'contact.map.title':          'Notre adresse',
     'contact.offices.pretitle':   'Notre implantation',
     'contact.offices.title':      'Notre agence à Lomé',
     'contact.offices.tg.city':    'Lomé',
@@ -475,8 +473,6 @@ const translations = {
 
 
     'contact.info.hours':         'Opening hours',
-    'contact.map.pretitle':       'Find us',
-    'contact.map.title':          'Our address',
     'contact.offices.pretitle':   'Our location',
     'contact.offices.title':      'Our agency in Lomé',
     'contact.offices.tg.city':    'Lomé',
